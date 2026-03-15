@@ -9,12 +9,12 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 
 const rows = [
-  { key: 'row_storage', flux: '✓', elfinder: '⚠', rfm: '⚠' },
-  { key: 'row_embed',   flux: '✓', elfinder: '⚠', rfm: '⚠' },
-  { key: 'row_jwt',     flux: '✓', elfinder: '✗', rfm: '✗' },
-  { key: 'row_seo',     flux: '✓', elfinder: '✗', rfm: '✗' },
-  { key: 'row_maintained', flux: '✓', elfinder: '✓', rfm: '✗' },
-  { key: 'row_ui',      flux: '✓', elfinder: '✗', rfm: '✗' },
+  { key: 'row_storage',    flux: '✓', elfinder: '⚠', lfm: '⚠', rfm: '⚠', resp: '✗' },
+  { key: 'row_embed',      flux: '✓', elfinder: '⚠', lfm: '✗', rfm: '⚠', resp: '✗' },
+  { key: 'row_jwt',        flux: '✓', elfinder: '✗', lfm: '✗', rfm: '✗', resp: '✗' },
+  { key: 'row_seo',        flux: '✓', elfinder: '✗', lfm: '✗', rfm: '✗', resp: '✗' },
+  { key: 'row_maintained', flux: '✓', elfinder: '✓', lfm: '⚠', rfm: '✗', resp: '✗' },
+  { key: 'row_ui',         flux: '✓', elfinder: '✗', lfm: '⚠', rfm: '✗', resp: '✗' },
 ];
 
 function statusClass(val: string): string {
@@ -35,23 +35,27 @@ function statusClass(val: string): string {
       </h2>
     </div>
 
-    <div class="mx-auto max-w-3xl overflow-x-auto">
+    <div class="mx-auto max-w-5xl overflow-x-auto">
       <table class="w-full text-sm">
         <thead>
           <tr class="border-b border-gray-200 dark:border-gray-700">
-            <th class="text-left py-3 px-4 font-medium text-gray-500 dark:text-gray-400">{t('compare.col_feature')}</th>
-            <th class="text-center py-3 px-4 font-bold text-accent dark:text-accent-dark">{t('compare.col_flux')}</th>
-            <th class="text-center py-3 px-4 font-medium text-gray-500 dark:text-gray-400">{t('compare.col_elfinder')}</th>
-            <th class="text-center py-3 px-4 font-medium text-gray-500 dark:text-gray-400">{t('compare.col_rfm')}</th>
+            <th class="text-left py-3 px-3 font-medium text-gray-500 dark:text-gray-400">{t('compare.col_feature')}</th>
+            <th class="text-center py-3 px-3 font-bold text-accent dark:text-accent-dark">{t('compare.col_flux')}</th>
+            <th class="text-center py-3 px-3 font-medium text-gray-500 dark:text-gray-400">{t('compare.col_elfinder')}</th>
+            <th class="text-center py-3 px-3 font-medium text-gray-500 dark:text-gray-400">{t('compare.col_lfm')}</th>
+            <th class="text-center py-3 px-3 font-medium text-gray-500 dark:text-gray-400">{t('compare.col_rfm')}</th>
+            <th class="text-center py-3 px-3 font-medium text-gray-500 dark:text-gray-400">{t('compare.col_resp')}</th>
           </tr>
         </thead>
         <tbody>
           {rows.map((row) => (
             <tr class="border-b border-gray-100 dark:border-gray-800">
-              <td class="py-3 px-4 text-gray-700 dark:text-gray-300">{t(`compare.${row.key}`)}</td>
-              <td class:list={['py-3 px-4 text-center text-lg', statusClass(row.flux)]}>{row.flux}</td>
-              <td class:list={['py-3 px-4 text-center text-lg', statusClass(row.elfinder)]}>{row.elfinder}</td>
-              <td class:list={['py-3 px-4 text-center text-lg', statusClass(row.rfm)]}>{row.rfm}</td>
+              <td class="py-3 px-3 text-gray-700 dark:text-gray-300">{t(`compare.${row.key}`)}</td>
+              <td class:list={['py-3 px-3 text-center text-lg', statusClass(row.flux)]}>{row.flux}</td>
+              <td class:list={['py-3 px-3 text-center text-lg', statusClass(row.elfinder)]}>{row.elfinder}</td>
+              <td class:list={['py-3 px-3 text-center text-lg', statusClass(row.lfm)]}>{row.lfm}</td>
+              <td class:list={['py-3 px-3 text-center text-lg', statusClass(row.rfm)]}>{row.rfm}</td>
+              <td class:list={['py-3 px-3 text-center text-lg', statusClass(row.resp)]}>{row.resp}</td>
             </tr>
           ))}
         </tbody>
