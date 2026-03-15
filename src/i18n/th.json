@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "FluxFiles — ตัวจัดการไฟล์ที่ฝังได้ทุกที่",
+    "description": "ตัวจัดการไฟล์ PHP โอเพนซอร์ส รองรับ S3, R2, local storage ฝังผ่าน iframe + postMessage SDK"
+  },
+  "nav": {
+    "docs": "เอกสาร",
+    "install": "ติดตั้ง",
+    "changelog": "บันทึกการเปลี่ยนแปลง",
+    "github": "GitHub"
+  },
+  "hero": {
+    "badge": "v1.0 — โอเพนซอร์ส · สัญญาอนุญาต MIT",
+    "headline": "ตัวจัดการไฟล์ที่ฝังได้ทุกที่",
+    "sub": "PHP 8.2 + Flysystem. Local, S3, Cloudflare R2 ใน UI เดียว แค่ 3 บรรทัด JavaScript",
+    "cta_start": "เริ่มต้นใช้งาน",
+    "cta_github": "Star บน GitHub",
+    "stat_php": "ไม่ต้องใช้เฟรมเวิร์ก",
+    "stat_sdk": "ขนาด SDK",
+    "stat_oss": "สัญญาอนุญาตโอเพนซอร์ส",
+    "stat_lang": "ภาษาที่รองรับ"
+  },
+  "demo": {
+    "label": "ตัวอย่าง",
+    "headline": "ดูการทำงานจริง"
+  },
+  "features": {
+    "label": "คุณสมบัติ",
+    "headline": "ทุกสิ่งที่ตัวจัดการไฟล์สมัยใหม่ต้องการ",
+    "sub": "สร้างขึ้นสำหรับนักพัฒนาที่ต้องการความยืดหยุ่น",
+    "storage_title": "หลายที่เก็บข้อมูล",
+    "storage_desc": "Local, AWS S3, Cloudflare R2 — สลับผ่านการตั้งค่า ไม่ต้องแก้โค้ด",
+    "embed_title": "ฝังได้ทุกที่",
+    "embed_desc": "iframe + postMessage SDK แค่ 3 บรรทัด JS ใช้ได้กับทุกเฟรมเวิร์ก",
+    "jwt_title": "JWT auth + scoping",
+    "jwt_desc": "พาธพรีฟิกซ์ต่อผู้ใช้, permission claims, disk whitelist",
+    "seo_title": "SEO metadata",
+    "seo_desc": "Alt text, title, caption ใน SQLite ซิงค์กับ S3 object tags",
+    "presign_title": "อัปโหลดแบบ presigned",
+    "presign_desc": "เบราว์เซอร์อัปโหลดตรงไปยัง S3/R2 — ไม่ใช้แบนด์วิดท์เซิร์ฟเวอร์เลย",
+    "i18n_title": "10+ ภาษา",
+    "i18n_desc": "ตรวจจับภาษาเบราว์เซอร์อัตโนมัติ รองรับ RTL เพิ่มภาษาของคุณใน 1 ไฟล์ JSON"
+  },
+  "install": {
+    "label": "ติดตั้งด่วน",
+    "headline": "พร้อมใช้งานใน 2 นาที",
+    "tab_composer": "Composer (PHP)",
+    "tab_npm": "npm (JS SDK)",
+    "tab_manual": "ติดตั้งเอง",
+    "copy": "คัดลอก",
+    "copied": "คัดลอกแล้ว!",
+    "works_with": "ใช้ได้กับ"
+  },
+  "compare": {
+    "label": "ทำไมต้อง FluxFiles",
+    "headline": "สร้างขึ้นสำหรับสิ่งที่คนอื่นลืม",
+    "col_feature": "คุณสมบัติ",
+    "col_flux": "FluxFiles",
+    "col_elfinder": "elFinder",
+    "col_rfm": "RichFilemanager",
+    "row_storage": "S3 + R2 + Local",
+    "row_embed": "ฝังในทุกเฟรมเวิร์ก",
+    "row_jwt": "JWT auth + scoping",
+    "row_seo": "SEO metadata",
+    "row_maintained": "ดูแลอย่างต่อเนื่อง",
+    "row_ui": "UI สมัยใหม่"
+  },
+  "footer": {
+    "made_by": "สร้างโดย",
+    "license": "สัญญาอนุญาต MIT",
+    "docs": "เอกสาร",
+    "changelog": "บันทึกการเปลี่ยนแปลง",
+    "license_link": "สัญญาอนุญาต"
+  }
+}

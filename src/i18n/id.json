@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "FluxFiles — Manajer file yang bisa disematkan di mana saja",
+    "description": "Manajer file PHP open source dengan dukungan S3, R2, penyimpanan lokal. Sematkan via iframe + postMessage SDK."
+  },
+  "nav": {
+    "docs": "Dokumentasi",
+    "install": "Instalasi",
+    "changelog": "Changelog",
+    "github": "GitHub"
+  },
+  "hero": {
+    "badge": "v1.0 — Open Source · Lisensi MIT",
+    "headline": "Manajer file yang bisa disematkan di mana saja",
+    "sub": "PHP 8.2 + Flysystem. Lokal, S3, Cloudflare R2 dalam satu UI. 3 baris JavaScript.",
+    "cta_start": "Mulai sekarang",
+    "cta_github": "Star di GitHub",
+    "stat_php": "Tanpa framework",
+    "stat_sdk": "Ukuran SDK",
+    "stat_oss": "Lisensi open source",
+    "stat_lang": "Bahasa didukung"
+  },
+  "demo": {
+    "label": "Pratinjau",
+    "headline": "Lihat langsung"
+  },
+  "features": {
+    "label": "Fitur",
+    "headline": "Semua yang dibutuhkan manajer file modern",
+    "sub": "Dibuat untuk developer yang butuh fleksibilitas.",
+    "storage_title": "Multi-penyimpanan",
+    "storage_desc": "Lokal, AWS S3, Cloudflare R2 — ganti lewat konfigurasi, tanpa ubah kode.",
+    "embed_title": "Sematkan di mana saja",
+    "embed_desc": "iframe + postMessage SDK. 3 baris JS. Bekerja dengan framework apa pun.",
+    "jwt_title": "JWT auth + scoping",
+    "jwt_desc": "Prefix path per pengguna, permission claims, disk whitelist.",
+    "seo_title": "Metadata SEO",
+    "seo_desc": "Alt text, judul, caption di SQLite. Disinkronkan dengan tag objek S3.",
+    "presign_title": "Upload presigned",
+    "presign_desc": "Browser upload langsung ke S3/R2 — nol bandwidth di server Anda.",
+    "i18n_title": "10+ bahasa",
+    "i18n_desc": "Deteksi otomatis bahasa browser. Dukungan RTL. Tambahkan bahasa Anda di 1 file JSON."
+  },
+  "install": {
+    "label": "Instalasi cepat",
+    "headline": "Siap dalam 2 menit",
+    "tab_composer": "Composer (PHP)",
+    "tab_npm": "npm (JS SDK)",
+    "tab_manual": "Manual",
+    "copy": "Salin",
+    "copied": "Tersalin!",
+    "works_with": "Bekerja dengan"
+  },
+  "compare": {
+    "label": "Mengapa FluxFiles",
+    "headline": "Dibuat untuk apa yang dilupakan yang lain",
+    "col_feature": "Fitur",
+    "col_flux": "FluxFiles",
+    "col_elfinder": "elFinder",
+    "col_rfm": "RichFilemanager",
+    "row_storage": "S3 + R2 + Lokal",
+    "row_embed": "Sematkan di framework apa pun",
+    "row_jwt": "JWT auth + scoping",
+    "row_seo": "Metadata SEO",
+    "row_maintained": "Dipelihara secara aktif",
+    "row_ui": "UI modern"
+  },
+  "footer": {
+    "made_by": "Dibuat oleh",
+    "license": "Lisensi MIT",
+    "docs": "Dokumentasi",
+    "changelog": "Changelog",
+    "license_link": "Lisensi"
+  }
+}

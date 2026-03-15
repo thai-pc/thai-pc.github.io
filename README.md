@@ -2,7 +2,7 @@
 
 Static landing page for [FluxFiles](https://github.com/thai-pc/fluxfiles) — an open-source PHP file manager with S3, R2, and local storage support.
 
-Built with **Astro 4**, **Tailwind CSS 3**, supports **8 languages** and **dark mode**.
+Built with **Astro 4**, **Tailwind CSS 3**, supports **16 languages** and **dark mode**.
 
 ## Prerequisites
 
@@ -50,14 +50,22 @@ fluxfiles-landing/
 │   │   └── [lang]/index.astro   # Dynamic route for all 8 languages
 │   ├── i18n/
 │   │   ├── utils.ts             # getLangFromUrl(), useTranslations()
-│   │   ├── en.json
-│   │   ├── vi.json
-│   │   ├── zh.json
-│   │   ├── ja.json
-│   │   ├── ko.json
-│   │   ├── fr.json
-│   │   ├── de.json
-│   │   └── es.json
+│   │   ├── en.json              # English
+│   │   ├── vi.json              # Vietnamese
+│   │   ├── zh.json              # Chinese
+│   │   ├── ja.json              # Japanese
+│   │   ├── ko.json              # Korean
+│   │   ├── fr.json              # French
+│   │   ├── de.json              # German
+│   │   ├── es.json              # Spanish
+│   │   ├── hi.json              # Hindi
+│   │   ├── pt.json              # Portuguese
+│   │   ├── ru.json              # Russian
+│   │   ├── ar.json              # Arabic
+│   │   ├── th.json              # Thai
+│   │   ├── tr.json              # Turkish
+│   │   ├── it.json              # Italian
+│   │   └── id.json              # Indonesian
 │   └── styles/
 │       └── global.css           # Tailwind directives + Inter font-face
 ├── .github/
@@ -75,12 +83,20 @@ fluxfiles-landing/
 | `/`      | English (default)  |
 | `/en/`   | English            |
 | `/vi/`   | Vietnamese         |
-| `/ja/`   | Japanese           |
-| `/de/`   | German             |
-| `/fr/`   | French             |
-| `/es/`   | Spanish            |
-| `/ko/`   | Korean             |
 | `/zh/`   | Chinese            |
+| `/ja/`   | Japanese           |
+| `/ko/`   | Korean             |
+| `/fr/`   | French             |
+| `/de/`   | German             |
+| `/es/`   | Spanish            |
+| `/hi/`   | Hindi              |
+| `/pt/`   | Portuguese         |
+| `/ru/`   | Russian            |
+| `/ar/`   | Arabic             |
+| `/th/`   | Thai               |
+| `/tr/`   | Turkish            |
+| `/it/`   | Italian            |
+| `/id/`   | Indonesian         |
 
 ## i18n — Adding a New Language
 

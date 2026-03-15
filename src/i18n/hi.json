@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "FluxFiles — कहीं भी एम्बेड होने वाला फ़ाइल मैनेजर",
+    "description": "S3, R2, लोकल स्टोरेज सपोर्ट वाला ओपन सोर्स PHP फ़ाइल मैनेजर। iframe + postMessage SDK से एम्बेड करें।"
+  },
+  "nav": {
+    "docs": "डॉक्स",
+    "install": "इंस्टॉल",
+    "changelog": "चेंजलॉग",
+    "github": "GitHub"
+  },
+  "hero": {
+    "badge": "v1.0 — ओपन सोर्स · MIT लाइसेंस",
+    "headline": "कहीं भी एम्बेड होने वाला फ़ाइल मैनेजर",
+    "sub": "PHP 8.2 + Flysystem। लोकल, S3, Cloudflare R2 एक UI में। JavaScript की सिर्फ 3 लाइनें।",
+    "cta_start": "शुरू करें",
+    "cta_github": "GitHub पर Star करें",
+    "stat_php": "कोई फ्रेमवर्क ज़रूरी नहीं",
+    "stat_sdk": "SDK बंडल साइज़",
+    "stat_oss": "ओपन सोर्स लाइसेंस",
+    "stat_lang": "भाषाएँ समर्थित"
+  },
+  "demo": {
+    "label": "लाइव प्रीव्यू",
+    "headline": "इसे एक्शन में देखें"
+  },
+  "features": {
+    "label": "फ़ीचर्स",
+    "headline": "एक आधुनिक फ़ाइल मैनेजर के लिए सब कुछ",
+    "sub": "लचीलापन चाहने वाले डेवलपर्स के लिए बनाया गया।",
+    "storage_title": "मल्टी-स्टोरेज",
+    "storage_desc": "लोकल, AWS S3, Cloudflare R2 — कॉन्फ़िग से बदलें, कोड बदलने की ज़रूरत नहीं।",
+    "embed_title": "कहीं भी एम्बेड करें",
+    "embed_desc": "iframe + postMessage SDK। JS की 3 लाइनें। किसी भी फ्रेमवर्क के साथ काम करता है।",
+    "jwt_title": "JWT ऑथ + स्कोपिंग",
+    "jwt_desc": "प्रति-यूज़र पाथ प्रीफ़िक्स, परमिशन क्लेम, डिस्क व्हाइटलिस्ट।",
+    "seo_title": "SEO मेटाडेटा",
+    "seo_desc": "SQLite में Alt टेक्स्ट, टाइटल, कैप्शन। S3 ऑब्जेक्ट टैग्स से सिंक।",
+    "presign_title": "प्रीसाइन्ड अपलोड",
+    "presign_desc": "ब्राउज़र सीधे S3/R2 पर अपलोड करता है — आपके सर्वर पर ज़ीरो बैंडविड्थ।",
+    "i18n_title": "10+ भाषाएँ",
+    "i18n_desc": "ब्राउज़र भाषा ऑटो-डिटेक्ट। RTL सपोर्ट। 1 JSON फ़ाइल में अपनी भाषा जोड़ें।"
+  },
+  "install": {
+    "label": "क्विक इंस्टॉल",
+    "headline": "2 मिनट में चालू करें",
+    "tab_composer": "Composer (PHP)",
+    "tab_npm": "npm (JS SDK)",
+    "tab_manual": "मैनुअल",
+    "copy": "कॉपी",
+    "copied": "कॉपी हो गया!",
+    "works_with": "इनके साथ काम करता है"
+  },
+  "compare": {
+    "label": "FluxFiles क्यों",
+    "headline": "जो दूसरे भूल गए, उसके लिए बनाया गया",
+    "col_feature": "फ़ीचर",
+    "col_flux": "FluxFiles",
+    "col_elfinder": "elFinder",
+    "col_rfm": "RichFilemanager",
+    "row_storage": "S3 + R2 + लोकल",
+    "row_embed": "किसी भी फ्रेमवर्क में एम्बेड",
+    "row_jwt": "JWT ऑथ + स्कोपिंग",
+    "row_seo": "SEO मेटाडेटा",
+    "row_maintained": "सक्रिय रूप से मेंटेन",
+    "row_ui": "मॉडर्न UI"
+  },
+  "footer": {
+    "made_by": "बनाया",
+    "license": "MIT लाइसेंस",
+    "docs": "डॉक्स",
+    "changelog": "चेंजलॉग",
+    "license_link": "लाइसेंस"
+  }
+}

@@ -6,6 +6,14 @@ import ko from './ko.json';
 import fr from './fr.json';
 import de from './de.json';
 import es from './es.json';
+import hi from './hi.json';
+import pt from './pt.json';
+import ru from './ru.json';
+import ar from './ar.json';
+import th from './th.json';
+import tr from './tr.json';
+import it from './it.json';
+import id from './id.json';
 
 export const languages = {
   en: 'English',
@@ -16,13 +24,21 @@ export const languages = {
   fr: 'Français',
   de: 'Deutsch',
   es: 'Español',
+  hi: 'हिन्दी',
+  pt: 'Português',
+  ru: 'Русский',
+  ar: 'العربية',
+  th: 'ไทย',
+  tr: 'Türkçe',
+  it: 'Italiano',
+  id: 'Bahasa Indonesia',
 } as const;
 
 export type Lang = keyof typeof languages;
 export const defaultLang: Lang = 'en';
 export const langList = Object.keys(languages) as Lang[];
 
-const translations: Record<Lang, Record<string, any>> = { en, vi, zh, ja, ko, fr, de, es };
+const translations: Record<Lang, Record<string, any>> = { en, vi, zh, ja, ko, fr, de, es, hi, pt, ru, ar, th, tr, it, id };
 
 export function getLangFromUrl(url: URL): Lang {
   const [, lang] = url.pathname.split('/');
