@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://thai-pc.github.io',
+  site: 'https://thai-pc.github.io/fluxfiles',
   base: '/fluxfiles',
 
   integrations: [
