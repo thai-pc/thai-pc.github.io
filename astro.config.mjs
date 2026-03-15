@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://thai-pc.github.io',
-  //base: '/fluxfiles',
+  base: '/fluxfiles',
 
   integrations: [
     tailwind({ applyBaseStyles: false }),

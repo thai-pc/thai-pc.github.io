@@ -1,3 +1,34 @@
 ---
-return Astro.redirect('/fluxfiles/en/', 301);
 ---
+
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>FluxFiles</title>
+
+  <script>
+    const supported = ["en","vi","ja","de","fr","es","ko","zh"];
+
+    const saved = localStorage.getItem("lang");
+
+    let lang;
+
+    if(saved && supported.includes(saved)){
+      lang = saved;
+    } else {
+      const browserLang = (navigator.language || "en").slice(0,2);
+
+      lang = supported.includes(browserLang) ? browserLang : "en";
+
+      localStorage.setItem("lang", lang);
+    }
+
+    window.location.replace(`/fluxfiles/${lang}/`);
+  </script>
+
+</head>
+
+<body>
+Redirecting...
+</body>
+</html>
