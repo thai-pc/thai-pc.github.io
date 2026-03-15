@@ -39,15 +39,15 @@ fluxfiles-landing/
 │   │   ├── Navbar.astro         # Sticky nav + lang switcher + dark toggle
 │   │   ├── Hero.astro           # Headline, CTAs, stats row
 │   │   ├── DemoPreview.astro    # Static file manager UI mockup
-│   │   ├── Features.astro       # 6 feature cards grid
-│   │   ├── Install.astro        # Composer/npm/Manual code tabs
-│   │   ├── Comparison.astro     # FluxFiles vs elFinder vs RichFilemanager
+│   │   ├── Features.astro       # 18 feature cards grid
+│   │   ├── Install.astro        # Composer/Laravel/JS SDK/Manual tabs
+│   │   ├── Comparison.astro     # FluxFiles vs 4 competitors
 │   │   └── Footer.astro         # Links + copyright
 │   ├── layouts/
 │   │   └── BaseLayout.astro     # HTML shell, SEO meta, hreflang, anti-FOUC
 │   ├── pages/
 │   │   ├── index.astro          # English (default language)
-│   │   └── [lang]/index.astro   # Dynamic route for all 8 languages
+│   │   └── [lang]/index.astro   # Dynamic route for all 16 languages
 │   ├── i18n/
 │   │   ├── utils.ts             # getLangFromUrl(), useTranslations()
 │   │   ├── en.json              # English
@@ -65,7 +65,7 @@ fluxfiles-landing/
 │   │   ├── th.json              # Thai
 │   │   ├── tr.json              # Turkish
 │   │   ├── it.json              # Italian
-│   │   └── id.json              # Indonesian
+│   │   └── nl.json              # Dutch
 │   └── styles/
 │       └── global.css           # Tailwind directives + Inter font-face
 ├── .github/
@@ -96,7 +96,7 @@ fluxfiles-landing/
 | `/th/`   | Thai               |
 | `/tr/`   | Turkish            |
 | `/it/`   | Italian            |
-| `/id/`   | Indonesian         |
+| `/nl/`   | Dutch              |
 
 ## i18n — Adding a New Language
 

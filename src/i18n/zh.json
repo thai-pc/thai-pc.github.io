@@ -10,7 +10,7 @@
     "github": "GitHub"
   },
   "hero": {
-    "badge": "v1.0 — 开源 · MIT 许可证",
+    "badge": "v1.22.0 — 开源 · MIT 许可证",
     "headline": "可嵌入任何地方的文件管理器",
     "sub": "PHP ≥ 7.4 + Flysystem。Local、S3、Cloudflare R2 统一界面。3行JavaScript。",
     "cta_start": "开始使用",
@@ -38,8 +38,32 @@
     "seo_desc": "Alt文本、标题、说明存储在SQLite。同步到S3对象标签。",
     "presign_title": "预签名上传",
     "presign_desc": "浏览器直接上传到S3/R2 — 服务器零带宽消耗。",
-    "i18n_title": "10+语言",
-    "i18n_desc": "自动检测浏览器语言。支持RTL。1个JSON文件即可添加语言。"
+    "i18n_title": "16种语言",
+    "i18n_desc": "自动检测浏览器语言。支持RTL。通过1个JSON文件添加您的语言。",
+    "ai_title": "AI自动标签",
+    "ai_desc": "Claude / OpenAI vision — 自动alt文本、标题、标签。",
+    "crop_title": "图片裁剪",
+    "crop_desc": "内置裁剪工具，预设宽高比。",
+    "optimize_title": "图片优化",
+    "optimize_desc": "自动WebP变体 — 缩略图、中等、大图。",
+    "chunk_title": "分片上传",
+    "chunk_desc": "S3 multipart，支持>10MB文件。",
+    "trash_title": "回收站",
+    "trash_desc": "可恢复删除，自动清理。",
+    "search_title": "全文搜索",
+    "search_desc": "SQLite FTS5搜索文件名、标题、标签。",
+    "bulk_title": "批量操作",
+    "bulk_desc": "多选移动、复制、删除、下载。",
+    "crossdisk_title": "跨磁盘传输",
+    "crossdisk_desc": "在本地 ↔ S3 ↔ R2之间复制/移动。",
+    "darkmode_title": "深色模式",
+    "darkmode_desc": "自动检测 + 手动切换。",
+    "audit_title": "审计日志",
+    "audit_desc": "记录所有写入操作。",
+    "ratelimit_title": "速率限制",
+    "ratelimit_desc": "每用户令牌桶API保护。",
+    "quota_title": "存储配额",
+    "quota_desc": "通过JWT claims设置每用户限制。"
   },
   "install": {
     "label": "快速安装",
@@ -49,7 +73,9 @@
     "tab_manual": "手动",
     "copy": "复制",
     "copied": "已复制！",
-    "works_with": "兼容"
+    "works_with": "兼容",
+    "tab_laravel": "Laravel",
+    "tab_sdk": "JS SDK"
   },
   "compare": {
     "label": "为什么选择FluxFiles",
@@ -65,13 +91,22 @@
     "row_jwt": "JWT认证 + 权限范围",
     "row_seo": "SEO元数据",
     "row_maintained": "积极维护中",
-    "row_ui": "现代UI"
+    "row_ui": "现代UI",
+    "row_ai": "AI自动标签",
+    "row_crop": "图片裁剪",
+    "row_chunk": "分片上传",
+    "row_search": "全文搜索",
+    "row_darkmode": "深色模式",
+    "row_i18n": "16种语言",
+    "row_php74": "PHP ≥ 7.4"
   },
   "footer": {
     "made_by": "作者",
     "license": "MIT许可证",
     "docs": "文档",
     "changelog": "更新日志",
-    "license_link": "许可证"
+    "license_link": "许可证",
+    "packagist": "Packagist",
+    "npm": "npm"
   }
 }

@@ -10,7 +10,7 @@
     "github": "GitHub"
   },
   "hero": {
-    "badge": "v1.0 — ओपन सोर्स · MIT लाइसेंस",
+    "badge": "v1.22.0 — ओपन सोर्स · MIT लाइसेंस",
     "headline": "कहीं भी एम्बेड होने वाला फ़ाइल मैनेजर",
     "sub": "PHP ≥ 7.4 + Flysystem। लोकल, S3, Cloudflare R2 एक UI में। JavaScript की सिर्फ 3 लाइनें।",
     "cta_start": "शुरू करें",
@@ -38,8 +38,32 @@
     "seo_desc": "SQLite में Alt टेक्स्ट, टाइटल, कैप्शन। S3 ऑब्जेक्ट टैग्स से सिंक।",
     "presign_title": "प्रीसाइन्ड अपलोड",
     "presign_desc": "ब्राउज़र सीधे S3/R2 पर अपलोड करता है — आपके सर्वर पर ज़ीरो बैंडविड्थ।",
-    "i18n_title": "10+ भाषाएँ",
-    "i18n_desc": "ब्राउज़र भाषा ऑटो-डिटेक्ट। RTL सपोर्ट। 1 JSON फ़ाइल में अपनी भाषा जोड़ें।"
+    "i18n_title": "16 भाषाएँ",
+    "i18n_desc": "ब्राउज़र भाषा ऑटो-डिटेक्ट। RTL सपोर्ट। 1 JSON फ़ाइल में अपनी भाषा जोड़ें।",
+    "ai_title": "AI ऑटो-टैग",
+    "ai_desc": "Claude / OpenAI vision — ऑटो alt टेक्स्ट, टाइटल, टैग्स।",
+    "crop_title": "इमेज क्रॉप",
+    "crop_desc": "आस्पेक्ट रेशियो प्रीसेट के साथ इनलाइन क्रॉप टूल।",
+    "optimize_title": "इमेज ऑप्टिमाइज़ेशन",
+    "optimize_desc": "ऑटो WebP वेरिएंट — thumb, medium, large।",
+    "chunk_title": "चंक अपलोड",
+    "chunk_desc": "10MB से बड़ी फ़ाइलों के लिए S3 मल्टीपार्ट।",
+    "trash_title": "ट्रैश",
+    "trash_desc": "रिकवर करने योग्य डिलीट, ऑटो-पर्ज।",
+    "search_title": "फुल-टेक्स्ट सर्च",
+    "search_desc": "SQLite FTS5 नाम, टाइटल, टैग्स में सर्च।",
+    "bulk_title": "बल्क ऑपरेशंस",
+    "bulk_desc": "मल्टी-सेलेक्ट मूव, कॉपी, डिलीट, डाउनलोड।",
+    "crossdisk_title": "क्रॉस-डिस्क ट्रांसफर",
+    "crossdisk_desc": "Local ↔ S3 ↔ R2 के बीच कॉपी/मूव।",
+    "darkmode_title": "डार्क मोड",
+    "darkmode_desc": "ऑटो-डिटेक्ट + मैनुअल टॉगल।",
+    "audit_title": "ऑडिट लॉग",
+    "audit_desc": "सभी राइट एक्शन लॉग।",
+    "ratelimit_title": "रेट लिमिटिंग",
+    "ratelimit_desc": "प्रति-यूज़र टोकन बकेट API सुरक्षा।",
+    "quota_title": "स्टोरेज कोटा",
+    "quota_desc": "JWT claims द्वारा प्रति-यूज़र सीमा।"
   },
   "install": {
     "label": "क्विक इंस्टॉल",
@@ -49,7 +73,9 @@
     "tab_manual": "मैनुअल",
     "copy": "कॉपी",
     "copied": "कॉपी हो गया!",
-    "works_with": "इनके साथ काम करता है"
+    "works_with": "इनके साथ काम करता है",
+    "tab_laravel": "Laravel",
+    "tab_sdk": "JS SDK"
   },
   "compare": {
     "label": "FluxFiles क्यों",
@@ -65,13 +91,22 @@
     "row_jwt": "JWT ऑथ + स्कोपिंग",
     "row_seo": "SEO मेटाडेटा",
     "row_maintained": "सक्रिय रूप से मेंटेन",
-    "row_ui": "मॉडर्न UI"
+    "row_ui": "मॉडर्न UI",
+    "row_ai": "AI ऑटो-टैग",
+    "row_crop": "इमेज क्रॉप",
+    "row_chunk": "चंक अपलोड",
+    "row_search": "फुल-टेक्स्ट सर्च",
+    "row_darkmode": "डार्क मोड",
+    "row_i18n": "16 भाषाएँ",
+    "row_php74": "PHP ≥ 7.4"
   },
   "footer": {
     "made_by": "बनाया",
     "license": "MIT लाइसेंस",
     "docs": "डॉक्स",
     "changelog": "चेंजलॉग",
-    "license_link": "लाइसेंस"
+    "license_link": "लाइसेंस",
+    "packagist": "Packagist",
+    "npm": "npm"
   }
 }

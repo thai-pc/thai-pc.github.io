@@ -10,7 +10,7 @@
     "github": "GitHub"
   },
   "hero": {
-    "badge": "v1.0 — オープンソース · MITライセンス",
+    "badge": "v1.22.0 — オープンソース · MITライセンス",
     "headline": "どこにでも埋め込めるファイルマネージャー",
     "sub": "PHP ≥ 7.4 + Flysystem。Local、S3、Cloudflare R2を一つのUIで。JavaScript3行。",
     "cta_start": "始める",
@@ -38,8 +38,32 @@
     "seo_desc": "Altテキスト、タイトル、キャプションをSQLiteに保存。S3オブジェクトタグと同期。",
     "presign_title": "署名付きアップロード",
     "presign_desc": "ブラウザからS3/R2に直接アップロード — サーバー帯域ゼロ。",
-    "i18n_title": "10+言語",
-    "i18n_desc": "ブラウザ言語を自動検出。RTL対応。JSONファイル1つで言語追加。"
+    "i18n_title": "16言語",
+    "i18n_desc": "ブラウザ言語を自動検出。RTL対応。1つのJSONファイルで言語追加。",
+    "ai_title": "AI自動タグ",
+    "ai_desc": "Claude / OpenAI vision — altテキスト、タイトル、タグを自動生成。",
+    "crop_title": "画像クロップ",
+    "crop_desc": "アスペクト比プリセット付きインラインクロップツール。",
+    "optimize_title": "画像最適化",
+    "optimize_desc": "WebPバリアント自動生成 — サムネイル、中、大。",
+    "chunk_title": "チャンクアップロード",
+    "chunk_desc": "10MB超ファイル向けS3マルチパート。",
+    "trash_title": "ゴミ箱",
+    "trash_desc": "復元可能な削除、自動パージ。",
+    "search_title": "全文検索",
+    "search_desc": "SQLite FTS5でファイル名、タイトル、タグを検索。",
+    "bulk_title": "一括操作",
+    "bulk_desc": "複数選択して移動、コピー、削除、ダウンロード。",
+    "crossdisk_title": "クロスディスク転送",
+    "crossdisk_desc": "ローカル ↔ S3 ↔ R2間のコピー/移動。",
+    "darkmode_title": "ダークモード",
+    "darkmode_desc": "自動検出 + 手動切替。",
+    "audit_title": "監査ログ",
+    "audit_desc": "すべての書き込み操作を記録。",
+    "ratelimit_title": "レート制限",
+    "ratelimit_desc": "ユーザーごとのトークンバケット。",
+    "quota_title": "ストレージクォータ",
+    "quota_desc": "JWTクレームによるユーザーごとの制限。"
   },
   "install": {
     "label": "クイックインストール",
@@ -49,7 +73,9 @@
     "tab_manual": "手動",
     "copy": "コピー",
     "copied": "コピー済み！",
-    "works_with": "対応フレームワーク"
+    "works_with": "対応フレームワーク",
+    "tab_laravel": "Laravel",
+    "tab_sdk": "JS SDK"
   },
   "compare": {
     "label": "FluxFilesを選ぶ理由",
@@ -65,13 +91,22 @@
     "row_jwt": "JWT認証 + スコーピング",
     "row_seo": "SEOメタデータ",
     "row_maintained": "積極的にメンテナンス中",
-    "row_ui": "モダンUI"
+    "row_ui": "モダンUI",
+    "row_ai": "AI自動タグ",
+    "row_crop": "画像クロップ",
+    "row_chunk": "チャンクアップロード",
+    "row_search": "全文検索",
+    "row_darkmode": "ダークモード",
+    "row_i18n": "16言語",
+    "row_php74": "PHP ≥ 7.4"
   },
   "footer": {
     "made_by": "作者",
     "license": "MITライセンス",
     "docs": "ドキュメント",
     "changelog": "変更履歴",
-    "license_link": "ライセンス"
+    "license_link": "ライセンス",
+    "packagist": "Packagist",
+    "npm": "npm"
   }
 }

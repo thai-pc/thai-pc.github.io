@@ -10,7 +10,7 @@
     "github": "GitHub"
   },
   "hero": {
-    "badge": "v1.0 — 오픈소스 · MIT 라이선스",
+    "badge": "v1.22.0 — 오픈소스 · MIT 라이선스",
     "headline": "어디에든 임베드할 수 있는 파일 매니저",
     "sub": "PHP ≥ 7.4 + Flysystem. Local, S3, Cloudflare R2를 하나의 UI로. JavaScript 3줄.",
     "cta_start": "시작하기",
@@ -38,8 +38,32 @@
     "seo_desc": "Alt 텍스트, 제목, 캡션을 SQLite에 저장. S3 오브젝트 태그와 동기화.",
     "presign_title": "사전 서명 업로드",
     "presign_desc": "브라우저에서 S3/R2로 직접 업로드 — 서버 대역폭 제로.",
-    "i18n_title": "10+ 언어",
-    "i18n_desc": "브라우저 언어 자동 감지. RTL 지원. JSON 파일 1개로 언어 추가."
+    "i18n_title": "16개 언어",
+    "i18n_desc": "브라우저 언어 자동 감지. RTL 지원. 1개 JSON 파일로 언어 추가.",
+    "ai_title": "AI 자동 태그",
+    "ai_desc": "Claude / OpenAI vision — alt 텍스트, 제목, 태그 자동 생성.",
+    "crop_title": "이미지 자르기",
+    "crop_desc": "종횡비 프리셋이 있는 인라인 자르기 도구.",
+    "optimize_title": "이미지 최적화",
+    "optimize_desc": "WebP 변형 자동 생성 — 썸네일, 중간, 대형.",
+    "chunk_title": "청크 업로드",
+    "chunk_desc": "10MB 초과 파일용 S3 멀티파트.",
+    "trash_title": "휴지통",
+    "trash_desc": "복구 가능한 삭제, 자동 정리.",
+    "search_title": "전체 텍스트 검색",
+    "search_desc": "SQLite FTS5로 이름, 제목, 태그 검색.",
+    "bulk_title": "일괄 작업",
+    "bulk_desc": "다중 선택 이동, 복사, 삭제, 다운로드.",
+    "crossdisk_title": "크로스 디스크 전송",
+    "crossdisk_desc": "로컬 ↔ S3 ↔ R2 간 복사/이동.",
+    "darkmode_title": "다크 모드",
+    "darkmode_desc": "자동 감지 + 수동 전환.",
+    "audit_title": "감사 로그",
+    "audit_desc": "모든 쓰기 작업 기록.",
+    "ratelimit_title": "속도 제한",
+    "ratelimit_desc": "사용자별 토큰 버킷 API 보호.",
+    "quota_title": "저장소 할당량",
+    "quota_desc": "JWT 클레임을 통한 사용자별 제한."
   },
   "install": {
     "label": "빠른 설치",
@@ -49,7 +73,9 @@
     "tab_manual": "수동",
     "copy": "복사",
     "copied": "복사됨!",
-    "works_with": "호환 프레임워크"
+    "works_with": "호환 프레임워크",
+    "tab_laravel": "Laravel",
+    "tab_sdk": "JS SDK"
   },
   "compare": {
     "label": "왜 FluxFiles인가",
@@ -65,13 +91,22 @@
     "row_jwt": "JWT 인증 + 스코핑",
     "row_seo": "SEO 메타데이터",
     "row_maintained": "활발히 유지보수 중",
-    "row_ui": "현대적 UI"
+    "row_ui": "현대적 UI",
+    "row_ai": "AI 자동 태그",
+    "row_crop": "이미지 자르기",
+    "row_chunk": "청크 업로드",
+    "row_search": "전체 텍스트 검색",
+    "row_darkmode": "다크 모드",
+    "row_i18n": "16개 언어",
+    "row_php74": "PHP ≥ 7.4"
   },
   "footer": {
     "made_by": "제작",
     "license": "MIT 라이선스",
     "docs": "문서",
     "changelog": "변경 기록",
-    "license_link": "라이선스"
+    "license_link": "라이선스",
+    "packagist": "Packagist",
+    "npm": "npm"
   }
 }
