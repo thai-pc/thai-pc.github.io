@@ -12,7 +12,7 @@
   "hero": {
     "badge": "v1.0 — オープンソース · MITライセンス",
     "headline": "どこにでも埋め込めるファイルマネージャー",
-    "sub": "PHP 8.2 + Flysystem。Local、S3、Cloudflare R2を一つのUIで。JavaScript3行。",
+    "sub": "PHP ≥ 7.4 + Flysystem。Local、S3、Cloudflare R2を一つのUIで。JavaScript3行。",
     "cta_start": "始める",
     "cta_github": "GitHubでスターする",
     "stat_php": "フレームワーク不要",

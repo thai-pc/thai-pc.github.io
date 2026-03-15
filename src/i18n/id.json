@@ -12,7 +12,7 @@
   "hero": {
     "badge": "v1.0 — Open Source · Lisensi MIT",
     "headline": "Manajer file yang bisa disematkan di mana saja",
-    "sub": "PHP 8.2 + Flysystem. Lokal, S3, Cloudflare R2 dalam satu UI. 3 baris JavaScript.",
+    "sub": "PHP ≥ 7.4 + Flysystem. Lokal, S3, Cloudflare R2 dalam satu UI. 3 baris JavaScript.",
     "cta_start": "Mulai sekarang",
     "cta_github": "Star di GitHub",
     "stat_php": "Tanpa framework",

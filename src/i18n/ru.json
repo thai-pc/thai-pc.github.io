@@ -12,7 +12,7 @@
   "hero": {
     "badge": "v1.0 — Открытый код · Лицензия MIT",
     "headline": "Файловый менеджер, встраиваемый куда угодно",
-    "sub": "PHP 8.2 + Flysystem. Локальное хранилище, S3, Cloudflare R2 в одном интерфейсе. 3 строки JavaScript.",
+    "sub": "PHP ≥ 7.4 + Flysystem. Локальное хранилище, S3, Cloudflare R2 в одном интерфейсе. 3 строки JavaScript.",
     "cta_start": "Начать",
     "cta_github": "Star на GitHub",
     "stat_php": "Без фреймворков",

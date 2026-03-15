@@ -12,7 +12,7 @@
   "hero": {
     "badge": "v1.0 — مفتوح المصدر · رخصة MIT",
     "headline": "مدير الملفات القابل للتضمين في أي مكان",
-    "sub": "PHP 8.2 + Flysystem. محلي، S3، Cloudflare R2 في واجهة واحدة. 3 أسطر من JavaScript.",
+    "sub": "PHP ≥ 7.4 + Flysystem. محلي، S3، Cloudflare R2 في واجهة واحدة. 3 أسطر من JavaScript.",
     "cta_start": "ابدأ الآن",
     "cta_github": "Star على GitHub",
     "stat_php": "لا يحتاج إطار عمل",

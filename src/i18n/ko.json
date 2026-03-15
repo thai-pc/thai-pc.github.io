@@ -12,7 +12,7 @@
   "hero": {
     "badge": "v1.0 — 오픈소스 · MIT 라이선스",
     "headline": "어디에든 임베드할 수 있는 파일 매니저",
-    "sub": "PHP 8.2 + Flysystem. Local, S3, Cloudflare R2를 하나의 UI로. JavaScript 3줄.",
+    "sub": "PHP ≥ 7.4 + Flysystem. Local, S3, Cloudflare R2를 하나의 UI로. JavaScript 3줄.",
     "cta_start": "시작하기",
     "cta_github": "GitHub에서 스타하기",
     "stat_php": "프레임워크 불필요",

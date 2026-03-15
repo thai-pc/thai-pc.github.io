@@ -12,7 +12,7 @@
   "hero": {
     "badge": "v1.0 — Açık Kaynak · MIT Lisansı",
     "headline": "Her yere gömülebilen dosya yöneticisi",
-    "sub": "PHP 8.2 + Flysystem. Yerel, S3, Cloudflare R2 tek arayüzde. 3 satır JavaScript.",
+    "sub": "PHP ≥ 7.4 + Flysystem. Yerel, S3, Cloudflare R2 tek arayüzde. 3 satır JavaScript.",
     "cta_start": "Başlayın",
     "cta_github": "GitHub'da Star verin",
     "stat_php": "Framework gerektirmez",
