@@ -12,7 +12,7 @@
   "hero": {
     "badge": "v1.0 — Mã nguồn mở · Giấy phép MIT",
     "headline": "Trình quản lý file nhúng được mọi nơi",
-    "sub": "PHP 8.2 + Flysystem. Local, S3, Cloudflare R2 trong một giao diện. 3 dòng JavaScript.",
+    "sub": "PHP ≥ 7.4 + Flysystem. Local, S3, Cloudflare R2 trong một giao diện. 3 dòng JavaScript.",
     "cta_start": "Bắt đầu",
     "cta_github": "Star trên GitHub",
     "stat_php": "Không cần framework",

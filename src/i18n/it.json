@@ -12,7 +12,7 @@
   "hero": {
     "badge": "v1.0 — Open Source · Licenza MIT",
     "headline": "Il file manager integrabile ovunque",
-    "sub": "PHP 8.2 + Flysystem. Locale, S3, Cloudflare R2 in un'unica interfaccia. 3 righe di JavaScript.",
+    "sub": "PHP ≥ 7.4 + Flysystem. Locale, S3, Cloudflare R2 in un'unica interfaccia. 3 righe di JavaScript.",
     "cta_start": "Inizia ora",
     "cta_github": "Star su GitHub",
     "stat_php": "Nessun framework richiesto",

@@ -12,7 +12,7 @@
   "hero": {
     "badge": "v1.0 — โอเพนซอร์ส · สัญญาอนุญาต MIT",
     "headline": "ตัวจัดการไฟล์ที่ฝังได้ทุกที่",
-    "sub": "PHP 8.2 + Flysystem. Local, S3, Cloudflare R2 ใน UI เดียว แค่ 3 บรรทัด JavaScript",
+    "sub": "PHP ≥ 7.4 + Flysystem. Local, S3, Cloudflare R2 ใน UI เดียว แค่ 3 บรรทัด JavaScript",
     "cta_start": "เริ่มต้นใช้งาน",
     "cta_github": "Star บน GitHub",
     "stat_php": "ไม่ต้องใช้เฟรมเวิร์ก",

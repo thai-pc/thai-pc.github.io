@@ -12,7 +12,7 @@
   "hero": {
     "badge": "v1.0 — Open Source · MIT License",
     "headline": "The file manager that embeds anywhere",
-    "sub": "PHP 8.2 + Flysystem. Local, S3, Cloudflare R2 in one UI. 3 lines of JavaScript.",
+    "sub": "PHP ≥ 7.4 + Flysystem. Local, S3, Cloudflare R2 in one UI. 3 lines of JavaScript.",
     "cta_start": "Get started",
     "cta_github": "Star on GitHub",
     "stat_php": "No framework required",

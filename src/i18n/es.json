@@ -12,7 +12,7 @@
   "hero": {
     "badge": "v1.0 — Código abierto · Licencia MIT",
     "headline": "El gestor de archivos que se incrusta en cualquier lugar",
-    "sub": "PHP 8.2 + Flysystem. Local, S3, Cloudflare R2 en una interfaz. 3 líneas de JavaScript.",
+    "sub": "PHP ≥ 7.4 + Flysystem. Local, S3, Cloudflare R2 en una interfaz. 3 líneas de JavaScript.",
     "cta_start": "Comenzar",
     "cta_github": "Star en GitHub",
     "stat_php": "Sin framework requerido",

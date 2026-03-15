@@ -12,7 +12,7 @@
   "hero": {
     "badge": "v1.0 — ओपन सोर्स · MIT लाइसेंस",
     "headline": "कहीं भी एम्बेड होने वाला फ़ाइल मैनेजर",
-    "sub": "PHP 8.2 + Flysystem। लोकल, S3, Cloudflare R2 एक UI में। JavaScript की सिर्फ 3 लाइनें।",
+    "sub": "PHP ≥ 7.4 + Flysystem। लोकल, S3, Cloudflare R2 एक UI में। JavaScript की सिर्फ 3 लाइनें।",
     "cta_start": "शुरू करें",
     "cta_github": "GitHub पर Star करें",
     "stat_php": "कोई फ्रेमवर्क ज़रूरी नहीं",
