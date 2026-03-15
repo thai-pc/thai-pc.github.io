@@ -49,6 +49,32 @@ FluxFiles.open({
 });
 <\/script>`;
 
+const reactCode = `npm install @fluxfiles/react
+
+import { FluxFilesModal } from '@fluxfiles/react';
+
+<FluxFilesModal
+    open={open}
+    endpoint="https://your-api.com"
+    token={token}
+    onSelect={(file) => console.log(file)}
+    onClose={() => setOpen(false)}
+/>`;
+
+const vueCode = `npm install @fluxfiles/vue
+
+<script setup>
+import { FluxFilesModal } from '@fluxfiles/vue';
+<\/script>
+
+<FluxFilesModal
+    v-model:open="open"
+    endpoint="https://your-api.com"
+    :token="token"
+    @select="onSelect"
+    @close="open = false"
+/>`;
+
 const manualCode = `git clone https://github.com/thai-pc/fluxfiles.git
 cd fluxfiles
 composer install
@@ -59,6 +85,8 @@ const tabs = [
   { id: 'composer', label: t('install.tab_composer'), code: composerCode },
   { id: 'laravel',  label: t('install.tab_laravel'),  code: laravelCode },
   { id: 'sdk',      label: t('install.tab_sdk'),      code: sdkCode },
+  { id: 'react',    label: 'React',                   code: reactCode },
+  { id: 'vue',      label: 'Vue',                     code: vueCode },
   { id: 'manual',   label: t('install.tab_manual'),   code: manualCode },
 ];
 
