@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "FluxFiles — Il file manager integrabile ovunque",
+    "description": "File manager PHP open source con S3, R2, storage locale. Integra tramite iframe + postMessage SDK."
+  },
+  "nav": {
+    "docs": "Documentazione",
+    "install": "Installazione",
+    "changelog": "Changelog",
+    "github": "GitHub"
+  },
+  "hero": {
+    "badge": "v1.0 — Open Source · Licenza MIT",
+    "headline": "Il file manager integrabile ovunque",
+    "sub": "PHP 8.2 + Flysystem. Locale, S3, Cloudflare R2 in un'unica interfaccia. 3 righe di JavaScript.",
+    "cta_start": "Inizia ora",
+    "cta_github": "Star su GitHub",
+    "stat_php": "Nessun framework richiesto",
+    "stat_sdk": "Dimensione SDK",
+    "stat_oss": "Licenza open source",
+    "stat_lang": "Lingue supportate"
+  },
+  "demo": {
+    "label": "Anteprima",
+    "headline": "Guardalo in azione"
+  },
+  "features": {
+    "label": "Funzionalità",
+    "headline": "Tutto ciò che serve a un file manager moderno",
+    "sub": "Progettato per sviluppatori che necessitano di flessibilità.",
+    "storage_title": "Multi-storage",
+    "storage_desc": "Locale, AWS S3, Cloudflare R2 — cambia tramite configurazione, nessuna modifica al codice.",
+    "embed_title": "Integra ovunque",
+    "embed_desc": "iframe + postMessage SDK. 3 righe di JS. Funziona con qualsiasi framework.",
+    "jwt_title": "Auth JWT + scoping",
+    "jwt_desc": "Prefisso percorso per utente, claims di autorizzazione, whitelist disco.",
+    "seo_title": "Metadati SEO",
+    "seo_desc": "Alt text, titolo, didascalia in SQLite. Sincronizzato con i tag oggetto S3.",
+    "presign_title": "Upload pre-firmati",
+    "presign_desc": "Il browser carica direttamente su S3/R2 — zero bandwidth sul tuo server.",
+    "i18n_title": "10+ lingue",
+    "i18n_desc": "Rileva automaticamente la lingua del browser. Supporto RTL. Aggiungi la tua in 1 file JSON."
+  },
+  "install": {
+    "label": "Installazione rapida",
+    "headline": "Pronto in 2 minuti",
+    "tab_composer": "Composer (PHP)",
+    "tab_npm": "npm (JS SDK)",
+    "tab_manual": "Manuale",
+    "copy": "Copia",
+    "copied": "Copiato!",
+    "works_with": "Funziona con"
+  },
+  "compare": {
+    "label": "Perché FluxFiles",
+    "headline": "Progettato per ciò che gli altri hanno dimenticato",
+    "col_feature": "Funzionalità",
+    "col_flux": "FluxFiles",
+    "col_elfinder": "elFinder",
+    "col_rfm": "RichFilemanager",
+    "row_storage": "S3 + R2 + Locale",
+    "row_embed": "Integra in qualsiasi framework",
+    "row_jwt": "Auth JWT + scoping",
+    "row_seo": "Metadati SEO",
+    "row_maintained": "Mantenuto attivamente",
+    "row_ui": "UI moderna"
+  },
+  "footer": {
+    "made_by": "Creato da",
+    "license": "Licenza MIT",
+    "docs": "Documentazione",
+    "changelog": "Changelog",
+    "license_link": "Licenza"
+  }
+}

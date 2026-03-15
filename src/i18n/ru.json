@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "FluxFiles — Файловый менеджер, встраиваемый куда угодно",
+    "description": "Открытый PHP файловый менеджер с поддержкой S3, R2, локального хранилища. Встраивайте через iframe + postMessage SDK."
+  },
+  "nav": {
+    "docs": "Документация",
+    "install": "Установка",
+    "changelog": "Изменения",
+    "github": "GitHub"
+  },
+  "hero": {
+    "badge": "v1.0 — Открытый код · Лицензия MIT",
+    "headline": "Файловый менеджер, встраиваемый куда угодно",
+    "sub": "PHP 8.2 + Flysystem. Локальное хранилище, S3, Cloudflare R2 в одном интерфейсе. 3 строки JavaScript.",
+    "cta_start": "Начать",
+    "cta_github": "Star на GitHub",
+    "stat_php": "Без фреймворков",
+    "stat_sdk": "Размер SDK",
+    "stat_oss": "Открытая лицензия",
+    "stat_lang": "Поддержка языков"
+  },
+  "demo": {
+    "label": "Демо",
+    "headline": "Посмотрите в действии"
+  },
+  "features": {
+    "label": "Возможности",
+    "headline": "Всё, что нужно современному файловому менеджеру",
+    "sub": "Создан для разработчиков, которым нужна гибкость.",
+    "storage_title": "Мульти-хранилище",
+    "storage_desc": "Локальное, AWS S3, Cloudflare R2 — переключайте через конфиг без изменения кода.",
+    "embed_title": "Встраивайте куда угодно",
+    "embed_desc": "iframe + postMessage SDK. 3 строки JS. Работает с любым фреймворком.",
+    "jwt_title": "JWT авторизация + скоупинг",
+    "jwt_desc": "Префикс пути для каждого пользователя, claims прав, белый список дисков.",
+    "seo_title": "SEO метаданные",
+    "seo_desc": "Alt-текст, заголовок, подпись в SQLite. Синхронизация с тегами объектов S3.",
+    "presign_title": "Предподписанные загрузки",
+    "presign_desc": "Браузер загружает напрямую в S3/R2 — нулевая нагрузка на ваш сервер.",
+    "i18n_title": "10+ языков",
+    "i18n_desc": "Автоопределение языка браузера. Поддержка RTL. Добавьте свой язык в 1 JSON-файле."
+  },
+  "install": {
+    "label": "Быстрая установка",
+    "headline": "Запуск за 2 минуты",
+    "tab_composer": "Composer (PHP)",
+    "tab_npm": "npm (JS SDK)",
+    "tab_manual": "Вручную",
+    "copy": "Копировать",
+    "copied": "Скопировано!",
+    "works_with": "Работает с"
+  },
+  "compare": {
+    "label": "Почему FluxFiles",
+    "headline": "Создан для того, о чём другие забыли",
+    "col_feature": "Функция",
+    "col_flux": "FluxFiles",
+    "col_elfinder": "elFinder",
+    "col_rfm": "RichFilemanager",
+    "row_storage": "S3 + R2 + Локальное",
+    "row_embed": "Встраивание в любой фреймворк",
+    "row_jwt": "JWT авторизация + скоупинг",
+    "row_seo": "SEO метаданные",
+    "row_maintained": "Активно поддерживается",
+    "row_ui": "Современный UI"
+  },
+  "footer": {
+    "made_by": "Создано",
+    "license": "Лицензия MIT",
+    "docs": "Документация",
+    "changelog": "Изменения",
+    "license_link": "Лицензия"
+  }
+}

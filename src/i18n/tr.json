@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "FluxFiles — Her yere gömülebilen dosya yöneticisi",
+    "description": "S3, R2, yerel depolama destekli açık kaynak PHP dosya yöneticisi. iframe + postMessage SDK ile gömün."
+  },
+  "nav": {
+    "docs": "Dokümantasyon",
+    "install": "Kurulum",
+    "changelog": "Değişiklik Günlüğü",
+    "github": "GitHub"
+  },
+  "hero": {
+    "badge": "v1.0 — Açık Kaynak · MIT Lisansı",
+    "headline": "Her yere gömülebilen dosya yöneticisi",
+    "sub": "PHP 8.2 + Flysystem. Yerel, S3, Cloudflare R2 tek arayüzde. 3 satır JavaScript.",
+    "cta_start": "Başlayın",
+    "cta_github": "GitHub'da Star verin",
+    "stat_php": "Framework gerektirmez",
+    "stat_sdk": "SDK boyutu",
+    "stat_oss": "Açık kaynak lisans",
+    "stat_lang": "Desteklenen diller"
+  },
+  "demo": {
+    "label": "Canlı Önizleme",
+    "headline": "Çalışırken görün"
+  },
+  "features": {
+    "label": "Özellikler",
+    "headline": "Modern bir dosya yöneticisinin ihtiyacı olan her şey",
+    "sub": "Esneklik isteyen geliştiriciler için tasarlandı.",
+    "storage_title": "Çoklu depolama",
+    "storage_desc": "Yerel, AWS S3, Cloudflare R2 — yapılandırmayla değiştirin, kod değişikliği yok.",
+    "embed_title": "Her yere gömün",
+    "embed_desc": "iframe + postMessage SDK. 3 satır JS. Her framework ile çalışır.",
+    "jwt_title": "JWT kimlik doğrulama + kapsam",
+    "jwt_desc": "Kullanıcı başına yol öneki, izin talepleri, disk beyaz listesi.",
+    "seo_title": "SEO meta verileri",
+    "seo_desc": "SQLite'da alt metin, başlık, açıklama. S3 nesne etiketleriyle senkronize.",
+    "presign_title": "Ön imzalı yüklemeler",
+    "presign_desc": "Tarayıcı doğrudan S3/R2'ye yükler — sunucunuzda sıfır bant genişliği.",
+    "i18n_title": "10+ dil",
+    "i18n_desc": "Tarayıcı dilini otomatik algılar. RTL desteği. 1 JSON dosyasında kendi dilinizi ekleyin."
+  },
+  "install": {
+    "label": "Hızlı kurulum",
+    "headline": "2 dakikada hazır",
+    "tab_composer": "Composer (PHP)",
+    "tab_npm": "npm (JS SDK)",
+    "tab_manual": "Manuel",
+    "copy": "Kopyala",
+    "copied": "Kopyalandı!",
+    "works_with": "Şunlarla çalışır"
+  },
+  "compare": {
+    "label": "Neden FluxFiles",
+    "headline": "Başkalarının unuttuğu şeyler için tasarlandı",
+    "col_feature": "Özellik",
+    "col_flux": "FluxFiles",
+    "col_elfinder": "elFinder",
+    "col_rfm": "RichFilemanager",
+    "row_storage": "S3 + R2 + Yerel",
+    "row_embed": "Her framework'e gömme",
+    "row_jwt": "JWT kimlik doğrulama + kapsam",
+    "row_seo": "SEO meta verileri",
+    "row_maintained": "Aktif olarak bakımı yapılıyor",
+    "row_ui": "Modern UI"
+  },
+  "footer": {
+    "made_by": "Yapan",
+    "license": "MIT Lisansı",
+    "docs": "Dokümantasyon",
+    "changelog": "Değişiklik Günlüğü",
+    "license_link": "Lisans"
+  }
+}

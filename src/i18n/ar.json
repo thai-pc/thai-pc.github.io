@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "FluxFiles — مدير الملفات القابل للتضمين في أي مكان",
+    "description": "مدير ملفات PHP مفتوح المصدر يدعم S3 وR2 والتخزين المحلي. قم بالتضمين عبر iframe + postMessage SDK."
+  },
+  "nav": {
+    "docs": "المستندات",
+    "install": "التثبيت",
+    "changelog": "سجل التغييرات",
+    "github": "GitHub"
+  },
+  "hero": {
+    "badge": "v1.0 — مفتوح المصدر · رخصة MIT",
+    "headline": "مدير الملفات القابل للتضمين في أي مكان",
+    "sub": "PHP 8.2 + Flysystem. محلي، S3، Cloudflare R2 في واجهة واحدة. 3 أسطر من JavaScript.",
+    "cta_start": "ابدأ الآن",
+    "cta_github": "Star على GitHub",
+    "stat_php": "لا يحتاج إطار عمل",
+    "stat_sdk": "حجم SDK",
+    "stat_oss": "رخصة مفتوحة المصدر",
+    "stat_lang": "لغات مدعومة"
+  },
+  "demo": {
+    "label": "معاينة مباشرة",
+    "headline": "شاهده أثناء العمل"
+  },
+  "features": {
+    "label": "الميزات",
+    "headline": "كل ما يحتاجه مدير ملفات حديث",
+    "sub": "مصمم للمطورين الذين يحتاجون المرونة.",
+    "storage_title": "تخزين متعدد",
+    "storage_desc": "محلي، AWS S3، Cloudflare R2 — بدّل من الإعدادات دون تغيير الكود.",
+    "embed_title": "تضمين في أي مكان",
+    "embed_desc": "iframe + postMessage SDK. 3 أسطر JS. يعمل مع أي إطار عمل.",
+    "jwt_title": "مصادقة JWT + نطاقات",
+    "jwt_desc": "بادئة مسار لكل مستخدم، صلاحيات، قائمة أقراص مسموحة.",
+    "seo_title": "بيانات SEO الوصفية",
+    "seo_desc": "نص بديل، عنوان، تعليق في SQLite. متزامن مع وسوم كائنات S3.",
+    "presign_title": "رفع بتوقيع مسبق",
+    "presign_desc": "المتصفح يرفع مباشرة إلى S3/R2 — صفر استهلاك على خادمك.",
+    "i18n_title": "+10 لغات",
+    "i18n_desc": "يكتشف لغة المتصفح تلقائياً. دعم RTL. أضف لغتك في ملف JSON واحد."
+  },
+  "install": {
+    "label": "تثبيت سريع",
+    "headline": "جاهز خلال دقيقتين",
+    "tab_composer": "Composer (PHP)",
+    "tab_npm": "npm (JS SDK)",
+    "tab_manual": "يدوي",
+    "copy": "نسخ",
+    "copied": "تم النسخ!",
+    "works_with": "يعمل مع"
+  },
+  "compare": {
+    "label": "لماذا FluxFiles",
+    "headline": "مصمم لما نسيه الآخرون",
+    "col_feature": "الميزة",
+    "col_flux": "FluxFiles",
+    "col_elfinder": "elFinder",
+    "col_rfm": "RichFilemanager",
+    "row_storage": "S3 + R2 + محلي",
+    "row_embed": "تضمين في أي إطار عمل",
+    "row_jwt": "مصادقة JWT + نطاقات",
+    "row_seo": "بيانات SEO الوصفية",
+    "row_maintained": "صيانة نشطة",
+    "row_ui": "واجهة حديثة"
+  },
+  "footer": {
+    "made_by": "صنع بواسطة",
+    "license": "رخصة MIT",
+    "docs": "المستندات",
+    "changelog": "سجل التغييرات",
+    "license_link": "الرخصة"
+  }
+}
