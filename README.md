@@ -101,6 +101,22 @@ fluxfiles-landing/
 - Falls back to `prefers-color-scheme` on first visit
 - Anti-FOUC inline script in `<head>` prevents flash on reload
 
+## Fork / Customize
+
+If you fork this project for your own product, update the following:
+
+| File               | What to change                                |
+| :----------------- | :-------------------------------------------- |
+| `astro.config.mjs` | `site` — your GitHub Pages or custom domain   |
+| `Navbar.astro`     | GitHub repo link + stars badge URL            |
+| `Hero.astro`       | GitHub repo link                              |
+| `Footer.astro`     | Author name / link                            |
+| `Install.astro`    | Install commands (composer, curl, etc.)        |
+| `robots.txt`       | Sitemap URL                                   |
+| `src/i18n/*.json`  | All translatable text                         |
+
+> **Attribution:** This landing page was originally created by [thai-pc](https://github.com/thai-pc). A link back is appreciated but not required under the MIT license.
+
 ## Deploy to GitHub Pages
 
 1. Push to `main` branch
