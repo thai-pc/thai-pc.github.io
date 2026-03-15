@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "FluxFiles — どこにでも埋め込めるファイルマネージャー",
+    "description": "S3、R2、ローカルストレージ対応のオープンソースPHPファイルマネージャー。iframe + postMessage SDKで埋め込み。"
+  },
+  "nav": {
+    "docs": "ドキュメント",
+    "install": "インストール",
+    "changelog": "変更履歴",
+    "github": "GitHub"
+  },
+  "hero": {
+    "badge": "v1.0 — オープンソース · MITライセンス",
+    "headline": "どこにでも埋め込めるファイルマネージャー",
+    "sub": "PHP 8.2 + Flysystem。Local、S3、Cloudflare R2を一つのUIで。JavaScript3行。",
+    "cta_start": "始める",
+    "cta_github": "GitHubでスターする",
+    "stat_php": "フレームワーク不要",
+    "stat_sdk": "SDKバンドルサイズ",
+    "stat_oss": "オープンソースライセンス",
+    "stat_lang": "対応言語"
+  },
+  "demo": {
+    "label": "プレビュー",
+    "headline": "実際の動作を確認"
+  },
+  "features": {
+    "label": "機能",
+    "headline": "モダンなファイルマネージャーに必要なすべて",
+    "sub": "柔軟性を求める開発者のために構築。",
+    "storage_title": "マルチストレージ",
+    "storage_desc": "Local、AWS S3、Cloudflare R2 — 設定で切り替え、コード変更不要。",
+    "embed_title": "どこにでも埋め込み",
+    "embed_desc": "iframe + postMessage SDK。JS3行。あらゆるフレームワークに対応。",
+    "jwt_title": "JWT認証 + スコーピング",
+    "jwt_desc": "ユーザーごとのパスプレフィックス、権限クレーム、ディスクホワイトリスト。",
+    "seo_title": "SEOメタデータ",
+    "seo_desc": "Altテキスト、タイトル、キャプションをSQLiteに保存。S3オブジェクトタグと同期。",
+    "presign_title": "署名付きアップロード",
+    "presign_desc": "ブラウザからS3/R2に直接アップロード — サーバー帯域ゼロ。",
+    "i18n_title": "10+言語",
+    "i18n_desc": "ブラウザ言語を自動検出。RTL対応。JSONファイル1つで言語追加。"
+  },
+  "install": {
+    "label": "クイックインストール",
+    "headline": "2分で起動",
+    "tab_composer": "Composer (PHP)",
+    "tab_npm": "npm (JS SDK)",
+    "tab_manual": "手動",
+    "copy": "コピー",
+    "copied": "コピー済み！",
+    "works_with": "対応フレームワーク"
+  },
+  "compare": {
+    "label": "FluxFilesを選ぶ理由",
+    "headline": "他が忘れたものを構築",
+    "col_feature": "機能",
+    "col_flux": "FluxFiles",
+    "col_elfinder": "elFinder",
+    "col_rfm": "RichFilemanager",
+    "row_storage": "S3 + R2 + Local",
+    "row_embed": "あらゆるフレームワークに埋め込み",
+    "row_jwt": "JWT認証 + スコーピング",
+    "row_seo": "SEOメタデータ",
+    "row_maintained": "積極的にメンテナンス中",
+    "row_ui": "モダンUI"
+  },
+  "footer": {
+    "made_by": "作者",
+    "license": "MITライセンス",
+    "docs": "ドキュメント",
+    "changelog": "変更履歴",
+    "license_link": "ライセンス"
+  }
+}

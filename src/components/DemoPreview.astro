@@ -1,0 +1,138 @@
+---
+import { useTranslations, type Lang } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section class="py-16 sm:py-20">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-5xl">
+      <!-- Browser Chrome -->
+      <div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-2xl shadow-gray-200/50 dark:shadow-black/30 overflow-hidden">
+        <!-- Title Bar -->
+        <div class="flex items-center gap-2 px-4 py-3 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
+          <div class="flex gap-1.5">
+            <div class="w-3 h-3 rounded-full bg-red-400"></div>
+            <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+            <div class="w-3 h-3 rounded-full bg-green-400"></div>
+          </div>
+          <div class="flex-1 flex justify-center">
+            <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-md px-4 py-1 text-xs text-gray-500 dark:text-gray-400 font-mono">
+              your-app.com/admin/files
+            </div>
+          </div>
+        </div>
+
+        <!-- File Manager UI -->
+        <div class="flex min-h-[350px] sm:min-h-[420px]">
+          <!-- Sidebar -->
+          <div class="hidden sm:flex flex-col w-44 border-r border-gray-200 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-800/50 p-3">
+            <!-- Disk Switcher -->
+            <div class="flex gap-1 mb-4">
+              <span class="text-[10px] font-medium px-2 py-0.5 rounded-full bg-accent text-white">S3</span>
+              <span class="text-[10px] font-medium px-2 py-0.5 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400">R2</span>
+              <span class="text-[10px] font-medium px-2 py-0.5 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400">Local</span>
+            </div>
+            <!-- Folder Tree -->
+            <div class="space-y-1 text-xs">
+              <div class="flex items-center gap-1.5 px-2 py-1.5 rounded-md bg-accent-light dark:bg-accent/10 text-accent dark:text-accent-dark font-medium">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" /></svg>
+                uploads
+              </div>
+              <div class="flex items-center gap-1.5 px-2 py-1.5 rounded-md text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" /></svg>
+                avatars
+              </div>
+              <div class="flex items-center gap-1.5 px-2 py-1.5 rounded-md text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" /></svg>
+                documents
+              </div>
+              <div class="flex items-center gap-1.5 px-2 py-1.5 rounded-md text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" /></svg>
+                media
+              </div>
+              <div class="flex items-center gap-1.5 px-2 py-1.5 rounded-md text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" /></svg>
+                backups
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Area -->
+          <div class="flex-1 p-4">
+            <!-- Toolbar -->
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-2">
+                <span class="text-xs text-gray-400 dark:text-gray-500 font-mono">/uploads</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="w-6 h-6 rounded bg-accent/10 dark:bg-accent/20 flex items-center justify-center">
+                  <svg class="w-3.5 h-3.5 text-accent dark:text-accent-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+                </div>
+                <div class="w-6 h-6 rounded bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
+                  <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" /></svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- File Grid -->
+            <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-3">
+              <div class="group flex flex-col items-center gap-2 p-3 rounded-lg border border-transparent hover:border-gray-200 dark:hover:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer transition-colors">
+                <div class="w-10 h-10 rounded-lg bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-lg">🖼️</div>
+                <span class="text-[11px] text-gray-600 dark:text-gray-400 truncate w-full text-center">hero.png</span>
+              </div>
+              <div class="group flex flex-col items-center gap-2 p-3 rounded-lg border border-accent/30 bg-accent-light/30 dark:bg-accent/5 dark:border-accent/20 cursor-pointer">
+                <div class="w-10 h-10 rounded-lg bg-green-50 dark:bg-green-900/20 flex items-center justify-center text-lg">📄</div>
+                <span class="text-[11px] text-accent dark:text-accent-dark truncate w-full text-center font-medium">report.pdf</span>
+              </div>
+              <div class="group flex flex-col items-center gap-2 p-3 rounded-lg border border-transparent hover:border-gray-200 dark:hover:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer transition-colors">
+                <div class="w-10 h-10 rounded-lg bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center text-lg">🎬</div>
+                <span class="text-[11px] text-gray-600 dark:text-gray-400 truncate w-full text-center">demo.mp4</span>
+              </div>
+              <div class="group flex flex-col items-center gap-2 p-3 rounded-lg border border-transparent hover:border-gray-200 dark:hover:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer transition-colors">
+                <div class="w-10 h-10 rounded-lg bg-yellow-50 dark:bg-yellow-900/20 flex items-center justify-center text-lg">📊</div>
+                <span class="text-[11px] text-gray-600 dark:text-gray-400 truncate w-full text-center">data.csv</span>
+              </div>
+              <div class="group flex flex-col items-center gap-2 p-3 rounded-lg border border-transparent hover:border-gray-200 dark:hover:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer transition-colors">
+                <div class="w-10 h-10 rounded-lg bg-red-50 dark:bg-red-900/20 flex items-center justify-center text-lg">🎵</div>
+                <span class="text-[11px] text-gray-600 dark:text-gray-400 truncate w-full text-center">track.mp3</span>
+              </div>
+              <div class="group flex flex-col items-center gap-2 p-3 rounded-lg border border-transparent hover:border-gray-200 dark:hover:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer transition-colors">
+                <div class="w-10 h-10 rounded-lg bg-orange-50 dark:bg-orange-900/20 flex items-center justify-center text-lg">🖼️</div>
+                <span class="text-[11px] text-gray-600 dark:text-gray-400 truncate w-full text-center">banner.jpg</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Detail Panel (desktop only) -->
+          <div class="hidden lg:flex flex-col w-52 border-l border-gray-200 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-800/50 p-4">
+            <div class="flex flex-col items-center text-center">
+              <div class="w-16 h-16 rounded-xl bg-green-50 dark:bg-green-900/20 flex items-center justify-center text-2xl mb-3">📄</div>
+              <div class="text-sm font-medium text-gray-900 dark:text-white">report.pdf</div>
+              <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">2.4 MB</div>
+            </div>
+            <div class="mt-4 space-y-3 text-xs">
+              <div>
+                <div class="text-gray-400 dark:text-gray-500">Disk</div>
+                <div class="text-gray-700 dark:text-gray-300 font-medium mt-0.5">AWS S3</div>
+              </div>
+              <div>
+                <div class="text-gray-400 dark:text-gray-500">Modified</div>
+                <div class="text-gray-700 dark:text-gray-300 font-medium mt-0.5">Mar 14, 2026</div>
+              </div>
+              <div>
+                <div class="text-gray-400 dark:text-gray-500">Alt text</div>
+                <div class="text-gray-700 dark:text-gray-300 font-medium mt-0.5">Q1 Financial Report</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

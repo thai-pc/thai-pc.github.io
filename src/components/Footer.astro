@@ -1,0 +1,47 @@
+---
+import { useTranslations, type Lang } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<footer class="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-surface-dark">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex flex-col items-center sm:items-start gap-2">
+        <a href={`/fluxfiles/${lang}/`} class="flex items-center gap-1 text-lg font-bold tracking-tight">
+          <span class="text-accent">Flux</span><span class="text-gray-600 dark:text-gray-400">Files</span>
+        </a>
+        <p class="text-sm text-gray-500 dark:text-gray-400">
+          {t('footer.made_by')} <a href="https://github.com/thai-pc" target="_blank" rel="noopener noreferrer" class="text-accent dark:text-accent-dark hover:underline">thai-pc</a>
+          &nbsp;·&nbsp;
+          {t('footer.license')}
+        </p>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="#features" class="text-sm text-gray-500 dark:text-gray-400 hover:text-accent dark:hover:text-accent-dark transition-colors">{t('footer.docs')}</a>
+        <a
+          href="https://github.com/thai-pc/fluxfiles"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm text-gray-500 dark:text-gray-400 hover:text-accent dark:hover:text-accent-dark transition-colors"
+        >
+          GitHub
+        </a>
+        <a href="#" class="text-sm text-gray-500 dark:text-gray-400 hover:text-accent dark:hover:text-accent-dark transition-colors">{t('footer.changelog')}</a>
+        <a href="#" class="text-sm text-gray-500 dark:text-gray-400 hover:text-accent dark:hover:text-accent-dark transition-colors">{t('footer.license_link')}</a>
+      </div>
+    </div>
+
+    <div class="mt-8 pt-6 border-t border-gray-100 dark:border-gray-800 text-center">
+      <p class="text-xs text-gray-400 dark:text-gray-500">
+        &copy; {new Date().getFullYear()} FluxFiles. Open source under MIT License.
+      </p>
+    </div>
+  </div>
+</footer>

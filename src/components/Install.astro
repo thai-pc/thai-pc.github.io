@@ -1,0 +1,160 @@
+---
+import { useTranslations, type Lang } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const composerCode = `composer require fluxfiles/fluxfiles
+
+# config/fluxfiles.php
+return [
+    'disks' => [
+        'local'  => ['driver' => 'local', 'root' => storage_path('app/public')],
+        's3'     => ['driver' => 's3', 'bucket' => env('AWS_BUCKET')],
+        'r2'     => ['driver' => 's3', 'bucket' => env('R2_BUCKET')],
+    ],
+    'auth' => ['driver' => 'jwt', 'secret' => env('FLUX_JWT_SECRET')],
+];`;
+
+const npmCode = `npm install @fluxfiles/sdk
+
+// In your app
+import { FluxFiles } from '@fluxfiles/sdk';
+
+FluxFiles.open({
+  el: '#file-picker',
+  endpoint: 'https://your-api.com/fluxfiles',
+  token: userJwtToken,
+});`;
+
+const manualCode = `# 1. Download latest release
+curl -L https://github.com/thai-pc/fluxfiles/releases/latest \\
+     -o fluxfiles.zip
+
+# 2. Extract to your project
+unzip fluxfiles.zip -d ./vendor/fluxfiles
+
+# 3. Include in your PHP file
+require_once './vendor/fluxfiles/autoload.php';`;
+
+const frameworks = [
+  { name: 'Laravel', color: 'bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400' },
+  { name: 'WordPress', color: 'bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-400' },
+  { name: 'React', color: 'bg-cyan-50 dark:bg-cyan-900/20 text-cyan-700 dark:text-cyan-400' },
+  { name: 'Vue', color: 'bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400' },
+  { name: 'Svelte', color: 'bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-400' },
+  { name: 'Next.js', color: 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300' },
+];
+---
+
+<section id="install" class="py-16 sm:py-24">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <div class="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent-light dark:bg-accent/10 px-3 py-1 text-xs font-medium text-accent dark:text-accent-dark mb-4">
+        {t('install.label')}
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
+        {t('install.headline')}
+      </h2>
+    </div>
+
+    <div class="mx-auto max-w-3xl" x-data="{ tab: 'composer' }">
+      <!-- Tabs -->
+      <div class="flex border-b border-gray-200 dark:border-gray-700 mb-0">
+        <button
+          @click="tab = 'composer'"
+          :class="tab === 'composer' ? 'border-accent text-accent dark:text-accent-dark' : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'"
+          class="px-4 py-2.5 text-sm font-medium border-b-2 -mb-px transition-colors"
+        >
+          {t('install.tab_composer')}
+        </button>
+        <button
+          @click="tab = 'npm'"
+          :class="tab === 'npm' ? 'border-accent text-accent dark:text-accent-dark' : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'"
+          class="px-4 py-2.5 text-sm font-medium border-b-2 -mb-px transition-colors"
+        >
+          {t('install.tab_npm')}
+        </button>
+        <button
+          @click="tab = 'manual'"
+          :class="tab === 'manual' ? 'border-accent text-accent dark:text-accent-dark' : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'"
+          class="px-4 py-2.5 text-sm font-medium border-b-2 -mb-px transition-colors"
+        >
+          {t('install.tab_manual')}
+        </button>
+      </div>
+
+      <!-- Code Panels -->
+      <div class="relative">
+        <div x-show="tab === 'composer'" class="relative">
+          <div class="bg-gray-950 rounded-b-xl p-4 overflow-x-auto">
+            <pre class="text-sm text-gray-300 font-mono leading-relaxed"><code id="code-composer">{composerCode}</code></pre>
+          </div>
+          <button
+            onclick="copyCode('composer')"
+            class="absolute top-3 right-3 px-3 py-1 text-xs font-medium text-gray-400 hover:text-white bg-gray-800 hover:bg-gray-700 rounded-md transition-colors"
+            data-copy-btn="composer"
+          >
+            {t('install.copy')}
+          </button>
+        </div>
+
+        <div x-show="tab === 'npm'" x-cloak class="relative">
+          <div class="bg-gray-950 rounded-b-xl p-4 overflow-x-auto">
+            <pre class="text-sm text-gray-300 font-mono leading-relaxed"><code id="code-npm">{npmCode}</code></pre>
+          </div>
+          <button
+            onclick="copyCode('npm')"
+            class="absolute top-3 right-3 px-3 py-1 text-xs font-medium text-gray-400 hover:text-white bg-gray-800 hover:bg-gray-700 rounded-md transition-colors"
+            data-copy-btn="npm"
+          >
+            {t('install.copy')}
+          </button>
+        </div>
+
+        <div x-show="tab === 'manual'" x-cloak class="relative">
+          <div class="bg-gray-950 rounded-b-xl p-4 overflow-x-auto">
+            <pre class="text-sm text-gray-300 font-mono leading-relaxed"><code id="code-manual">{manualCode}</code></pre>
+          </div>
+          <button
+            onclick="copyCode('manual')"
+            class="absolute top-3 right-3 px-3 py-1 text-xs font-medium text-gray-400 hover:text-white bg-gray-800 hover:bg-gray-700 rounded-md transition-colors"
+            data-copy-btn="manual"
+          >
+            {t('install.copy')}
+          </button>
+        </div>
+      </div>
+
+      <!-- Framework Pills -->
+      <div class="mt-8 text-center">
+        <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">{t('install.works_with')}</p>
+        <div class="flex flex-wrap justify-center gap-2">
+          {frameworks.map((fw) => (
+            <span class:list={['px-3 py-1.5 rounded-full text-xs font-medium', fw.color]}>
+              {fw.name}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  function copyCode(tab) {
+    var code = document.getElementById('code-' + tab);
+    if (!code) return;
+    navigator.clipboard.writeText(code.textContent || '').then(function() {
+      var btn = document.querySelector('[data-copy-btn="' + tab + '"]');
+      if (!btn) return;
+      var original = btn.textContent;
+      btn.textContent = '\u2713 Copied!';
+      setTimeout(function() { btn.textContent = original; }, 2000);
+    });
+  }
+</script>

@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "FluxFiles — The file manager that embeds anywhere",
+    "description": "Open source PHP file manager with S3, R2, local storage. Embed via iframe + postMessage SDK."
+  },
+  "nav": {
+    "docs": "Docs",
+    "install": "Install",
+    "changelog": "Changelog",
+    "github": "GitHub"
+  },
+  "hero": {
+    "badge": "v1.0 — Open Source · MIT License",
+    "headline": "The file manager that embeds anywhere",
+    "sub": "PHP 8.2 + Flysystem. Local, S3, Cloudflare R2 in one UI. 3 lines of JavaScript.",
+    "cta_start": "Get started",
+    "cta_github": "Star on GitHub",
+    "stat_php": "No framework required",
+    "stat_sdk": "SDK bundle size",
+    "stat_oss": "Open source license",
+    "stat_lang": "Languages supported"
+  },
+  "demo": {
+    "label": "Live Preview",
+    "headline": "See it in action"
+  },
+  "features": {
+    "label": "Features",
+    "headline": "Everything a modern file manager needs",
+    "sub": "Built for developers who need flexibility.",
+    "storage_title": "Multi-storage",
+    "storage_desc": "Local, AWS S3, Cloudflare R2 — swap with config, no code change.",
+    "embed_title": "Embed anywhere",
+    "embed_desc": "iframe + postMessage SDK. 3 lines of JS. Works with any framework.",
+    "jwt_title": "JWT auth + scoping",
+    "jwt_desc": "Per-user path prefix, permission claims, disk whitelist.",
+    "seo_title": "SEO metadata",
+    "seo_desc": "Alt text, title, caption in SQLite. Synced to S3 object tags.",
+    "presign_title": "Presigned uploads",
+    "presign_desc": "Browser uploads directly to S3/R2 — zero bandwidth on your server.",
+    "i18n_title": "10+ languages",
+    "i18n_desc": "Auto-detects browser language. RTL support. Add your own in 1 JSON file."
+  },
+  "install": {
+    "label": "Quick install",
+    "headline": "Up and running in 2 minutes",
+    "tab_composer": "Composer (PHP)",
+    "tab_npm": "npm (JS SDK)",
+    "tab_manual": "Manual",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "works_with": "Works with"
+  },
+  "compare": {
+    "label": "Why FluxFiles",
+    "headline": "Built for what others forgot",
+    "col_feature": "Feature",
+    "col_flux": "FluxFiles",
+    "col_elfinder": "elFinder",
+    "col_rfm": "RichFilemanager",
+    "row_storage": "S3 + R2 + Local",
+    "row_embed": "Embed any framework",
+    "row_jwt": "JWT auth + scoping",
+    "row_seo": "SEO metadata",
+    "row_maintained": "Actively maintained",
+    "row_ui": "Modern UI"
+  },
+  "footer": {
+    "made_by": "Made by",
+    "license": "MIT License",
+    "docs": "Docs",
+    "changelog": "Changelog",
+    "license_link": "License"
+  }
+}

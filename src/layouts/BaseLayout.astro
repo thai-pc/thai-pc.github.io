@@ -1,0 +1,74 @@
+---
+import { langList, type Lang } from '../i18n/utils';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  lang: Lang;
+}
+
+const { title, description, lang } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang={lang} class="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="icon" type="image/svg+xml" href="/fluxfiles/favicon.svg" />
+
+    {langList.map((l) => (
+      <link
+        rel="alternate"
+        hreflang={l}
+        href={new URL(`/fluxfiles/${l}/`, Astro.site)}
+      />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={new URL('/fluxfiles/en/', Astro.site)} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL('/fluxfiles/og-image.png', Astro.site)} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:locale" content={lang} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL('/fluxfiles/og-image.png', Astro.site)} />
+
+    <link rel="preload" href="/fluxfiles/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
+
+    <script is:inline>
+      (function() {
+        const stored = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (stored === 'dark' || (!stored && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "FluxFiles",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "license": "https://opensource.org/licenses/MIT"
+    })} />
+  </head>
+  <body class="min-h-screen font-sans antialiased">
+    <slot />
+  </body>
+</html>

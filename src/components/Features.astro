@@ -1,0 +1,77 @@
+---
+import { useTranslations, type Lang } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const features = [
+  {
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" /></svg>`,
+    title: t('features.storage_title'),
+    desc: t('features.storage_desc'),
+    color: 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400',
+  },
+  {
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>`,
+    title: t('features.embed_title'),
+    desc: t('features.embed_desc'),
+    color: 'bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400',
+  },
+  {
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>`,
+    title: t('features.jwt_title'),
+    desc: t('features.jwt_desc'),
+    color: 'bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400',
+  },
+  {
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>`,
+    title: t('features.seo_title'),
+    desc: t('features.seo_desc'),
+    color: 'bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400',
+  },
+  {
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" /></svg>`,
+    title: t('features.presign_title'),
+    desc: t('features.presign_desc'),
+    color: 'bg-rose-50 dark:bg-rose-900/20 text-rose-600 dark:text-rose-400',
+  },
+  {
+    icon: `<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" /></svg>`,
+    title: t('features.i18n_title'),
+    desc: t('features.i18n_desc'),
+    color: 'bg-teal-50 dark:bg-teal-900/20 text-teal-600 dark:text-teal-400',
+  },
+];
+---
+
+<section id="features" class="py-16 sm:py-24 bg-gray-50/50 dark:bg-gray-900/50">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <div class="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent-light dark:bg-accent/10 px-3 py-1 text-xs font-medium text-accent dark:text-accent-dark mb-4">
+        {t('features.label')}
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
+        {t('features.headline')}
+      </h2>
+      <p class="mt-4 text-gray-600 dark:text-gray-400">
+        {t('features.sub')}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {features.map((f) => (
+        <div class="group p-6 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/50 hover:border-accent/30 dark:hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5 transition-all duration-200">
+          <div class:list={['w-10 h-10 rounded-lg flex items-center justify-center mb-4', f.color]}>
+            <Fragment set:html={f.icon} />
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">{f.title}</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{f.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

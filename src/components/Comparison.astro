@@ -1,0 +1,61 @@
+---
+import { useTranslations, type Lang } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const rows = [
+  { key: 'row_storage', flux: '✓', elfinder: '⚠', rfm: '⚠' },
+  { key: 'row_embed',   flux: '✓', elfinder: '⚠', rfm: '⚠' },
+  { key: 'row_jwt',     flux: '✓', elfinder: '✗', rfm: '✗' },
+  { key: 'row_seo',     flux: '✓', elfinder: '✗', rfm: '✗' },
+  { key: 'row_maintained', flux: '✓', elfinder: '✓', rfm: '✗' },
+  { key: 'row_ui',      flux: '✓', elfinder: '✗', rfm: '✗' },
+];
+
+function statusClass(val: string): string {
+  if (val === '✓') return 'text-green-600 dark:text-green-400 font-bold';
+  if (val === '✗') return 'text-red-500 dark:text-red-400';
+  return 'text-amber-500 dark:text-amber-400';
+}
+---
+
+<section class="py-16 sm:py-24 bg-gray-50/50 dark:bg-gray-900/50">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <div class="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent-light dark:bg-accent/10 px-3 py-1 text-xs font-medium text-accent dark:text-accent-dark mb-4">
+        {t('compare.label')}
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
+        {t('compare.headline')}
+      </h2>
+    </div>
+
+    <div class="mx-auto max-w-3xl overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-gray-200 dark:border-gray-700">
+            <th class="text-left py-3 px-4 font-medium text-gray-500 dark:text-gray-400">{t('compare.col_feature')}</th>
+            <th class="text-center py-3 px-4 font-bold text-accent dark:text-accent-dark">{t('compare.col_flux')}</th>
+            <th class="text-center py-3 px-4 font-medium text-gray-500 dark:text-gray-400">{t('compare.col_elfinder')}</th>
+            <th class="text-center py-3 px-4 font-medium text-gray-500 dark:text-gray-400">{t('compare.col_rfm')}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row) => (
+            <tr class="border-b border-gray-100 dark:border-gray-800">
+              <td class="py-3 px-4 text-gray-700 dark:text-gray-300">{t(`compare.${row.key}`)}</td>
+              <td class:list={['py-3 px-4 text-center text-lg', statusClass(row.flux)]}>{row.flux}</td>
+              <td class:list={['py-3 px-4 text-center text-lg', statusClass(row.elfinder)]}>{row.elfinder}</td>
+              <td class:list={['py-3 px-4 text-center text-lg', statusClass(row.rfm)]}>{row.rfm}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

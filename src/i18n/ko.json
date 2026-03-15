@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "FluxFiles — 어디에든 임베드할 수 있는 파일 매니저",
+    "description": "S3, R2, 로컬 스토리지를 지원하는 오픈소스 PHP 파일 매니저. iframe + postMessage SDK로 임베드."
+  },
+  "nav": {
+    "docs": "문서",
+    "install": "설치",
+    "changelog": "변경 기록",
+    "github": "GitHub"
+  },
+  "hero": {
+    "badge": "v1.0 — 오픈소스 · MIT 라이선스",
+    "headline": "어디에든 임베드할 수 있는 파일 매니저",
+    "sub": "PHP 8.2 + Flysystem. Local, S3, Cloudflare R2를 하나의 UI로. JavaScript 3줄.",
+    "cta_start": "시작하기",
+    "cta_github": "GitHub에서 스타하기",
+    "stat_php": "프레임워크 불필요",
+    "stat_sdk": "SDK 번들 크기",
+    "stat_oss": "오픈소스 라이선스",
+    "stat_lang": "지원 언어"
+  },
+  "demo": {
+    "label": "미리보기",
+    "headline": "실제 동작 확인"
+  },
+  "features": {
+    "label": "기능",
+    "headline": "현대적인 파일 매니저에 필요한 모든 것",
+    "sub": "유연성이 필요한 개발자를 위해 구축.",
+    "storage_title": "멀티 스토리지",
+    "storage_desc": "Local, AWS S3, Cloudflare R2 — 설정으로 전환, 코드 변경 불필요.",
+    "embed_title": "어디든 임베드",
+    "embed_desc": "iframe + postMessage SDK. JS 3줄. 모든 프레임워크와 호환.",
+    "jwt_title": "JWT 인증 + 스코핑",
+    "jwt_desc": "사용자별 경로 접두사, 권한 클레임, 디스크 화이트리스트.",
+    "seo_title": "SEO 메타데이터",
+    "seo_desc": "Alt 텍스트, 제목, 캡션을 SQLite에 저장. S3 오브젝트 태그와 동기화.",
+    "presign_title": "사전 서명 업로드",
+    "presign_desc": "브라우저에서 S3/R2로 직접 업로드 — 서버 대역폭 제로.",
+    "i18n_title": "10+ 언어",
+    "i18n_desc": "브라우저 언어 자동 감지. RTL 지원. JSON 파일 1개로 언어 추가."
+  },
+  "install": {
+    "label": "빠른 설치",
+    "headline": "2분 만에 시작",
+    "tab_composer": "Composer (PHP)",
+    "tab_npm": "npm (JS SDK)",
+    "tab_manual": "수동",
+    "copy": "복사",
+    "copied": "복사됨!",
+    "works_with": "호환 프레임워크"
+  },
+  "compare": {
+    "label": "왜 FluxFiles인가",
+    "headline": "다른 도구가 잊은 것을 구축",
+    "col_feature": "기능",
+    "col_flux": "FluxFiles",
+    "col_elfinder": "elFinder",
+    "col_rfm": "RichFilemanager",
+    "row_storage": "S3 + R2 + Local",
+    "row_embed": "모든 프레임워크에 임베드",
+    "row_jwt": "JWT 인증 + 스코핑",
+    "row_seo": "SEO 메타데이터",
+    "row_maintained": "활발히 유지보수 중",
+    "row_ui": "현대적 UI"
+  },
+  "footer": {
+    "made_by": "제작",
+    "license": "MIT 라이선스",
+    "docs": "문서",
+    "changelog": "변경 기록",
+    "license_link": "라이선스"
+  }
+}

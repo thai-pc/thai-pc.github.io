@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "FluxFiles — Trình quản lý file nhúng được mọi nơi",
+    "description": "Trình quản lý file PHP mã nguồn mở hỗ trợ S3, R2, local. Nhúng qua iframe + postMessage SDK."
+  },
+  "nav": {
+    "docs": "Tài liệu",
+    "install": "Cài đặt",
+    "changelog": "Nhật ký",
+    "github": "GitHub"
+  },
+  "hero": {
+    "badge": "v1.0 — Mã nguồn mở · Giấy phép MIT",
+    "headline": "Trình quản lý file nhúng được mọi nơi",
+    "sub": "PHP 8.2 + Flysystem. Local, S3, Cloudflare R2 trong một giao diện. 3 dòng JavaScript.",
+    "cta_start": "Bắt đầu",
+    "cta_github": "Star trên GitHub",
+    "stat_php": "Không cần framework",
+    "stat_sdk": "Kích thước SDK",
+    "stat_oss": "Giấy phép mã nguồn mở",
+    "stat_lang": "Ngôn ngữ hỗ trợ"
+  },
+  "demo": {
+    "label": "Xem trước",
+    "headline": "Xem thực tế"
+  },
+  "features": {
+    "label": "Tính năng",
+    "headline": "Mọi thứ một trình quản lý file hiện đại cần",
+    "sub": "Xây dựng cho lập trình viên cần sự linh hoạt.",
+    "storage_title": "Đa lưu trữ",
+    "storage_desc": "Local, AWS S3, Cloudflare R2 — thay đổi bằng config, không cần sửa code.",
+    "embed_title": "Nhúng mọi nơi",
+    "embed_desc": "iframe + postMessage SDK. 3 dòng JS. Hoạt động với mọi framework.",
+    "jwt_title": "JWT auth + phân quyền",
+    "jwt_desc": "Tiền tố đường dẫn theo user, phân quyền claims, danh sách disk.",
+    "seo_title": "SEO metadata",
+    "seo_desc": "Alt text, title, caption trong SQLite. Đồng bộ với S3 object tags.",
+    "presign_title": "Upload presigned",
+    "presign_desc": "Trình duyệt upload trực tiếp lên S3/R2 — không tốn bandwidth server.",
+    "i18n_title": "10+ ngôn ngữ",
+    "i18n_desc": "Tự nhận diện ngôn ngữ trình duyệt. Hỗ trợ RTL. Thêm ngôn ngữ bằng 1 file JSON."
+  },
+  "install": {
+    "label": "Cài đặt nhanh",
+    "headline": "Chạy trong 2 phút",
+    "tab_composer": "Composer (PHP)",
+    "tab_npm": "npm (JS SDK)",
+    "tab_manual": "Thủ công",
+    "copy": "Sao chép",
+    "copied": "Đã sao chép!",
+    "works_with": "Tương thích với"
+  },
+  "compare": {
+    "label": "Tại sao FluxFiles",
+    "headline": "Xây dựng cho những gì người khác bỏ quên",
+    "col_feature": "Tính năng",
+    "col_flux": "FluxFiles",
+    "col_elfinder": "elFinder",
+    "col_rfm": "RichFilemanager",
+    "row_storage": "S3 + R2 + Local",
+    "row_embed": "Nhúng mọi framework",
+    "row_jwt": "JWT auth + phân quyền",
+    "row_seo": "SEO metadata",
+    "row_maintained": "Đang maintain",
+    "row_ui": "UI hiện đại"
+  },
+  "footer": {
+    "made_by": "Tạo bởi",
+    "license": "Giấy phép MIT",
+    "docs": "Tài liệu",
+    "changelog": "Nhật ký",
+    "license_link": "Giấy phép"
+  }
+}

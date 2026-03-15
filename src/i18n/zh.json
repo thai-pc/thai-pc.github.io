@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "FluxFiles — 可嵌入任何地方的文件管理器",
+    "description": "开源PHP文件管理器，支持S3、R2、本地存储。通过iframe + postMessage SDK嵌入。"
+  },
+  "nav": {
+    "docs": "文档",
+    "install": "安装",
+    "changelog": "更新日志",
+    "github": "GitHub"
+  },
+  "hero": {
+    "badge": "v1.0 — 开源 · MIT 许可证",
+    "headline": "可嵌入任何地方的文件管理器",
+    "sub": "PHP 8.2 + Flysystem。Local、S3、Cloudflare R2 统一界面。3行JavaScript。",
+    "cta_start": "开始使用",
+    "cta_github": "在GitHub上加星",
+    "stat_php": "无需框架",
+    "stat_sdk": "SDK包大小",
+    "stat_oss": "开源许可证",
+    "stat_lang": "支持语言"
+  },
+  "demo": {
+    "label": "预览",
+    "headline": "查看实际效果"
+  },
+  "features": {
+    "label": "功能",
+    "headline": "现代文件管理器所需的一切",
+    "sub": "为需要灵活性的开发者而构建。",
+    "storage_title": "多存储",
+    "storage_desc": "Local、AWS S3、Cloudflare R2 — 配置切换，无需改代码。",
+    "embed_title": "嵌入任何地方",
+    "embed_desc": "iframe + postMessage SDK。3行JS。兼容任何框架。",
+    "jwt_title": "JWT认证 + 权限范围",
+    "jwt_desc": "按用户路径前缀、权限声明、磁盘白名单。",
+    "seo_title": "SEO元数据",
+    "seo_desc": "Alt文本、标题、说明存储在SQLite。同步到S3对象标签。",
+    "presign_title": "预签名上传",
+    "presign_desc": "浏览器直接上传到S3/R2 — 服务器零带宽消耗。",
+    "i18n_title": "10+语言",
+    "i18n_desc": "自动检测浏览器语言。支持RTL。1个JSON文件即可添加语言。"
+  },
+  "install": {
+    "label": "快速安装",
+    "headline": "2分钟启动运行",
+    "tab_composer": "Composer (PHP)",
+    "tab_npm": "npm (JS SDK)",
+    "tab_manual": "手动",
+    "copy": "复制",
+    "copied": "已复制！",
+    "works_with": "兼容"
+  },
+  "compare": {
+    "label": "为什么选择FluxFiles",
+    "headline": "为他人遗忘之处而构建",
+    "col_feature": "功能",
+    "col_flux": "FluxFiles",
+    "col_elfinder": "elFinder",
+    "col_rfm": "RichFilemanager",
+    "row_storage": "S3 + R2 + Local",
+    "row_embed": "嵌入任何框架",
+    "row_jwt": "JWT认证 + 权限范围",
+    "row_seo": "SEO元数据",
+    "row_maintained": "积极维护中",
+    "row_ui": "现代UI"
+  },
+  "footer": {
+    "made_by": "作者",
+    "license": "MIT许可证",
+    "docs": "文档",
+    "changelog": "更新日志",
+    "license_link": "许可证"
+  }
+}
