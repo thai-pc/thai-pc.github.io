@@ -23,18 +23,19 @@ const t = useTranslations(lang);
         </p>
       </div>
 
-      <div class="flex items-center gap-6">
-        <a href="#features" class="text-sm text-gray-500 dark:text-gray-400 hover:text-accent dark:hover:text-accent-dark transition-colors">{t('footer.docs')}</a>
-        <a
-          href="https://github.com/thai-pc/fluxfiles"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-sm text-gray-500 dark:text-gray-400 hover:text-accent dark:hover:text-accent-dark transition-colors"
-        >
-          GitHub
-        </a>
-        <a href="#" class="text-sm text-gray-500 dark:text-gray-400 hover:text-accent dark:hover:text-accent-dark transition-colors">{t('footer.changelog')}</a>
-        <a href="#" class="text-sm text-gray-500 dark:text-gray-400 hover:text-accent dark:hover:text-accent-dark transition-colors">{t('footer.license_link')}</a>
+      <div class="flex flex-col items-center sm:items-end gap-3">
+        <div class="flex items-center gap-6">
+          <a href="#features" class="text-sm text-gray-500 dark:text-gray-400 hover:text-accent dark:hover:text-accent-dark transition-colors">{t('footer.docs')}</a>
+          <a href="https://github.com/thai-pc/fluxfiles" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-500 dark:text-gray-400 hover:text-accent dark:hover:text-accent-dark transition-colors">GitHub</a>
+          <a href="#" class="text-sm text-gray-500 dark:text-gray-400 hover:text-accent dark:hover:text-accent-dark transition-colors">{t('footer.changelog')}</a>
+          <a href="#" class="text-sm text-gray-500 dark:text-gray-400 hover:text-accent dark:hover:text-accent-dark transition-colors">{t('footer.license_link')}</a>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="https://packagist.org/packages/fluxfiles/fluxfiles" target="_blank" rel="noopener noreferrer" class="text-xs text-gray-400 dark:text-gray-500 hover:text-accent dark:hover:text-accent-dark transition-colors">{t('footer.packagist')}</a>
+          <a href="https://www.npmjs.com/package/fluxfiles" target="_blank" rel="noopener noreferrer" class="text-xs text-gray-400 dark:text-gray-500 hover:text-accent dark:hover:text-accent-dark transition-colors">{t('footer.npm')}</a>
+          <a href="https://www.npmjs.com/package/@fluxfiles/react" target="_blank" rel="noopener noreferrer" class="text-xs text-gray-400 dark:text-gray-500 hover:text-accent dark:hover:text-accent-dark transition-colors">@fluxfiles/react</a>
+          <a href="https://www.npmjs.com/package/@fluxfiles/vue" target="_blank" rel="noopener noreferrer" class="text-xs text-gray-400 dark:text-gray-500 hover:text-accent dark:hover:text-accent-dark transition-colors">@fluxfiles/vue</a>
+        </div>
       </div>
     </div>
 

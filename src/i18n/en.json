@@ -10,7 +10,7 @@
     "github": "GitHub"
   },
   "hero": {
-    "badge": "v1.0 — Open Source · MIT License",
+    "badge": "v1.22.0 — Open Source · MIT License",
     "headline": "The file manager that embeds anywhere",
     "sub": "PHP ≥ 7.4 + Flysystem. Local, S3, Cloudflare R2 in one UI. 3 lines of JavaScript.",
     "cta_start": "Get started",
@@ -38,14 +38,39 @@
     "seo_desc": "Alt text, title, caption in SQLite. Synced to S3 object tags.",
     "presign_title": "Presigned uploads",
     "presign_desc": "Browser uploads directly to S3/R2 — zero bandwidth on your server.",
-    "i18n_title": "10+ languages",
-    "i18n_desc": "Auto-detects browser language. RTL support. Add your own in 1 JSON file."
+    "i18n_title": "16 languages",
+    "i18n_desc": "Auto-detects browser language. RTL support. Add your own in 1 JSON file.",
+    "ai_title": "AI auto-tag",
+    "ai_desc": "Claude / OpenAI vision — auto alt text, title, tags.",
+    "crop_title": "Image crop",
+    "crop_desc": "Inline crop tool with aspect ratio presets.",
+    "optimize_title": "Image optimization",
+    "optimize_desc": "Auto WebP variants — thumb, medium, large.",
+    "chunk_title": "Chunk upload",
+    "chunk_desc": "S3 multipart for files > 10MB.",
+    "trash_title": "Trash / soft delete",
+    "trash_desc": "Recoverable deletes with auto-purge.",
+    "search_title": "Full-text search",
+    "search_desc": "SQLite FTS5 across names, titles, tags.",
+    "bulk_title": "Bulk operations",
+    "bulk_desc": "Multi-select move, copy, delete, download.",
+    "crossdisk_title": "Cross-disk transfer",
+    "crossdisk_desc": "Copy/move between Local ↔ S3 ↔ R2.",
+    "darkmode_title": "Dark mode",
+    "darkmode_desc": "Auto-detect + manual toggle in UI.",
+    "audit_title": "Audit log",
+    "audit_desc": "All write actions logged for compliance.",
+    "ratelimit_title": "Rate limiting",
+    "ratelimit_desc": "Token bucket per user for API protection.",
+    "quota_title": "Storage quota",
+    "quota_desc": "Per-user storage limits via JWT claims."
   },
   "install": {
     "label": "Quick install",
     "headline": "Up and running in 2 minutes",
     "tab_composer": "Composer (PHP)",
-    "tab_npm": "npm (JS SDK)",
+    "tab_laravel": "Laravel",
+    "tab_sdk": "JS SDK",
     "tab_manual": "Manual",
     "copy": "Copy",
     "copied": "Copied!",
@@ -65,13 +90,22 @@
     "row_jwt": "JWT auth + scoping",
     "row_seo": "SEO metadata",
     "row_maintained": "Actively maintained",
-    "row_ui": "Modern UI"
+    "row_ui": "Modern UI",
+    "row_ai": "AI auto-tag",
+    "row_crop": "Image crop",
+    "row_chunk": "Chunk upload",
+    "row_search": "Full-text search",
+    "row_darkmode": "Dark mode",
+    "row_i18n": "16 languages",
+    "row_php74": "PHP ≥ 7.4"
   },
   "footer": {
     "made_by": "Made by",
     "license": "MIT License",
     "docs": "Docs",
     "changelog": "Changelog",
-    "license_link": "License"
+    "license_link": "License",
+    "packagist": "Packagist",
+    "npm": "npm"
   }
 }

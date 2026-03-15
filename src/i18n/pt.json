@@ -10,7 +10,7 @@
     "github": "GitHub"
   },
   "hero": {
-    "badge": "v1.0 — Open Source · Licença MIT",
+    "badge": "v1.22.0 — Open Source · Licença MIT",
     "headline": "O gerenciador de arquivos que funciona em qualquer lugar",
     "sub": "PHP ≥ 7.4 + Flysystem. Local, S3, Cloudflare R2 em uma UI. 3 linhas de JavaScript.",
     "cta_start": "Começar agora",
@@ -38,8 +38,32 @@
     "seo_desc": "Alt text, título, legenda no SQLite. Sincronizado com tags de objeto S3.",
     "presign_title": "Uploads pré-assinados",
     "presign_desc": "Navegador faz upload direto para S3/R2 — zero bandwidth no seu servidor.",
-    "i18n_title": "10+ idiomas",
-    "i18n_desc": "Detecta idioma do navegador automaticamente. Suporte RTL. Adicione o seu em 1 arquivo JSON."
+    "i18n_title": "16 idiomas",
+    "i18n_desc": "Detecta idioma do navegador automaticamente. Suporte RTL. Adicione o seu em 1 arquivo JSON.",
+    "ai_title": "AI auto-tag",
+    "ai_desc": "Claude / OpenAI vision — alt text, título, tags automáticos.",
+    "crop_title": "Recorte de imagem",
+    "crop_desc": "Ferramenta de recorte com proporções predefinidas.",
+    "optimize_title": "Otimização de imagem",
+    "optimize_desc": "Variantes WebP automáticas — thumb, médio, grande.",
+    "chunk_title": "Upload em partes",
+    "chunk_desc": "S3 multipart para arquivos > 10MB.",
+    "trash_title": "Lixeira",
+    "trash_desc": "Exclusão recuperável com limpeza automática.",
+    "search_title": "Busca em texto completo",
+    "search_desc": "SQLite FTS5 em nomes, títulos, tags.",
+    "bulk_title": "Operações em massa",
+    "bulk_desc": "Seleção múltipla: mover, copiar, excluir, baixar.",
+    "crossdisk_title": "Transferência cross-disk",
+    "crossdisk_desc": "Copiar/mover entre Local ↔ S3 ↔ R2.",
+    "darkmode_title": "Modo escuro",
+    "darkmode_desc": "Detecção automática + alternância manual.",
+    "audit_title": "Log de auditoria",
+    "audit_desc": "Todas as ações de escrita registradas.",
+    "ratelimit_title": "Limitação de taxa",
+    "ratelimit_desc": "Token bucket por usuário para proteção da API.",
+    "quota_title": "Cota de armazenamento",
+    "quota_desc": "Limites por usuário via JWT claims."
   },
   "install": {
     "label": "Instalação rápida",
@@ -49,7 +73,9 @@
     "tab_manual": "Manual",
     "copy": "Copiar",
     "copied": "Copiado!",
-    "works_with": "Funciona com"
+    "works_with": "Funciona com",
+    "tab_laravel": "Laravel",
+    "tab_sdk": "JS SDK"
   },
   "compare": {
     "label": "Por que FluxFiles",
@@ -65,13 +91,22 @@
     "row_jwt": "Auth JWT + escopo",
     "row_seo": "Metadados SEO",
     "row_maintained": "Mantido ativamente",
-    "row_ui": "UI moderna"
+    "row_ui": "UI moderna",
+    "row_ai": "AI auto-tag",
+    "row_crop": "Recorte de imagem",
+    "row_chunk": "Upload em partes",
+    "row_search": "Busca em texto",
+    "row_darkmode": "Modo escuro",
+    "row_i18n": "16 idiomas",
+    "row_php74": "PHP ≥ 7.4"
   },
   "footer": {
     "made_by": "Feito por",
     "license": "Licença MIT",
     "docs": "Docs",
     "changelog": "Changelog",
-    "license_link": "Licença"
+    "license_link": "Licença",
+    "packagist": "Packagist",
+    "npm": "npm"
   }
 }

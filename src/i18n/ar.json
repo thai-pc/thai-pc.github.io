@@ -10,7 +10,7 @@
     "github": "GitHub"
   },
   "hero": {
-    "badge": "v1.0 — مفتوح المصدر · رخصة MIT",
+    "badge": "v1.22.0 — مفتوح المصدر · رخصة MIT",
     "headline": "مدير الملفات القابل للتضمين في أي مكان",
     "sub": "PHP ≥ 7.4 + Flysystem. محلي، S3، Cloudflare R2 في واجهة واحدة. 3 أسطر من JavaScript.",
     "cta_start": "ابدأ الآن",
@@ -38,8 +38,32 @@
     "seo_desc": "نص بديل، عنوان، تعليق في SQLite. متزامن مع وسوم كائنات S3.",
     "presign_title": "رفع بتوقيع مسبق",
     "presign_desc": "المتصفح يرفع مباشرة إلى S3/R2 — صفر استهلاك على خادمك.",
-    "i18n_title": "+10 لغات",
-    "i18n_desc": "يكتشف لغة المتصفح تلقائياً. دعم RTL. أضف لغتك في ملف JSON واحد."
+    "i18n_title": "16 لغة",
+    "i18n_desc": "يكتشف لغة المتصفح تلقائياً. دعم RTL. أضف لغتك في ملف JSON واحد.",
+    "ai_title": "وسم AI تلقائي",
+    "ai_desc": "Claude / OpenAI vision — نص بديل وعنوان ووسوم تلقائية.",
+    "crop_title": "اقتصاص الصور",
+    "crop_desc": "أداة اقتصاص مع نسب أبعاد مسبقة.",
+    "optimize_title": "تحسين الصور",
+    "optimize_desc": "متغيرات WebP تلقائية — مصغّرة ومتوسطة وكبيرة.",
+    "chunk_title": "رفع مجزّأ",
+    "chunk_desc": "S3 multipart للملفات > 10 ميجابايت.",
+    "trash_title": "سلة المحذوفات",
+    "trash_desc": "حذف قابل للاسترداد مع تنظيف تلقائي.",
+    "search_title": "بحث نصي كامل",
+    "search_desc": "SQLite FTS5 في الأسماء والعناوين والوسوم.",
+    "bulk_title": "عمليات جماعية",
+    "bulk_desc": "تحديد متعدد للنقل والنسخ والحذف والتحميل.",
+    "crossdisk_title": "نقل عبر الأقراص",
+    "crossdisk_desc": "نسخ/نقل بين محلي ↔ S3 ↔ R2.",
+    "darkmode_title": "الوضع الداكن",
+    "darkmode_desc": "كشف تلقائي + تبديل يدوي.",
+    "audit_title": "سجل التدقيق",
+    "audit_desc": "جميع إجراءات الكتابة مسجّلة.",
+    "ratelimit_title": "تحديد المعدل",
+    "ratelimit_desc": "Token bucket لكل مستخدم لحماية API.",
+    "quota_title": "حصة التخزين",
+    "quota_desc": "حدود لكل مستخدم عبر JWT claims."
   },
   "install": {
     "label": "تثبيت سريع",
@@ -49,7 +73,9 @@
     "tab_manual": "يدوي",
     "copy": "نسخ",
     "copied": "تم النسخ!",
-    "works_with": "يعمل مع"
+    "works_with": "يعمل مع",
+    "tab_laravel": "Laravel",
+    "tab_sdk": "JS SDK"
   },
   "compare": {
     "label": "لماذا FluxFiles",
@@ -65,13 +91,22 @@
     "row_jwt": "مصادقة JWT + نطاقات",
     "row_seo": "بيانات SEO الوصفية",
     "row_maintained": "صيانة نشطة",
-    "row_ui": "واجهة حديثة"
+    "row_ui": "واجهة حديثة",
+    "row_ai": "وسم AI تلقائي",
+    "row_crop": "اقتصاص الصور",
+    "row_chunk": "رفع مجزّأ",
+    "row_search": "بحث نصي كامل",
+    "row_darkmode": "الوضع الداكن",
+    "row_i18n": "16 لغة",
+    "row_php74": "PHP ≥ 7.4"
   },
   "footer": {
     "made_by": "صنع بواسطة",
     "license": "رخصة MIT",
     "docs": "المستندات",
     "changelog": "سجل التغييرات",
-    "license_link": "الرخصة"
+    "license_link": "الرخصة",
+    "packagist": "Packagist",
+    "npm": "npm"
   }
 }

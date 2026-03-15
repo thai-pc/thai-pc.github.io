@@ -13,7 +13,7 @@ import ar from './ar.json';
 import th from './th.json';
 import tr from './tr.json';
 import it from './it.json';
-import id from './id.json';
+import nl from './nl.json';
 
 export const languages = {
   en: 'English',
@@ -31,14 +31,14 @@ export const languages = {
   th: 'ไทย',
   tr: 'Türkçe',
   it: 'Italiano',
-  id: 'Bahasa Indonesia',
+  nl: 'Nederlands',
 } as const;
 
 export type Lang = keyof typeof languages;
 export const defaultLang: Lang = 'en';
 export const langList = Object.keys(languages) as Lang[];
 
-const translations: Record<Lang, Record<string, any>> = { en, vi, zh, ja, ko, fr, de, es, hi, pt, ru, ar, th, tr, it, id };
+const translations: Record<Lang, Record<string, any>> = { en, vi, zh, ja, ko, fr, de, es, hi, pt, ru, ar, th, tr, it, nl };
 
 export function getLangFromUrl(url: URL): Lang {
   const [, lang] = url.pathname.split('/');

@@ -10,7 +10,7 @@
     "github": "GitHub"
   },
   "hero": {
-    "badge": "v1.0 — Açık Kaynak · MIT Lisansı",
+    "badge": "v1.22.0 — Açık Kaynak · MIT Lisansı",
     "headline": "Her yere gömülebilen dosya yöneticisi",
     "sub": "PHP ≥ 7.4 + Flysystem. Yerel, S3, Cloudflare R2 tek arayüzde. 3 satır JavaScript.",
     "cta_start": "Başlayın",
@@ -38,8 +38,32 @@
     "seo_desc": "SQLite'da alt metin, başlık, açıklama. S3 nesne etiketleriyle senkronize.",
     "presign_title": "Ön imzalı yüklemeler",
     "presign_desc": "Tarayıcı doğrudan S3/R2'ye yükler — sunucunuzda sıfır bant genişliği.",
-    "i18n_title": "10+ dil",
-    "i18n_desc": "Tarayıcı dilini otomatik algılar. RTL desteği. 1 JSON dosyasında kendi dilinizi ekleyin."
+    "i18n_title": "16 dil",
+    "i18n_desc": "Tarayıcı dilini otomatik algılar. RTL desteği. 1 JSON dosyasında kendi dilinizi ekleyin.",
+    "ai_title": "AI otomatik etiket",
+    "ai_desc": "Claude / OpenAI vision — otomatik alt metin, başlık, etiketler.",
+    "crop_title": "Görüntü kırpma",
+    "crop_desc": "En-boy oranı ön ayarlı satır içi kırpma aracı.",
+    "optimize_title": "Görüntü optimizasyonu",
+    "optimize_desc": "Otomatik WebP varyantları — küçük, orta, büyük.",
+    "chunk_title": "Parçalı yükleme",
+    "chunk_desc": "10MB üzeri dosyalar için S3 multipart.",
+    "trash_title": "Çöp kutusu",
+    "trash_desc": "Kurtarılabilir silme, otomatik temizleme.",
+    "search_title": "Tam metin arama",
+    "search_desc": "SQLite FTS5 ile isim, başlık, etiket arama.",
+    "bulk_title": "Toplu işlemler",
+    "bulk_desc": "Çoklu seçim: taşıma, kopyalama, silme, indirme.",
+    "crossdisk_title": "Diskler arası transfer",
+    "crossdisk_desc": "Yerel ↔ S3 ↔ R2 arasında kopyalama/taşıma.",
+    "darkmode_title": "Karanlık mod",
+    "darkmode_desc": "Otomatik algılama + manuel geçiş.",
+    "audit_title": "Denetim günlüğü",
+    "audit_desc": "Tüm yazma işlemleri kaydedilir.",
+    "ratelimit_title": "Hız sınırlama",
+    "ratelimit_desc": "Kullanıcı başına token bucket API koruması.",
+    "quota_title": "Depolama kotası",
+    "quota_desc": "JWT claims ile kullanıcı başına limitler."
   },
   "install": {
     "label": "Hızlı kurulum",
@@ -49,7 +73,9 @@
     "tab_manual": "Manuel",
     "copy": "Kopyala",
     "copied": "Kopyalandı!",
-    "works_with": "Şunlarla çalışır"
+    "works_with": "Şunlarla çalışır",
+    "tab_laravel": "Laravel",
+    "tab_sdk": "JS SDK"
   },
   "compare": {
     "label": "Neden FluxFiles",
@@ -65,13 +91,22 @@
     "row_jwt": "JWT kimlik doğrulama + kapsam",
     "row_seo": "SEO meta verileri",
     "row_maintained": "Aktif olarak bakımı yapılıyor",
-    "row_ui": "Modern UI"
+    "row_ui": "Modern UI",
+    "row_ai": "AI otomatik etiket",
+    "row_crop": "Görüntü kırpma",
+    "row_chunk": "Parçalı yükleme",
+    "row_search": "Tam metin arama",
+    "row_darkmode": "Karanlık mod",
+    "row_i18n": "16 dil",
+    "row_php74": "PHP ≥ 7.4"
   },
   "footer": {
     "made_by": "Yapan",
     "license": "MIT Lisansı",
     "docs": "Dokümantasyon",
     "changelog": "Değişiklik Günlüğü",
-    "license_link": "Lisans"
+    "license_link": "Lisans",
+    "packagist": "Packagist",
+    "npm": "npm"
   }
 }
