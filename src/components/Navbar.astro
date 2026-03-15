@@ -16,7 +16,7 @@ const langEntries = Object.entries(languages) as [Lang, string][];
 >
   <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
     <div class="flex h-16 items-center justify-between">
-      <a href={`/fluxfiles/${lang}/`} class="flex items-center gap-1 text-xl font-bold tracking-tight">
+      <a href={`/${lang}/`} class="flex items-center gap-1 text-xl font-bold tracking-tight">
         <span class="text-accent">Flux</span><span class="text-gray-600 dark:text-gray-400">Files</span>
       </a>
 
@@ -40,7 +40,7 @@ const langEntries = Object.entries(languages) as [Lang, string][];
 
         <select
           class="text-sm bg-transparent border border-gray-200 dark:border-gray-700 rounded-md px-2 py-1 text-gray-600 dark:text-gray-400 focus:outline-none focus:ring-1 focus:ring-accent"
-          onchange="window.location.href = '/fluxfiles/' + this.value + '/'"
+          onchange="window.location.href = '/' + this.value + '/'"
         >
           {langEntries.map(([code, label]) => (
             <option value={code} selected={code === lang}>{label}</option>
@@ -87,7 +87,7 @@ const langEntries = Object.entries(languages) as [Lang, string][];
         </a>
         <select
           class="text-sm bg-transparent border border-gray-200 dark:border-gray-700 rounded-md px-2 py-1 text-gray-600 dark:text-gray-400 w-fit"
-          onchange="window.location.href = '/fluxfiles/' + this.value + '/'"
+          onchange="window.location.href = '/' + this.value + '/'"
         >
           {langEntries.map(([code, label]) => (
             <option value={code} selected={code === lang}>{label}</option>

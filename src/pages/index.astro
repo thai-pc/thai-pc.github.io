@@ -1,34 +1,28 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import DemoPreview from '../components/DemoPreview.astro';
+import Features from '../components/Features.astro';
+import Install from '../components/Install.astro';
+import Comparison from '../components/Comparison.astro';
+import Footer from '../components/Footer.astro';
+import { useTranslations, type Lang } from '../i18n/utils';
+
+const lang: Lang = 'en';
+const t = useTranslations(lang);
 ---
 
-<html>
-<head>
-  <meta charset="utf-8" />
-  <title>FluxFiles</title>
+<BaseLayout title={t('meta.title')} description={t('meta.description')} lang={lang}>
+  <Navbar lang={lang} />
+  <main>
+    <Hero lang={lang} />
+    <DemoPreview lang={lang} />
+    <Features lang={lang} />
+    <Install lang={lang} />
+    <Comparison lang={lang} />
+  </main>
+  <Footer lang={lang} />
 
-  <script>
-    const supported = ["en","vi","ja","de","fr","es","ko","zh"];
-
-    const saved = localStorage.getItem("lang");
-
-    let lang;
-
-    if(saved && supported.includes(saved)){
-      lang = saved;
-    } else {
-      const browserLang = (navigator.language || "en").slice(0,2);
-
-      lang = supported.includes(browserLang) ? browserLang : "en";
-
-      localStorage.setItem("lang", lang);
-    }
-
-    window.location.replace(`/fluxfiles/${lang}/`);
-  </script>
-
-</head>
-
-<body>
-Redirecting...
-</body>
-</html>
+  <script is:inline src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+</BaseLayout>

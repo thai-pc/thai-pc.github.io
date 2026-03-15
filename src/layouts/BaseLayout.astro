@@ -23,30 +23,30 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <meta name="description" content={description} />
 
     <link rel="canonical" href={canonicalURL} />
-    <link rel="icon" type="image/svg+xml" href="/fluxfiles/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     {langList.map((l) => (
       <link
         rel="alternate"
         hreflang={l}
-        href={new URL(`/fluxfiles/${l}/`, Astro.site)}
+        href={new URL(`/${l}/`, Astro.site)}
       />
     ))}
-    <link rel="alternate" hreflang="x-default" href={new URL('/fluxfiles/en/', Astro.site)} />
+    <link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site)} />
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL('/fluxfiles/og-image.png', Astro.site)} />
+    <meta property="og:image" content={new URL('/og-image.png', Astro.site)} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:locale" content={lang} />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={new URL('/fluxfiles/og-image.png', Astro.site)} />
+    <meta name="twitter:image" content={new URL('/og-image.png', Astro.site)} />
 
-    <link rel="preload" href="/fluxfiles/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
 
     <script is:inline>
       (function() {
