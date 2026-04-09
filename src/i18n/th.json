@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "FluxFiles — ตัวจัดการไฟล์ที่ฝังได้ทุกที่",
-    "description": "ตัวจัดการไฟล์ PHP โอเพนซอร์ส รองรับ S3, R2, local storage ฝังผ่าน iframe + postMessage SDK"
+    "description": "ตัวจัดการไฟล์ PHP 8.1+ รองรับ S3, R2, local storage UI Alpine.js ฝังผ่าน iframe + JavaScript SDK"
   },
   "nav": {
     "docs": "เอกสาร",
@@ -12,7 +12,7 @@
   "hero": {
     "badge": "v1.22.0 — โอเพนซอร์ส · สัญญาอนุญาต MIT",
     "headline": "ตัวจัดการไฟล์ที่ฝังได้ทุกที่",
-    "sub": "PHP ≥ 7.4 + Flysystem. Local, S3, Cloudflare R2 ใน UI เดียว แค่ 3 บรรทัด JavaScript",
+    "sub": "PHP ≥ 8.1 + Flysystem 3 UI Alpine.js Local, S3, Cloudflare R2 ฝังด้วย JavaScript ไม่กี่บรรทัด",
     "cta_start": "เริ่มต้นใช้งาน",
     "cta_github": "Star บน GitHub",
     "stat_php": "ไม่ต้องใช้เฟรมเวิร์ก",
@@ -29,17 +29,17 @@
     "headline": "ทุกสิ่งที่ตัวจัดการไฟล์สมัยใหม่ต้องการ",
     "sub": "สร้างขึ้นสำหรับนักพัฒนาที่ต้องการความยืดหยุ่น",
     "storage_title": "หลายที่เก็บข้อมูล",
-    "storage_desc": "Local, AWS S3, Cloudflare R2 — สลับผ่านการตั้งค่า ไม่ต้องแก้โค้ด",
+    "storage_desc": "Local, AWS S3, Cloudflare R2 ผ่าน Flysystem v3 — สลับด้วย config ไม่ต้องแก้โค้ด",
     "embed_title": "ฝังได้ทุกที่",
-    "embed_desc": "iframe + postMessage SDK แค่ 3 บรรทัด JS ใช้ได้กับทุกเฟรมเวิร์ก",
+    "embed_desc": "iframe + postMessage SDK UI แยกใช้ Alpine.js (ไม่ต้อง build) ใช้กับทุกเฟรมเวิร์ก",
     "jwt_title": "JWT auth + scoping",
-    "jwt_desc": "พาธพรีฟิกซ์ต่อผู้ใช้, permission claims, disk whitelist",
+    "jwt_desc": "พาธพรีฟิกซ์ต่อผู้ใช้ สิทธิ์ ไวท์ลิสต์ดิสก์ โหมด owner-only",
     "seo_title": "SEO metadata",
-    "seo_desc": "Alt text, title, caption ใน SQLite ซิงค์กับ S3 object tags",
+    "seo_desc": "หัวข้อ alt คำบรรยาย แท็ก — metadata อ็อบเจ็กต์ S3 (คลาวด์) หรือ sidecar JSON (โลคัล) ค้นหาข้อความเต็ม",
     "presign_title": "อัปโหลดแบบ presigned",
     "presign_desc": "เบราว์เซอร์อัปโหลดตรงไปยัง S3/R2 — ไม่ใช้แบนด์วิดท์เซิร์ฟเวอร์เลย",
     "i18n_title": "16 ภาษา",
-    "i18n_desc": "ตรวจจับภาษาเบราว์เซอร์อัตโนมัติ รองรับ RTL เพิ่มภาษาของคุณใน 1 ไฟล์ JSON",
+    "i18n_desc": "ค่าเริ่มต้นภาษาอังกฤษ ตั้ง locale ผ่าน SDK URL (?locale=) หรือ FLUXFILES_LOCALE อาหรับ RTL",
     "ai_title": "AI auto-tag",
     "ai_desc": "Claude / OpenAI vision — alt text, ชื่อ, แท็กอัตโนมัติ",
     "crop_title": "ครอปรูปภาพ",
@@ -57,13 +57,19 @@
     "crossdisk_title": "ถ่ายโอนข้ามดิสก์",
     "crossdisk_desc": "คัดลอก/ย้ายระหว่าง Local ↔ S3 ↔ R2",
     "darkmode_title": "โหมดมืด",
-    "darkmode_desc": "ตรวจจับอัตโนมัติ + สลับด้วยตนเอง",
+    "darkmode_desc": "สว่าง / มืด / อัตโนมัติ ใน UI และ SDK",
     "audit_title": "บันทึกการตรวจสอบ",
     "audit_desc": "บันทึกการกระทำเขียนทั้งหมด",
     "ratelimit_title": "จำกัดอัตรา",
     "ratelimit_desc": "Token bucket ต่อผู้ใช้สำหรับป้องกัน API",
     "quota_title": "โควต้าพื้นที่",
-    "quota_desc": "จำกัดต่อผู้ใช้ผ่าน JWT claims"
+    "quota_desc": "จำกัดต่อผู้ใช้ผ่าน JWT claims",
+    "byob_title": "BYOB bucket",
+    "byob_desc": "ผู้ใช้ผูก S3/R2 เอง — credential เข้ารหัสใน JWT (AES-256-GCM)",
+    "dup_title": "ตรวจซ้ำ",
+    "dup_desc": "SHA-256 ตรงกันข้ามอัปโหลดซ้ำ เว้นแต่บังคับเขียนทับ",
+    "tokenrefresh_title": "รีเฟรชโทเคน SDK",
+    "tokenrefresh_desc": "onTokenRefresh เมื่อ 401 — รวมรีเฟรช ลองใหม่ updateToken()"
   },
   "install": {
     "label": "ติดตั้งด่วน",
@@ -98,7 +104,7 @@
     "row_search": "ค้นหาข้อความเต็ม",
     "row_darkmode": "โหมดมืด",
     "row_i18n": "16 ภาษา",
-    "row_php74": "PHP ≥ 7.4"
+    "row_php81": "PHP ≥ 8.1"
   },
   "footer": {
     "made_by": "สร้างโดย",
@@ -107,6 +113,7 @@
     "changelog": "บันทึกการเปลี่ยนแปลง",
     "license_link": "สัญญาอนุญาต",
     "packagist": "Packagist",
-    "npm": "npm"
+    "npm": "npm",
+    "readme_hint": "เอกสารฉบับเต็มบน GitHub"
   }
 }

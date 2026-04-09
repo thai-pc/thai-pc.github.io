@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "FluxFiles — مدير الملفات القابل للتضمين في أي مكان",
-    "description": "مدير ملفات PHP مفتوح المصدر يدعم S3 وR2 والتخزين المحلي. قم بالتضمين عبر iframe + postMessage SDK."
+    "description": "مدير ملفات PHP 8.1+ مع S3 وR2 والتخزين المحلي. واجهة Alpine.js. التضمين عبر iframe + SDK جافاسكربت."
   },
   "nav": {
     "docs": "المستندات",
@@ -12,7 +12,7 @@
   "hero": {
     "badge": "v1.22.0 — مفتوح المصدر · رخصة MIT",
     "headline": "مدير الملفات القابل للتضمين في أي مكان",
-    "sub": "PHP ≥ 7.4 + Flysystem. محلي، S3، Cloudflare R2 في واجهة واحدة. 3 أسطر من JavaScript.",
+    "sub": "PHP ≥ 8.1 + Flysystem 3. واجهة Alpine.js. محلي، S3، Cloudflare R2. التضمين بعدة أسطر JavaScript.",
     "cta_start": "ابدأ الآن",
     "cta_github": "Star على GitHub",
     "stat_php": "لا يحتاج إطار عمل",
@@ -29,17 +29,17 @@
     "headline": "كل ما يحتاجه مدير ملفات حديث",
     "sub": "مصمم للمطورين الذين يحتاجون المرونة.",
     "storage_title": "تخزين متعدد",
-    "storage_desc": "محلي، AWS S3، Cloudflare R2 — بدّل من الإعدادات دون تغيير الكود.",
+    "storage_desc": "محلي، AWS S3، Cloudflare R2 عبر Flysystem v3 — التبديل بالإعداد دون تغيير الكود.",
     "embed_title": "تضمين في أي مكان",
-    "embed_desc": "iframe + postMessage SDK. 3 أسطر JS. يعمل مع أي إطار عمل.",
+    "embed_desc": "iframe + SDK postMessage. الواجهة المستقلة Alpine.js (بدون بناء). يعمل مع أي إطار.",
     "jwt_title": "مصادقة JWT + نطاقات",
-    "jwt_desc": "بادئة مسار لكل مستخدم، صلاحيات، قائمة أقراص مسموحة.",
+    "jwt_desc": "بادئة مسار لكل مستخدم، صلاحيات، قائمة أقراص، وضع المالك فقط.",
     "seo_title": "بيانات SEO الوصفية",
-    "seo_desc": "نص بديل، عنوان، تعليق في SQLite. متزامن مع وسوم كائنات S3.",
+    "seo_desc": "عنوان، alt، تعليق، وسوم — بيانات وصفية S3 (سحابة) أو JSON جانبي (محلي). بحث نصي كامل.",
     "presign_title": "رفع بتوقيع مسبق",
     "presign_desc": "المتصفح يرفع مباشرة إلى S3/R2 — صفر استهلاك على خادمك.",
     "i18n_title": "16 لغة",
-    "i18n_desc": "يكتشف لغة المتصفح تلقائياً. دعم RTL. أضف لغتك في ملف JSON واحد.",
+    "i18n_desc": "الإنجليزية افتراضياً. عيّن اللغة عبر SDK أو URL (?locale=) أو FLUXFILES_LOCALE. RTL للعربية.",
     "ai_title": "وسم AI تلقائي",
     "ai_desc": "Claude / OpenAI vision — نص بديل وعنوان ووسوم تلقائية.",
     "crop_title": "اقتصاص الصور",
@@ -57,13 +57,19 @@
     "crossdisk_title": "نقل عبر الأقراص",
     "crossdisk_desc": "نسخ/نقل بين محلي ↔ S3 ↔ R2.",
     "darkmode_title": "الوضع الداكن",
-    "darkmode_desc": "كشف تلقائي + تبديل يدوي.",
+    "darkmode_desc": "فاتح / داكن / تلقائي في الواجهة وSDK.",
     "audit_title": "سجل التدقيق",
     "audit_desc": "جميع إجراءات الكتابة مسجّلة.",
     "ratelimit_title": "تحديد المعدل",
     "ratelimit_desc": "Token bucket لكل مستخدم لحماية API.",
     "quota_title": "حصة التخزين",
-    "quota_desc": "حدود لكل مستخدم عبر JWT claims."
+    "quota_desc": "حدود لكل مستخدم عبر JWT claims.",
+    "byob_title": "دلاء BYOB",
+    "byob_desc": "المستخدمون يضيفون S3/R2 الخاص — بيانات الاعتماد مشفّرة في JWT (AES-256-GCM).",
+    "dup_title": "كشف التكرار",
+    "dup_desc": "تطابق SHA-256 يتخطى الرفع الزائد ما لم يُفرض الاستبدال.",
+    "tokenrefresh_title": "تجديد رمز SDK",
+    "tokenrefresh_desc": "onTokenRefresh عند 401 — تجديد مجمّع، إعادة محاولة، updateToken()."
   },
   "install": {
     "label": "تثبيت سريع",
@@ -98,7 +104,7 @@
     "row_search": "بحث نصي كامل",
     "row_darkmode": "الوضع الداكن",
     "row_i18n": "16 لغة",
-    "row_php74": "PHP ≥ 7.4"
+    "row_php81": "PHP ≥ 8.1"
   },
   "footer": {
     "made_by": "صنع بواسطة",
@@ -107,6 +113,7 @@
     "changelog": "سجل التغييرات",
     "license_link": "الرخصة",
     "packagist": "Packagist",
-    "npm": "npm"
+    "npm": "npm",
+    "readme_hint": "الوثائق الكاملة على GitHub"
   }
 }

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "FluxFiles — कहीं भी एम्बेड होने वाला फ़ाइल मैनेजर",
-    "description": "S3, R2, लोकल स्टोरेज सपोर्ट वाला ओपन सोर्स PHP फ़ाइल मैनेजर। iframe + postMessage SDK से एम्बेड करें।"
+    "description": "PHP 8.1+ फ़ाइल मैनेजर S3, R2, लोकल स्टोरेज के साथ। Alpine.js UI। iframe + JavaScript SDK से एम्बेड।"
   },
   "nav": {
     "docs": "डॉक्स",
@@ -12,7 +12,7 @@
   "hero": {
     "badge": "v1.22.0 — ओपन सोर्स · MIT लाइसेंस",
     "headline": "कहीं भी एम्बेड होने वाला फ़ाइल मैनेजर",
-    "sub": "PHP ≥ 7.4 + Flysystem। लोकल, S3, Cloudflare R2 एक UI में। JavaScript की सिर्फ 3 लाइनें।",
+    "sub": "PHP ≥ 8.1 + Flysystem 3। Alpine.js UI। Local, S3, Cloudflare R2। कुछ पंक्तियों JavaScript से एम्बेड।",
     "cta_start": "शुरू करें",
     "cta_github": "GitHub पर Star करें",
     "stat_php": "कोई फ्रेमवर्क ज़रूरी नहीं",
@@ -29,17 +29,17 @@
     "headline": "एक आधुनिक फ़ाइल मैनेजर के लिए सब कुछ",
     "sub": "लचीलापन चाहने वाले डेवलपर्स के लिए बनाया गया।",
     "storage_title": "मल्टी-स्टोरेज",
-    "storage_desc": "लोकल, AWS S3, Cloudflare R2 — कॉन्फ़िग से बदलें, कोड बदलने की ज़रूरत नहीं।",
+    "storage_desc": "Local, AWS S3, Cloudflare R2 — Flysystem v3 के ज़रिए। कॉन्फ़िग से बदलें।",
     "embed_title": "कहीं भी एम्बेड करें",
-    "embed_desc": "iframe + postMessage SDK। JS की 3 लाइनें। किसी भी फ्रेमवर्क के साथ काम करता है।",
+    "embed_desc": "iframe + postMessage SDK। स्टैंडअलोन UI Alpine.js (बिना बिल्ड)। किसी भी फ्रेमवर्क के साथ।",
     "jwt_title": "JWT ऑथ + स्कोपिंग",
-    "jwt_desc": "प्रति-यूज़र पाथ प्रीफ़िक्स, परमिशन क्लेम, डिस्क व्हाइटलिस्ट।",
+    "jwt_desc": "प्रति-यूज़र पाथ प्रीफ़िक्स, अनुमतियाँ, डिस्क व्हाइटलिस्ट, owner-only मोड।",
     "seo_title": "SEO मेटाडेटा",
-    "seo_desc": "SQLite में Alt टेक्स्ट, टाइटल, कैप्शन। S3 ऑब्जेक्ट टैग्स से सिंक।",
+    "seo_desc": "शीर्षक, alt, कैप्शन, टैग — क्लाउड पर S3 ऑब्जेक्ट मेटाडेटा, लोकल पर sidecar JSON। फुल-टेक्स्ट सर्च।",
     "presign_title": "प्रीसाइन्ड अपलोड",
     "presign_desc": "ब्राउज़र सीधे S3/R2 पर अपलोड करता है — आपके सर्वर पर ज़ीरो बैंडविड्थ।",
     "i18n_title": "16 भाषाएँ",
-    "i18n_desc": "ब्राउज़र भाषा ऑटो-डिटेक्ट। RTL सपोर्ट। 1 JSON फ़ाइल में अपनी भाषा जोड़ें।",
+    "i18n_desc": "डिफ़ॉल्ट अंग्रेज़ी। SDK, URL (?locale=), या FLUXFILES_LOCALE से सेट करें। अरबी के लिए RTL।",
     "ai_title": "AI ऑटो-टैग",
     "ai_desc": "Claude / OpenAI vision — ऑटो alt टेक्स्ट, टाइटल, टैग्स।",
     "crop_title": "इमेज क्रॉप",
@@ -57,13 +57,19 @@
     "crossdisk_title": "क्रॉस-डिस्क ट्रांसफर",
     "crossdisk_desc": "Local ↔ S3 ↔ R2 के बीच कॉपी/मूव।",
     "darkmode_title": "डार्क मोड",
-    "darkmode_desc": "ऑटो-डिटेक्ट + मैनुअल टॉगल।",
+    "darkmode_desc": "UI और SDK में लाइट / डार्क / ऑटो।",
     "audit_title": "ऑडिट लॉग",
     "audit_desc": "सभी राइट एक्शन लॉग।",
     "ratelimit_title": "रेट लिमिटिंग",
     "ratelimit_desc": "प्रति-यूज़र टोकन बकेट API सुरक्षा।",
     "quota_title": "स्टोरेज कोटा",
-    "quota_desc": "JWT claims द्वारा प्रति-यूज़र सीमा।"
+    "quota_desc": "JWT claims द्वारा प्रति-यूज़र सीमा।",
+    "byob_title": "BYOB बकेट",
+    "byob_desc": "यूज़र अपना S3/R2 जोड़ते हैं — JWT में क्रेडेंशियल एन्क्रिप्ट (AES-256-GCM)।",
+    "dup_title": "डुप्लिकेट पहचान",
+    "dup_desc": "SHA-256 मैच पर अतिरिक्त अपलोड स्किप, जब तक फोर्स ओवरराइट न हो।",
+    "tokenrefresh_title": "SDK टोकन रिफ़्रेश",
+    "tokenrefresh_desc": "401 पर onTokenRefresh — एकीकृत रिफ़्रेश, रीट्राय, और updateToken()।"
   },
   "install": {
     "label": "क्विक इंस्टॉल",
@@ -98,7 +104,7 @@
     "row_search": "फुल-टेक्स्ट सर्च",
     "row_darkmode": "डार्क मोड",
     "row_i18n": "16 भाषाएँ",
-    "row_php74": "PHP ≥ 7.4"
+    "row_php81": "PHP ≥ 8.1"
   },
   "footer": {
     "made_by": "बनाया",
@@ -107,6 +113,7 @@
     "changelog": "चेंजलॉग",
     "license_link": "लाइसेंस",
     "packagist": "Packagist",
-    "npm": "npm"
+    "npm": "npm",
+    "readme_hint": "पूर्ण दस्तावेज़ GitHub पर"
   }
 }

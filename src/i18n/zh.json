@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "FluxFiles — 可嵌入任何地方的文件管理器",
-    "description": "开源PHP文件管理器，支持S3、R2、本地存储。通过iframe + postMessage SDK嵌入。"
+    "description": "PHP 8.1+ 文件管理器，支持 S3、R2、本地存储。Alpine.js UI。通过 iframe + JavaScript SDK 嵌入。"
   },
   "nav": {
     "docs": "文档",
@@ -12,7 +12,7 @@
   "hero": {
     "badge": "v1.22.0 — 开源 · MIT 许可证",
     "headline": "可嵌入任何地方的文件管理器",
-    "sub": "PHP ≥ 7.4 + Flysystem。Local、S3、Cloudflare R2 统一界面。3行JavaScript。",
+    "sub": "PHP ≥ 8.1 + Flysystem 3。Alpine.js UI。Local、S3、Cloudflare R2。几行 JavaScript 即可嵌入。",
     "cta_start": "开始使用",
     "cta_github": "在GitHub上加星",
     "stat_php": "无需框架",
@@ -29,17 +29,17 @@
     "headline": "现代文件管理器所需的一切",
     "sub": "为需要灵活性的开发者而构建。",
     "storage_title": "多存储",
-    "storage_desc": "Local、AWS S3、Cloudflare R2 — 配置切换，无需改代码。",
+    "storage_desc": "本地、AWS S3、Cloudflare R2 通过 Flysystem v3 — 仅改配置即可切换。",
     "embed_title": "嵌入任何地方",
-    "embed_desc": "iframe + postMessage SDK。3行JS。兼容任何框架。",
+    "embed_desc": "iframe + postMessage SDK。独立 UI 使用 Alpine.js（零构建）。适用于任何框架。",
     "jwt_title": "JWT认证 + 权限范围",
-    "jwt_desc": "按用户路径前缀、权限声明、磁盘白名单。",
+    "jwt_desc": "每用户路径前缀、权限声明、磁盘白名单、仅所有者模式。",
     "seo_title": "SEO元数据",
-    "seo_desc": "Alt文本、标题、说明存储在SQLite。同步到S3对象标签。",
+    "seo_desc": "标题、alt、说明、标签 — 云端为 S3 对象元数据，本地为 sidecar JSON。全文搜索。",
     "presign_title": "预签名上传",
     "presign_desc": "浏览器直接上传到S3/R2 — 服务器零带宽消耗。",
     "i18n_title": "16种语言",
-    "i18n_desc": "自动检测浏览器语言。支持RTL。通过1个JSON文件添加您的语言。",
+    "i18n_desc": "默认英语。通过 SDK、URL (?locale=) 或 FLUXFILES_LOCALE 设置语言。阿拉伯语 RTL。",
     "ai_title": "AI自动标签",
     "ai_desc": "Claude / OpenAI vision — 自动alt文本、标题、标签。",
     "crop_title": "图片裁剪",
@@ -57,13 +57,19 @@
     "crossdisk_title": "跨磁盘传输",
     "crossdisk_desc": "在本地 ↔ S3 ↔ R2之间复制/移动。",
     "darkmode_title": "深色模式",
-    "darkmode_desc": "自动检测 + 手动切换。",
+    "darkmode_desc": "UI 与 SDK 支持浅色 / 深色 / 自动。",
     "audit_title": "审计日志",
     "audit_desc": "记录所有写入操作。",
     "ratelimit_title": "速率限制",
     "ratelimit_desc": "每用户令牌桶API保护。",
     "quota_title": "存储配额",
-    "quota_desc": "通过JWT claims设置每用户限制。"
+    "quota_desc": "通过JWT claims设置每用户限制。",
+    "byob_title": "BYOB 存储桶",
+    "byob_desc": "用户自带 S3/R2 — 凭证在 JWT 中加密（AES-256-GCM）。",
+    "dup_title": "重复检测",
+    "dup_desc": "SHA-256 相同则跳过重复上传，除非强制覆盖。",
+    "tokenrefresh_title": "SDK 令牌刷新",
+    "tokenrefresh_desc": "401 时 onTokenRefresh — 合并刷新、重试，以及 updateToken() 主动轮换。"
   },
   "install": {
     "label": "快速安装",
@@ -98,7 +104,7 @@
     "row_search": "全文搜索",
     "row_darkmode": "深色模式",
     "row_i18n": "16种语言",
-    "row_php74": "PHP ≥ 7.4"
+    "row_php81": "PHP ≥ 8.1"
   },
   "footer": {
     "made_by": "作者",
@@ -107,6 +113,7 @@
     "changelog": "更新日志",
     "license_link": "许可证",
     "packagist": "Packagist",
-    "npm": "npm"
+    "npm": "npm",
+    "readme_hint": "完整文档见 GitHub"
   }
 }
