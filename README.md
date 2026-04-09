@@ -2,7 +2,7 @@
 
 Static landing page for [FluxFiles](https://github.com/thai-pc/fluxfiles) — PHP **8.1+** file manager with S3, R2, local storage, Alpine.js UI, and iframe + SDK embedding.
 
-Built with **Astro 4**, **Tailwind CSS 3**, supports **16 languages** and **dark mode**.
+Built with **Astro 4**, **Tailwind CSS 3**, supports **16 languages** and **light / dark / system** themes.
 
 ## Prerequisites
 
@@ -36,7 +36,7 @@ fluxfiles-landing/
 │       └── inter-var.woff2
 ├── src/
 │   ├── components/
-│   │   ├── Navbar.astro         # Sticky nav + lang switcher + dark toggle
+│   │   ├── Navbar.astro         # Sticky nav + lang switcher + theme (light/dark/system)
 │   │   ├── Hero.astro           # Headline, CTAs, stats row
 │   │   ├── DemoPreview.astro    # Static file manager UI mockup
 │   │   ├── Features.astro       # 21 feature cards grid
@@ -44,7 +44,7 @@ fluxfiles-landing/
 │   │   ├── Comparison.astro     # FluxFiles vs 4 competitors
 │   │   └── Footer.astro         # Links + copyright
 │   ├── layouts/
-│   │   └── BaseLayout.astro     # HTML shell, SEO meta, hreflang, anti-FOUC
+│   │   └── BaseLayout.astro     # HTML shell, SEO meta, hreflang, theme init
 │   ├── pages/
 │   │   ├── index.astro          # English (default language)
 │   │   └── [lang]/index.astro   # Dynamic route for all 16 languages
@@ -67,7 +67,7 @@ fluxfiles-landing/
 │   │   ├── it.json              # Italian
 │   │   └── nl.json              # Dutch
 │   └── styles/
-│       └── global.css           # Tailwind directives + Inter font-face
+│       └── global.css           # Semantic theme tokens + Tailwind + Inter
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml           # GitHub Pages CI/CD
@@ -110,12 +110,13 @@ fluxfiles-landing/
    ```
 3. The dynamic route `[lang]/index.astro` picks it up automatically.
 
-## Dark Mode
+## Theme (light / dark / system)
 
-- Uses Tailwind `class` strategy (`dark:` prefix)
-- Persists user preference in `localStorage`
-- Falls back to `prefers-color-scheme` on first visit
-- Anti-FOUC inline script in `<head>` prevents flash on reload
+- **Tailwind** `darkMode: 'class'` — components use `dark:` as before; `.dark` on `<html>` follows the resolved theme.
+- **Three modes** (navbar cycles **light → dark → system**): stored as `localStorage.theme` = `light` | `dark` | `system`. Missing or invalid values behave as **system** (follow OS).
+- **System mode:** applies `prefers-color-scheme`; a `matchMedia('(prefers-color-scheme: dark)')` `change` listener updates the page when the OS theme changes.
+- **Semantic tokens** in `src/styles/global.css` (e.g. `--bg-page`, `--text-primary`, `--code-bg`, `--border-default`, `--progress-fill`) keep light/dark readable without ad‑hoc `#000` / `#fff`; body background and code/install panels consume these variables.
+- **Anti-FOUC** inline script in `<head>` sets `class` + `data-theme-mode` before first paint.
 
 ## Fork / Customize
 
