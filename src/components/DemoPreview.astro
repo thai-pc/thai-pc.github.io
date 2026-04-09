@@ -7,6 +7,12 @@ interface Props {
 
 const { lang } = Astro.props;
 const t = useTranslations(lang);
+
+const screenshots = [
+  { src: '/demo/fluxfiles-demo-desktop.png', alt: 'FluxFiles desktop file manager UI' },
+  { src: '/demo/fluxfiles-demo-mobile.png', alt: 'FluxFiles mobile file manager UI' },
+  { src: '/demo/fluxfiles-demo-modal.png', alt: 'FluxFiles create folder modal' },
+];
 ---
 
 <section class="py-16 sm:py-20">
@@ -155,6 +161,63 @@ const t = useTranslations(lang);
         </div>
       </div>
     </div>
+
+    <div class="mt-10 sm:mt-12 mx-auto max-w-5xl">
+      <div
+        class="rounded-xl border border-[var(--border-default)] bg-[var(--bg-elevated)] overflow-hidden shadow-lg shadow-black/5 dark:shadow-black/30"
+        data-demo-carousel
+      >
+        <div class="relative">
+          <div class="flex transition-transform duration-300 ease-out will-change-transform" data-carousel-track>
+            {screenshots.map((img) => (
+              <figure class="w-full shrink-0" data-carousel-slide>
+                <div class="w-full aspect-[16/9] sm:aspect-[21/9] bg-[var(--bg-page)]">
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    loading="lazy"
+                    decoding="async"
+                    class="h-full w-full object-contain"
+                  />
+                </div>
+              </figure>
+            ))}
+          </div>
+
+          <button
+            type="button"
+            class="absolute left-3 top-1/2 -translate-y-1/2 inline-flex items-center justify-center w-9 h-9 rounded-full border border-[var(--border-default)] bg-[var(--bg-page)]/90 text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-page)] transition-colors backdrop-blur"
+            aria-label="Previous screenshot"
+            data-carousel-prev
+          >
+            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M12.707 15.707a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414l5-5a1 1 0 111.414 1.414L8.414 10l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            class="absolute right-3 top-1/2 -translate-y-1/2 inline-flex items-center justify-center w-9 h-9 rounded-full border border-[var(--border-default)] bg-[var(--bg-page)]/90 text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-page)] transition-colors backdrop-blur"
+            aria-label="Next screenshot"
+            data-carousel-next
+          >
+            <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M7.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 11-1.414-1.414L11.586 10 7.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="flex items-center justify-center gap-2 py-3 border-t border-[var(--border-default)] bg-[var(--bg-elevated)]" data-carousel-dots>
+          {screenshots.map((_, idx) => (
+            <button
+              type="button"
+              class="w-2.5 h-2.5 rounded-full border border-[var(--border-default)] bg-[var(--bg-page)] hover:bg-[var(--bg-subtle)] transition-colors"
+              aria-label={`Go to screenshot ${idx + 1}`}
+              data-carousel-dot={idx}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -174,6 +237,54 @@ const t = useTranslations(lang);
           }, 1600);
         });
       });
+    });
+  });
+</script>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('[data-demo-carousel]').forEach(function (root) {
+      var track = root.querySelector('[data-carousel-track]');
+      var slides = root.querySelectorAll('[data-carousel-slide]');
+      var btnPrev = root.querySelector('[data-carousel-prev]');
+      var btnNext = root.querySelector('[data-carousel-next]');
+      var dots = root.querySelectorAll('[data-carousel-dot]');
+      if (!track || !slides.length) return;
+
+      var index = 0;
+      function clamp(n) {
+        return Math.max(0, Math.min(slides.length - 1, n));
+      }
+      function render() {
+        var pct = index * 100;
+        track.style.transform = 'translateX(-' + pct + '%)';
+        dots.forEach(function (d, i) {
+          d.style.background = i === index ? 'var(--progress-fill)' : 'var(--bg-page)';
+          d.setAttribute('aria-current', i === index ? 'true' : 'false');
+        });
+      }
+      function goTo(n) {
+        index = clamp(n);
+        render();
+      }
+
+      btnPrev && btnPrev.addEventListener('click', function () { goTo(index - 1); });
+      btnNext && btnNext.addEventListener('click', function () { goTo(index + 1); });
+      dots.forEach(function (d) {
+        d.addEventListener('click', function () {
+          var raw = d.getAttribute('data-carousel-dot');
+          var n = raw ? parseInt(raw, 10) : 0;
+          goTo(n);
+        });
+      });
+
+      // Keyboard support when any control is focused
+      root.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') goTo(index - 1);
+        if (e.key === 'ArrowRight') goTo(index + 1);
+      });
+
+      render();
     });
   });
 </script>
