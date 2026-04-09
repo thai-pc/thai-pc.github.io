@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://thai-pc.github.io/fluxfiles/sitemap-index.xml
