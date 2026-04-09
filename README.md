@@ -38,7 +38,6 @@ fluxfiles-landing/
 │   ├── components/
 │   │   ├── Navbar.astro         # Sticky nav + lang switcher + theme (light/dark/system)
 │   │   ├── Hero.astro           # Headline, CTAs, stats row
-│   │   ├── DemoPreview.astro    # Static file manager UI mockup
 │   │   ├── Features.astro       # 21 feature cards grid
 │   │   ├── Install.astro        # Composer/Laravel/JS SDK/React/Vue/Manual tabs
 │   │   ├── Comparison.astro     # FluxFiles vs 4 competitors
