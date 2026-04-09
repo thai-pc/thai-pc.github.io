@@ -22,7 +22,8 @@
   },
   "demo": {
     "label": "Vorschau",
-    "headline": "In Aktion sehen"
+    "headline": "In Aktion sehen",
+    "upload_mock_label": "Upload-Vorschau (Demo-UI)"
   },
   "features": {
     "label": "Funktionen",

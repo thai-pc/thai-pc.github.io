@@ -22,7 +22,8 @@
   },
   "demo": {
     "label": "预览",
-    "headline": "查看实际效果"
+    "headline": "查看实际效果",
+    "upload_mock_label": "上传预览（演示界面）"
   },
   "features": {
     "label": "功能",

@@ -22,7 +22,8 @@
   },
   "demo": {
     "label": "Live voorbeeld",
-    "headline": "Bekijk het in actie"
+    "headline": "Bekijk het in actie",
+    "upload_mock_label": "Uploadvoorbeeld (demo-UI)"
   },
   "features": {
     "label": "Functies",

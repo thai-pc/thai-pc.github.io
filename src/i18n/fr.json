@@ -22,7 +22,8 @@
   },
   "demo": {
     "label": "Aperçu",
-    "headline": "Voir en action"
+    "headline": "Voir en action",
+    "upload_mock_label": "Aperçu du téléversement (démo)"
   },
   "features": {
     "label": "Fonctionnalités",

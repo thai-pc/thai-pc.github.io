@@ -148,12 +148,13 @@ const frameworks = [
             x-cloak={i > 0 ? true : undefined}
             class="relative"
           >
-            <div class="bg-gray-950 rounded-b-xl p-4 overflow-x-auto">
-              <pre class="text-sm text-gray-300 font-mono leading-relaxed"><code id={`code-${tb.id}`}>{tb.code}</code></pre>
+            <div class="rounded-b-xl p-4 overflow-x-auto bg-[var(--code-bg)] text-[var(--code-text)] ring-1 ring-[var(--code-border)] shadow-inner">
+              <pre class="text-sm font-mono leading-relaxed"><code id={`code-${tb.id}`}>{tb.code}</code></pre>
             </div>
             <button
+              type="button"
               onclick={`copyCode('${tb.id}')`}
-              class="absolute top-3 right-3 px-3 py-1 text-xs font-medium text-gray-400 hover:text-white bg-gray-800 hover:bg-gray-700 rounded-md transition-colors"
+              class="absolute top-3 right-3 px-3 py-1 text-xs font-medium rounded-md transition-colors bg-[var(--copy-btn-bg)] text-[var(--copy-btn-text)] hover:bg-[var(--copy-btn-bg-hover)] disabled:opacity-50 disabled:pointer-events-none"
               data-copy-btn={tb.id}
             >
               {t('install.copy')}

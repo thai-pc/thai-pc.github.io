@@ -22,7 +22,8 @@
   },
   "demo": {
     "label": "Xem trước",
-    "headline": "Xem thực tế"
+    "headline": "Xem thực tế",
+    "upload_mock_label": "Xem trước tải lên (giao diện demo)"
   },
   "features": {
     "label": "Tính năng",

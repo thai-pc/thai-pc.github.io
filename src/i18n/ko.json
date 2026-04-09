@@ -22,7 +22,8 @@
   },
   "demo": {
     "label": "미리보기",
-    "headline": "실제 동작 확인"
+    "headline": "실제 동작 확인",
+    "upload_mock_label": "업로드 미리보기(데모 UI)"
   },
   "features": {
     "label": "기능",
