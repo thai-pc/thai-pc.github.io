@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "FluxFiles — The file manager that embeds anywhere",
-    "description": "Open source PHP file manager with S3, R2, local storage. Embed via iframe + postMessage SDK."
+    "description": "PHP 8.1+ file manager with S3, R2, and local storage. Alpine.js UI. Embed via iframe + JavaScript SDK."
   },
   "nav": {
     "docs": "Docs",
@@ -12,7 +12,7 @@
   "hero": {
     "badge": "v1.22.0 — Open Source · MIT License",
     "headline": "The file manager that embeds anywhere",
-    "sub": "PHP ≥ 7.4 + Flysystem. Local, S3, Cloudflare R2 in one UI. 3 lines of JavaScript.",
+    "sub": "PHP ≥ 8.1 + Flysystem 3. Alpine.js UI. Local, S3, Cloudflare R2. Embed with a few lines of JavaScript.",
     "cta_start": "Get started",
     "cta_github": "Star on GitHub",
     "stat_php": "No framework required",
@@ -29,17 +29,17 @@
     "headline": "Everything a modern file manager needs",
     "sub": "Built for developers who need flexibility.",
     "storage_title": "Multi-storage",
-    "storage_desc": "Local, AWS S3, Cloudflare R2 — swap with config, no code change.",
+    "storage_desc": "Local, AWS S3, Cloudflare R2 via Flysystem v3 — swap with config, no code change.",
     "embed_title": "Embed anywhere",
-    "embed_desc": "iframe + postMessage SDK. 3 lines of JS. Works with any framework.",
+    "embed_desc": "iframe + postMessage SDK. Standalone UI is Alpine.js (zero build). Works with any framework.",
     "jwt_title": "JWT auth + scoping",
-    "jwt_desc": "Per-user path prefix, permission claims, disk whitelist.",
+    "jwt_desc": "Per-user path prefix, permission claims, disk whitelist, owner-only mode.",
     "seo_title": "SEO metadata",
-    "seo_desc": "Alt text, title, caption in SQLite. Synced to S3 object tags.",
+    "seo_desc": "Title, alt, caption, tags — S3 object metadata (cloud) or sidecar JSON (local). Full-text search.",
     "presign_title": "Presigned uploads",
     "presign_desc": "Browser uploads directly to S3/R2 — zero bandwidth on your server.",
     "i18n_title": "16 languages",
-    "i18n_desc": "Auto-detects browser language. RTL support. Add your own in 1 JSON file.",
+    "i18n_desc": "Default English. Set locale via SDK, URL (?locale=), or FLUXFILES_LOCALE. RTL for Arabic.",
     "ai_title": "AI auto-tag",
     "ai_desc": "Claude / OpenAI vision — auto alt text, title, tags.",
     "crop_title": "Image crop",
@@ -57,7 +57,13 @@
     "crossdisk_title": "Cross-disk transfer",
     "crossdisk_desc": "Copy/move between Local ↔ S3 ↔ R2.",
     "darkmode_title": "Dark mode",
-    "darkmode_desc": "Auto-detect + manual toggle in UI.",
+    "darkmode_desc": "Light / dark / auto in UI and SDK.",
+    "byob_title": "BYOB buckets",
+    "byob_desc": "Users bring their own S3/R2 — credentials encrypted in JWT (AES-256-GCM).",
+    "dup_title": "Duplicate detection",
+    "dup_desc": "SHA-256 match skips redundant uploads unless you force overwrite.",
+    "tokenrefresh_title": "SDK token refresh",
+    "tokenrefresh_desc": "onTokenRefresh on 401 — coalesced refresh, retry, and updateToken() for proactive rotation.",
     "audit_title": "Audit log",
     "audit_desc": "All write actions logged for compliance.",
     "ratelimit_title": "Rate limiting",
@@ -97,7 +103,7 @@
     "row_search": "Full-text search",
     "row_darkmode": "Dark mode",
     "row_i18n": "16 languages",
-    "row_php74": "PHP ≥ 7.4"
+    "row_php81": "PHP ≥ 8.1"
   },
   "footer": {
     "made_by": "Made by",
@@ -106,6 +112,7 @@
     "changelog": "Changelog",
     "license_link": "License",
     "packagist": "Packagist",
-    "npm": "npm"
+    "npm": "npm",
+    "readme_hint": "Full documentation on GitHub"
   }
 }

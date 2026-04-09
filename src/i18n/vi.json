@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "FluxFiles — Trình quản lý file nhúng được mọi nơi",
-    "description": "Trình quản lý file PHP mã nguồn mở hỗ trợ S3, R2, local. Nhúng qua iframe + postMessage SDK."
+    "description": "Trình quản lý file PHP 8.1+ với S3, R2, local. Giao diện Alpine.js. Nhúng qua iframe + SDK JavaScript."
   },
   "nav": {
     "docs": "Tài liệu",
@@ -12,7 +12,7 @@
   "hero": {
     "badge": "v1.22.0 — Mã nguồn mở · Giấy phép MIT",
     "headline": "Trình quản lý file nhúng được mọi nơi",
-    "sub": "PHP ≥ 7.4 + Flysystem. Local, S3, Cloudflare R2 trong một giao diện. 3 dòng JavaScript.",
+    "sub": "PHP ≥ 8.1 + Flysystem 3. Giao diện Alpine.js. Local, S3, Cloudflare R2. Nhúng với vài dòng JavaScript.",
     "cta_start": "Bắt đầu",
     "cta_github": "Star trên GitHub",
     "stat_php": "Không cần framework",
@@ -29,17 +29,17 @@
     "headline": "Mọi thứ một trình quản lý file hiện đại cần",
     "sub": "Xây dựng cho lập trình viên cần sự linh hoạt.",
     "storage_title": "Đa lưu trữ",
-    "storage_desc": "Local, AWS S3, Cloudflare R2 — thay đổi bằng config, không cần sửa code.",
+    "storage_desc": "Local, AWS S3, Cloudflare R2 qua Flysystem v3 — đổi bằng config, không sửa code.",
     "embed_title": "Nhúng mọi nơi",
-    "embed_desc": "iframe + postMessage SDK. 3 dòng JS. Hoạt động với mọi framework.",
+    "embed_desc": "iframe + SDK postMessage. UI độc lập dùng Alpine.js (không build). Dùng được với mọi framework.",
     "jwt_title": "JWT auth + phân quyền",
-    "jwt_desc": "Tiền tố đường dẫn theo user, phân quyền claims, danh sách disk.",
+    "jwt_desc": "Prefix đường dẫn theo user, quyền, whitelist disk, chế độ owner-only.",
     "seo_title": "SEO metadata",
-    "seo_desc": "Alt text, title, caption trong SQLite. Đồng bộ với S3 object tags.",
+    "seo_desc": "Title, alt, caption, tags — metadata object S3 (cloud) hoặc sidecar JSON (local). Tìm kiếm full-text.",
     "presign_title": "Upload presigned",
     "presign_desc": "Trình duyệt upload trực tiếp lên S3/R2 — không tốn bandwidth server.",
     "i18n_title": "16 ngôn ngữ",
-    "i18n_desc": "Tự nhận diện ngôn ngữ trình duyệt. Hỗ trợ RTL. Thêm ngôn ngữ của bạn trong 1 file JSON.",
+    "i18n_desc": "Mặc định tiếng Anh. Đặt locale qua SDK, URL (?locale=), hoặc FLUXFILES_LOCALE. RTL cho tiếng Ả Rập.",
     "ai_title": "AI auto-tag",
     "ai_desc": "Claude / OpenAI vision — tự động alt text, tiêu đề, tags.",
     "crop_title": "Cắt ảnh",
@@ -57,13 +57,19 @@
     "crossdisk_title": "Chuyển giữa các disk",
     "crossdisk_desc": "Sao chép/di chuyển giữa Local ↔ S3 ↔ R2.",
     "darkmode_title": "Chế độ tối",
-    "darkmode_desc": "Tự nhận diện + chuyển đổi thủ công.",
+    "darkmode_desc": "Sáng / tối / tự động trong UI và SDK.",
     "audit_title": "Nhật ký kiểm toán",
     "audit_desc": "Ghi log tất cả hành động ghi.",
     "ratelimit_title": "Giới hạn tốc độ",
     "ratelimit_desc": "Token bucket cho mỗi người dùng.",
     "quota_title": "Hạn mức lưu trữ",
-    "quota_desc": "Giới hạn dung lượng theo JWT claims."
+    "quota_desc": "Giới hạn dung lượng theo JWT claims.",
+    "byob_title": "BYOB bucket",
+    "byob_desc": "Người dùng gắn S3/R2 riêng — credential mã hóa trong JWT (AES-256-GCM).",
+    "dup_title": "Phát hiện trùng file",
+    "dup_desc": "Khớp SHA-256 bỏ qua upload trùng trừ khi bạn force ghi đè.",
+    "tokenrefresh_title": "Làm mới token SDK",
+    "tokenrefresh_desc": "onTokenRefresh khi 401 — gộp refresh, thử lại, và updateToken() để đổi token chủ động."
   },
   "install": {
     "label": "Cài đặt nhanh",
@@ -98,7 +104,7 @@
     "row_search": "Tìm kiếm toàn văn",
     "row_darkmode": "Chế độ tối",
     "row_i18n": "16 ngôn ngữ",
-    "row_php74": "PHP ≥ 7.4"
+    "row_php81": "PHP ≥ 8.1"
   },
   "footer": {
     "made_by": "Tạo bởi",
@@ -107,6 +113,7 @@
     "changelog": "Nhật ký",
     "license_link": "Giấy phép",
     "packagist": "Packagist",
-    "npm": "npm"
+    "npm": "npm",
+    "readme_hint": "Tài liệu đầy đủ trên GitHub"
   }
 }

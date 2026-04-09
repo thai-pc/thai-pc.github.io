@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "FluxFiles — どこにでも埋め込めるファイルマネージャー",
-    "description": "S3、R2、ローカルストレージ対応のオープンソースPHPファイルマネージャー。iframe + postMessage SDKで埋め込み。"
+    "description": "PHP 8.1+ 対応のファイルマネージャー。S3、R2、ローカルストレージ。Alpine.js UI。iframe + JavaScript SDKで埋め込み。"
   },
   "nav": {
     "docs": "ドキュメント",
@@ -12,7 +12,7 @@
   "hero": {
     "badge": "v1.22.0 — オープンソース · MITライセンス",
     "headline": "どこにでも埋め込めるファイルマネージャー",
-    "sub": "PHP ≥ 7.4 + Flysystem。Local、S3、Cloudflare R2を一つのUIで。JavaScript3行。",
+    "sub": "PHP ≥ 8.1 + Flysystem 3。Alpine.js UI。Local、S3、Cloudflare R2。数行のJavaScriptで埋め込み。",
     "cta_start": "始める",
     "cta_github": "GitHubでスターする",
     "stat_php": "フレームワーク不要",
@@ -29,17 +29,17 @@
     "headline": "モダンなファイルマネージャーに必要なすべて",
     "sub": "柔軟性を求める開発者のために構築。",
     "storage_title": "マルチストレージ",
-    "storage_desc": "Local、AWS S3、Cloudflare R2 — 設定で切り替え、コード変更不要。",
+    "storage_desc": "ローカル、AWS S3、Cloudflare R2 — Flysystem v3経由。設定で切替、コード変更不要。",
     "embed_title": "どこにでも埋め込み",
-    "embed_desc": "iframe + postMessage SDK。JS3行。あらゆるフレームワークに対応。",
+    "embed_desc": "iframe + postMessage SDK。スタンドアロンUIはAlpine.js（ビルド不要）。どのフレームワークでも可。",
     "jwt_title": "JWT認証 + スコーピング",
-    "jwt_desc": "ユーザーごとのパスプレフィックス、権限クレーム、ディスクホワイトリスト。",
+    "jwt_desc": "ユーザーごとのパスプレフィックス、権限、ディスクホワイトリスト、owner-onlyモード。",
     "seo_title": "SEOメタデータ",
-    "seo_desc": "Altテキスト、タイトル、キャプションをSQLiteに保存。S3オブジェクトタグと同期。",
+    "seo_desc": "タイトル、alt、キャプション、タグ — クラウドはS3オブジェクトメタデータ、ローカルはsidecar JSON。全文検索。",
     "presign_title": "署名付きアップロード",
     "presign_desc": "ブラウザからS3/R2に直接アップロード — サーバー帯域ゼロ。",
     "i18n_title": "16言語",
-    "i18n_desc": "ブラウザ言語を自動検出。RTL対応。1つのJSONファイルで言語追加。",
+    "i18n_desc": "デフォルトは英語。SDK、URL (?locale=)、またはFLUXFILES_LOCALEで指定。アラビア語はRTL。",
     "ai_title": "AI自動タグ",
     "ai_desc": "Claude / OpenAI vision — altテキスト、タイトル、タグを自動生成。",
     "crop_title": "画像クロップ",
@@ -57,13 +57,19 @@
     "crossdisk_title": "クロスディスク転送",
     "crossdisk_desc": "ローカル ↔ S3 ↔ R2間のコピー/移動。",
     "darkmode_title": "ダークモード",
-    "darkmode_desc": "自動検出 + 手動切替。",
+    "darkmode_desc": "UIとSDKでライト/ダーク/自動。",
     "audit_title": "監査ログ",
     "audit_desc": "すべての書き込み操作を記録。",
     "ratelimit_title": "レート制限",
     "ratelimit_desc": "ユーザーごとのトークンバケット。",
     "quota_title": "ストレージクォータ",
-    "quota_desc": "JWTクレームによるユーザーごとの制限。"
+    "quota_desc": "JWTクレームによるユーザーごとの制限。",
+    "byob_title": "BYOBバケット",
+    "byob_desc": "ユーザー自身のS3/R2 — 認証情報はJWT内で暗号化（AES-256-GCM）。",
+    "dup_title": "重複検出",
+    "dup_desc": "SHA-256一致で冗長アップロードをスキップ（強制上書き除く）。",
+    "tokenrefresh_title": "SDKトークン更新",
+    "tokenrefresh_desc": "401時にonTokenRefresh — 更新の集約、再試行、updateToken()で事前更新。"
   },
   "install": {
     "label": "クイックインストール",
@@ -98,7 +104,7 @@
     "row_search": "全文検索",
     "row_darkmode": "ダークモード",
     "row_i18n": "16言語",
-    "row_php74": "PHP ≥ 7.4"
+    "row_php81": "PHP ≥ 8.1"
   },
   "footer": {
     "made_by": "作者",
@@ -107,6 +113,7 @@
     "changelog": "変更履歴",
     "license_link": "ライセンス",
     "packagist": "Packagist",
-    "npm": "npm"
+    "npm": "npm",
+    "readme_hint": "完全なドキュメントは GitHub で"
   }
 }

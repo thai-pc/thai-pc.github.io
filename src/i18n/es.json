@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "FluxFiles — El gestor de archivos que se incrusta en cualquier lugar",
-    "description": "Gestor de archivos PHP de código abierto con S3, R2, almacenamiento local. Incrusta vía iframe + SDK postMessage."
+    "description": "Gestor de archivos PHP 8.1+ con S3, R2 y almacenamiento local. UI Alpine.js. Incrustar vía iframe + SDK JavaScript."
   },
   "nav": {
     "docs": "Documentación",
@@ -12,7 +12,7 @@
   "hero": {
     "badge": "v1.22.0 — Código abierto · Licencia MIT",
     "headline": "El gestor de archivos que se incrusta en cualquier lugar",
-    "sub": "PHP ≥ 7.4 + Flysystem. Local, S3, Cloudflare R2 en una interfaz. 3 líneas de JavaScript.",
+    "sub": "PHP ≥ 8.1 + Flysystem 3. UI Alpine.js. Local, S3, Cloudflare R2. Incrusta con pocas líneas de JavaScript.",
     "cta_start": "Comenzar",
     "cta_github": "Star en GitHub",
     "stat_php": "Sin framework requerido",
@@ -29,17 +29,17 @@
     "headline": "Todo lo que un gestor de archivos moderno necesita",
     "sub": "Construido para desarrolladores que necesitan flexibilidad.",
     "storage_title": "Multi-almacenamiento",
-    "storage_desc": "Local, AWS S3, Cloudflare R2 — cambia con configuración, sin cambiar código.",
+    "storage_desc": "Local, AWS S3, Cloudflare R2 vía Flysystem v3 — cambia con config, sin tocar código.",
     "embed_title": "Incrusta en cualquier lugar",
-    "embed_desc": "iframe + SDK postMessage. 3 líneas de JS. Compatible con cualquier framework.",
+    "embed_desc": "iframe + SDK postMessage. La UI standalone usa Alpine.js (sin build). Funciona con cualquier framework.",
     "jwt_title": "Auth JWT + alcance",
-    "jwt_desc": "Prefijo de ruta por usuario, claims de permisos, lista blanca de discos.",
+    "jwt_desc": "Prefijo de ruta por usuario, permisos, lista blanca de discos, modo solo propietario.",
     "seo_title": "Metadatos SEO",
-    "seo_desc": "Texto alt, título, descripción en SQLite. Sincronizado con tags de objetos S3.",
+    "seo_desc": "Título, alt, leyenda, tags — metadatos de objeto S3 (nube) o JSON sidecar (local). Búsqueda de texto completo.",
     "presign_title": "Subidas presignadas",
     "presign_desc": "El navegador sube directamente a S3/R2 — cero ancho de banda en tu servidor.",
     "i18n_title": "16 idiomas",
-    "i18n_desc": "Detecta automáticamente el idioma del navegador. Soporte RTL. Añade el tuyo en 1 archivo JSON.",
+    "i18n_desc": "Inglés por defecto. Establece locale vía SDK, URL (?locale=) o FLUXFILES_LOCALE. RTL para árabe.",
     "ai_title": "AI auto-tag",
     "ai_desc": "Claude / OpenAI vision — alt text, título, tags automáticos.",
     "crop_title": "Recorte de imagen",
@@ -57,13 +57,19 @@
     "crossdisk_title": "Transferencia cross-disk",
     "crossdisk_desc": "Copiar/mover entre Local ↔ S3 ↔ R2.",
     "darkmode_title": "Modo oscuro",
-    "darkmode_desc": "Detección automática + interruptor manual.",
+    "darkmode_desc": "Claro / oscuro / auto en UI y SDK.",
     "audit_title": "Registro de auditoría",
     "audit_desc": "Todas las acciones de escritura registradas.",
     "ratelimit_title": "Limitación de velocidad",
     "ratelimit_desc": "Token bucket por usuario para protección API.",
     "quota_title": "Cuota de almacenamiento",
-    "quota_desc": "Límites por usuario vía JWT claims."
+    "quota_desc": "Límites por usuario vía JWT claims.",
+    "byob_title": "Buckets BYOB",
+    "byob_desc": "Los usuarios traen su propio S3/R2 — credenciales cifradas en JWT (AES-256-GCM).",
+    "dup_title": "Detección de duplicados",
+    "dup_desc": "Coincidencia SHA-256 omite cargas redundantes salvo sobrescritura forzada.",
+    "tokenrefresh_title": "Renovación de token SDK",
+    "tokenrefresh_desc": "onTokenRefresh en 401 — refresh coalescido, reintento y updateToken() para rotación proactiva."
   },
   "install": {
     "label": "Instalación rápida",
@@ -98,7 +104,7 @@
     "row_search": "Búsqueda de texto",
     "row_darkmode": "Modo oscuro",
     "row_i18n": "16 idiomas",
-    "row_php74": "PHP ≥ 7.4"
+    "row_php81": "PHP ≥ 8.1"
   },
   "footer": {
     "made_by": "Creado por",
@@ -107,6 +113,7 @@
     "changelog": "Registro de cambios",
     "license_link": "Licencia",
     "packagist": "Packagist",
-    "npm": "npm"
+    "npm": "npm",
+    "readme_hint": "Documentación completa en GitHub"
   }
 }

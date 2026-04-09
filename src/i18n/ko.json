@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "FluxFiles — 어디에든 임베드할 수 있는 파일 매니저",
-    "description": "S3, R2, 로컬 스토리지를 지원하는 오픈소스 PHP 파일 매니저. iframe + postMessage SDK로 임베드."
+    "description": "PHP 8.1+ 파일 매니저. S3, R2, 로컬 스토리지. Alpine.js UI. iframe + JavaScript SDK로 임베드."
   },
   "nav": {
     "docs": "문서",
@@ -12,7 +12,7 @@
   "hero": {
     "badge": "v1.22.0 — 오픈소스 · MIT 라이선스",
     "headline": "어디에든 임베드할 수 있는 파일 매니저",
-    "sub": "PHP ≥ 7.4 + Flysystem. Local, S3, Cloudflare R2를 하나의 UI로. JavaScript 3줄.",
+    "sub": "PHP ≥ 8.1 + Flysystem 3. Alpine.js UI. Local, S3, Cloudflare R2. 몇 줄의 JavaScript로 임베드.",
     "cta_start": "시작하기",
     "cta_github": "GitHub에서 스타하기",
     "stat_php": "프레임워크 불필요",
@@ -29,17 +29,17 @@
     "headline": "현대적인 파일 매니저에 필요한 모든 것",
     "sub": "유연성이 필요한 개발자를 위해 구축.",
     "storage_title": "멀티 스토리지",
-    "storage_desc": "Local, AWS S3, Cloudflare R2 — 설정으로 전환, 코드 변경 불필요.",
+    "storage_desc": "로컬, AWS S3, Cloudflare R2 — Flysystem v3. 설정만으로 전환.",
     "embed_title": "어디든 임베드",
-    "embed_desc": "iframe + postMessage SDK. JS 3줄. 모든 프레임워크와 호환.",
+    "embed_desc": "iframe + postMessage SDK. 독립 UI는 Alpine.js(빌드 없음). 모든 프레임워크와 호환.",
     "jwt_title": "JWT 인증 + 스코핑",
-    "jwt_desc": "사용자별 경로 접두사, 권한 클레임, 디스크 화이트리스트.",
+    "jwt_desc": "사용자별 경로 접두사, 권한, 디스크 화이트리스트, owner-only 모드.",
     "seo_title": "SEO 메타데이터",
-    "seo_desc": "Alt 텍스트, 제목, 캡션을 SQLite에 저장. S3 오브젝트 태그와 동기화.",
+    "seo_desc": "제목, alt, 캡션, 태그 — 클라우드는 S3 객체 메타데이터, 로컬은 sidecar JSON. 전체 텍스트 검색.",
     "presign_title": "사전 서명 업로드",
     "presign_desc": "브라우저에서 S3/R2로 직접 업로드 — 서버 대역폭 제로.",
     "i18n_title": "16개 언어",
-    "i18n_desc": "브라우저 언어 자동 감지. RTL 지원. 1개 JSON 파일로 언어 추가.",
+    "i18n_desc": "기본 영어. SDK, URL (?locale=), FLUXFILES_LOCALE로 설정. 아랍어 RTL.",
     "ai_title": "AI 자동 태그",
     "ai_desc": "Claude / OpenAI vision — alt 텍스트, 제목, 태그 자동 생성.",
     "crop_title": "이미지 자르기",
@@ -57,13 +57,19 @@
     "crossdisk_title": "크로스 디스크 전송",
     "crossdisk_desc": "로컬 ↔ S3 ↔ R2 간 복사/이동.",
     "darkmode_title": "다크 모드",
-    "darkmode_desc": "자동 감지 + 수동 전환.",
+    "darkmode_desc": "UI 및 SDK에서 라이트/다크/자동.",
     "audit_title": "감사 로그",
     "audit_desc": "모든 쓰기 작업 기록.",
     "ratelimit_title": "속도 제한",
     "ratelimit_desc": "사용자별 토큰 버킷 API 보호.",
     "quota_title": "저장소 할당량",
-    "quota_desc": "JWT 클레임을 통한 사용자별 제한."
+    "quota_desc": "JWT 클레임을 통한 사용자별 제한.",
+    "byob_title": "BYOB 버킷",
+    "byob_desc": "사용자 자체 S3/R2 — JWT 내 자격 증명 암호화(AES-256-GCM).",
+    "dup_title": "중복 감지",
+    "dup_desc": "SHA-256 일치 시 강제 덮어쓰기 전까지 중복 업로드 건너뜀.",
+    "tokenrefresh_title": "SDK 토큰 갱신",
+    "tokenrefresh_desc": "401 시 onTokenRefresh — 갱신 병합, 재시도, updateToken()으로 사전 갱신."
   },
   "install": {
     "label": "빠른 설치",
@@ -98,7 +104,7 @@
     "row_search": "전체 텍스트 검색",
     "row_darkmode": "다크 모드",
     "row_i18n": "16개 언어",
-    "row_php74": "PHP ≥ 7.4"
+    "row_php81": "PHP ≥ 8.1"
   },
   "footer": {
     "made_by": "제작",
@@ -107,6 +113,7 @@
     "changelog": "변경 기록",
     "license_link": "라이선스",
     "packagist": "Packagist",
-    "npm": "npm"
+    "npm": "npm",
+    "readme_hint": "전체 문서는 GitHub에서"
   }
 }

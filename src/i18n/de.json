@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "FluxFiles — Der Dateimanager, der überall eingebettet wird",
-    "description": "Open-Source PHP-Dateimanager mit S3, R2, lokalem Speicher. Einbetten über iframe + postMessage SDK."
+    "description": "PHP 8.1+ Dateimanager mit S3, R2, lokalem Speicher. Alpine.js UI. Einbetten via iframe + JavaScript-SDK."
   },
   "nav": {
     "docs": "Dokumentation",
@@ -12,7 +12,7 @@
   "hero": {
     "badge": "v1.22.0 — Open Source · MIT-Lizenz",
     "headline": "Der Dateimanager, der überall eingebettet wird",
-    "sub": "PHP ≥ 7.4 + Flysystem. Local, S3, Cloudflare R2 in einer Oberfläche. 3 Zeilen JavaScript.",
+    "sub": "PHP ≥ 8.1 + Flysystem 3. Alpine.js UI. Local, S3, Cloudflare R2. Einbetten mit wenigen Zeilen JavaScript.",
     "cta_start": "Loslegen",
     "cta_github": "Stern auf GitHub",
     "stat_php": "Kein Framework erforderlich",
@@ -29,17 +29,17 @@
     "headline": "Alles, was ein moderner Dateimanager braucht",
     "sub": "Gebaut für Entwickler, die Flexibilität brauchen.",
     "storage_title": "Multi-Speicher",
-    "storage_desc": "Local, AWS S3, Cloudflare R2 — per Konfiguration wechseln, kein Code ändern.",
+    "storage_desc": "Lokal, AWS S3, Cloudflare R2 über Flysystem v3 — per Konfiguration wechseln, kein Code-Change.",
     "embed_title": "Überall einbetten",
-    "embed_desc": "iframe + postMessage SDK. 3 Zeilen JS. Funktioniert mit jedem Framework.",
+    "embed_desc": "iframe + postMessage SDK. Standalone-UI mit Alpine.js (ohne Build). Funktioniert mit jedem Framework.",
     "jwt_title": "JWT-Auth + Scoping",
-    "jwt_desc": "Benutzerspezifischer Pfadpräfix, Berechtigungs-Claims, Disk-Whitelist.",
+    "jwt_desc": "Pfad-Präfix pro Nutzer, Berechtigungen, Disk-Whitelist, Owner-only-Modus.",
     "seo_title": "SEO-Metadaten",
-    "seo_desc": "Alt-Text, Titel, Beschriftung in SQLite. Synchronisiert mit S3-Objekt-Tags.",
+    "seo_desc": "Titel, Alt, Beschriftung, Tags — S3-Objektmetadaten (Cloud) oder Sidecar-JSON (lokal). Volltextsuche.",
     "presign_title": "Vorsignierte Uploads",
     "presign_desc": "Browser lädt direkt zu S3/R2 hoch — null Bandbreite auf Ihrem Server.",
     "i18n_title": "16 Sprachen",
-    "i18n_desc": "Automatische Browser-Spracherkennung. RTL-Unterstützung. Eigene Sprache in 1 JSON-Datei hinzufügen.",
+    "i18n_desc": "Standard Englisch. Locale über SDK, URL (?locale=) oder FLUXFILES_LOCALE. RTL für Arabisch.",
     "ai_title": "AI Auto-Tag",
     "ai_desc": "Claude / OpenAI Vision — automatisch Alt-Text, Titel, Tags.",
     "crop_title": "Bildzuschnitt",
@@ -57,13 +57,19 @@
     "crossdisk_title": "Cross-Disk-Transfer",
     "crossdisk_desc": "Kopieren/Verschieben zwischen Lokal ↔ S3 ↔ R2.",
     "darkmode_title": "Dunkelmodus",
-    "darkmode_desc": "Automatische Erkennung + manueller Umschalter.",
+    "darkmode_desc": "Hell / dunkel / auto in UI und SDK.",
     "audit_title": "Audit-Protokoll",
     "audit_desc": "Alle Schreibaktionen werden protokolliert.",
     "ratelimit_title": "Ratenbegrenzung",
     "ratelimit_desc": "Token Bucket pro Benutzer zum API-Schutz.",
     "quota_title": "Speicherkontingent",
-    "quota_desc": "Benutzerlimits über JWT-Claims."
+    "quota_desc": "Benutzerlimits über JWT-Claims.",
+    "byob_title": "BYOB-Buckets",
+    "byob_desc": "Nutzer bringen eigenes S3/R2 — Zugangsdaten verschlüsselt im JWT (AES-256-GCM).",
+    "dup_title": "Duplikaterkennung",
+    "dup_desc": "SHA-256-Match überspringt redundante Uploads außer bei erzwungenem Überschreiben.",
+    "tokenrefresh_title": "SDK-Token-Refresh",
+    "tokenrefresh_desc": "onTokenRefresh bei 401 — zusammengefasster Refresh, Retry und updateToken() für proaktive Rotation."
   },
   "install": {
     "label": "Schnellinstallation",
@@ -98,7 +104,7 @@
     "row_search": "Volltextsuche",
     "row_darkmode": "Dunkelmodus",
     "row_i18n": "16 Sprachen",
-    "row_php74": "PHP ≥ 7.4"
+    "row_php81": "PHP ≥ 8.1"
   },
   "footer": {
     "made_by": "Erstellt von",
@@ -107,6 +113,7 @@
     "changelog": "Änderungsprotokoll",
     "license_link": "Lizenz",
     "packagist": "Packagist",
-    "npm": "npm"
+    "npm": "npm",
+    "readme_hint": "Vollständige Dokumentation auf GitHub"
   }
 }

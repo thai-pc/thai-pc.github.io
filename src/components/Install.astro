@@ -15,26 +15,32 @@ cp .env.example .env
 FLUXFILES_SECRET=your-random-32-char-secret
 FLUXFILES_ALLOWED_ORIGINS=https://yourapp.com
 
-# your-app.php
 require_once 'vendor/autoload.php';
 
 $token = fluxfiles_token(
-    'user-123',
-    ['read', 'write', 'delete'],
-    ['local', 's3']
+    userId: 'user-123',
+    perms: ['read', 'write', 'delete'],
+    disks: ['local', 's3', 'r2'],
+    prefix: 'user-123/',
+    maxUploadMb: 10,
+    allowedExt: null,
+    ttl: 3600
 );`;
 
 const laravelCode = `composer require fluxfiles/laravel
 php artisan vendor:publish --tag=fluxfiles-config
 
-# .env
-FLUXFILES_SECRET=your-random-32-char-secret
-FLUXFILES_ALLOWED_ORIGINS=https://yourapp.com
+# .env — point the adapter at your FluxFiles server
+FLUXFILES_ENDPOINT=https://fm.yourdomain.com
+FLUXFILES_SECRET=your-secret-min-32-chars
 
-# Routes are auto-registered
-# Config at config/fluxfiles.php`;
+# Optional: match CORS on the FluxFiles host
+# FLUXFILES_ALLOWED_ORIGINS=https://yourapp.com
 
-const sdkCode = `<script src="https://unpkg.com/fluxfiles@1.22.0/fluxfiles.js"><\/script>
+# Config: config/fluxfiles.php`;
+
+const sdkCode = `<!-- Demo: unpkg. In production, serve fluxfiles.js from your FluxFiles host -->
+<script src="https://unpkg.com/fluxfiles@1.22.0/fluxfiles.js"><\/script>
 
 <script>
 FluxFiles.open({
@@ -45,6 +51,11 @@ FluxFiles.open({
     container: '#file-picker',
     onSelect: function(file) {
         console.log('Selected:', file.url);
+    },
+    async onTokenRefresh() {
+        const r = await fetch('/api/auth/refresh-fluxfiles-token');
+        const { token } = await r.json();
+        return token;
     }
 });
 <\/script>`;
@@ -77,9 +88,14 @@ import { FluxFilesModal } from '@fluxfiles/vue';
 
 const manualCode = `git clone https://github.com/thai-pc/fluxfiles.git
 cd fluxfiles
-composer install
+composer install -d packages/core
 cp .env.example .env
-php -S localhost:8080 -t .`;
+
+cd packages/core
+php -S localhost:8080 router.php
+
+# UI:  http://localhost:8080/public/index.html
+# API: http://localhost:8080/api/fm/list?disk=local&path=`;
 
 const tabs = [
   { id: 'composer', label: t('install.tab_composer'), code: composerCode },
@@ -95,6 +111,8 @@ const frameworks = [
   { name: 'WordPress', color: 'bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-400' },
   { name: 'React / Next.js', color: 'bg-cyan-50 dark:bg-cyan-900/20 text-cyan-700 dark:text-cyan-400' },
   { name: 'Vue / Nuxt', color: 'bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400' },
+  { name: 'CKEditor 4', color: 'bg-orange-50 dark:bg-orange-900/20 text-orange-700 dark:text-orange-400' },
+  { name: 'TinyMCE', color: 'bg-violet-50 dark:bg-violet-900/20 text-violet-700 dark:text-violet-400' },
   { name: 'Any framework', color: 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300' },
 ];
 ---

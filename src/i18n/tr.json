@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "FluxFiles — Her yere gömülebilen dosya yöneticisi",
-    "description": "S3, R2, yerel depolama destekli açık kaynak PHP dosya yöneticisi. iframe + postMessage SDK ile gömün."
+    "description": "S3, R2, yerel depolama ile PHP 8.1+ dosya yöneticisi. Alpine.js Arayüzü. iframe + JavaScript SDK ile gömün."
   },
   "nav": {
     "docs": "Dokümantasyon",
@@ -12,7 +12,7 @@
   "hero": {
     "badge": "v1.22.0 — Açık Kaynak · MIT Lisansı",
     "headline": "Her yere gömülebilen dosya yöneticisi",
-    "sub": "PHP ≥ 7.4 + Flysystem. Yerel, S3, Cloudflare R2 tek arayüzde. 3 satır JavaScript.",
+    "sub": "PHP ≥ 8.1 + Flysystem 3. Alpine.js Arayüzü. Yerel, S3, Cloudflare R2. Birkaç satır JavaScript ile gömün.",
     "cta_start": "Başlayın",
     "cta_github": "GitHub'da Star verin",
     "stat_php": "Framework gerektirmez",
@@ -29,17 +29,17 @@
     "headline": "Modern bir dosya yöneticisinin ihtiyacı olan her şey",
     "sub": "Esneklik isteyen geliştiriciler için tasarlandı.",
     "storage_title": "Çoklu depolama",
-    "storage_desc": "Yerel, AWS S3, Cloudflare R2 — yapılandırmayla değiştirin, kod değişikliği yok.",
+    "storage_desc": "Yerel, AWS S3, Cloudflare R2 — Flysystem v3 ile. Yapılandırmayla değiştirin.",
     "embed_title": "Her yere gömün",
-    "embed_desc": "iframe + postMessage SDK. 3 satır JS. Her framework ile çalışır.",
+    "embed_desc": "iframe + postMessage SDK. Bağımsız UI Alpine.js (derleme yok). Her framework ile çalışır.",
     "jwt_title": "JWT kimlik doğrulama + kapsam",
-    "jwt_desc": "Kullanıcı başına yol öneki, izin talepleri, disk beyaz listesi.",
+    "jwt_desc": "Kullanıcı başına yol öneki, izinler, disk beyaz listesi, yalnızca sahip modu.",
     "seo_title": "SEO meta verileri",
-    "seo_desc": "SQLite'da alt metin, başlık, açıklama. S3 nesne etiketleriyle senkronize.",
+    "seo_desc": "Başlık, alt, açıklama, etiketler — S3 nesne meta verisi (bulut) veya sidecar JSON (yerel). Tam metin arama.",
     "presign_title": "Ön imzalı yüklemeler",
     "presign_desc": "Tarayıcı doğrudan S3/R2'ye yükler — sunucunuzda sıfır bant genişliği.",
     "i18n_title": "16 dil",
-    "i18n_desc": "Tarayıcı dilini otomatik algılar. RTL desteği. 1 JSON dosyasında kendi dilinizi ekleyin.",
+    "i18n_desc": "Varsayılan İngilizce. SDK, URL (?locale=) veya FLUXFILES_LOCALE ile ayarlayın. Arapça RTL.",
     "ai_title": "AI otomatik etiket",
     "ai_desc": "Claude / OpenAI vision — otomatik alt metin, başlık, etiketler.",
     "crop_title": "Görüntü kırpma",
@@ -57,13 +57,19 @@
     "crossdisk_title": "Diskler arası transfer",
     "crossdisk_desc": "Yerel ↔ S3 ↔ R2 arasında kopyalama/taşıma.",
     "darkmode_title": "Karanlık mod",
-    "darkmode_desc": "Otomatik algılama + manuel geçiş.",
+    "darkmode_desc": "Açık / koyu / otomatik — UI ve SDK'da.",
     "audit_title": "Denetim günlüğü",
     "audit_desc": "Tüm yazma işlemleri kaydedilir.",
     "ratelimit_title": "Hız sınırlama",
     "ratelimit_desc": "Kullanıcı başına token bucket API koruması.",
     "quota_title": "Depolama kotası",
-    "quota_desc": "JWT claims ile kullanıcı başına limitler."
+    "quota_desc": "JWT claims ile kullanıcı başına limitler.",
+    "byob_title": "BYOB kovaları",
+    "byob_desc": "Kullanıcılar kendi S3/R2'sini ekler — kimlik bilgileri JWT'de şifreli (AES-256-GCM).",
+    "dup_title": "Yinelenen algılama",
+    "dup_desc": "SHA-256 eşleşmesi zorla yazma dışında gereksiz yüklemeleri atlar.",
+    "tokenrefresh_title": "SDK belirteci yenileme",
+    "tokenrefresh_desc": "401'de onTokenRefresh — birleşik yenileme, yeniden deneme, updateToken()."
   },
   "install": {
     "label": "Hızlı kurulum",
@@ -98,7 +104,7 @@
     "row_search": "Tam metin arama",
     "row_darkmode": "Karanlık mod",
     "row_i18n": "16 dil",
-    "row_php74": "PHP ≥ 7.4"
+    "row_php81": "PHP ≥ 8.1"
   },
   "footer": {
     "made_by": "Yapan",
@@ -107,6 +113,7 @@
     "changelog": "Değişiklik Günlüğü",
     "license_link": "Lisans",
     "packagist": "Packagist",
-    "npm": "npm"
+    "npm": "npm",
+    "readme_hint": "Tam belgelendirme GitHub'da"
   }
 }

@@ -1,6 +1,6 @@
 # FluxFiles Landing Page
 
-Static landing page for [FluxFiles](https://github.com/thai-pc/fluxfiles) — an open-source PHP file manager with S3, R2, and local storage support.
+Static landing page for [FluxFiles](https://github.com/thai-pc/fluxfiles) — PHP **8.1+** file manager with S3, R2, local storage, Alpine.js UI, and iframe + SDK embedding.
 
 Built with **Astro 4**, **Tailwind CSS 3**, supports **16 languages** and **dark mode**.
 
@@ -39,8 +39,8 @@ fluxfiles-landing/
 │   │   ├── Navbar.astro         # Sticky nav + lang switcher + dark toggle
 │   │   ├── Hero.astro           # Headline, CTAs, stats row
 │   │   ├── DemoPreview.astro    # Static file manager UI mockup
-│   │   ├── Features.astro       # 18 feature cards grid
-│   │   ├── Install.astro        # Composer/Laravel/JS SDK/Manual tabs
+│   │   ├── Features.astro       # 21 feature cards grid
+│   │   ├── Install.astro        # Composer/Laravel/JS SDK/React/Vue/Manual tabs
 │   │   ├── Comparison.astro     # FluxFiles vs 4 competitors
 │   │   └── Footer.astro         # Links + copyright
 │   ├── layouts/

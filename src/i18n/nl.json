@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "FluxFiles — De bestandsbeheerder die overal past",
-    "description": "Open source PHP bestandsbeheerder met S3, R2, lokale opslag. Integreer via iframe + postMessage SDK."
+    "description": "PHP 8.1+ bestandsbeheerder met S3, R2, lokale opslag. Alpine.js UI. Inbedden via iframe + JavaScript SDK."
   },
   "nav": {
     "docs": "Documentatie",
@@ -12,7 +12,7 @@
   "hero": {
     "badge": "v1.22.0 — Open Source · MIT-licentie",
     "headline": "De bestandsbeheerder die overal past",
-    "sub": "PHP ≥ 7.4 + Flysystem. Lokaal, S3, Cloudflare R2 in één UI. 3 regels JavaScript.",
+    "sub": "PHP ≥ 8.1 + Flysystem 3. Alpine.js UI. Lokaal, S3, Cloudflare R2. Inbedden met een paar regels JavaScript.",
     "cta_start": "Aan de slag",
     "cta_github": "Star op GitHub",
     "stat_php": "Geen framework nodig",
@@ -29,17 +29,17 @@
     "headline": "Alles wat een moderne bestandsbeheerder nodig heeft",
     "sub": "Gebouwd voor ontwikkelaars die flexibiliteit nodig hebben.",
     "storage_title": "Multi-opslag",
-    "storage_desc": "Lokaal, AWS S3, Cloudflare R2 — wissel via config, geen codewijziging.",
+    "storage_desc": "Lokaal, AWS S3, Cloudflare R2 via Flysystem v3 — wissel via config, geen codewijziging.",
     "embed_title": "Overal integreren",
-    "embed_desc": "iframe + postMessage SDK. 3 regels JS. Werkt met elk framework.",
+    "embed_desc": "iframe + postMessage SDK. Standalone UI gebruikt Alpine.js (geen build). Werkt met elk framework.",
     "jwt_title": "JWT-auth + scoping",
-    "jwt_desc": "Pad-prefix per gebruiker, machtigingsclaims, schijf-whitelist.",
+    "jwt_desc": "Pad-prefix per gebruiker, rechten, schijf-whitelist, alleen-eigenaar modus.",
     "seo_title": "SEO-metadata",
-    "seo_desc": "Alt-tekst, titel, bijschrift in SQLite. Gesynchroniseerd met S3-objecttags.",
+    "seo_desc": "Titel, alt, bijschrift, tags — S3-objectmetadata (cloud) of sidecar JSON (lokaal). Zoeken in volledige tekst.",
     "presign_title": "Vooraf ondertekende uploads",
     "presign_desc": "Browser uploadt rechtstreeks naar S3/R2 — nul bandbreedte op uw server.",
     "i18n_title": "16 talen",
-    "i18n_desc": "Automatische taaldetectie. RTL-ondersteuning. Voeg uw taal toe in 1 JSON-bestand.",
+    "i18n_desc": "Standaard Engels. Stel taal in via SDK, URL (?locale=) of FLUXFILES_LOCALE. RTL voor Arabisch.",
     "ai_title": "AI auto-tag",
     "ai_desc": "Claude / OpenAI vision — automatisch alt-tekst, titel, tags.",
     "crop_title": "Afbeelding bijsnijden",
@@ -57,13 +57,19 @@
     "crossdisk_title": "Cross-disk overdracht",
     "crossdisk_desc": "Kopiëren/verplaatsen tussen Lokaal ↔ S3 ↔ R2.",
     "darkmode_title": "Donkere modus",
-    "darkmode_desc": "Automatische detectie + handmatige schakelaar.",
+    "darkmode_desc": "Licht / donker / auto in UI en SDK.",
     "audit_title": "Auditlogboek",
     "audit_desc": "Alle schrijfacties gelogd voor compliance.",
     "ratelimit_title": "Snelheidsbeperking",
     "ratelimit_desc": "Token bucket per gebruiker voor API-bescherming.",
     "quota_title": "Opslagquota",
-    "quota_desc": "Limieten per gebruiker via JWT-claims."
+    "quota_desc": "Limieten per gebruiker via JWT-claims.",
+    "byob_title": "BYOB-buckets",
+    "byob_desc": "Gebruikers koppelen eigen S3/R2 — inloggegevens versleuteld in JWT (AES-256-GCM).",
+    "dup_title": "Duplicaatdetectie",
+    "dup_desc": "SHA-256-match slaat redundante uploads over tenzij geforceerd overschrijven.",
+    "tokenrefresh_title": "SDK-token vernieuwen",
+    "tokenrefresh_desc": "onTokenRefresh bij 401 — samengevoegde refresh, opnieuw proberen, updateToken()."
   },
   "install": {
     "label": "Snel installeren",
@@ -97,7 +103,7 @@
     "row_search": "Zoeken in volledige tekst",
     "row_darkmode": "Donkere modus",
     "row_i18n": "16 talen",
-    "row_php74": "PHP ≥ 7.4"
+    "row_php81": "PHP ≥ 8.1"
   },
   "footer": {
     "made_by": "Gemaakt door",
@@ -106,6 +112,7 @@
     "changelog": "Wijzigingen",
     "license_link": "Licentie",
     "packagist": "Packagist",
-    "npm": "npm"
+    "npm": "npm",
+    "readme_hint": "Volledige documentatie op GitHub"
   }
 }
