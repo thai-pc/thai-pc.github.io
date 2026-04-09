@@ -49,12 +49,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
 
     <script is:inline>
-      (function() {
-        const stored = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (stored === 'dark' || (!stored && prefersDark)) {
-          document.documentElement.classList.add('dark');
-        }
+      (function () {
+        var raw = localStorage.getItem('theme');
+        var mode = raw === 'light' || raw === 'dark' || raw === 'system' ? raw : 'system';
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var useDark = mode === 'dark' || (mode === 'system' && prefersDark);
+        var root = document.documentElement;
+        root.classList.toggle('dark', useDark);
+        root.dataset.themeMode = mode;
       })();
     </script>
 
@@ -70,5 +72,48 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   </head>
   <body class="min-h-screen font-sans antialiased">
     <slot />
+    <script is:inline>
+      (function () {
+        var KEY = 'theme';
+        var MEDIA = window.matchMedia('(prefers-color-scheme: dark)');
+        var ARIA = {
+          light: 'Color theme: light. Click for dark.',
+          dark: 'Color theme: dark. Click for system.',
+          system: 'Color theme: match system. Click for light.'
+        };
+        function getMode() {
+          var raw = localStorage.getItem(KEY);
+          return raw === 'light' || raw === 'dark' || raw === 'system' ? raw : 'system';
+        }
+        function applyTheme(fromMode) {
+          var mode = fromMode !== undefined ? fromMode : getMode();
+          var useDark = mode === 'dark' || (mode === 'system' && MEDIA.matches);
+          var root = document.documentElement;
+          root.classList.toggle('dark', useDark);
+          root.dataset.themeMode = mode;
+          document.querySelectorAll('.theme-cycle').forEach(function (el) {
+            el.setAttribute('aria-label', ARIA[mode] || ARIA.system);
+          });
+        }
+        function nextMode(current) {
+          if (current === 'light') return 'dark';
+          if (current === 'dark') return 'system';
+          return 'light';
+        }
+        MEDIA.addEventListener('change', function () {
+          if (getMode() === 'system') applyTheme();
+        });
+        document.addEventListener('click', function (e) {
+          var btn = e.target && e.target.closest && e.target.closest('.theme-cycle');
+          if (!btn) return;
+          var n = nextMode(getMode());
+          localStorage.setItem(KEY, n);
+          applyTheme(n);
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+          applyTheme();
+        });
+      })();
+    </script>
   </body>
 </html>

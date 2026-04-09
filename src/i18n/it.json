@@ -22,7 +22,8 @@
   },
   "demo": {
     "label": "Anteprima",
-    "headline": "Guardalo in azione"
+    "headline": "Guardalo in azione",
+    "upload_mock_label": "Anteprima caricamento (demo)"
   },
   "features": {
     "label": "Funzionalità",

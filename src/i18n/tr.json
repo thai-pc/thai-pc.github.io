@@ -22,7 +22,8 @@
   },
   "demo": {
     "label": "Canlı Önizleme",
-    "headline": "Çalışırken görün"
+    "headline": "Çalışırken görün",
+    "upload_mock_label": "Yükleme önizlemesi (demo arayüzü)"
   },
   "features": {
     "label": "Özellikler",

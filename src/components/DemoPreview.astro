@@ -75,7 +75,7 @@ const t = useTranslations(lang);
                   <svg class="w-3.5 h-3.5 text-accent dark:text-accent-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
                 </div>
                 <div class="w-6 h-6 rounded bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
-                  <svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" /></svg>
+                  <svg class="w-3.5 h-3.5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" /></svg>
                 </div>
               </div>
             </div>
@@ -107,13 +107,34 @@ const t = useTranslations(lang);
                 <span class="text-[11px] text-gray-600 dark:text-gray-400 truncate w-full text-center">banner.jpg</span>
               </div>
             </div>
+
+            <div class="mt-6 rounded-lg border border-dashed border-[var(--border-default)] bg-[var(--bg-subtle)] p-4" data-demo-upload-mock>
+              <p class="text-xs font-medium mb-2" style="color: var(--text-muted);">
+                {t('demo.upload_mock_label')}
+              </p>
+              <div class="h-2 rounded-full overflow-hidden mb-3" style="background: var(--progress-track);">
+                <div class="h-full w-2/3 rounded-full" style="background: var(--progress-fill);" />
+              </div>
+              <div class="flex flex-col sm:flex-row gap-2 sm:items-center">
+                <code class="demo-mock-url flex-1 min-w-0 truncate text-xs font-mono px-2 py-1.5 rounded-md border text-[var(--code-text)] bg-[var(--bg-elevated)] border-[var(--border-default)]">
+                  https://cdn.example.com/v1/object/uploads/hero.png
+                </code>
+                <button
+                  type="button"
+                  class="demo-mock-copy shrink-0 px-3 py-1.5 text-xs font-medium rounded-md bg-accent text-white hover:bg-accent/90 active:bg-accent/95 transition-colors disabled:opacity-45 disabled:pointer-events-none"
+                  data-label={t('install.copy')}
+                >
+                  {t('install.copy')}
+                </button>
+              </div>
+            </div>
           </div>
 
           <!-- Detail Panel (desktop only) -->
           <div class="hidden lg:flex flex-col w-52 border-l border-gray-200 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-800/50 p-4">
             <div class="flex flex-col items-center text-center">
               <div class="w-16 h-16 rounded-xl bg-green-50 dark:bg-green-900/20 flex items-center justify-center text-2xl mb-3">📄</div>
-              <div class="text-sm font-medium text-gray-900 dark:text-white">report.pdf</div>
+              <div class="text-sm font-medium text-gray-900 dark:text-gray-100">report.pdf</div>
               <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">2.4 MB</div>
             </div>
             <div class="mt-4 space-y-3 text-xs">
@@ -136,3 +157,23 @@ const t = useTranslations(lang);
     </div>
   </div>
 </section>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.demo-mock-copy').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var root = btn.closest('[data-demo-upload-mock]');
+        var urlEl = root && root.querySelector('.demo-mock-url');
+        var text = urlEl ? (urlEl.textContent || '').trim() : '';
+        if (!text || !navigator.clipboard) return;
+        navigator.clipboard.writeText(text).then(function () {
+          var orig = btn.getAttribute('data-label') || btn.textContent;
+          btn.textContent = '\u2713';
+          window.setTimeout(function () {
+            btn.textContent = orig;
+          }, 1600);
+        });
+      });
+    });
+  });
+</script>

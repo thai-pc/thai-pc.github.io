@@ -22,7 +22,8 @@
   },
   "demo": {
     "label": "Vista previa",
-    "headline": "Ver en acción"
+    "headline": "Ver en acción",
+    "upload_mock_label": "Vista previa de subida (UI demo)"
   },
   "features": {
     "label": "Características",

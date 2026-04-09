@@ -22,7 +22,8 @@
   },
   "demo": {
     "label": "Live Preview",
-    "headline": "See it in action"
+    "headline": "See it in action",
+    "upload_mock_label": "Upload preview (demo UI)"
   },
   "features": {
     "label": "Features",

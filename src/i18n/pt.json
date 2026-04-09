@@ -22,7 +22,8 @@
   },
   "demo": {
     "label": "Demonstração",
-    "headline": "Veja em ação"
+    "headline": "Veja em ação",
+    "upload_mock_label": "Pré-visualização de envio (demo)"
   },
   "features": {
     "label": "Recursos",

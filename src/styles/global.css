@@ -10,12 +10,96 @@
   font-display: swap;
 }
 
+:root {
+  color-scheme: light dark;
+  --bg-page: #ffffff;
+  --bg-elevated: #f8fafc;
+  --bg-subtle: #f1f5f9;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  --border-default: #e5e7eb;
+  --border-muted: #f3f4f6;
+  --code-bg: #0f172a;
+  --code-text: #cbd5e1;
+  --code-muted: #94a3b8;
+  --code-border: rgba(51, 65, 85, 0.55);
+  --copy-btn-bg: #1e293b;
+  --copy-btn-bg-hover: #334155;
+  --copy-btn-text: #e2e8f0;
+  --focus-ring: #1a56a0;
+  --progress-track: #e2e8f0;
+  --progress-fill: #1a56a0;
+}
+
+.dark {
+  color-scheme: dark;
+  --bg-page: #0d1117;
+  --bg-elevated: #161b22;
+  --bg-subtle: #21262d;
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+  --text-muted: #6e7681;
+  --border-default: #30363d;
+  --border-muted: #21262d;
+  --code-bg: #0d1117;
+  --code-text: #c9d1d9;
+  --code-muted: #8b949e;
+  --code-border: rgba(72, 79, 88, 0.7);
+  --copy-btn-bg: #21262d;
+  --copy-btn-bg-hover: #30363d;
+  --copy-btn-text: #e6edf3;
+  --progress-track: #30363d;
+  --progress-fill: #4d8ed4;
+}
+
+[x-cloak] {
+  display: none !important;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-white text-gray-900 dark:bg-surface-dark dark:text-gray-100;
+    @apply min-h-screen font-sans antialiased;
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  select:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+
+  button:focus-visible:disabled {
+    outline: none;
+  }
+}
+
+@layer utilities {
+  .theme-cycle .theme-icon {
+    @apply w-4 h-4;
+    display: none;
+  }
+
+  html[data-theme-mode='light'] .theme-cycle .theme-icon-light {
+    display: block;
+    @apply text-amber-500;
+  }
+
+  html[data-theme-mode='dark'] .theme-cycle .theme-icon-dark {
+    display: block;
+    @apply text-sky-300;
+  }
+
+  html[data-theme-mode='system'] .theme-cycle .theme-icon-system {
+    display: block;
+    @apply text-gray-600 dark:text-gray-400;
   }
 }
