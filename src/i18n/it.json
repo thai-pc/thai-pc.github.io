@@ -10,7 +10,7 @@
     "github": "GitHub"
   },
   "hero": {
-    "badge": "v1.22.0 — Open Source · Licenza MIT",
+    "badge": "v0.1.0 — Open Source · Licenza MIT",
     "headline": "Il file manager integrabile ovunque",
     "sub": "PHP ≥ 8.1 + Flysystem 3. UI Alpine.js. Locale, S3, Cloudflare R2. Integra con poche righe di JavaScript.",
     "cta_start": "Inizia ora",
@@ -116,5 +116,38 @@
     "packagist": "Packagist",
     "npm": "npm",
     "readme_hint": "Documentazione completa su GitHub"
+  },
+  "cta": {
+    "headline": "Pronto a integrare FluxFiles?",
+    "sub": "Aggiungi un file manager pronto per la produzione alla tua app in pochi minuti — senza vincoli di framework, con licenza MIT.",
+    "primary": "Inizia",
+    "secondary": "Leggi la documentazione"
+  },
+  "adapters": {
+    "label": "Integrazioni",
+    "headline": "Adattatori pronti all'uso per il tuo stack",
+    "sub": "Gli adattatori ufficiali integrano FluxFiles in modo nativo nei framework e negli editor che usi già."
+  },
+  "embed": {
+    "label": "Incorpora",
+    "headline": "Incorporalo in poche righe",
+    "sub": "Carica fluxfiles.js, passa un JWT generato lato server e inserisci un file manager completo — o una finestra di selezione file — in qualsiasi pagina.",
+    "note": "I token vengono generati lato server — non inviare mai il tuo secret al browser."
+  },
+  "faq": {
+    "label": "FAQ",
+    "headline": "Domande frequenti",
+    "oss_q": "FluxFiles è gratuito e open source?",
+    "oss_a": "Sì — con licenza MIT, self-hosting gratuito e pubblicato su Composer e npm. Nessun piano a pagamento né limiti d'uso.",
+    "storage_q": "Dove vengono archiviati i miei file?",
+    "storage_a": "Dove decidi tu: disco locale, AWS S3 o Cloudflare R2 tramite Flysystem. Lo storage è tuo — nulla passa da terze parti.",
+    "auth_q": "Come funziona l'autenticazione?",
+    "auth_a": "JWT stateless (HS256): generi un token lato server con claim granulari (permessi, dischi, ambito del percorso, limiti), così ogni utente vede solo ciò che permetti.",
+    "accounts_q": "I miei utenti hanno bisogno di un account FluxFiles?",
+    "accounts_a": "No. FluxFiles si fida del JWT emesso dalla tua app, quindi si collega alla tua autenticazione esistente — nessun sistema utenti separato.",
+    "embed_q": "Posso incorporarlo nella mia app o nel mio editor esistente?",
+    "embed_a": "Sì — l'iframe + SDK JS funziona in qualsiasi pagina, con adattatori ufficiali per Laravel, WordPress, React, Vue/Nuxt, CKEditor 4 e TinyMCE.",
+    "run_q": "Cosa serve per eseguirlo?",
+    "run_a": "PHP 8.1+ con alcune estensioni comuni e Composer. Puntalo a un disco, imposta un secret e le origini consentite, poi avvialo — gira su un piccolo VPS."
   }
 }

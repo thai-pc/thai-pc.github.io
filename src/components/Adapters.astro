@@ -1,0 +1,44 @@
+---
+import { useTranslations, type Lang } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+// Official integrations shipped with FluxFiles. Names are proper nouns (not translated).
+const adapters = [
+  { name: 'Laravel', tag: 'PHP', icon: 'M16 3l5 3v6l-5 3-5-3V8l-3-2 3-2 5 3zm0 0l-5 3' },
+  { name: 'WordPress', tag: 'Plugin', icon: 'M12 2a10 10 0 100 20 10 10 0 000-20zm0 2a8 8 0 016.9 12L15 8h-2l2 6-2 5a8 8 0 01-2-15.9zM4 12a8 8 0 015-7.4L7 16a8 8 0 01-3-4z' },
+  { name: 'React', tag: 'Component', icon: 'M12 13.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm0 0c5.5 4 9.5 4.5 10 2.5M12 12c-5.5-4-9.5-4.5-10-2.5m10 2.5c-4 5.5-4.5 9.5-2.5 10m2.5-10c4-5.5 4.5-9.5 2.5-10' },
+  { name: 'Vue / Nuxt', tag: 'Component', icon: 'M3 4h4l5 8 5-8h4l-9 15L3 4z' },
+  { name: 'CKEditor 4', tag: 'Plugin', icon: 'M4 5a2 2 0 012-2h12a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm4 4h8M8 13h8M8 17h5' },
+  { name: 'TinyMCE', tag: 'Plugin', icon: 'M5 5h14v3H5V5zm5 5h9v9h-9v-9zM5 12h3v7H5v-7z' },
+];
+---
+
+<section id="adapters" class="py-20 sm:py-28 bg-surface dark:bg-surface-dark">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <p class="text-sm font-semibold uppercase tracking-wide text-accent dark:text-accent-dark mb-3">{t('adapters.label')}</p>
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100">{t('adapters.headline')}</h2>
+      <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">{t('adapters.sub')}</p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+      {adapters.map((a) => (
+        <div class="flex flex-col items-center justify-center gap-3 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/40 p-6 hover:border-accent/40 hover:shadow-lg transition-all">
+          <div class="w-12 h-12 rounded-lg bg-accent-light dark:bg-accent/10 flex items-center justify-center">
+            <svg class="w-7 h-7 text-accent dark:text-accent-dark" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d={a.icon} /></svg>
+          </div>
+          <div class="text-center">
+            <div class="font-semibold text-sm text-gray-900 dark:text-gray-100">{a.name}</div>
+            <div class="text-xs text-gray-500 dark:text-gray-400">{a.tag}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

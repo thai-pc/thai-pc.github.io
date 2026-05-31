@@ -11,7 +11,10 @@
 }
 
 :root {
-  color-scheme: light dark;
+  /* Deterministic: native controls (select, scrollbar, inputs) must match the
+     resolved theme, not the OS. Otherwise picking Light on a dark-OS machine
+     leaves dropdowns/scrollbars dark. .dark overrides this to `dark`. */
+  color-scheme: light;
   --bg-page: #ffffff;
   --bg-elevated: #f8fafc;
   --bg-subtle: #f1f5f9;

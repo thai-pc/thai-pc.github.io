@@ -6,13 +6,15 @@ import ScreenshotSlider from '../../components/ScreenshotSlider.astro';
 import Features from '../../components/Features.astro';
 import Install from '../../components/Install.astro';
 import Comparison from '../../components/Comparison.astro';
+import Adapters from '../../components/Adapters.astro';
+import EmbedDemo from '../../components/EmbedDemo.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
 import Footer from '../../components/Footer.astro';
-import { langList, useTranslations, type Lang } from '../../i18n/utils';
-
-export const prerender = true;
+import { getLangFromUrl, useTranslations, langList, type Lang } from '../../i18n/utils';
 
 export function getStaticPaths() {
-  return langList.map((l) => ({ params: { lang: l } }));
+  return langList.map((lang) => ({ params: { lang } }));
 }
 
 const { lang } = Astro.params as { lang: Lang };
@@ -26,7 +28,11 @@ const t = useTranslations(lang);
     <ScreenshotSlider lang={lang} />
     <Features lang={lang} />
     <Install lang={lang} />
+    <Adapters lang={lang} />
+    <EmbedDemo lang={lang} />
     <Comparison lang={lang} />
+    <Faq lang={lang} />
+    <Cta lang={lang} />
   </main>
   <Footer lang={lang} />
 

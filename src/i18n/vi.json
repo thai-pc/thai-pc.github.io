@@ -10,7 +10,7 @@
     "github": "GitHub"
   },
   "hero": {
-    "badge": "v1.22.0 — Mã nguồn mở · Giấy phép MIT",
+    "badge": "v0.1.0 — Mã nguồn mở · Giấy phép MIT",
     "headline": "Trình quản lý file nhúng được mọi nơi",
     "sub": "PHP ≥ 8.1 + Flysystem 3. Giao diện Alpine.js. Local, S3, Cloudflare R2. Nhúng với vài dòng JavaScript.",
     "cta_start": "Bắt đầu",
@@ -116,5 +116,38 @@
     "packagist": "Packagist",
     "npm": "npm",
     "readme_hint": "Tài liệu đầy đủ trên GitHub"
+  },
+  "cta": {
+    "headline": "Sẵn sàng nhúng FluxFiles?",
+    "sub": "Thêm trình quản lý file sẵn sàng cho production vào ứng dụng của bạn chỉ trong vài phút — không khóa framework, giấy phép MIT.",
+    "primary": "Bắt đầu",
+    "secondary": "Đọc tài liệu"
+  },
+  "adapters": {
+    "label": "Tích hợp",
+    "headline": "Adapter cắm-là-chạy cho stack của bạn",
+    "sub": "Các adapter chính thức nhúng FluxFiles trực tiếp vào framework và trình soạn thảo bạn đang dùng."
+  },
+  "embed": {
+    "label": "Nhúng",
+    "headline": "Nhúng chỉ với vài dòng",
+    "sub": "Tải fluxfiles.js, truyền JWT do server cấp, và đặt nguyên một trình quản lý file — hoặc một modal chọn file — vào bất kỳ trang nào.",
+    "note": "Token được cấp ở phía server — đừng bao giờ đưa secret ra trình duyệt."
+  },
+  "faq": {
+    "label": "Hỏi đáp",
+    "headline": "Câu hỏi thường gặp",
+    "oss_q": "FluxFiles có miễn phí và mã nguồn mở không?",
+    "oss_a": "Có — giấy phép MIT, tự host miễn phí, phát hành trên Composer và npm. Không có gói trả phí, không giới hạn sử dụng.",
+    "storage_q": "File của tôi lưu ở đâu?",
+    "storage_a": "Ở nơi bạn trỏ tới: ổ local, AWS S3 hoặc Cloudflare R2 qua Flysystem. Bạn sở hữu nơi lưu trữ — không gì đi qua bên thứ ba.",
+    "auth_q": "Xác thực hoạt động thế nào?",
+    "auth_a": "JWT phi trạng thái (HS256): bạn cấp token ở server với các claim chi tiết (quyền, disk, phạm vi đường dẫn, giới hạn), nên mỗi user chỉ thấy đúng phần bạn cho phép.",
+    "accounts_q": "Người dùng có cần tài khoản FluxFiles không?",
+    "accounts_a": "Không. FluxFiles tin tưởng JWT do chính ứng dụng của bạn cấp, nên gắn thẳng vào hệ thống auth sẵn có — không cần hệ thống user riêng.",
+    "embed_q": "Tôi có nhúng được vào app/editor sẵn có không?",
+    "embed_a": "Có — iframe + JS SDK chạy trên mọi trang, kèm adapter chính thức cho Laravel, WordPress, React, Vue/Nuxt, CKEditor 4 và TinyMCE.",
+    "run_q": "Cần gì để chạy?",
+    "run_a": "PHP 8.1+ với vài extension phổ biến và Composer. Trỏ tới một disk, đặt secret và allowed origins, rồi chạy — nhẹ tới mức chạy được trên VPS nhỏ."
   }
 }
