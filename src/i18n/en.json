@@ -10,7 +10,7 @@
     "github": "GitHub"
   },
   "hero": {
-    "badge": "v1.22.0 — Open Source · MIT License",
+    "badge": "v0.1.0 — Open Source · MIT License",
     "headline": "The file manager that embeds anywhere",
     "sub": "PHP ≥ 8.1 + Flysystem 3. Alpine.js UI. Local, S3, Cloudflare R2. Embed with a few lines of JavaScript.",
     "cta_start": "Get started",
@@ -115,5 +115,38 @@
     "packagist": "Packagist",
     "npm": "npm",
     "readme_hint": "Full documentation on GitHub"
+  },
+  "cta": {
+    "headline": "Ready to embed FluxFiles?",
+    "sub": "Add a production-ready file manager to your app in minutes — no framework lock-in, MIT licensed.",
+    "primary": "Get started",
+    "secondary": "Read the docs"
+  },
+  "adapters": {
+    "label": "Integrations",
+    "headline": "Drop-in adapters for your stack",
+    "sub": "Official adapters embed FluxFiles natively in the frameworks and editors you already use."
+  },
+  "embed": {
+    "label": "Embed",
+    "headline": "Embed it in a few lines",
+    "sub": "Load fluxfiles.js, pass a server-minted JWT, and drop a full file manager — or a file-picker modal — into any page.",
+    "note": "Tokens are minted server-side — never ship your secret to the browser."
+  },
+  "faq": {
+    "label": "FAQ",
+    "headline": "Frequently asked questions",
+    "oss_q": "Is FluxFiles free and open source?",
+    "oss_a": "Yes — MIT licensed, free to self-host, and published on Composer and npm. No paid tiers, no usage limits.",
+    "storage_q": "Where are my files stored?",
+    "storage_a": "Wherever you point it: local disk, AWS S3, or Cloudflare R2 via Flysystem. You own the storage — nothing goes through a third party.",
+    "auth_q": "How does authentication work?",
+    "auth_a": "Stateless JWT (HS256): you mint a token server-side with granular claims (permissions, disks, path scope, limits), so each user sees only what you allow.",
+    "accounts_q": "Do my users need a FluxFiles account?",
+    "accounts_a": "No. FluxFiles trusts the JWT from your own app, so it plugs into your existing auth — there's no separate user system.",
+    "embed_q": "Can I embed it in my existing app or editor?",
+    "embed_a": "Yes — the iframe + JS SDK works in any page, with official adapters for Laravel, WordPress, React, Vue/Nuxt, CKEditor 4 and TinyMCE.",
+    "run_q": "What do I need to run it?",
+    "run_a": "PHP 8.1+ with common extensions and Composer. Point it at a disk, set a secret and allowed origins, then serve — it runs on a small VPS."
   }
 }

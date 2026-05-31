@@ -10,7 +10,7 @@
     "github": "GitHub"
   },
   "hero": {
-    "badge": "v1.22.0 — Açık Kaynak · MIT Lisansı",
+    "badge": "v0.1.0 — Açık Kaynak · MIT Lisansı",
     "headline": "Her yere gömülebilen dosya yöneticisi",
     "sub": "PHP ≥ 8.1 + Flysystem 3. Alpine.js Arayüzü. Yerel, S3, Cloudflare R2. Birkaç satır JavaScript ile gömün.",
     "cta_start": "Başlayın",
@@ -116,5 +116,38 @@
     "packagist": "Packagist",
     "npm": "npm",
     "readme_hint": "Tam belgelendirme GitHub'da"
+  },
+  "cta": {
+    "headline": "FluxFiles'ı gömmeye hazır mısınız?",
+    "sub": "Üretime hazır bir dosya yöneticisini uygulamanıza dakikalar içinde ekleyin — çerçeve bağımlılığı olmadan, MIT lisanslı.",
+    "primary": "Başlayın",
+    "secondary": "Belgeleri okuyun"
+  },
+  "adapters": {
+    "label": "Entegrasyonlar",
+    "headline": "Yığınınız için hazır adaptörler",
+    "sub": "Resmi adaptörler, FluxFiles'ı zaten kullandığınız çerçevelere ve editörlere yerel olarak gömer."
+  },
+  "embed": {
+    "label": "Gömme",
+    "headline": "Birkaç satırda gömün",
+    "sub": "fluxfiles.js'i yükleyin, sunucuda üretilen bir JWT geçirin ve herhangi bir sayfaya tam bir dosya yöneticisi — ya da dosya seçme penceresi — yerleştirin.",
+    "note": "Token'lar sunucu tarafında üretilir — secret'ınızı asla tarayıcıya göndermeyin."
+  },
+  "faq": {
+    "label": "SSS",
+    "headline": "Sıkça sorulan sorular",
+    "oss_q": "FluxFiles ücretsiz ve açık kaynak mı?",
+    "oss_a": "Evet — MIT lisanslı, ücretsiz olarak kendiniz barındırabilir, Composer ve npm'de yayınlanmıştır. Ücretli kademe veya kullanım sınırı yok.",
+    "storage_q": "Dosyalarım nerede saklanıyor?",
+    "storage_a": "Nereyi gösterirseniz orada: yerel disk, AWS S3 veya Flysystem üzerinden Cloudflare R2. Depolama sizindir — hiçbir şey üçüncü taraftan geçmez.",
+    "auth_q": "Kimlik doğrulama nasıl çalışır?",
+    "auth_a": "Durumsuz JWT (HS256): sunucuda ayrıntılı talep'lerle (izinler, diskler, yol kapsamı, limitler) bir token üretirsiniz; böylece her kullanıcı yalnızca izin verdiğinizi görür.",
+    "accounts_q": "Kullanıcılarımın FluxFiles hesabına ihtiyacı var mı?",
+    "accounts_a": "Hayır. FluxFiles kendi uygulamanızın verdiği JWT'ye güvenir, böylece mevcut kimlik doğrulamanıza doğrudan bağlanır — ayrı bir kullanıcı sistemi yok.",
+    "embed_q": "Mevcut uygulamama veya editörüme gömebilir miyim?",
+    "embed_a": "Evet — iframe + JS SDK her sayfada çalışır; Laravel, WordPress, React, Vue/Nuxt, CKEditor 4 ve TinyMCE için resmi adaptörler vardır.",
+    "run_q": "Çalıştırmak için neye ihtiyacım var?",
+    "run_a": "Birkaç yaygın eklenti ile PHP 8.1+ ve Composer. Bir diske yönlendirin, bir secret ve izin verilen origin'leri ayarlayın, ardından sunun — küçük bir VPS'te çalışır."
   }
 }

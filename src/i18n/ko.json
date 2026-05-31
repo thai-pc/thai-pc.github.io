@@ -10,7 +10,7 @@
     "github": "GitHub"
   },
   "hero": {
-    "badge": "v1.22.0 — 오픈소스 · MIT 라이선스",
+    "badge": "v0.1.0 — 오픈소스 · MIT 라이선스",
     "headline": "어디에든 임베드할 수 있는 파일 매니저",
     "sub": "PHP ≥ 8.1 + Flysystem 3. Alpine.js UI. Local, S3, Cloudflare R2. 몇 줄의 JavaScript로 임베드.",
     "cta_start": "시작하기",
@@ -116,5 +116,38 @@
     "packagist": "Packagist",
     "npm": "npm",
     "readme_hint": "전체 문서는 GitHub에서"
+  },
+  "cta": {
+    "headline": "FluxFiles를 임베드할 준비가 되셨나요?",
+    "sub": "프로덕션급 파일 관리자를 몇 분 만에 앱에 추가하세요 — 프레임워크 종속 없이, MIT 라이선스.",
+    "primary": "시작하기",
+    "secondary": "문서 읽기"
+  },
+  "adapters": {
+    "label": "통합",
+    "headline": "당신의 스택을 위한 드롭인 어댑터",
+    "sub": "공식 어댑터로 이미 사용 중인 프레임워크와 에디터에 FluxFiles를 네이티브로 임베드하세요."
+  },
+  "embed": {
+    "label": "임베드",
+    "headline": "몇 줄이면 임베드 완료",
+    "sub": "fluxfiles.js를 로드하고 서버에서 발급한 JWT를 전달하면, 완전한 파일 관리자(또는 파일 선택 모달)를 어떤 페이지에든 넣을 수 있습니다.",
+    "note": "토큰은 서버에서 발급합니다 — 시크릿을 절대 브라우저로 보내지 마세요."
+  },
+  "faq": {
+    "label": "FAQ",
+    "headline": "자주 묻는 질문",
+    "oss_q": "FluxFiles는 무료이고 오픈소스인가요?",
+    "oss_a": "네 — MIT 라이선스로 무료 셀프호스팅이 가능하며 Composer와 npm에 공개되어 있습니다. 유료 등급이나 사용 제한이 없습니다.",
+    "storage_q": "파일은 어디에 저장되나요?",
+    "storage_a": "원하는 곳에 저장됩니다: 로컬 디스크, AWS S3, 또는 Flysystem을 통한 Cloudflare R2. 저장소는 당신의 것이며 제3자를 거치지 않습니다.",
+    "auth_q": "인증은 어떻게 동작하나요?",
+    "auth_a": "무상태 JWT(HS256)입니다. 권한·디스크·경로 범위·한도 같은 세분화된 클레임으로 서버에서 토큰을 발급하므로, 각 사용자는 허용된 것만 볼 수 있습니다.",
+    "accounts_q": "사용자에게 FluxFiles 계정이 필요한가요?",
+    "accounts_a": "아니요. FluxFiles는 당신의 앱이 발급한 JWT를 신뢰하므로 기존 인증에 바로 연결됩니다 — 별도의 사용자 시스템이 필요 없습니다.",
+    "embed_q": "기존 앱이나 에디터에 임베드할 수 있나요?",
+    "embed_a": "네 — iframe + JS SDK는 어떤 페이지에서도 동작하며 Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE용 공식 어댑터를 제공합니다.",
+    "run_q": "실행하려면 무엇이 필요한가요?",
+    "run_a": "PHP 8.1+와 몇 가지 일반 확장, 그리고 Composer입니다. 디스크를 지정하고 시크릿과 허용 오리진을 설정한 뒤 실행하면 됩니다 — 작은 VPS에서도 잘 돌아갑니다."
   }
 }

@@ -10,7 +10,7 @@
     "github": "GitHub"
   },
   "hero": {
-    "badge": "v1.22.0 — 开源 · MIT 许可证",
+    "badge": "v0.1.0 — 开源 · MIT 许可证",
     "headline": "可嵌入任何地方的文件管理器",
     "sub": "PHP ≥ 8.1 + Flysystem 3。Alpine.js UI。Local、S3、Cloudflare R2。几行 JavaScript 即可嵌入。",
     "cta_start": "开始使用",
@@ -116,5 +116,38 @@
     "packagist": "Packagist",
     "npm": "npm",
     "readme_hint": "完整文档见 GitHub"
+  },
+  "cta": {
+    "headline": "准备好嵌入 FluxFiles 了吗？",
+    "sub": "几分钟内为你的应用添加生产级文件管理器——不锁定框架，采用 MIT 许可。",
+    "primary": "开始使用",
+    "secondary": "阅读文档"
+  },
+  "adapters": {
+    "label": "集成",
+    "headline": "适配你技术栈的即插即用适配器",
+    "sub": "官方适配器可将 FluxFiles 原生嵌入你已经在用的框架和编辑器中。"
+  },
+  "embed": {
+    "label": "嵌入",
+    "headline": "几行代码即可嵌入",
+    "sub": "加载 fluxfiles.js，传入由服务端签发的 JWT，即可把完整的文件管理器（或文件选择弹窗）放进任意页面。",
+    "note": "令牌在服务端签发——切勿把密钥发送到浏览器。"
+  },
+  "faq": {
+    "label": "常见问题",
+    "headline": "常见问题解答",
+    "oss_q": "FluxFiles 是免费且开源的吗？",
+    "oss_a": "是的——采用 MIT 许可，可免费自托管，发布在 Composer 和 npm 上。没有付费档位，也没有使用限制。",
+    "storage_q": "我的文件存在哪里？",
+    "storage_a": "由你指定：本地磁盘、AWS S3 或通过 Flysystem 使用 Cloudflare R2。存储归你所有——不经过任何第三方。",
+    "auth_q": "身份验证如何工作？",
+    "auth_a": "无状态 JWT（HS256）：你在服务端签发带有细粒度声明（权限、磁盘、路径范围、限额）的令牌，因此每个用户只能看到你允许的内容。",
+    "accounts_q": "我的用户需要 FluxFiles 账号吗？",
+    "accounts_a": "不需要。FluxFiles 信任你自己应用签发的 JWT，可直接接入你现有的认证——无需单独的用户系统。",
+    "embed_q": "能嵌入到我现有的应用或编辑器里吗？",
+    "embed_a": "可以——iframe + JS SDK 适用于任意页面，并提供 Laravel、WordPress、React、Vue/Nuxt、CKEditor 4 和 TinyMCE 的官方适配器。",
+    "run_q": "运行它需要什么？",
+    "run_a": "PHP 8.1+、几个常见扩展和 Composer。指向一个磁盘，设置密钥与允许来源，然后启动即可——在小型 VPS 上也能流畅运行。"
   }
 }
