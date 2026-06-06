@@ -7,7 +7,8 @@
     "docs": "Docs",
     "install": "Instalar",
     "changelog": "Changelog",
-    "github": "GitHub"
+    "github": "GitHub",
+    "byob": "Por que BYOB"
   },
   "hero": {
     "badge": "v0.1.0 — Open Source · Licença MIT",
@@ -70,7 +71,11 @@
     "dup_title": "Detecção de duplicatas",
     "dup_desc": "Correspondência SHA-256 pula uploads redundantes exceto sobrescrita forçada.",
     "tokenrefresh_title": "Atualização de token SDK",
-    "tokenrefresh_desc": "onTokenRefresh em 401 — refresh coalescido, retry e updateToken() para rotação proativa."
+    "tokenrefresh_desc": "onTokenRefresh em 401 — refresh coalescido, retry e updateToken() para rotação proativa.",
+    "doctor_title": "Bucket Doctor",
+    "doctor_desc": "Diagnostica qualquer disco S3/R2 — credenciais, leitura/escrita/exclusão, presign, CORS, multipart — com correções de IAM e CORS prontas para colar. Faça onboarding de buckets BYOB em minutos.",
+    "node_title": "SDK de tokens Node",
+    "node_desc": "Emita tokens do FluxFiles a partir de qualquer backend JS (Express, Next.js, Nuxt) com @fluxfiles/node — compatível byte a byte com o core PHP. Sem PHP para emitir tokens."
   },
   "install": {
     "label": "Instalação rápida",
@@ -149,5 +154,40 @@
     "embed_a": "Sim — o iframe + SDK JS funciona em qualquer página, com adaptadores oficiais para Laravel, WordPress, React, Vue/Nuxt, CKEditor 4 e TinyMCE.",
     "run_q": "O que preciso para executá-lo?",
     "run_a": "PHP 8.1+ com algumas extensões comuns e o Composer. Aponte para um disco, defina um segredo e as origens permitidas, e sirva — roda em um VPS pequeno."
+  },
+  "byob": {
+    "label": "O diferencial · BYOB",
+    "headline": "Os arquivos dos seus clientes ficam nos buckets dos seus clientes",
+    "sub": "O FluxFiles é o gerenciador de arquivos incorporável em que cada inquilino conecta o próprio bucket S3/R2 — e você nunca armazena os dados nem as credenciais dele.",
+    "p1_title": "Soberania de dados",
+    "p1_desc": "Os arquivos ficam na conta de nuvem e na região do próprio cliente — feito para LGPD/GDPR, conformidade e compras corporativas.",
+    "p2_title": "Zero dados, zero credenciais em repouso",
+    "p2_desc": "As credenciais do bucket são criptografadas com AES-256-GCM dentro do JWT e descriptografadas apenas em tempo de execução — nunca gravadas em banco ou log.",
+    "p3_title": "Custo de armazenamento que tende a zero",
+    "p3_desc": "Armazenamento e egress são cobrados de cada cliente, não de você. Sem conta que cresce com sua base de usuários.",
+    "p4_title": "Sem estado e incorporável",
+    "p4_desc": "Sem banco de dados central. Incorpore o seletor em qualquer app por iframe ou SDK; seu backend emite um token restrito e de curta duração.",
+    "how": "Como funciona: seu app criptografa as credenciais do bucket do inquilino em um JWT de curta duração (HKDF-SHA256 + AES-256-GCM). O FluxFiles só as descriptografa para executar a operação solicitada.",
+    "diag_app": "Seu app SaaS",
+    "diag_token": "JWT restrito (credenciais criptografadas)",
+    "diag_core": "FluxFiles",
+    "diag_runtime": "descriptografa só em execução",
+    "diag_tenant": "Inquilino",
+    "diag_bucket": "bucket próprio"
+  },
+  "saas": {
+    "label": "vs. SaaS de arquivos",
+    "headline": "Auto-hospedado e incorporável — não mais um SaaS de upload",
+    "sub": "APIs de arquivos hospedadas são ótimas, mas armazenam seus dados e cobram por uso. O FluxFiles roda na sua stack, cada inquilino no próprio bucket.",
+    "col_feature": "Recurso",
+    "col_flux": "FluxFiles",
+    "row_selfhost": "Auto-hospedado (roda na sua infra)",
+    "row_byob": "BYOB — o bucket próprio de cada cliente",
+    "row_embed": "UI de gerenciador de arquivos incorporável",
+    "row_oss": "Código aberto (MIT)",
+    "row_fees": "Sem taxas de SaaS por armazenamento / upload",
+    "row_multistorage": "Multi-armazenamento (S3 / R2 / local)",
+    "row_scoping": "Escopo de token por inquilino nativo",
+    "note": "A comparação reflete as ofertas padrão típicas; cada produto se destaca na sua área. O nicho do FluxFiles é a combinação incorporável, auto-hospedado e bring-your-own-bucket."
   }
 }
