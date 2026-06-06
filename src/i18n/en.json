@@ -7,7 +7,8 @@
     "docs": "Docs",
     "install": "Install",
     "changelog": "Changelog",
-    "github": "GitHub"
+    "github": "GitHub",
+    "byob": "Why BYOB"
   },
   "hero": {
     "badge": "v0.1.0 — Open Source · MIT License",
@@ -152,5 +153,44 @@
     "embed_a": "Yes — the iframe + JS SDK works in any page, with official adapters for Laravel, WordPress, React, Vue/Nuxt, CKEditor 4 and TinyMCE.",
     "run_q": "What do I need to run it?",
     "run_a": "PHP 8.1+ with common extensions and Composer. Point it at a disk, set a secret and allowed origins, then serve — it runs on a small VPS."
+  },
+  "byob": {
+    "label": "The moat · BYOB",
+    "headline": "Your customers' files stay in your customers' buckets",
+    "sub": "FluxFiles is the embeddable file manager where each tenant connects their own S3/R2 bucket — and you never store their data or their credentials.",
+    "p1_title": "Data sovereignty",
+    "p1_desc": "Files live in the customer's own cloud account and region — built for GDPR, compliance, and enterprise procurement.",
+    "p2_title": "Zero data, zero creds at rest",
+    "p2_desc": "Bucket credentials are AES-256-GCM encrypted inside the JWT and decrypted only at runtime — never written to a database or a log.",
+    "p3_title": "Storage cost that scales to zero",
+    "p3_desc": "Storage and egress are billed to each customer, not to you. No storage bill that grows with your user base.",
+    "p4_title": "Stateless & embeddable",
+    "p4_desc": "No central database. Drop the picker into any app by iframe or SDK; your backend mints a scoped, short-lived token.",
+    "how": "How it works: your app encrypts the tenant’s bucket credentials into a short-lived JWT (HKDF-SHA256 + AES-256-GCM). FluxFiles decrypts them only to run the requested operation.",
+    "diag_app": "Your SaaS app",
+    "diag_token": "scoped JWT (encrypted creds)",
+    "diag_core": "FluxFiles",
+    "diag_runtime": "decrypts at runtime only",
+    "diag_tenant": "Tenant",
+    "diag_bucket": "own bucket"
+  },
+  "saas": {
+    "label": "vs. file-API SaaS",
+    "headline": "Self-hosted and embeddable — not another upload SaaS",
+    "sub": "Hosted file APIs are great, but they store your data and bill per use. FluxFiles runs in your stack, with each tenant on their own bucket.",
+    "col_feature": "Capability",
+    "col_flux": "FluxFiles",
+    "col_filestack": "Filestack",
+    "col_uploadcare": "Uploadcare",
+    "col_cloudinary": "Cloudinary",
+    "col_supabase": "Supabase Storage",
+    "row_selfhost": "Self-hosted (runs in your infra)",
+    "row_byob": "BYOB — each customer’s own bucket",
+    "row_embed": "Embeddable file-manager UI",
+    "row_oss": "Open source (MIT)",
+    "row_fees": "No per-storage / per-upload SaaS fees",
+    "row_multistorage": "Multi-storage (S3 / R2 / local)",
+    "row_scoping": "Per-tenant token scoping built in",
+    "note": "Comparison reflects typical default offerings; each product excels in its own space. FluxFiles’ niche is the embeddable, self-hosted, bring-your-own-bucket combination."
   }
 }
