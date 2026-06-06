@@ -97,12 +97,39 @@ php -S localhost:8080 router.php
 # UI:  http://localhost:8080/public/index.html
 # API: http://localhost:8080/api/fm/list?disk=local&path=`;
 
+const nodeCode = `npm install @fluxfiles/node
+
+// Express / Next.js route — mint a token from your JS backend (no PHP)
+import { createToken } from '@fluxfiles/node';
+
+app.get('/fluxfiles-token', (req, res) => {
+    const token = createToken({
+        secret: process.env.FLUXFILES_SECRET, // >= 32 bytes
+        userId: req.user.id,
+        perms: ['read', 'write', 'delete'],
+        prefix: \`users/\${req.user.id}\`,
+        ttl: 3600,
+    });
+    res.json({ token });
+});`;
+
+const dockerCode = `git clone https://github.com/thai-pc/fluxfiles.git
+docker build -f fluxfiles/docker/Dockerfile.prod -t fluxfiles fluxfiles
+
+docker run -p 8080:80 \\\\
+  -e FLUXFILES_SECRET=your-random-32-char-secret \\\\
+  fluxfiles
+
+# UI: http://localhost:8080/public/index.html`;
+
 const tabs = [
   { id: 'composer', label: t('install.tab_composer'), code: composerCode },
   { id: 'laravel',  label: t('install.tab_laravel'),  code: laravelCode },
+  { id: 'node',     label: 'Node',                    code: nodeCode },
   { id: 'sdk',      label: t('install.tab_sdk'),      code: sdkCode },
   { id: 'react',    label: 'React',                   code: reactCode },
   { id: 'vue',      label: 'Vue',                     code: vueCode },
+  { id: 'docker',   label: 'Docker',                  code: dockerCode },
   { id: 'manual',   label: t('install.tab_manual'),   code: manualCode },
 ];
 

@@ -7,7 +7,8 @@
     "docs": "文档",
     "install": "安装",
     "changelog": "更新日志",
-    "github": "GitHub"
+    "github": "GitHub",
+    "byob": "为何 BYOB"
   },
   "hero": {
     "badge": "v0.1.0 — 开源 · MIT 许可证",
@@ -70,7 +71,11 @@
     "dup_title": "重复检测",
     "dup_desc": "SHA-256 相同则跳过重复上传，除非强制覆盖。",
     "tokenrefresh_title": "SDK 令牌刷新",
-    "tokenrefresh_desc": "401 时 onTokenRefresh — 合并刷新、重试，以及 updateToken() 主动轮换。"
+    "tokenrefresh_desc": "401 时 onTokenRefresh — 合并刷新、重试，以及 updateToken() 主动轮换。",
+    "doctor_title": "存储桶体检",
+    "doctor_desc": "诊断任意 S3/R2 磁盘——凭证、读/写/删、预签名、CORS、分片——并给出可直接粘贴的 IAM 与 CORS 修复方案。几分钟接入 BYOB 存储桶。",
+    "node_title": "Node 令牌 SDK",
+    "node_desc": "用 @fluxfiles/node 从任意 JS 后端（Express、Next.js、Nuxt）签发 FluxFiles 令牌——与 PHP 核心逐字节兼容。签发令牌无需 PHP。"
   },
   "install": {
     "label": "快速安装",
@@ -149,5 +154,40 @@
     "embed_a": "可以——iframe + JS SDK 适用于任意页面，并提供 Laravel、WordPress、React、Vue/Nuxt、CKEditor 4 和 TinyMCE 的官方适配器。",
     "run_q": "运行它需要什么？",
     "run_a": "PHP 8.1+、几个常见扩展和 Composer。指向一个磁盘，设置密钥与允许来源，然后启动即可——在小型 VPS 上也能流畅运行。"
+  },
+  "byob": {
+    "label": "护城河 · BYOB",
+    "headline": "客户的文件留在客户自己的存储桶里",
+    "sub": "FluxFiles 是可嵌入的文件管理器：每个租户接入自己的 S3/R2 存储桶——你永远不存储他们的数据或凭证。",
+    "p1_title": "数据主权",
+    "p1_desc": "文件存放在客户自己的云账户与区域——契合 GDPR、合规与企业采购。",
+    "p2_title": "静态不留数据、不留凭证",
+    "p2_desc": "存储桶凭证以 AES-256-GCM 加密在 JWT 中，仅在运行时解密——绝不写入数据库或日志。",
+    "p3_title": "存储成本可归零",
+    "p3_desc": "存储与出口流量由各客户承担，而非你。账单不会随用户增长而膨胀。",
+    "p4_title": "无状态且可嵌入",
+    "p4_desc": "无中心数据库。通过 iframe 或 SDK 把选择器嵌入任意应用；由你的后端签发受限的短时令牌。",
+    "how": "工作原理：你的应用把租户的存储桶凭证加密进一个短时 JWT（HKDF-SHA256 + AES-256-GCM）。FluxFiles 仅为执行所请求的操作而解密。",
+    "diag_app": "你的 SaaS 应用",
+    "diag_token": "受限 JWT（加密凭证）",
+    "diag_core": "FluxFiles",
+    "diag_runtime": "仅运行时解密",
+    "diag_tenant": "租户",
+    "diag_bucket": "自有存储桶"
+  },
+  "saas": {
+    "label": "对比文件 API SaaS",
+    "headline": "自托管且可嵌入——而非又一个上传 SaaS",
+    "sub": "托管文件 API 很好，但它们存储你的数据并按用量计费。FluxFiles 运行在你的技术栈中，每个租户使用自己的存储桶。",
+    "col_feature": "能力",
+    "col_flux": "FluxFiles",
+    "row_selfhost": "自托管（运行在你的基础设施）",
+    "row_byob": "BYOB——每个客户自有存储桶",
+    "row_embed": "可嵌入的文件管理器 UI",
+    "row_oss": "开源（MIT）",
+    "row_fees": "无按存储/上传的 SaaS 费用",
+    "row_multistorage": "多存储（S3 / R2 / 本地）",
+    "row_scoping": "内置按租户令牌作用域",
+    "note": "对比反映各产品的典型默认能力；每款产品在各自领域都很出色。FluxFiles 的定位是可嵌入、自托管、自带存储桶三者的组合。"
   }
 }

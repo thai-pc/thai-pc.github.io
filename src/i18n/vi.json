@@ -7,7 +7,8 @@
     "docs": "Tài liệu",
     "install": "Cài đặt",
     "changelog": "Nhật ký",
-    "github": "GitHub"
+    "github": "GitHub",
+    "byob": "Vì sao BYOB"
   },
   "hero": {
     "badge": "v0.1.0 — Mã nguồn mở · Giấy phép MIT",
@@ -70,7 +71,11 @@
     "dup_title": "Phát hiện trùng file",
     "dup_desc": "Khớp SHA-256 bỏ qua upload trùng trừ khi bạn force ghi đè.",
     "tokenrefresh_title": "Làm mới token SDK",
-    "tokenrefresh_desc": "onTokenRefresh khi 401 — gộp refresh, thử lại, và updateToken() để đổi token chủ động."
+    "tokenrefresh_desc": "onTokenRefresh khi 401 — gộp refresh, thử lại, và updateToken() để đổi token chủ động.",
+    "doctor_title": "Bucket Doctor",
+    "doctor_desc": "Chẩn đoán disk S3/R2 bất kỳ — credentials, đọc/ghi/xóa, presign, CORS, multipart — kèm bản vá IAM & CORS dán là chạy. Onboard bucket BYOB trong vài phút.",
+    "node_title": "Node token SDK",
+    "node_desc": "Phát token FluxFiles từ backend JS bất kỳ (Express, Next.js, Nuxt) với @fluxfiles/node — tương thích byte với core PHP. Không cần PHP để phát token."
   },
   "install": {
     "label": "Cài đặt nhanh",
@@ -149,5 +154,40 @@
     "embed_a": "Có — iframe + JS SDK chạy trên mọi trang, kèm adapter chính thức cho Laravel, WordPress, React, Vue/Nuxt, CKEditor 4 và TinyMCE.",
     "run_q": "Cần gì để chạy?",
     "run_a": "PHP 8.1+ với vài extension phổ biến và Composer. Trỏ tới một disk, đặt secret và allowed origins, rồi chạy — nhẹ tới mức chạy được trên VPS nhỏ."
+  },
+  "byob": {
+    "label": "Lợi thế · BYOB",
+    "headline": "File của khách hàng nằm trong bucket của chính họ",
+    "sub": "FluxFiles là file manager nhúng được, nơi mỗi tenant kết nối bucket S3/R2 của riêng họ — và bạn không bao giờ lưu data hay credentials của họ.",
+    "p1_title": "Chủ quyền dữ liệu",
+    "p1_desc": "File nằm trong tài khoản và region cloud của khách — phù hợp GDPR, compliance, mua sắm doanh nghiệp.",
+    "p2_title": "Không lưu data, không lưu creds",
+    "p2_desc": "Credentials bucket được mã hóa AES-256-GCM trong JWT và chỉ giải mã lúc runtime — không bao giờ ghi vào database hay log.",
+    "p3_title": "Chi phí lưu trữ về 0",
+    "p3_desc": "Storage và egress tính vào từng khách, không phải bạn. Không có hóa đơn storage phình theo lượng người dùng.",
+    "p4_title": "Stateless & nhúng được",
+    "p4_desc": "Không database trung tâm. Nhúng picker vào app bất kỳ qua iframe hoặc SDK; backend của bạn phát token giới hạn, ngắn hạn.",
+    "how": "Cách hoạt động: app của bạn mã hóa credentials bucket của tenant vào một JWT ngắn hạn (HKDF-SHA256 + AES-256-GCM). FluxFiles chỉ giải mã để chạy thao tác được yêu cầu.",
+    "diag_app": "App SaaS của bạn",
+    "diag_token": "JWT giới hạn (creds mã hóa)",
+    "diag_core": "FluxFiles",
+    "diag_runtime": "chỉ giải mã lúc runtime",
+    "diag_tenant": "Tenant",
+    "diag_bucket": "bucket riêng"
+  },
+  "saas": {
+    "label": "so với file-API SaaS",
+    "headline": "Self-hosted và nhúng được — không phải một upload SaaS nữa",
+    "sub": "Các file API hosted rất tốt, nhưng chúng lưu data của bạn và tính phí theo dùng. FluxFiles chạy trong hạ tầng của bạn, mỗi tenant trên bucket riêng.",
+    "col_feature": "Khả năng",
+    "col_flux": "FluxFiles",
+    "row_selfhost": "Self-hosted (chạy trong hạ tầng của bạn)",
+    "row_byob": "BYOB — bucket riêng của từng khách",
+    "row_embed": "UI file manager nhúng được",
+    "row_oss": "Mã nguồn mở (MIT)",
+    "row_fees": "Không phí SaaS theo storage / upload",
+    "row_multistorage": "Đa storage (S3 / R2 / local)",
+    "row_scoping": "Scope token theo từng tenant sẵn có",
+    "note": "So sánh phản ánh gói mặc định thông thường; mỗi sản phẩm mạnh ở mảng riêng. Niche của FluxFiles là bộ ba nhúng-được, self-hosted, bring-your-own-bucket."
   }
 }

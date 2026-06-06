@@ -7,7 +7,8 @@
     "docs": "ドキュメント",
     "install": "インストール",
     "changelog": "変更履歴",
-    "github": "GitHub"
+    "github": "GitHub",
+    "byob": "BYOB とは"
   },
   "hero": {
     "badge": "v0.1.0 — オープンソース · MITライセンス",
@@ -70,7 +71,11 @@
     "dup_title": "重複検出",
     "dup_desc": "SHA-256一致で冗長アップロードをスキップ（強制上書き除く）。",
     "tokenrefresh_title": "SDKトークン更新",
-    "tokenrefresh_desc": "401時にonTokenRefresh — 更新の集約、再試行、updateToken()で事前更新。"
+    "tokenrefresh_desc": "401時にonTokenRefresh — 更新の集約、再試行、updateToken()で事前更新。",
+    "doctor_title": "バケットドクター",
+    "doctor_desc": "任意の S3/R2 ディスクを診断——認証情報、読み/書き/削除、署名付き URL、CORS、マルチパート——貼り付けるだけの IAM・CORS 修正付き。BYOB バケットを数分で導入。",
+    "node_title": "Node トークン SDK",
+    "node_desc": "@fluxfiles/node で任意の JS バックエンド（Express、Next.js、Nuxt）から FluxFiles トークンを発行——PHP コアとバイト互換。トークン発行に PHP 不要。"
   },
   "install": {
     "label": "クイックインストール",
@@ -149,5 +154,40 @@
     "embed_a": "はい。iframe + JS SDK はどのページでも動作し、Laravel・WordPress・React・Vue/Nuxt・CKEditor 4・TinyMCE 向けの公式アダプターがあります。",
     "run_q": "動かすには何が必要ですか？",
     "run_a": "PHP 8.1+ と一般的な拡張、そして Composer です。ディスクを指定し、シークレットと許可オリジンを設定して起動するだけ。小さな VPS でも快適に動きます。"
+  },
+  "byob": {
+    "label": "堀 · BYOB",
+    "headline": "お客様のファイルは、お客様自身のバケットに保存",
+    "sub": "FluxFiles は埋め込み可能なファイルマネージャー。各テナントが自分の S3/R2 バケットを接続し、あなたが彼らのデータや認証情報を保存することは一切ありません。",
+    "p1_title": "データ主権",
+    "p1_desc": "ファイルは顧客自身のクラウドアカウントとリージョンに保存——GDPR・コンプライアンス・企業調達に最適。",
+    "p2_title": "保存時はデータも認証情報もゼロ",
+    "p2_desc": "バケットの認証情報は JWT 内で AES-256-GCM 暗号化され、実行時のみ復号——データベースやログには一切書き込みません。",
+    "p3_title": "ストレージコストはゼロまでスケール",
+    "p3_desc": "ストレージと転送量は各顧客に課金され、あなたには課金されません。ユーザー増加で膨らむ請求はありません。",
+    "p4_title": "ステートレスで埋め込み可能",
+    "p4_desc": "中央データベース不要。iframe か SDK でピッカーを任意のアプリに埋め込み、あなたのバックエンドがスコープ付きの短命トークンを発行します。",
+    "how": "仕組み：アプリがテナントのバケット認証情報を短命の JWT（HKDF-SHA256 + AES-256-GCM）に暗号化。FluxFiles は要求された操作の実行時のみ復号します。",
+    "diag_app": "あなたの SaaS アプリ",
+    "diag_token": "スコープ付き JWT（暗号化資格情報）",
+    "diag_core": "FluxFiles",
+    "diag_runtime": "実行時のみ復号",
+    "diag_tenant": "テナント",
+    "diag_bucket": "自分のバケット"
+  },
+  "saas": {
+    "label": "ファイル API SaaS との比較",
+    "headline": "セルフホストで埋め込み可能——もう一つのアップロード SaaS ではない",
+    "sub": "ホスト型ファイル API も優れていますが、データを保存し従量課金です。FluxFiles はあなたのスタックで動作し、各テナントが自分のバケットを使います。",
+    "col_feature": "機能",
+    "col_flux": "FluxFiles",
+    "row_selfhost": "セルフホスト（自社インフラで動作）",
+    "row_byob": "BYOB——各顧客が自分のバケット",
+    "row_embed": "埋め込み可能なファイルマネージャー UI",
+    "row_oss": "オープンソース（MIT）",
+    "row_fees": "ストレージ/アップロード課金の SaaS 料金なし",
+    "row_multistorage": "マルチストレージ（S3 / R2 / ローカル）",
+    "row_scoping": "テナント単位のトークンスコープを標準装備",
+    "note": "比較は一般的なデフォルト提供内容を反映しています。各製品はそれぞれの領域で優れています。FluxFiles のニッチは、埋め込み可能・セルフホスト・自前バケットの組み合わせです。"
   }
 }

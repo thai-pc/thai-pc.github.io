@@ -7,7 +7,8 @@
     "docs": "Documentación",
     "install": "Instalación",
     "changelog": "Registro de cambios",
-    "github": "GitHub"
+    "github": "GitHub",
+    "byob": "Por qué BYOB"
   },
   "hero": {
     "badge": "v0.1.0 — Código abierto · Licencia MIT",
@@ -70,7 +71,11 @@
     "dup_title": "Detección de duplicados",
     "dup_desc": "Coincidencia SHA-256 omite cargas redundantes salvo sobrescritura forzada.",
     "tokenrefresh_title": "Renovación de token SDK",
-    "tokenrefresh_desc": "onTokenRefresh en 401 — refresh coalescido, reintento y updateToken() para rotación proactiva."
+    "tokenrefresh_desc": "onTokenRefresh en 401 — refresh coalescido, reintento y updateToken() para rotación proactiva.",
+    "doctor_title": "Bucket Doctor",
+    "doctor_desc": "Diagnostica cualquier disco S3/R2 — credenciales, lectura/escritura/borrado, presign, CORS, multipart — con correcciones de IAM y CORS listas para pegar. Conecta buckets BYOB en minutos.",
+    "node_title": "SDK de tokens Node",
+    "node_desc": "Emite tokens de FluxFiles desde cualquier backend JS (Express, Next.js, Nuxt) con @fluxfiles/node — compatible byte a byte con el núcleo PHP. No necesitas PHP para emitir tokens."
   },
   "install": {
     "label": "Instalación rápida",
@@ -149,5 +154,40 @@
     "embed_a": "Sí — el iframe + SDK de JS funciona en cualquier página, con adaptadores oficiales para Laravel, WordPress, React, Vue/Nuxt, CKEditor 4 y TinyMCE.",
     "run_q": "¿Qué necesito para ejecutarlo?",
     "run_a": "PHP 8.1+ con algunas extensiones comunes y Composer. Apúntalo a un disco, define un secreto y los orígenes permitidos, y sírvelo — funciona en un VPS pequeño."
+  },
+  "byob": {
+    "label": "La ventaja · BYOB",
+    "headline": "Los archivos de tus clientes se quedan en los buckets de tus clientes",
+    "sub": "FluxFiles es el gestor de archivos embebible donde cada inquilino conecta su propio bucket S3/R2 — y tú nunca almacenas sus datos ni sus credenciales.",
+    "p1_title": "Soberanía de datos",
+    "p1_desc": "Los archivos viven en la cuenta cloud y la región del propio cliente — pensado para RGPD, cumplimiento y compras empresariales.",
+    "p2_title": "Cero datos, cero credenciales en reposo",
+    "p2_desc": "Las credenciales del bucket se cifran con AES-256-GCM dentro del JWT y solo se descifran en tiempo de ejecución — nunca se escriben en base de datos ni en logs.",
+    "p3_title": "Un coste de almacenamiento que tiende a cero",
+    "p3_desc": "El almacenamiento y el egress se facturan a cada cliente, no a ti. Sin factura que crezca con tu base de usuarios.",
+    "p4_title": "Sin estado y embebible",
+    "p4_desc": "Sin base de datos central. Embebe el selector en cualquier app por iframe o SDK; tu backend emite un token acotado y de corta duración.",
+    "how": "Cómo funciona: tu app cifra las credenciales del bucket del inquilino en un JWT de corta duración (HKDF-SHA256 + AES-256-GCM). FluxFiles solo las descifra para ejecutar la operación solicitada.",
+    "diag_app": "Tu app SaaS",
+    "diag_token": "JWT acotado (credenciales cifradas)",
+    "diag_core": "FluxFiles",
+    "diag_runtime": "descifra solo en ejecución",
+    "diag_tenant": "Inquilino",
+    "diag_bucket": "su bucket"
+  },
+  "saas": {
+    "label": "frente a SaaS de archivos",
+    "headline": "Autoalojado y embebible — no otro SaaS de subida",
+    "sub": "Las API de archivos alojadas son geniales, pero almacenan tus datos y facturan por uso. FluxFiles corre en tu stack, cada inquilino en su propio bucket.",
+    "col_feature": "Capacidad",
+    "col_flux": "FluxFiles",
+    "row_selfhost": "Autoalojado (corre en tu infraestructura)",
+    "row_byob": "BYOB — el bucket propio de cada cliente",
+    "row_embed": "UI de gestor de archivos embebible",
+    "row_oss": "Código abierto (MIT)",
+    "row_fees": "Sin tarifas SaaS por almacenamiento / subida",
+    "row_multistorage": "Multi-almacenamiento (S3 / R2 / local)",
+    "row_scoping": "Alcance de token por inquilino integrado",
+    "note": "La comparación refleja las ofertas por defecto habituales; cada producto destaca en lo suyo. El nicho de FluxFiles es la combinación embebible, autoalojado y bring-your-own-bucket."
   }
 }

@@ -7,7 +7,8 @@
     "docs": "Documentation",
     "install": "Installation",
     "changelog": "Journal des modifications",
-    "github": "GitHub"
+    "github": "GitHub",
+    "byob": "Pourquoi BYOB"
   },
   "hero": {
     "badge": "v0.1.0 — Open Source · Licence MIT",
@@ -70,7 +71,11 @@
     "dup_title": "Détection des doublons",
     "dup_desc": "Correspondance SHA-256 — ignore les uploads redondants sauf écrasement forcé.",
     "tokenrefresh_title": "Rafraîchissement du token SDK",
-    "tokenrefresh_desc": "onTokenRefresh sur 401 — refresh fusionné, retry, et updateToken() pour rotation proactive."
+    "tokenrefresh_desc": "onTokenRefresh sur 401 — refresh fusionné, retry, et updateToken() pour rotation proactive.",
+    "doctor_title": "Bucket Doctor",
+    "doctor_desc": "Diagnostique n’importe quel disque S3/R2 — identifiants, lecture/écriture/suppression, presign, CORS, multipart — avec des correctifs IAM et CORS prêts à coller. Intégrez un bucket BYOB en quelques minutes.",
+    "node_title": "SDK de jetons Node",
+    "node_desc": "Émettez des jetons FluxFiles depuis n’importe quel backend JS (Express, Next.js, Nuxt) avec @fluxfiles/node — compatible octet par octet avec le cœur PHP. Aucun PHP requis pour émettre des jetons."
   },
   "install": {
     "label": "Installation rapide",
@@ -149,5 +154,40 @@
     "embed_a": "Oui — l'iframe + le SDK JS fonctionne dans n'importe quelle page, avec des adaptateurs officiels pour Laravel, WordPress, React, Vue/Nuxt, CKEditor 4 et TinyMCE.",
     "run_q": "De quoi ai-je besoin pour l'exécuter ?",
     "run_a": "PHP 8.1+ avec quelques extensions courantes et Composer. Pointez-le vers un disque, définissez un secret et les origines autorisées, puis lancez-le — il tourne sur un petit VPS."
+  },
+  "byob": {
+    "label": "L’atout · BYOB",
+    "headline": "Les fichiers de vos clients restent dans les buckets de vos clients",
+    "sub": "FluxFiles est le gestionnaire de fichiers intégrable où chaque locataire connecte son propre bucket S3/R2 — et vous ne stockez jamais ses données ni ses identifiants.",
+    "p1_title": "Souveraineté des données",
+    "p1_desc": "Les fichiers résident dans le compte cloud et la région du client — pensé pour le RGPD, la conformité et les achats en entreprise.",
+    "p2_title": "Zéro donnée, zéro identifiant au repos",
+    "p2_desc": "Les identifiants du bucket sont chiffrés en AES-256-GCM dans le JWT et déchiffrés uniquement à l’exécution — jamais écrits en base ou dans un log.",
+    "p3_title": "Un coût de stockage qui tend vers zéro",
+    "p3_desc": "Le stockage et l’egress sont facturés à chaque client, pas à vous. Pas de facture qui gonfle avec votre base d’utilisateurs.",
+    "p4_title": "Sans état et intégrable",
+    "p4_desc": "Aucune base centrale. Intégrez le sélecteur dans n’importe quelle app via iframe ou SDK ; votre backend émet un jeton restreint et de courte durée.",
+    "how": "Fonctionnement : votre app chiffre les identifiants du bucket du locataire dans un JWT de courte durée (HKDF-SHA256 + AES-256-GCM). FluxFiles ne les déchiffre que pour exécuter l’opération demandée.",
+    "diag_app": "Votre app SaaS",
+    "diag_token": "JWT restreint (identifiants chiffrés)",
+    "diag_core": "FluxFiles",
+    "diag_runtime": "déchiffré à l’exécution uniquement",
+    "diag_tenant": "Locataire",
+    "diag_bucket": "son bucket"
+  },
+  "saas": {
+    "label": "face aux SaaS de fichiers",
+    "headline": "Auto-hébergé et intégrable — pas un énième SaaS d’upload",
+    "sub": "Les API de fichiers hébergées sont excellentes, mais elles stockent vos données et facturent à l’usage. FluxFiles tourne dans votre stack, chaque locataire sur son propre bucket.",
+    "col_feature": "Capacité",
+    "col_flux": "FluxFiles",
+    "row_selfhost": "Auto-hébergé (tourne dans votre infra)",
+    "row_byob": "BYOB — le bucket de chaque client",
+    "row_embed": "UI de gestion de fichiers intégrable",
+    "row_oss": "Open source (MIT)",
+    "row_fees": "Aucun frais SaaS au stockage / à l’upload",
+    "row_multistorage": "Multi-stockage (S3 / R2 / local)",
+    "row_scoping": "Portée de jeton par locataire intégrée",
+    "note": "Le comparatif reflète les offres par défaut habituelles ; chaque produit excelle dans son domaine. La niche de FluxFiles est la combinaison intégrable, auto-hébergée et bring-your-own-bucket."
   }
 }
