@@ -9,9 +9,11 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 
 const screenshots = [
-  { src: '/demo/fluxfiles-demo-desktop.png', alt: 'FluxFiles desktop file manager UI' },
-  { src: '/demo/fluxfiles-demo-mobile.png', alt: 'FluxFiles mobile file manager UI' },
-  { src: '/demo/fluxfiles-demo-modal.png', alt: 'FluxFiles create folder modal' },
+  { src: '/demo/fluxfiles-demo-desktop.png', alt: 'FluxFiles desktop file manager with image thumbnails', caption: 'Grid view with instant WebP thumbnails' },
+  { src: '/demo/fluxfiles-demo-activity.png', alt: 'FluxFiles activity log of file operations', caption: 'Activity log — kept in your own bucket' },
+  { src: '/demo/fluxfiles-demo-trash.png', alt: 'FluxFiles trash with restore and delete forever', caption: 'Trash — restore or delete forever' },
+  { src: '/demo/fluxfiles-demo-doctor.png', alt: 'FluxFiles bucket health diagnostics', caption: 'Bucket health diagnostics' },
+  { src: '/demo/fluxfiles-demo-mobile.png', alt: 'FluxFiles responsive mobile file manager', caption: 'Responsive on mobile' },
 ];
 ---
 
@@ -34,7 +36,7 @@ const screenshots = [
         <div class="flex transition-transform duration-300 ease-out will-change-transform" data-carousel-track>
           {screenshots.map((img, idx) => (
             <figure class="w-full shrink-0" data-carousel-slide>
-              <div class="w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9] bg-[var(--bg-page)]">
+              <div class="relative w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9] bg-[var(--bg-page)]">
                 <img
                   src={img.src}
                   alt={img.alt}
@@ -43,6 +45,9 @@ const screenshots = [
                   class="h-full w-full object-contain cursor-zoom-in"
                   data-carousel-image={idx}
                 />
+                <figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-[var(--border-default)] bg-[var(--bg-page)]/90 px-3 py-1 text-xs font-medium text-[var(--text-secondary)] backdrop-blur">
+                  {img.caption}
+                </figcaption>
               </div>
             </figure>
           ))}
