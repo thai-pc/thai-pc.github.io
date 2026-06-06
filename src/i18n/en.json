@@ -70,7 +70,11 @@
     "ratelimit_title": "Rate limiting",
     "ratelimit_desc": "Token bucket per user for API protection.",
     "quota_title": "Storage quota",
-    "quota_desc": "Per-user storage limits via JWT claims."
+    "quota_desc": "Per-user storage limits via JWT claims.",
+    "doctor_title": "Bucket Doctor",
+    "doctor_desc": "Diagnose any S3/R2 disk — credentials, read/write/delete, presign, CORS, multipart — with ready-to-paste IAM & CORS fixes. Onboard BYOB buckets in minutes.",
+    "node_title": "Node token SDK",
+    "node_desc": "Mint FluxFiles tokens from any JS backend (Express, Next.js, Nuxt) with @fluxfiles/node — byte-compatible with the PHP core. No PHP required to issue tokens."
   },
   "install": {
     "label": "Quick install",
