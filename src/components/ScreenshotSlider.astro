@@ -163,12 +163,15 @@ const screenshots = [
 
       var index = 0;
       var images = root.querySelectorAll('[data-carousel-image]');
-      var modal = root.querySelector('[data-carousel-modal]');
-      var modalImg = root.querySelector('[data-carousel-modal-image]');
-      var modalClose = root.querySelector('[data-carousel-modal-close]');
-      var modalBackdrop = root.querySelector('[data-carousel-modal-backdrop]');
-      var modalPrev = root.querySelector('[data-carousel-modal-prev]');
-      var modalNext = root.querySelector('[data-carousel-modal-next]');
+      // The zoom modal is a sibling of the carousel root (it's position:fixed),
+      // so scope lookups to the section, not to `root`.
+      var scope = root.closest('section') || document;
+      var modal = scope.querySelector('[data-carousel-modal]');
+      var modalImg = modal && modal.querySelector('[data-carousel-modal-image]');
+      var modalClose = modal && modal.querySelector('[data-carousel-modal-close]');
+      var modalBackdrop = modal && modal.querySelector('[data-carousel-modal-backdrop]');
+      var modalPrev = modal && modal.querySelector('[data-carousel-modal-prev]');
+      var modalNext = modal && modal.querySelector('[data-carousel-modal-next]');
       var previouslyFocused = null;
 
       function clamp(n) {
