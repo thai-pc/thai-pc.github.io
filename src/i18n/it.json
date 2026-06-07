@@ -11,7 +11,7 @@
     "byob": "Perché BYOB"
   },
   "hero": {
-    "badge": "v0.1.0 — Open Source · Licenza MIT",
+    "badge": "v0.2 — Open Source · Licenza MIT",
     "headline": "Il file manager integrabile ovunque",
     "sub": "PHP ≥ 8.1 + Flysystem 3. UI Alpine.js. Locale, S3, Cloudflare R2. Integra con poche righe di JavaScript.",
     "cta_start": "Inizia ora",

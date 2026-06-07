@@ -11,7 +11,7 @@
     "byob": "BYOB とは"
   },
   "hero": {
-    "badge": "v0.1.0 — オープンソース · MITライセンス",
+    "badge": "v0.2 — オープンソース · MITライセンス",
     "headline": "どこにでも埋め込めるファイルマネージャー",
     "sub": "PHP ≥ 8.1 + Flysystem 3。Alpine.js UI。Local、S3、Cloudflare R2。数行のJavaScriptで埋め込み。",
     "cta_start": "始める",

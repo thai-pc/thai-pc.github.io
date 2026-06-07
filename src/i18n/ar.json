@@ -11,7 +11,7 @@
     "byob": "لماذا BYOB"
   },
   "hero": {
-    "badge": "v0.1.0 — مفتوح المصدر · رخصة MIT",
+    "badge": "v0.2 — مفتوح المصدر · رخصة MIT",
     "headline": "مدير الملفات القابل للتضمين في أي مكان",
     "sub": "PHP ≥ 8.1 + Flysystem 3. واجهة Alpine.js. محلي، S3، Cloudflare R2. التضمين بعدة أسطر JavaScript.",
     "cta_start": "ابدأ الآن",
