@@ -217,5 +217,8 @@
     "headline": "Dùng thử FluxFiles ngay tại đây",
     "sub": "Chính giao diện nhúng được, chạy ngay trong trình duyệt bạn. Mở thư mục, tải ảnh lên, xoá vào thùng rác và khôi phục — không gì rời khỏi trang này.",
     "hint": "Nhúng vào trang này chỉ bằng một thẻ <iframe> — đúng cách nó gắn vào ứng dụng của bạn."
+  },
+  "ui": {
+    "swipe": "Vuốt để so sánh"
   }
 }

@@ -216,5 +216,8 @@
     "headline": "Try FluxFiles right here",
     "sub": "The exact embeddable UI, running in your browser. Open folders, upload images, delete to trash and restore — nothing leaves this page.",
     "hint": "Embedded in this page with a single <iframe> — the same way it drops into your app."
+  },
+  "ui": {
+    "swipe": "Swipe to compare"
   }
 }

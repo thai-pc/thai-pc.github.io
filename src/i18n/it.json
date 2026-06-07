@@ -217,5 +217,8 @@
     "headline": "Prova FluxFiles proprio qui",
     "sub": "La stessa UI incorporabile, in esecuzione nel tuo browser. Apri cartelle, carica immagini, elimina nel cestino e ripristina — niente lascia questa pagina.",
     "hint": "Incorporato in questa pagina con un solo <iframe> — esattamente come entra nella tua app."
+  },
+  "ui": {
+    "swipe": "Scorri per confrontare"
   }
 }

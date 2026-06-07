@@ -217,5 +217,8 @@
     "headline": "FluxFiles'ı tam burada deneyin",
     "sub": "Tam olarak gömülebilir arayüz, tarayıcınızda çalışıyor. Klasörleri açın, görsel yükleyin, çöp kutusuna silip geri yükleyin — hiçbir şey bu sayfadan ayrılmaz.",
     "hint": "Tek bir <iframe> ile bu sayfaya gömüldü — uygulamanıza eklenme şekliyle birebir aynı."
+  },
+  "ui": {
+    "swipe": "Karşılaştırmak için kaydırın"
   }
 }

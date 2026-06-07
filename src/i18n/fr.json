@@ -217,5 +217,8 @@
     "headline": "Essayez FluxFiles ici même",
     "sub": "L'interface intégrable exacte, dans votre navigateur. Ouvrez des dossiers, importez des images, supprimez vers la corbeille et restaurez — rien ne quitte cette page.",
     "hint": "Intégré à cette page avec un seul <iframe> — exactement comme dans votre application."
+  },
+  "ui": {
+    "swipe": "Glissez pour comparer"
   }
 }

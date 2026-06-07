@@ -216,5 +216,8 @@
     "headline": "Probeer FluxFiles hier meteen",
     "sub": "Precies dezelfde insluitbare UI, draaiend in je browser. Open mappen, upload afbeeldingen, verwijder naar de prullenbak en herstel — niets verlaat deze pagina.",
     "hint": "Ingesloten in deze pagina met één <iframe> — net zoals het in je app komt."
+  },
+  "ui": {
+    "swipe": "Veeg om te vergelijken"
   }
 }

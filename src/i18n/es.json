@@ -217,5 +217,8 @@
     "headline": "Prueba FluxFiles aquí mismo",
     "sub": "La misma interfaz integrable, ejecutándose en tu navegador. Abre carpetas, sube imágenes, elimina a la papelera y restaura — nada sale de esta página.",
     "hint": "Integrado en esta página con un solo <iframe>, tal como se incorpora a tu app."
+  },
+  "ui": {
+    "swipe": "Desliza para comparar"
   }
 }
