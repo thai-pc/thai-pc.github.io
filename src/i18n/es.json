@@ -58,7 +58,7 @@
     "trash_title": "Papelera",
     "trash_desc": "Eliminación recuperable con purga automática.",
     "search_title": "Búsqueda de texto completo",
-    "search_desc": "SQLite FTS5 en nombres, títulos, tags.",
+    "search_desc": "Búsqueda indexada por nombres, títulos, tags — basada en archivos, sin base de datos.",
     "bulk_title": "Operaciones masivas",
     "bulk_desc": "Selección múltiple: mover, copiar, eliminar, descargar.",
     "crossdisk_title": "Transferencia cross-disk",
@@ -217,5 +217,8 @@
     "headline": "Prueba FluxFiles aquí mismo",
     "sub": "La misma interfaz integrable, ejecutándose en tu navegador. Abre carpetas, sube imágenes, elimina a la papelera y restaura — nada sale de esta página.",
     "hint": "Integrado en esta página con un solo <iframe>, tal como se incorpora a tu app."
+  },
+  "ui": {
+    "swipe": "Desliza para comparar"
   }
 }

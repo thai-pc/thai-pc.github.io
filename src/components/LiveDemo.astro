@@ -34,13 +34,31 @@ const t = useTranslations(lang);
         <code class="ml-2 text-xs text-gray-400 dark:text-gray-500 truncate">&lt;iframe src=&quot;https://your-app.com/files&quot;&gt;</code>
       </div>
       <iframe
-        src="/demo-app/"
+        data-demo-frame
         title="FluxFiles interactive demo"
         loading="lazy"
         class="w-full h-[560px] sm:h-[640px] bg-white dark:bg-gray-950"
       ></iframe>
+      <noscript>
+        <iframe src="/demo-app/" title="FluxFiles interactive demo" class="w-full h-[560px] sm:h-[640px]"></iframe>
+      </noscript>
     </div>
 
     <p class="text-center mt-5 text-sm text-gray-500 dark:text-gray-400">{t('live.hint')}</p>
   </div>
+
+  <script is:inline>
+    (function () {
+      var frame = document.querySelector('[data-demo-frame]');
+      if (!frame) return;
+      var theme = function () { return document.documentElement.classList.contains('dark') ? 'dark' : 'light'; };
+      // Load the demo already in the host's theme (no flash), then keep it in sync.
+      frame.src = '/demo-app/?theme=' + theme();
+      var sync = function () {
+        try { frame.contentWindow.postMessage({ type: 'fluxfiles-theme', theme: theme() }, '*'); } catch (e) {}
+      };
+      frame.addEventListener('load', sync);
+      new MutationObserver(sync).observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    })();
+  </script>
 </section>

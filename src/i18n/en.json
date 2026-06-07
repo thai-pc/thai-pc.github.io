@@ -58,7 +58,7 @@
     "trash_title": "Trash / soft delete",
     "trash_desc": "Recoverable deletes with auto-purge.",
     "search_title": "Full-text search",
-    "search_desc": "SQLite FTS5 across names, titles, tags.",
+    "search_desc": "Indexed search across names, titles, tags — file-based, no database.",
     "bulk_title": "Bulk operations",
     "bulk_desc": "Multi-select move, copy, delete, download.",
     "crossdisk_title": "Cross-disk transfer",
@@ -216,5 +216,8 @@
     "headline": "Try FluxFiles right here",
     "sub": "The exact embeddable UI, running in your browser. Open folders, upload images, delete to trash and restore — nothing leaves this page.",
     "hint": "Embedded in this page with a single <iframe> — the same way it drops into your app."
+  },
+  "ui": {
+    "swipe": "Swipe to compare"
   }
 }

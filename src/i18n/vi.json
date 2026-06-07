@@ -58,7 +58,7 @@
     "trash_title": "Thùng rác",
     "trash_desc": "Xóa mềm có thể khôi phục, tự dọn dẹp.",
     "search_title": "Tìm kiếm toàn văn",
-    "search_desc": "SQLite FTS5 tìm theo tên, tiêu đề, tags.",
+    "search_desc": "Tìm kiếm có index theo tên, tiêu đề, tags — dựa trên file, không cần database.",
     "bulk_title": "Thao tác hàng loạt",
     "bulk_desc": "Chọn nhiều file để di chuyển, sao chép, xóa, tải.",
     "crossdisk_title": "Chuyển giữa các disk",
@@ -217,5 +217,8 @@
     "headline": "Dùng thử FluxFiles ngay tại đây",
     "sub": "Chính giao diện nhúng được, chạy ngay trong trình duyệt bạn. Mở thư mục, tải ảnh lên, xoá vào thùng rác và khôi phục — không gì rời khỏi trang này.",
     "hint": "Nhúng vào trang này chỉ bằng một thẻ <iframe> — đúng cách nó gắn vào ứng dụng của bạn."
+  },
+  "ui": {
+    "swipe": "Vuốt để so sánh"
   }
 }

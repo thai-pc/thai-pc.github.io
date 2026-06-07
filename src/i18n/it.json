@@ -58,7 +58,7 @@
     "trash_title": "Cestino",
     "trash_desc": "Eliminazione recuperabile con pulizia automatica.",
     "search_title": "Ricerca full-text",
-    "search_desc": "SQLite FTS5 in nomi, titoli, tag.",
+    "search_desc": "Ricerca indicizzata per nomi, titoli, tag — basata su file, senza database.",
     "bulk_title": "Operazioni in blocco",
     "bulk_desc": "Selezione multipla: spostare, copiare, eliminare, scaricare.",
     "crossdisk_title": "Trasferimento cross-disk",
@@ -217,5 +217,8 @@
     "headline": "Prova FluxFiles proprio qui",
     "sub": "La stessa UI incorporabile, in esecuzione nel tuo browser. Apri cartelle, carica immagini, elimina nel cestino e ripristina — niente lascia questa pagina.",
     "hint": "Incorporato in questa pagina con un solo <iframe> — esattamente come entra nella tua app."
+  },
+  "ui": {
+    "swipe": "Scorri per confrontare"
   }
 }

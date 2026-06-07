@@ -58,7 +58,7 @@
     "trash_title": "Çöp kutusu",
     "trash_desc": "Kurtarılabilir silme, otomatik temizleme.",
     "search_title": "Tam metin arama",
-    "search_desc": "SQLite FTS5 ile isim, başlık, etiket arama.",
+    "search_desc": "İsim, başlık, etiketlerde dizinli arama — dosya tabanlı, veritabanı yok.",
     "bulk_title": "Toplu işlemler",
     "bulk_desc": "Çoklu seçim: taşıma, kopyalama, silme, indirme.",
     "crossdisk_title": "Diskler arası transfer",
@@ -217,5 +217,8 @@
     "headline": "FluxFiles'ı tam burada deneyin",
     "sub": "Tam olarak gömülebilir arayüz, tarayıcınızda çalışıyor. Klasörleri açın, görsel yükleyin, çöp kutusuna silip geri yükleyin — hiçbir şey bu sayfadan ayrılmaz.",
     "hint": "Tek bir <iframe> ile bu sayfaya gömüldü — uygulamanıza eklenme şekliyle birebir aynı."
+  },
+  "ui": {
+    "swipe": "Karşılaştırmak için kaydırın"
   }
 }

@@ -58,7 +58,7 @@
     "trash_title": "Prullenbak",
     "trash_desc": "Herstelbare verwijderingen met automatische opschoning.",
     "search_title": "Zoeken in volledige tekst",
-    "search_desc": "SQLite FTS5 in namen, titels, tags.",
+    "search_desc": "Geïndexeerde zoekopdracht op namen, titels, tags — bestandsgebaseerd, geen database.",
     "bulk_title": "Bulkbewerkingen",
     "bulk_desc": "Multi-select verplaatsen, kopiëren, verwijderen, downloaden.",
     "crossdisk_title": "Cross-disk overdracht",
@@ -216,5 +216,8 @@
     "headline": "Probeer FluxFiles hier meteen",
     "sub": "Precies dezelfde insluitbare UI, draaiend in je browser. Open mappen, upload afbeeldingen, verwijder naar de prullenbak en herstel — niets verlaat deze pagina.",
     "hint": "Ingesloten in deze pagina met één <iframe> — net zoals het in je app komt."
+  },
+  "ui": {
+    "swipe": "Veeg om te vergelijken"
   }
 }

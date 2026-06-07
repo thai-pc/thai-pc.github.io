@@ -58,7 +58,7 @@
     "trash_title": "Papierkorb",
     "trash_desc": "Wiederherstellbares Löschen mit automatischer Bereinigung.",
     "search_title": "Volltextsuche",
-    "search_desc": "SQLite FTS5 in Namen, Titeln, Tags.",
+    "search_desc": "Indizierte Suche über Namen, Titel, Tags — dateibasiert, ohne Datenbank.",
     "bulk_title": "Massenoperationen",
     "bulk_desc": "Mehrfachauswahl: Verschieben, Kopieren, Löschen, Herunterladen.",
     "crossdisk_title": "Cross-Disk-Transfer",
@@ -217,5 +217,8 @@
     "headline": "Probieren Sie FluxFiles direkt hier",
     "sub": "Genau die einbettbare Oberfläche, in Ihrem Browser. Ordner öffnen, Bilder hochladen, in den Papierkorb löschen und wiederherstellen — nichts verlässt diese Seite.",
     "hint": "Mit einem einzigen <iframe> in diese Seite eingebettet — genau so kommt es in Ihre App."
+  },
+  "ui": {
+    "swipe": "Wischen zum Vergleichen"
   }
 }
