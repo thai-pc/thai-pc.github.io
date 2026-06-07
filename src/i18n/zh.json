@@ -11,7 +11,7 @@
     "byob": "为何 BYOB"
   },
   "hero": {
-    "badge": "v0.1.0 — 开源 · MIT 许可证",
+    "badge": "v0.2 — 开源 · MIT 许可证",
     "headline": "可嵌入任何地方的文件管理器",
     "sub": "PHP ≥ 8.1 + Flysystem 3。Alpine.js UI。Local、S3、Cloudflare R2。几行 JavaScript 即可嵌入。",
     "cta_start": "开始使用",

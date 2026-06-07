@@ -11,7 +11,7 @@
     "byob": "Почему BYOB"
   },
   "hero": {
-    "badge": "v0.1.0 — Открытый код · Лицензия MIT",
+    "badge": "v0.2 — Открытый код · Лицензия MIT",
     "headline": "Файловый менеджер, встраиваемый куда угодно",
     "sub": "PHP ≥ 8.1 + Flysystem 3. UI Alpine.js. Локальное, S3, Cloudflare R2. Встраивание за несколько строк JavaScript.",
     "cta_start": "Начать",

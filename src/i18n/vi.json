@@ -11,7 +11,7 @@
     "byob": "Vì sao BYOB"
   },
   "hero": {
-    "badge": "v0.1.0 — Mã nguồn mở · Giấy phép MIT",
+    "badge": "v0.2 — Mã nguồn mở · Giấy phép MIT",
     "headline": "Trình quản lý file nhúng được mọi nơi",
     "sub": "PHP ≥ 8.1 + Flysystem 3. Giao diện Alpine.js. Local, S3, Cloudflare R2. Nhúng với vài dòng JavaScript.",
     "cta_start": "Bắt đầu",

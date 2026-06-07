@@ -11,7 +11,7 @@
     "byob": "Pourquoi BYOB"
   },
   "hero": {
-    "badge": "v0.1.0 — Open Source · Licence MIT",
+    "badge": "v0.2 — Open Source · Licence MIT",
     "headline": "Le gestionnaire de fichiers intégrable partout",
     "sub": "PHP ≥ 8.1 + Flysystem 3. UI Alpine.js. Local, S3, Cloudflare R2. Intégrez en quelques lignes de JavaScript.",
     "cta_start": "Commencer",

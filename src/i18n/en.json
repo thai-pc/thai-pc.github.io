@@ -11,7 +11,7 @@
     "byob": "Why BYOB"
   },
   "hero": {
-    "badge": "v0.1.0 — Open Source · MIT License",
+    "badge": "v0.2 — Open Source · MIT License",
     "headline": "The file manager that embeds anywhere",
     "sub": "PHP ≥ 8.1 + Flysystem 3. Alpine.js UI. Local, S3, Cloudflare R2. Embed with a few lines of JavaScript.",
     "cta_start": "Get started",

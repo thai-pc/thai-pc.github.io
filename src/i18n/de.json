@@ -11,7 +11,7 @@
     "byob": "Warum BYOB"
   },
   "hero": {
-    "badge": "v0.1.0 — Open Source · MIT-Lizenz",
+    "badge": "v0.2 — Open Source · MIT-Lizenz",
     "headline": "Der Dateimanager, der überall eingebettet wird",
     "sub": "PHP ≥ 8.1 + Flysystem 3. Alpine.js UI. Local, S3, Cloudflare R2. Einbetten mit wenigen Zeilen JavaScript.",
     "cta_start": "Loslegen",

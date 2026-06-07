@@ -11,7 +11,7 @@
     "byob": "Neden BYOB"
   },
   "hero": {
-    "badge": "v0.1.0 — Açık Kaynak · MIT Lisansı",
+    "badge": "v0.2 — Açık Kaynak · MIT Lisansı",
     "headline": "Her yere gömülebilen dosya yöneticisi",
     "sub": "PHP ≥ 8.1 + Flysystem 3. Alpine.js Arayüzü. Yerel, S3, Cloudflare R2. Birkaç satır JavaScript ile gömün.",
     "cta_start": "Başlayın",
