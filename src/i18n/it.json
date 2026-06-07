@@ -211,5 +211,11 @@
     "p3_desc": "Inserisci un selettore di media in CKEditor, TinyMCE o nel tuo editor tramite l'SDK iframe.",
     "p4_title": "Strumenti interni e dashboard",
     "p4_desc": "Aggiungi upload, anteprime e operazioni sui file con audit ai pannelli di amministrazione in un pomeriggio."
+  },
+  "live": {
+    "label": "Demo dal vivo",
+    "headline": "Prova FluxFiles proprio qui",
+    "sub": "La stessa UI incorporabile, in esecuzione nel tuo browser. Apri cartelle, carica immagini, elimina nel cestino e ripristina — niente lascia questa pagina.",
+    "hint": "Incorporato in questa pagina con un solo <iframe> — esattamente come entra nella tua app."
   }
 }

@@ -211,5 +211,11 @@
     "p3_desc": "Binden Sie einen Medien-Picker per iframe-SDK in CKEditor, TinyMCE oder Ihren eigenen Editor ein.",
     "p4_title": "Interne Tools & Dashboards",
     "p4_desc": "Ergänzen Sie Admin-Panels an einem Nachmittag um Uploads, Vorschauen und auditierte Dateioperationen."
+  },
+  "live": {
+    "label": "Live-Demo",
+    "headline": "Probieren Sie FluxFiles direkt hier",
+    "sub": "Genau die einbettbare Oberfläche, in Ihrem Browser. Ordner öffnen, Bilder hochladen, in den Papierkorb löschen und wiederherstellen — nichts verlässt diese Seite.",
+    "hint": "Mit einem einzigen <iframe> in diese Seite eingebettet — genau so kommt es in Ihre App."
   }
 }

@@ -210,5 +210,11 @@
     "p3_desc": "Drop a media picker into CKEditor, TinyMCE, or your own editor via the iframe SDK.",
     "p4_title": "Internal tools & dashboards",
     "p4_desc": "Add uploads, previews and audited file operations to admin panels in an afternoon."
+  },
+  "live": {
+    "label": "Live demo",
+    "headline": "Try FluxFiles right here",
+    "sub": "The exact embeddable UI, running in your browser. Open folders, upload images, delete to trash and restore — nothing leaves this page.",
+    "hint": "Embedded in this page with a single <iframe> — the same way it drops into your app."
   }
 }

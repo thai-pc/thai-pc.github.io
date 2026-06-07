@@ -210,5 +210,11 @@
     "p3_desc": "Plaats een mediakiezer in CKEditor, TinyMCE of je eigen editor via de iframe-SDK.",
     "p4_title": "Interne tools en dashboards",
     "p4_desc": "Voeg uploads, previews en geaudite bestandsbewerkingen toe aan admin-panels in een middag."
+  },
+  "live": {
+    "label": "Live demo",
+    "headline": "Probeer FluxFiles hier meteen",
+    "sub": "Precies dezelfde insluitbare UI, draaiend in je browser. Open mappen, upload afbeeldingen, verwijder naar de prullenbak en herstel — niets verlaat deze pagina.",
+    "hint": "Ingesloten in deze pagina met één <iframe> — net zoals het in je app komt."
   }
 }

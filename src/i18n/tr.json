@@ -211,5 +211,11 @@
     "p3_desc": "iframe SDK ile CKEditor, TinyMCE veya kendi editörünüze bir medya seçici ekleyin.",
     "p4_title": "İç araçlar ve panolar",
     "p4_desc": "Yönetim panellerine yükleme, önizleme ve denetlenen dosya işlemlerini bir öğleden sonrada ekleyin."
+  },
+  "live": {
+    "label": "Canlı demo",
+    "headline": "FluxFiles'ı tam burada deneyin",
+    "sub": "Tam olarak gömülebilir arayüz, tarayıcınızda çalışıyor. Klasörleri açın, görsel yükleyin, çöp kutusuna silip geri yükleyin — hiçbir şey bu sayfadan ayrılmaz.",
+    "hint": "Tek bir <iframe> ile bu sayfaya gömüldü — uygulamanıza eklenme şekliyle birebir aynı."
   }
 }
