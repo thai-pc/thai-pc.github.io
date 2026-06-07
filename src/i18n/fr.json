@@ -58,7 +58,7 @@
     "trash_title": "Corbeille",
     "trash_desc": "Suppression réversible avec purge automatique.",
     "search_title": "Recherche plein texte",
-    "search_desc": "SQLite FTS5 dans les noms, titres, tags.",
+    "search_desc": "Recherche indexée par noms, titres, tags — basée fichier, sans base de données.",
     "bulk_title": "Opérations en masse",
     "bulk_desc": "Sélection multiple : déplacer, copier, supprimer, télécharger.",
     "crossdisk_title": "Transfert cross-disk",

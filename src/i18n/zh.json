@@ -58,7 +58,7 @@
     "trash_title": "回收站",
     "trash_desc": "可恢复删除，自动清理。",
     "search_title": "全文搜索",
-    "search_desc": "SQLite FTS5搜索文件名、标题、标签。",
+    "search_desc": "对文件名、标题、标签建立索引搜索 —— 基于文件，无需数据库。",
     "bulk_title": "批量操作",
     "bulk_desc": "多选移动、复制、删除、下载。",
     "crossdisk_title": "跨磁盘传输",

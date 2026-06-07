@@ -58,7 +58,7 @@
     "trash_title": "Thùng rác",
     "trash_desc": "Xóa mềm có thể khôi phục, tự dọn dẹp.",
     "search_title": "Tìm kiếm toàn văn",
-    "search_desc": "SQLite FTS5 tìm theo tên, tiêu đề, tags.",
+    "search_desc": "Tìm kiếm có index theo tên, tiêu đề, tags — dựa trên file, không cần database.",
     "bulk_title": "Thao tác hàng loạt",
     "bulk_desc": "Chọn nhiều file để di chuyển, sao chép, xóa, tải.",
     "crossdisk_title": "Chuyển giữa các disk",

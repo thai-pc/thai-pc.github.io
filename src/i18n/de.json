@@ -58,7 +58,7 @@
     "trash_title": "Papierkorb",
     "trash_desc": "Wiederherstellbares Löschen mit automatischer Bereinigung.",
     "search_title": "Volltextsuche",
-    "search_desc": "SQLite FTS5 in Namen, Titeln, Tags.",
+    "search_desc": "Indizierte Suche über Namen, Titel, Tags — dateibasiert, ohne Datenbank.",
     "bulk_title": "Massenoperationen",
     "bulk_desc": "Mehrfachauswahl: Verschieben, Kopieren, Löschen, Herunterladen.",
     "crossdisk_title": "Cross-Disk-Transfer",

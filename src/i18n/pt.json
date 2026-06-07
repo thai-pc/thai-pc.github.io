@@ -58,7 +58,7 @@
     "trash_title": "Lixeira",
     "trash_desc": "Exclusão recuperável com limpeza automática.",
     "search_title": "Busca em texto completo",
-    "search_desc": "SQLite FTS5 em nomes, títulos, tags.",
+    "search_desc": "Busca indexada por nomes, títulos, tags — baseada em arquivos, sem banco de dados.",
     "bulk_title": "Operações em massa",
     "bulk_desc": "Seleção múltipla: mover, copiar, excluir, baixar.",
     "crossdisk_title": "Transferência cross-disk",

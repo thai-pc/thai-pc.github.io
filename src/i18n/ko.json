@@ -58,7 +58,7 @@
     "trash_title": "휴지통",
     "trash_desc": "복구 가능한 삭제, 자동 정리.",
     "search_title": "전체 텍스트 검색",
-    "search_desc": "SQLite FTS5로 이름, 제목, 태그 검색.",
+    "search_desc": "이름, 제목, 태그 인덱스 검색 — 파일 기반, 데이터베이스 불필요.",
     "bulk_title": "일괄 작업",
     "bulk_desc": "다중 선택 이동, 복사, 삭제, 다운로드.",
     "crossdisk_title": "크로스 디스크 전송",

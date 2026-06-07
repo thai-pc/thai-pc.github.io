@@ -58,7 +58,7 @@
     "trash_title": "Cestino",
     "trash_desc": "Eliminazione recuperabile con pulizia automatica.",
     "search_title": "Ricerca full-text",
-    "search_desc": "SQLite FTS5 in nomi, titoli, tag.",
+    "search_desc": "Ricerca indicizzata per nomi, titoli, tag — basata su file, senza database.",
     "bulk_title": "Operazioni in blocco",
     "bulk_desc": "Selezione multipla: spostare, copiare, eliminare, scaricare.",
     "crossdisk_title": "Trasferimento cross-disk",
