@@ -24,7 +24,12 @@
   "demo": {
     "label": "Live Preview",
     "headline": "See it in action",
-    "upload_mock_label": "Upload preview (demo UI)"
+    "upload_mock_label": "Upload preview (demo UI)",
+    "cap_desktop": "Grid view with instant WebP thumbnails",
+    "cap_activity": "Activity log — kept in your own bucket",
+    "cap_trash": "Trash — restore or delete forever",
+    "cap_doctor": "Bucket Doctor — S3/R2 health checks + fixes",
+    "cap_mobile": "Responsive on mobile"
   },
   "features": {
     "label": "Features",
@@ -192,5 +197,24 @@
     "row_multistorage": "Multi-storage (S3 / R2 / local)",
     "row_scoping": "Per-tenant token scoping built in",
     "note": "Comparison reflects typical default offerings; each product excels in its own space. FluxFiles’ niche is the embeddable, self-hosted, bring-your-own-bucket combination."
+  },
+  "who": {
+    "label": "Who it's for",
+    "headline": "Built for teams that ship file features",
+    "sub": "If your product needs uploads, FluxFiles drops in — without making you the landlord of your customers' data.",
+    "p1_title": "SaaS & multi-tenant apps",
+    "p1_desc": "Give every customer a file manager on their own bucket. Per-tenant token scoping and data sovereignty are built in.",
+    "p2_title": "Agencies & freelancers",
+    "p2_desc": "Ship a polished media library to each client without standing up storage infrastructure per project.",
+    "p3_title": "CMS & editor integrations",
+    "p3_desc": "Drop a media picker into CKEditor, TinyMCE, or your own editor via the iframe SDK.",
+    "p4_title": "Internal tools & dashboards",
+    "p4_desc": "Add uploads, previews and audited file operations to admin panels in an afternoon."
+  },
+  "live": {
+    "label": "Live demo",
+    "headline": "Try FluxFiles right here",
+    "sub": "The exact embeddable UI, running in your browser. Open folders, upload images, delete to trash and restore — nothing leaves this page.",
+    "hint": "Embedded in this page with a single <iframe> — the same way it drops into your app."
   }
 }

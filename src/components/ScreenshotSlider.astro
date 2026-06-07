@@ -9,11 +9,11 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 
 const screenshots = [
-  { src: '/demo/fluxfiles-demo-desktop.png', alt: 'FluxFiles desktop file manager with image thumbnails', caption: 'Grid view with instant WebP thumbnails' },
-  { src: '/demo/fluxfiles-demo-activity.png', alt: 'FluxFiles activity log of file operations', caption: 'Activity log — kept in your own bucket' },
-  { src: '/demo/fluxfiles-demo-trash.png', alt: 'FluxFiles trash with restore and delete forever', caption: 'Trash — restore or delete forever' },
-  { src: '/demo/fluxfiles-demo-doctor.png', alt: 'FluxFiles bucket health diagnostics for an S3 bucket with CORS and IAM remediation', caption: 'Bucket Doctor — S3/R2 health checks + fixes' },
-  { src: '/demo/fluxfiles-demo-mobile.png', alt: 'FluxFiles responsive mobile file manager', caption: 'Responsive on mobile' },
+  { src: '/demo/fluxfiles-demo-desktop.png', alt: 'FluxFiles desktop file manager with image thumbnails', caption: t('demo.cap_desktop') },
+  { src: '/demo/fluxfiles-demo-activity.png', alt: 'FluxFiles activity log of file operations', caption: t('demo.cap_activity') },
+  { src: '/demo/fluxfiles-demo-trash.png', alt: 'FluxFiles trash with restore and delete forever', caption: t('demo.cap_trash') },
+  { src: '/demo/fluxfiles-demo-doctor.png', alt: 'FluxFiles bucket health diagnostics for an S3 bucket with CORS and IAM remediation', caption: t('demo.cap_doctor') },
+  { src: '/demo/fluxfiles-demo-mobile.png', alt: 'FluxFiles responsive mobile file manager', caption: t('demo.cap_mobile') },
 ];
 ---
 
@@ -40,10 +40,14 @@ const screenshots = [
                 <img
                   src={img.src}
                   alt={img.alt}
-                  loading="lazy"
+                  width="1440"
+                  height="900"
+                  loading={idx === 0 ? 'eager' : 'lazy'}
+                  fetchpriority={idx === 0 ? 'high' : 'auto'}
                   decoding="async"
                   class="h-full w-full object-contain cursor-zoom-in"
                   data-carousel-image={idx}
+                  data-caption={img.caption}
                 />
                 <figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-[var(--border-default)] bg-[var(--bg-page)]/90 px-3 py-1 text-xs font-medium text-[var(--text-secondary)] backdrop-blur">
                   {img.caption}
@@ -99,8 +103,8 @@ const screenshots = [
       <div class="relative w-full max-w-6xl">
         <div class="rounded-xl border border-[var(--border-default)] bg-[var(--bg-page)] shadow-2xl overflow-hidden">
           <div class="flex items-center justify-between px-4 py-3 border-b border-[var(--border-default)] bg-[var(--bg-elevated)]">
-            <div class="text-sm font-medium" style="color: var(--text-secondary);">
-              Screenshot
+            <div class="text-sm font-medium" style="color: var(--text-secondary);" data-carousel-modal-title>
+              {screenshots[0].caption}
             </div>
             <button
               type="button"
@@ -163,12 +167,16 @@ const screenshots = [
 
       var index = 0;
       var images = root.querySelectorAll('[data-carousel-image]');
-      var modal = root.querySelector('[data-carousel-modal]');
-      var modalImg = root.querySelector('[data-carousel-modal-image]');
-      var modalClose = root.querySelector('[data-carousel-modal-close]');
-      var modalBackdrop = root.querySelector('[data-carousel-modal-backdrop]');
-      var modalPrev = root.querySelector('[data-carousel-modal-prev]');
-      var modalNext = root.querySelector('[data-carousel-modal-next]');
+      // The zoom modal is a sibling of the carousel root (it's position:fixed),
+      // so scope lookups to the section, not to `root`.
+      var scope = root.closest('section') || document;
+      var modal = scope.querySelector('[data-carousel-modal]');
+      var modalImg = modal && modal.querySelector('[data-carousel-modal-image]');
+      var modalClose = modal && modal.querySelector('[data-carousel-modal-close]');
+      var modalBackdrop = modal && modal.querySelector('[data-carousel-modal-backdrop]');
+      var modalPrev = modal && modal.querySelector('[data-carousel-modal-prev]');
+      var modalNext = modal && modal.querySelector('[data-carousel-modal-next]');
+      var modalTitle = modal && modal.querySelector('[data-carousel-modal-title]');
       var previouslyFocused = null;
 
       function clamp(n) {
@@ -191,6 +199,7 @@ const screenshots = [
         if (!active) return;
         modalImg.setAttribute('src', active.getAttribute('src') || '');
         modalImg.setAttribute('alt', active.getAttribute('alt') || 'Screenshot');
+        if (modalTitle) modalTitle.textContent = active.getAttribute('data-caption') || '';
       }
       function openModal() {
         if (!modal) return;

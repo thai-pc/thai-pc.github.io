@@ -24,7 +24,12 @@
   "demo": {
     "label": "Xem trước",
     "headline": "Xem thực tế",
-    "upload_mock_label": "Xem trước tải lên (giao diện demo)"
+    "upload_mock_label": "Xem trước tải lên (giao diện demo)",
+    "cap_desktop": "Lưới ảnh với thumbnail WebP tức thì",
+    "cap_activity": "Nhật ký hoạt động — lưu trong bucket của bạn",
+    "cap_trash": "Thùng rác — khôi phục hoặc xoá vĩnh viễn",
+    "cap_doctor": "Bucket Doctor — kiểm tra S3/R2 + cách khắc phục",
+    "cap_mobile": "Tương thích trên di động"
   },
   "features": {
     "label": "Tính năng",
@@ -188,6 +193,29 @@
     "row_fees": "Không phí SaaS theo storage / upload",
     "row_multistorage": "Đa storage (S3 / R2 / local)",
     "row_scoping": "Scope token theo từng tenant sẵn có",
-    "note": "So sánh phản ánh gói mặc định thông thường; mỗi sản phẩm mạnh ở mảng riêng. Niche của FluxFiles là bộ ba nhúng-được, self-hosted, bring-your-own-bucket."
+    "note": "So sánh phản ánh gói mặc định thông thường; mỗi sản phẩm mạnh ở mảng riêng. Niche của FluxFiles là bộ ba nhúng-được, self-hosted, bring-your-own-bucket.",
+    "col_filestack": "Filestack",
+    "col_uploadcare": "Uploadcare",
+    "col_cloudinary": "Cloudinary",
+    "col_supabase": "Supabase Storage"
+  },
+  "who": {
+    "label": "Dành cho ai",
+    "headline": "Tạo ra cho đội ngũ làm tính năng quản lý file",
+    "sub": "Nếu sản phẩm của bạn cần upload, FluxFiles gắn vào ngay — mà không biến bạn thành nơi giữ dữ liệu của khách hàng.",
+    "p1_title": "SaaS & ứng dụng đa người thuê",
+    "p1_desc": "Cho mỗi khách hàng một trình quản lý file trên bucket riêng của họ. Giới hạn token theo tenant và chủ quyền dữ liệu có sẵn.",
+    "p2_title": "Agency & freelancer",
+    "p2_desc": "Giao thư viện media gọn gàng cho từng khách mà không phải dựng hạ tầng lưu trữ cho mỗi dự án.",
+    "p3_title": "Tích hợp CMS & trình soạn thảo",
+    "p3_desc": "Gắn bộ chọn media vào CKEditor, TinyMCE hoặc editor của bạn qua iframe SDK.",
+    "p4_title": "Công cụ nội bộ & dashboard",
+    "p4_desc": "Thêm upload, xem trước và thao tác file có audit vào trang quản trị chỉ trong một buổi chiều."
+  },
+  "live": {
+    "label": "Demo trực tiếp",
+    "headline": "Dùng thử FluxFiles ngay tại đây",
+    "sub": "Chính giao diện nhúng được, chạy ngay trong trình duyệt bạn. Mở thư mục, tải ảnh lên, xoá vào thùng rác và khôi phục — không gì rời khỏi trang này.",
+    "hint": "Nhúng vào trang này chỉ bằng một thẻ <iframe> — đúng cách nó gắn vào ứng dụng của bạn."
   }
 }

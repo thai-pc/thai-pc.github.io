@@ -7,7 +7,8 @@
     "docs": "Documentazione",
     "install": "Installazione",
     "changelog": "Changelog",
-    "github": "GitHub"
+    "github": "GitHub",
+    "byob": "Perché BYOB"
   },
   "hero": {
     "badge": "v0.1.0 — Open Source · Licenza MIT",
@@ -23,7 +24,12 @@
   "demo": {
     "label": "Anteprima",
     "headline": "Guardalo in azione",
-    "upload_mock_label": "Anteprima caricamento (demo)"
+    "upload_mock_label": "Anteprima caricamento (demo)",
+    "cap_desktop": "Vista a griglia con miniature WebP istantanee",
+    "cap_activity": "Registro attività — conservato nel tuo bucket",
+    "cap_trash": "Cestino — ripristina o elimina per sempre",
+    "cap_doctor": "Bucket Doctor — diagnostica S3/R2 + soluzioni",
+    "cap_mobile": "Responsive su mobile"
   },
   "features": {
     "label": "Funzionalità",
@@ -70,7 +76,11 @@
     "dup_title": "Rilevamento duplicati",
     "dup_desc": "Match SHA-256 salta upload ridondanti salvo sovrascrittura forzata.",
     "tokenrefresh_title": "Refresh token SDK",
-    "tokenrefresh_desc": "onTokenRefresh su 401 — refresh coalescente, retry e updateToken()."
+    "tokenrefresh_desc": "onTokenRefresh su 401 — refresh coalescente, retry e updateToken().",
+    "doctor_title": "Bucket Doctor",
+    "doctor_desc": "Diagnostica qualsiasi disco S3/R2 — credenziali, lettura/scrittura/eliminazione, presign, CORS, multipart — con correzioni IAM e CORS pronte da incollare. Onboarding dei bucket BYOB in pochi minuti.",
+    "node_title": "Node token SDK",
+    "node_desc": "Genera token FluxFiles da qualsiasi backend JS (Express, Next.js, Nuxt) con @fluxfiles/node — compatibile byte per byte con il core PHP. Nessun PHP necessario per emettere i token."
   },
   "install": {
     "label": "Installazione rapida",
@@ -149,5 +159,63 @@
     "embed_a": "Sì — l'iframe + SDK JS funziona in qualsiasi pagina, con adattatori ufficiali per Laravel, WordPress, React, Vue/Nuxt, CKEditor 4 e TinyMCE.",
     "run_q": "Cosa serve per eseguirlo?",
     "run_a": "PHP 8.1+ con alcune estensioni comuni e Composer. Puntalo a un disco, imposta un secret e le origini consentite, poi avvialo — gira su un piccolo VPS."
+  },
+  "byob": {
+    "label": "Il fossato · BYOB",
+    "headline": "I file dei tuoi clienti restano nei bucket dei tuoi clienti",
+    "sub": "FluxFiles è il file manager incorporabile in cui ogni tenant collega il proprio bucket S3/R2 — e tu non conservi né i loro dati né le loro credenziali.",
+    "p1_title": "Sovranità dei dati",
+    "p1_desc": "I file risiedono nell'account cloud e nella regione del cliente — pensato per GDPR, compliance e procurement aziendale.",
+    "p2_title": "Zero dati, zero credenziali a riposo",
+    "p2_desc": "Le credenziali del bucket sono cifrate con AES-256-GCM dentro il JWT e decifrate solo a runtime — mai scritte su database o log.",
+    "p3_title": "Costi di storage che scalano a zero",
+    "p3_desc": "Storage ed egress sono fatturati a ogni cliente, non a te. Nessuna bolletta di storage che cresce con i tuoi utenti.",
+    "p4_title": "Stateless e incorporabile",
+    "p4_desc": "Nessun database centrale. Inserisci il picker in qualsiasi app via iframe o SDK; il tuo backend emette un token con ambito e di breve durata.",
+    "how": "Come funziona: la tua app cifra le credenziali del bucket del tenant in un JWT di breve durata (HKDF-SHA256 + AES-256-GCM). FluxFiles le decifra solo per eseguire l'operazione richiesta.",
+    "diag_app": "La tua app SaaS",
+    "diag_token": "JWT con ambito (credenziali cifrate)",
+    "diag_core": "FluxFiles",
+    "diag_runtime": "decifra solo a runtime",
+    "diag_tenant": "Tenant",
+    "diag_bucket": "bucket proprio"
+  },
+  "saas": {
+    "label": "vs. SaaS di file-API",
+    "headline": "Self-hosted e incorporabile — non l'ennesimo SaaS di upload",
+    "sub": "Le API di file gestite sono ottime, ma conservano i tuoi dati e fatturano a consumo. FluxFiles gira nel tuo stack, con ogni tenant sul proprio bucket.",
+    "col_feature": "Capacità",
+    "col_flux": "FluxFiles",
+    "col_filestack": "Filestack",
+    "col_uploadcare": "Uploadcare",
+    "col_cloudinary": "Cloudinary",
+    "col_supabase": "Supabase Storage",
+    "row_selfhost": "Self-hosted (gira nella tua infrastruttura)",
+    "row_byob": "BYOB — bucket proprio di ogni cliente",
+    "row_embed": "UI file manager incorporabile",
+    "row_oss": "Open source (MIT)",
+    "row_fees": "Nessun costo SaaS per storage / per upload",
+    "row_multistorage": "Multi-storage (S3 / R2 / locale)",
+    "row_scoping": "Scoping del token per tenant integrato",
+    "note": "Il confronto riflette le offerte predefinite tipiche; ogni prodotto eccelle nel proprio ambito. La nicchia di FluxFiles è la combinazione incorporabile, self-hosted e bring-your-own-bucket."
+  },
+  "who": {
+    "label": "Per chi è",
+    "headline": "Pensato per i team che rilasciano funzioni sui file",
+    "sub": "Se il tuo prodotto richiede upload, FluxFiles si integra — senza renderti il custode dei dati dei tuoi clienti.",
+    "p1_title": "SaaS e app multi-tenant",
+    "p1_desc": "Dai a ogni cliente un file manager sul proprio bucket. Scoping del token per tenant e sovranità dei dati inclusi.",
+    "p2_title": "Agenzie e freelance",
+    "p2_desc": "Consegna a ogni cliente una libreria multimediale curata senza allestire un'infrastruttura di storage per progetto.",
+    "p3_title": "Integrazioni CMS ed editor",
+    "p3_desc": "Inserisci un selettore di media in CKEditor, TinyMCE o nel tuo editor tramite l'SDK iframe.",
+    "p4_title": "Strumenti interni e dashboard",
+    "p4_desc": "Aggiungi upload, anteprime e operazioni sui file con audit ai pannelli di amministrazione in un pomeriggio."
+  },
+  "live": {
+    "label": "Demo dal vivo",
+    "headline": "Prova FluxFiles proprio qui",
+    "sub": "La stessa UI incorporabile, in esecuzione nel tuo browser. Apri cartelle, carica immagini, elimina nel cestino e ripristina — niente lascia questa pagina.",
+    "hint": "Incorporato in questa pagina con un solo <iframe> — esattamente come entra nella tua app."
   }
 }

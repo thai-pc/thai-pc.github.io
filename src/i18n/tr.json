@@ -7,7 +7,8 @@
     "docs": "Dokümantasyon",
     "install": "Kurulum",
     "changelog": "Değişiklik Günlüğü",
-    "github": "GitHub"
+    "github": "GitHub",
+    "byob": "Neden BYOB"
   },
   "hero": {
     "badge": "v0.1.0 — Açık Kaynak · MIT Lisansı",
@@ -23,7 +24,12 @@
   "demo": {
     "label": "Canlı Önizleme",
     "headline": "Çalışırken görün",
-    "upload_mock_label": "Yükleme önizlemesi (demo arayüzü)"
+    "upload_mock_label": "Yükleme önizlemesi (demo arayüzü)",
+    "cap_desktop": "Anında WebP küçük resimli ızgara görünümü",
+    "cap_activity": "Etkinlik günlüğü — kendi bucket'ınızda saklanır",
+    "cap_trash": "Çöp kutusu — geri yükle veya kalıcı sil",
+    "cap_doctor": "Bucket Doctor — S3/R2 sağlık kontrolü + çözümler",
+    "cap_mobile": "Mobilde duyarlı"
   },
   "features": {
     "label": "Özellikler",
@@ -70,7 +76,11 @@
     "dup_title": "Yinelenen algılama",
     "dup_desc": "SHA-256 eşleşmesi zorla yazma dışında gereksiz yüklemeleri atlar.",
     "tokenrefresh_title": "SDK belirteci yenileme",
-    "tokenrefresh_desc": "401'de onTokenRefresh — birleşik yenileme, yeniden deneme, updateToken()."
+    "tokenrefresh_desc": "401'de onTokenRefresh — birleşik yenileme, yeniden deneme, updateToken().",
+    "doctor_title": "Bucket Doctor",
+    "doctor_desc": "Herhangi bir S3/R2 diskini teşhis edin — kimlik bilgileri, okuma/yazma/silme, presign, CORS, multipart — yapıştırmaya hazır IAM ve CORS düzeltmeleriyle. BYOB bucket'larını dakikalar içinde ekleyin.",
+    "node_title": "Node token SDK",
+    "node_desc": "@fluxfiles/node ile herhangi bir JS arka ucundan (Express, Next.js, Nuxt) FluxFiles jetonları üretin — PHP çekirdeğiyle bayt uyumlu. Jeton üretmek için PHP gerekmez."
   },
   "install": {
     "label": "Hızlı kurulum",
@@ -149,5 +159,63 @@
     "embed_a": "Evet — iframe + JS SDK her sayfada çalışır; Laravel, WordPress, React, Vue/Nuxt, CKEditor 4 ve TinyMCE için resmi adaptörler vardır.",
     "run_q": "Çalıştırmak için neye ihtiyacım var?",
     "run_a": "Birkaç yaygın eklenti ile PHP 8.1+ ve Composer. Bir diske yönlendirin, bir secret ve izin verilen origin'leri ayarlayın, ardından sunun — küçük bir VPS'te çalışır."
+  },
+  "byob": {
+    "label": "Avantaj · BYOB",
+    "headline": "Müşterilerinizin dosyaları müşterilerinizin bucket'larında kalır",
+    "sub": "FluxFiles, her kiracının kendi S3/R2 bucket'ını bağladığı gömülebilir dosya yöneticisidir — ne verilerini ne de kimlik bilgilerini siz saklarsınız.",
+    "p1_title": "Veri egemenliği",
+    "p1_desc": "Dosyalar müşterinin kendi bulut hesabında ve bölgesinde bulunur — KVKK/GDPR, uyumluluk ve kurumsal satın alma için tasarlandı.",
+    "p2_title": "Beklemede sıfır veri, sıfır kimlik bilgisi",
+    "p2_desc": "Bucket kimlik bilgileri JWT içinde AES-256-GCM ile şifrelenir ve yalnızca çalışma anında çözülür — asla bir veritabanına veya günlüğe yazılmaz.",
+    "p3_title": "Sıfıra ölçeklenen depolama maliyeti",
+    "p3_desc": "Depolama ve egress her müşteriye faturalandırılır, size değil. Kullanıcı tabanınızla büyüyen bir depolama faturası yok.",
+    "p4_title": "Durumsuz ve gömülebilir",
+    "p4_desc": "Merkezi veritabanı yok. Seçiciyi iframe veya SDK ile herhangi bir uygulamaya yerleştirin; arka ucunuz kapsamlı, kısa ömürlü bir jeton üretir.",
+    "how": "Nasıl çalışır: uygulamanız kiracının bucket kimlik bilgilerini kısa ömürlü bir JWT'ye şifreler (HKDF-SHA256 + AES-256-GCM). FluxFiles bunları yalnızca istenen işlemi yürütmek için çözer.",
+    "diag_app": "SaaS uygulamanız",
+    "diag_token": "kapsamlı JWT (şifreli kimlik bilgileri)",
+    "diag_core": "FluxFiles",
+    "diag_runtime": "yalnızca çalışma anında çözer",
+    "diag_tenant": "Kiracı",
+    "diag_bucket": "kendi bucket'ı"
+  },
+  "saas": {
+    "label": "dosya-API SaaS'larına karşı",
+    "headline": "Kendi sunucunuzda ve gömülebilir — bir başka yükleme SaaS'ı değil",
+    "sub": "Barındırılan dosya API'leri harikadır ama verinizi saklar ve kullanım başına ücret alır. FluxFiles kendi yığınınızda çalışır, her kiracı kendi bucket'ında.",
+    "col_feature": "Yetenek",
+    "col_flux": "FluxFiles",
+    "col_filestack": "Filestack",
+    "col_uploadcare": "Uploadcare",
+    "col_cloudinary": "Cloudinary",
+    "col_supabase": "Supabase Storage",
+    "row_selfhost": "Kendi sunucunuzda (altyapınızda çalışır)",
+    "row_byob": "BYOB — her müşterinin kendi bucket'ı",
+    "row_embed": "Gömülebilir dosya yöneticisi arayüzü",
+    "row_oss": "Açık kaynak (MIT)",
+    "row_fees": "Depolama / yükleme başına SaaS ücreti yok",
+    "row_multistorage": "Çoklu depolama (S3 / R2 / yerel)",
+    "row_scoping": "Kiracı başına yerleşik jeton kapsamı",
+    "note": "Karşılaştırma tipik varsayılan sunumları yansıtır; her ürün kendi alanında öne çıkar. FluxFiles'ın nişi gömülebilir, kendi sunucusunda ve bring-your-own-bucket birleşimidir."
+  },
+  "who": {
+    "label": "Kimler için",
+    "headline": "Dosya özellikleri sunan ekipler için tasarlandı",
+    "sub": "Ürününüz yükleme gerektiriyorsa FluxFiles uyum sağlar — sizi müşterilerinizin verisinin bekçisi yapmadan.",
+    "p1_title": "SaaS ve çok kiracılı uygulamalar",
+    "p1_desc": "Her müşteriye kendi bucket'ında bir dosya yöneticisi verin. Kiracı bazında jeton kapsamı ve veri egemenliği yerleşiktir.",
+    "p2_title": "Ajanslar ve serbest çalışanlar",
+    "p2_desc": "Her proje için depolama altyapısı kurmadan her müşteriye özenli bir medya kütüphanesi sunun.",
+    "p3_title": "CMS ve editör entegrasyonları",
+    "p3_desc": "iframe SDK ile CKEditor, TinyMCE veya kendi editörünüze bir medya seçici ekleyin.",
+    "p4_title": "İç araçlar ve panolar",
+    "p4_desc": "Yönetim panellerine yükleme, önizleme ve denetlenen dosya işlemlerini bir öğleden sonrada ekleyin."
+  },
+  "live": {
+    "label": "Canlı demo",
+    "headline": "FluxFiles'ı tam burada deneyin",
+    "sub": "Tam olarak gömülebilir arayüz, tarayıcınızda çalışıyor. Klasörleri açın, görsel yükleyin, çöp kutusuna silip geri yükleyin — hiçbir şey bu sayfadan ayrılmaz.",
+    "hint": "Tek bir <iframe> ile bu sayfaya gömüldü — uygulamanıza eklenme şekliyle birebir aynı."
   }
 }

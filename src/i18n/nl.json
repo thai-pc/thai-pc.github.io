@@ -7,7 +7,8 @@
     "docs": "Documentatie",
     "install": "Installatie",
     "changelog": "Wijzigingen",
-    "github": "GitHub"
+    "github": "GitHub",
+    "byob": "Waarom BYOB"
   },
   "hero": {
     "badge": "v0.1.0 — Open Source · MIT-licentie",
@@ -23,7 +24,12 @@
   "demo": {
     "label": "Live voorbeeld",
     "headline": "Bekijk het in actie",
-    "upload_mock_label": "Uploadvoorbeeld (demo-UI)"
+    "upload_mock_label": "Uploadvoorbeeld (demo-UI)",
+    "cap_desktop": "Rasterweergave met directe WebP-thumbnails",
+    "cap_activity": "Activiteitenlog — bewaard in je eigen bucket",
+    "cap_trash": "Prullenbak — herstellen of definitief verwijderen",
+    "cap_doctor": "Bucket Doctor — S3/R2-controles + oplossingen",
+    "cap_mobile": "Responsief op mobiel"
   },
   "features": {
     "label": "Functies",
@@ -70,7 +76,11 @@
     "dup_title": "Duplicaatdetectie",
     "dup_desc": "SHA-256-match slaat redundante uploads over tenzij geforceerd overschrijven.",
     "tokenrefresh_title": "SDK-token vernieuwen",
-    "tokenrefresh_desc": "onTokenRefresh bij 401 — samengevoegde refresh, opnieuw proberen, updateToken()."
+    "tokenrefresh_desc": "onTokenRefresh bij 401 — samengevoegde refresh, opnieuw proberen, updateToken().",
+    "doctor_title": "Bucket Doctor",
+    "doctor_desc": "Diagnosticeer elke S3/R2-schijf — credentials, lezen/schrijven/verwijderen, presign, CORS, multipart — met kant-en-klare IAM- en CORS-fixes. Onboard BYOB-buckets in minuten.",
+    "node_title": "Node token SDK",
+    "node_desc": "Genereer FluxFiles-tokens vanuit elke JS-backend (Express, Next.js, Nuxt) met @fluxfiles/node — byte-compatibel met de PHP-core. Geen PHP nodig om tokens uit te geven."
   },
   "install": {
     "label": "Snel installeren",
@@ -148,5 +158,63 @@
     "embed_a": "Ja — de iframe + JS-SDK werkt op elke pagina, met officiële adapters voor Laravel, WordPress, React, Vue/Nuxt, CKEditor 4 en TinyMCE.",
     "run_q": "Wat heb ik nodig om het te draaien?",
     "run_a": "PHP 8.1+ met enkele gangbare extensies en Composer. Richt het op een schijf, stel een secret en toegestane origins in, en serveer — het draait op een kleine VPS."
+  },
+  "byob": {
+    "label": "De slotgracht · BYOB",
+    "headline": "De bestanden van je klanten blijven in de buckets van je klanten",
+    "sub": "FluxFiles is de insluitbare bestandsmanager waarbij elke tenant zijn eigen S3/R2-bucket koppelt — en jij bewaart noch hun data noch hun credentials.",
+    "p1_title": "Datasoevereiniteit",
+    "p1_desc": "Bestanden staan in het eigen cloud-account en de regio van de klant — gebouwd voor AVG, compliance en enterprise-inkoop.",
+    "p2_title": "Geen data, geen credentials in rust",
+    "p2_desc": "Bucket-credentials worden met AES-256-GCM versleuteld in de JWT en alleen tijdens runtime ontsleuteld — nooit naar een database of log geschreven.",
+    "p3_title": "Opslagkosten die naar nul schalen",
+    "p3_desc": "Opslag en egress worden aan elke klant gefactureerd, niet aan jou. Geen opslagrekening die meegroeit met je gebruikers.",
+    "p4_title": "Stateless en insluitbaar",
+    "p4_desc": "Geen centrale database. Plaats de picker in elke app via iframe of SDK; je backend geeft een scoped, kortlevend token uit.",
+    "how": "Hoe het werkt: je app versleutelt de bucket-credentials van de tenant in een kortlevende JWT (HKDF-SHA256 + AES-256-GCM). FluxFiles ontsleutelt ze alleen om de gevraagde bewerking uit te voeren.",
+    "diag_app": "Jouw SaaS-app",
+    "diag_token": "scoped JWT (versleutelde creds)",
+    "diag_core": "FluxFiles",
+    "diag_runtime": "ontsleutelt alleen tijdens runtime",
+    "diag_tenant": "Tenant",
+    "diag_bucket": "eigen bucket"
+  },
+  "saas": {
+    "label": "vs. file-API-SaaS",
+    "headline": "Self-hosted en insluitbaar — niet zomaar een upload-SaaS",
+    "sub": "Gehoste file-API's zijn prima, maar ze bewaren je data en rekenen per gebruik. FluxFiles draait in je eigen stack, met elke tenant op zijn eigen bucket.",
+    "col_feature": "Mogelijkheid",
+    "col_flux": "FluxFiles",
+    "col_filestack": "Filestack",
+    "col_uploadcare": "Uploadcare",
+    "col_cloudinary": "Cloudinary",
+    "col_supabase": "Supabase Storage",
+    "row_selfhost": "Self-hosted (draait in je eigen infra)",
+    "row_byob": "BYOB — eigen bucket per klant",
+    "row_embed": "Insluitbare bestandsmanager-UI",
+    "row_oss": "Open source (MIT)",
+    "row_fees": "Geen SaaS-kosten per opslag / per upload",
+    "row_multistorage": "Multi-storage (S3 / R2 / lokaal)",
+    "row_scoping": "Token-scoping per tenant ingebouwd",
+    "note": "De vergelijking weerspiegelt typische standaardaanbiedingen; elk product blinkt uit in zijn eigen domein. De niche van FluxFiles is de insluitbare, self-hosted, bring-your-own-bucket-combinatie."
+  },
+  "who": {
+    "label": "Voor wie",
+    "headline": "Gebouwd voor teams die bestandsfuncties uitbrengen",
+    "sub": "Als je product uploads nodig heeft, past FluxFiles erin — zonder dat jij de beheerder van de data van je klanten wordt.",
+    "p1_title": "SaaS- en multi-tenant-apps",
+    "p1_desc": "Geef elke klant een bestandsmanager op de eigen bucket. Token-scoping per tenant en datasoevereiniteit zitten erin.",
+    "p2_title": "Bureaus en freelancers",
+    "p2_desc": "Lever elke klant een verzorgde mediabibliotheek zonder per project opslaginfra op te zetten.",
+    "p3_title": "CMS- en editor-integraties",
+    "p3_desc": "Plaats een mediakiezer in CKEditor, TinyMCE of je eigen editor via de iframe-SDK.",
+    "p4_title": "Interne tools en dashboards",
+    "p4_desc": "Voeg uploads, previews en geaudite bestandsbewerkingen toe aan admin-panels in een middag."
+  },
+  "live": {
+    "label": "Live demo",
+    "headline": "Probeer FluxFiles hier meteen",
+    "sub": "Precies dezelfde insluitbare UI, draaiend in je browser. Open mappen, upload afbeeldingen, verwijder naar de prullenbak en herstel — niets verlaat deze pagina.",
+    "hint": "Ingesloten in deze pagina met één <iframe> — net zoals het in je app komt."
   }
 }

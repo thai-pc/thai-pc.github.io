@@ -24,7 +24,12 @@
   "demo": {
     "label": "Aperçu",
     "headline": "Voir en action",
-    "upload_mock_label": "Aperçu du téléversement (démo)"
+    "upload_mock_label": "Aperçu du téléversement (démo)",
+    "cap_desktop": "Vue grille avec vignettes WebP instantanées",
+    "cap_activity": "Journal d'activité — conservé dans votre bucket",
+    "cap_trash": "Corbeille — restaurer ou supprimer définitivement",
+    "cap_doctor": "Bucket Doctor — diagnostics S3/R2 + correctifs",
+    "cap_mobile": "Adapté au mobile"
   },
   "features": {
     "label": "Fonctionnalités",
@@ -188,6 +193,29 @@
     "row_fees": "Aucun frais SaaS au stockage / à l’upload",
     "row_multistorage": "Multi-stockage (S3 / R2 / local)",
     "row_scoping": "Portée de jeton par locataire intégrée",
-    "note": "Le comparatif reflète les offres par défaut habituelles ; chaque produit excelle dans son domaine. La niche de FluxFiles est la combinaison intégrable, auto-hébergée et bring-your-own-bucket."
+    "note": "Le comparatif reflète les offres par défaut habituelles ; chaque produit excelle dans son domaine. La niche de FluxFiles est la combinaison intégrable, auto-hébergée et bring-your-own-bucket.",
+    "col_filestack": "Filestack",
+    "col_uploadcare": "Uploadcare",
+    "col_cloudinary": "Cloudinary",
+    "col_supabase": "Supabase Storage"
+  },
+  "who": {
+    "label": "Pour qui",
+    "headline": "Conçu pour les équipes qui livrent des fonctions de fichiers",
+    "sub": "Si votre produit a besoin d'uploads, FluxFiles s'intègre — sans faire de vous le gardien des données de vos clients.",
+    "p1_title": "SaaS & apps multi-tenant",
+    "p1_desc": "Offrez à chaque client un gestionnaire de fichiers sur son propre bucket. Scoping de token par tenant et souveraineté des données inclus.",
+    "p2_title": "Agences & freelances",
+    "p2_desc": "Livrez une médiathèque soignée à chaque client sans monter une infra de stockage par projet.",
+    "p3_title": "Intégrations CMS & éditeurs",
+    "p3_desc": "Ajoutez un sélecteur de médias à CKEditor, TinyMCE ou votre propre éditeur via le SDK iframe.",
+    "p4_title": "Outils internes & tableaux de bord",
+    "p4_desc": "Ajoutez uploads, aperçus et opérations de fichiers auditées à vos panneaux d'admin en un après-midi."
+  },
+  "live": {
+    "label": "Démo en direct",
+    "headline": "Essayez FluxFiles ici même",
+    "sub": "L'interface intégrable exacte, dans votre navigateur. Ouvrez des dossiers, importez des images, supprimez vers la corbeille et restaurez — rien ne quitte cette page.",
+    "hint": "Intégré à cette page avec un seul <iframe> — exactement comme dans votre application."
   }
 }

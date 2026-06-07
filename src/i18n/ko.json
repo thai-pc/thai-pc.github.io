@@ -24,7 +24,12 @@
   "demo": {
     "label": "미리보기",
     "headline": "실제 동작 확인",
-    "upload_mock_label": "업로드 미리보기(데모 UI)"
+    "upload_mock_label": "업로드 미리보기(데모 UI)",
+    "cap_desktop": "즉시 WebP 썸네일 그리드 보기",
+    "cap_activity": "활동 로그 — 내 버킷에 저장",
+    "cap_trash": "휴지통 — 복원 또는 영구 삭제",
+    "cap_doctor": "버킷 닥터 — S3/R2 상태 점검 + 해결",
+    "cap_mobile": "모바일 반응형"
   },
   "features": {
     "label": "기능",
@@ -188,6 +193,29 @@
     "row_fees": "스토리지/업로드별 SaaS 요금 없음",
     "row_multistorage": "멀티 스토리지(S3 / R2 / 로컬)",
     "row_scoping": "테넌트별 토큰 범위 기본 제공",
-    "note": "비교는 일반적인 기본 제공 기능을 반영합니다. 각 제품은 고유 영역에서 뛰어납니다. FluxFiles의 틈새는 임베드 가능·셀프 호스팅·자체 버킷의 조합입니다."
+    "note": "비교는 일반적인 기본 제공 기능을 반영합니다. 각 제품은 고유 영역에서 뛰어납니다. FluxFiles의 틈새는 임베드 가능·셀프 호스팅·자체 버킷의 조합입니다.",
+    "col_filestack": "Filestack",
+    "col_uploadcare": "Uploadcare",
+    "col_cloudinary": "Cloudinary",
+    "col_supabase": "Supabase Storage"
+  },
+  "who": {
+    "label": "대상 사용자",
+    "headline": "파일 기능을 출시하는 팀을 위해",
+    "sub": "제품에 업로드가 필요하다면 FluxFiles를 그대로 끼워 넣으세요 — 고객 데이터의 관리자가 되지 않으면서.",
+    "p1_title": "SaaS·멀티테넌트 앱",
+    "p1_desc": "모든 고객에게 자기 버킷의 파일 매니저를 제공합니다. 테넌트별 토큰 제한과 데이터 주권이 기본 내장.",
+    "p2_title": "에이전시·프리랜서",
+    "p2_desc": "프로젝트마다 스토리지 인프라를 세우지 않고도 세련된 미디어 라이브러리를 고객에게 제공.",
+    "p3_title": "CMS·에디터 통합",
+    "p3_desc": "iframe SDK로 CKEditor, TinyMCE 또는 직접 만든 에디터에 미디어 피커를 추가.",
+    "p4_title": "내부 도구·대시보드",
+    "p4_desc": "관리자 패널에 업로드·미리보기·감사 기록 파일 작업을 반나절 만에 추가."
+  },
+  "live": {
+    "label": "라이브 데모",
+    "headline": "여기서 바로 FluxFiles 사용해 보기",
+    "sub": "임베드 가능한 바로 그 UI가 브라우저에서 동작합니다. 폴더 열기, 이미지 업로드, 휴지통으로 삭제 후 복원 — 아무것도 이 페이지를 벗어나지 않습니다.",
+    "hint": "단 하나의 <iframe>으로 이 페이지에 임베드 — 앱에 넣는 방식과 동일합니다."
   }
 }
