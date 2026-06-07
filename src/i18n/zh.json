@@ -24,7 +24,12 @@
   "demo": {
     "label": "预览",
     "headline": "查看实际效果",
-    "upload_mock_label": "上传预览（演示界面）"
+    "upload_mock_label": "上传预览（演示界面）",
+    "cap_desktop": "网格视图，即时 WebP 缩略图",
+    "cap_activity": "活动日志 — 存于你自己的存储桶",
+    "cap_trash": "回收站 — 恢复或永久删除",
+    "cap_doctor": "存储桶体检 — S3/R2 健康检查 + 修复",
+    "cap_mobile": "移动端自适应"
   },
   "features": {
     "label": "功能",
@@ -188,6 +193,23 @@
     "row_fees": "无按存储/上传的 SaaS 费用",
     "row_multistorage": "多存储（S3 / R2 / 本地）",
     "row_scoping": "内置按租户令牌作用域",
-    "note": "对比反映各产品的典型默认能力；每款产品在各自领域都很出色。FluxFiles 的定位是可嵌入、自托管、自带存储桶三者的组合。"
+    "note": "对比反映各产品的典型默认能力；每款产品在各自领域都很出色。FluxFiles 的定位是可嵌入、自托管、自带存储桶三者的组合。",
+    "col_filestack": "Filestack",
+    "col_uploadcare": "Uploadcare",
+    "col_cloudinary": "Cloudinary",
+    "col_supabase": "Supabase Storage"
+  },
+  "who": {
+    "label": "适合谁",
+    "headline": "为交付文件功能的团队而生",
+    "sub": "如果你的产品需要上传，FluxFiles 即插即用 —— 而不会让你成为客户数据的“房东”。",
+    "p1_title": "SaaS 与多租户应用",
+    "p1_desc": "为每位客户提供基于自有存储桶的文件管理器。按租户的令牌限定与数据主权开箱即用。",
+    "p2_title": "代理商与自由职业者",
+    "p2_desc": "为每个客户交付精致的媒体库，无需为每个项目搭建存储基础设施。",
+    "p3_title": "CMS 与编辑器集成",
+    "p3_desc": "通过 iframe SDK 将媒体选择器嵌入 CKEditor、TinyMCE 或你自己的编辑器。",
+    "p4_title": "内部工具与仪表板",
+    "p4_desc": "一个下午即可为后台面板加上上传、预览和带审计的文件操作。"
   }
 }

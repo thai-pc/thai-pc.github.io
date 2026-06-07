@@ -24,7 +24,12 @@
   "demo": {
     "label": "Vorschau",
     "headline": "In Aktion sehen",
-    "upload_mock_label": "Upload-Vorschau (Demo-UI)"
+    "upload_mock_label": "Upload-Vorschau (Demo-UI)",
+    "cap_desktop": "Rasteransicht mit sofortigen WebP-Thumbnails",
+    "cap_activity": "Aktivitätsprotokoll — in Ihrem eigenen Bucket",
+    "cap_trash": "Papierkorb — wiederherstellen oder endgültig löschen",
+    "cap_doctor": "Bucket Doctor — S3/R2-Diagnose + Korrekturen",
+    "cap_mobile": "Mobil responsiv"
   },
   "features": {
     "label": "Funktionen",
@@ -188,6 +193,23 @@
     "row_fees": "Keine SaaS-Gebühren pro Speicher / Upload",
     "row_multistorage": "Multi-Storage (S3 / R2 / lokal)",
     "row_scoping": "Token-Scoping pro Mandant integriert",
-    "note": "Der Vergleich spiegelt typische Standardangebote wider; jedes Produkt glänzt in seinem Bereich. Die Nische von FluxFiles ist die Kombination aus einbettbar, selbst gehostet und Bring-your-own-Bucket."
+    "note": "Der Vergleich spiegelt typische Standardangebote wider; jedes Produkt glänzt in seinem Bereich. Die Nische von FluxFiles ist die Kombination aus einbettbar, selbst gehostet und Bring-your-own-Bucket.",
+    "col_filestack": "Filestack",
+    "col_uploadcare": "Uploadcare",
+    "col_cloudinary": "Cloudinary",
+    "col_supabase": "Supabase Storage"
+  },
+  "who": {
+    "label": "Für wen",
+    "headline": "Gebaut für Teams, die Datei-Funktionen ausliefern",
+    "sub": "Wenn Ihr Produkt Uploads braucht, fügt sich FluxFiles ein — ohne Sie zum Verwalter der Kundendaten zu machen.",
+    "p1_title": "SaaS & Multi-Tenant-Apps",
+    "p1_desc": "Geben Sie jedem Kunden einen Dateimanager auf dem eigenen Bucket. Token-Scoping pro Mandant und Datenhoheit sind eingebaut.",
+    "p2_title": "Agenturen & Freelancer",
+    "p2_desc": "Liefern Sie jedem Kunden eine gepflegte Mediathek, ohne pro Projekt Speicher-Infrastruktur aufzubauen.",
+    "p3_title": "CMS- & Editor-Integrationen",
+    "p3_desc": "Binden Sie einen Medien-Picker per iframe-SDK in CKEditor, TinyMCE oder Ihren eigenen Editor ein.",
+    "p4_title": "Interne Tools & Dashboards",
+    "p4_desc": "Ergänzen Sie Admin-Panels an einem Nachmittag um Uploads, Vorschauen und auditierte Dateioperationen."
   }
 }

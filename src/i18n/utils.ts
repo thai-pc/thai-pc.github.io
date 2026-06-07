@@ -38,6 +38,12 @@ export type Lang = keyof typeof languages;
 export const defaultLang: Lang = 'en';
 export const langList = Object.keys(languages) as Lang[];
 
+/** Right-to-left locales — used to set <html dir>. */
+export const rtlLangs: Lang[] = ['ar'];
+export function dirFor(lang: Lang): 'rtl' | 'ltr' {
+  return rtlLangs.includes(lang) ? 'rtl' : 'ltr';
+}
+
 const translations: Record<Lang, Record<string, any>> = { en, vi, zh, ja, ko, fr, de, es, hi, pt, ru, ar, th, tr, it, nl };
 
 export function getLangFromUrl(url: URL): Lang {
