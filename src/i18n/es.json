@@ -220,5 +220,11 @@
   },
   "ui": {
     "swipe": "Desliza para comparar"
+  },
+  "tenant": {
+    "label": "Multiinquilino",
+    "headline": "Un token por inquilino, cada uno con sus reglas",
+    "sub": "FluxFiles es sin estado: el JWT que emite tu backend es la configuración del inquilino. Ruta de almacenamiento, tamaño máximo por archivo, cuota, número de archivos, tipos permitidos, permisos — todo aplicado en el servidor. Sin archivos de configuración por inquilino, sin reinicios.",
+    "note": "Combínalo con BYOB para poner a cada inquilino en su propio bucket."
   }
 }

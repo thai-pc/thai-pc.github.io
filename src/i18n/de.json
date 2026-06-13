@@ -220,5 +220,11 @@
   },
   "ui": {
     "swipe": "Wischen zum Vergleichen"
+  },
+  "tenant": {
+    "label": "Mandantenfähig",
+    "headline": "Ein Token pro Mandant — jeder mit eigenen Regeln",
+    "sub": "FluxFiles ist zustandslos: Das vom Backend ausgestellte JWT ist die Konfiguration des Mandanten. Speicherpfad, Dateigrößenlimit, Kontingent, Dateianzahl, erlaubte Typen, Rechte — alles serverseitig erzwungen. Keine Konfigdateien pro Mandant, keine Neustarts.",
+    "note": "Mit BYOB kombiniert liegt jeder Mandant in seinem eigenen Bucket."
   }
 }

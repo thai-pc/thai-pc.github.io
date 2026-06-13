@@ -1,0 +1,65 @@
+---
+import { useTranslations, type Lang } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+// Universal code sample — not translated.
+const code = `// Your backend, per request — the token IS the tenant's config.
+import { createToken } from '@fluxfiles/node';
+
+const claims = tenant.plan === 'pro'
+  // 100 MB/file · any type · 50 GB · unlimited files · own bucket
+  ? { disks: ['s3'],    maxUploadMb: 100, allowedExt: null,
+      maxStorageMb: 51200, maxFiles: 0 }
+  // 5 MB/file · images only · 500 MB · 200 files
+  : { disks: ['local'], maxUploadMb: 5,   allowedExt: ['jpg','png','webp'],
+      maxStorageMb: 500,   maxFiles: 200 };
+
+const token = createToken({
+  secret: process.env.FLUXFILES_SECRET,
+  userId: tenant.id,
+  prefix: \`tenant_\${tenant.id}/\`,   // isolates each tenant's files
+  perms:  ['read', 'write', 'delete'],
+  ...claims,
+});`;
+
+// Per-tenant knobs — claim names are universal, no translation needed.
+const claims = ['prefix', 'disks / BYOB', 'max_upload', 'max_storage', 'max_files', 'allowed_ext', 'perms'];
+---
+
+<section id="multi-tenant" class="py-16 sm:py-24">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <div class="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent-light dark:bg-accent/10 px-3 py-1 text-xs font-medium text-accent dark:text-accent-dark mb-4">
+        {t('tenant.label')}
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
+        {t('tenant.headline')}
+      </h2>
+      <p class="mt-4 text-gray-600 dark:text-gray-400">
+        {t('tenant.sub')}
+      </p>
+    </div>
+
+    <div class="rounded-xl overflow-hidden ring-1 ring-[var(--code-border)] shadow-lg shadow-black/5 dark:shadow-black/30">
+      <div class="p-4 sm:p-5 overflow-x-auto bg-[var(--code-bg)] text-[var(--code-text)]">
+        <pre class="text-xs sm:text-sm font-mono leading-relaxed"><code>{code}</code></pre>
+      </div>
+    </div>
+
+    <div class="mt-6 flex flex-wrap justify-center gap-2">
+      {claims.map((c) => (
+        <span class="px-3 py-1 rounded-full text-xs font-mono border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/50 text-gray-600 dark:text-gray-300">
+          {c}
+        </span>
+      ))}
+    </div>
+
+    <p class="text-center mt-5 text-sm text-gray-500 dark:text-gray-400">{t('tenant.note')}</p>
+  </div>
+</section>

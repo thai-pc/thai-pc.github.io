@@ -220,5 +220,11 @@
   },
   "ui": {
     "swipe": "Vuốt để so sánh"
+  },
+  "tenant": {
+    "label": "Đa người thuê",
+    "headline": "Mỗi tenant một token — với luật riêng",
+    "sub": "FluxFiles không trạng thái: JWT do backend của bạn ký chính là config của tenant. Đường dẫn lưu, giới hạn dung lượng file, quota, số file, loại file cho phép, quyền — tất cả enforce ở server. Không file config riêng, không cần restart.",
+    "note": "Kết hợp BYOB để mỗi tenant dùng bucket riêng của họ."
   }
 }

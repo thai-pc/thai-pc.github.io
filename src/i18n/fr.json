@@ -220,5 +220,11 @@
   },
   "ui": {
     "swipe": "Glissez pour comparer"
+  },
+  "tenant": {
+    "label": "Multi-tenant",
+    "headline": "Un token par tenant — chacun ses règles",
+    "sub": "FluxFiles est sans état : le JWT émis par votre backend est la config du tenant. Chemin de stockage, taille max par fichier, quota, nombre de fichiers, types autorisés, permissions — tout est appliqué côté serveur. Aucun fichier de config par tenant, aucun redémarrage.",
+    "note": "Associez-le au BYOB pour mettre chaque tenant sur son propre bucket."
   }
 }
