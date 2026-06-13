@@ -220,5 +220,11 @@
   },
   "ui": {
     "swipe": "Scorri per confrontare"
+  },
+  "tenant": {
+    "label": "Multi-tenant",
+    "headline": "Un token per tenant — ognuno con le sue regole",
+    "sub": "FluxFiles è stateless: il JWT emesso dal tuo backend è la configurazione del tenant. Percorso di storage, dimensione massima per file, quota, numero di file, tipi consentiti, permessi — tutto applicato lato server. Nessun file di config per tenant, nessun riavvio.",
+    "note": "Abbinalo al BYOB per mettere ogni tenant sul proprio bucket."
   }
 }

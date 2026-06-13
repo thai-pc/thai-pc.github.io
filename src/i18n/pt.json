@@ -220,5 +220,11 @@
   },
   "ui": {
     "swipe": "Deslize para comparar"
+  },
+  "tenant": {
+    "label": "Multilocatário",
+    "headline": "Um token por inquilino — cada um com suas regras",
+    "sub": "O FluxFiles é stateless: o JWT que seu backend emite é a configuração do inquilino. Caminho de armazenamento, tamanho máximo por arquivo, cota, número de arquivos, tipos permitidos, permissões — tudo aplicado no servidor. Sem arquivos de configuração por inquilino, sem reinícios.",
+    "note": "Combine com BYOB para colocar cada inquilino no próprio bucket."
   }
 }

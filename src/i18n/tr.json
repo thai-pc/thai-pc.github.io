@@ -220,5 +220,11 @@
   },
   "ui": {
     "swipe": "Karşılaştırmak için kaydırın"
+  },
+  "tenant": {
+    "label": "Çok kiracılı",
+    "headline": "Kiracı başına bir jeton — her biri kendi kurallarıyla",
+    "sub": "FluxFiles durumsuzdur: arka ucunuzun ürettiği JWT, o kiracının yapılandırmasıdır. Depolama yolu, dosya boyutu sınırı, kota, dosya sayısı, izin verilen türler, yetkiler — hepsi sunucu tarafında uygulanır. Kiracı başına yapılandırma dosyası yok, yeniden başlatma yok.",
+    "note": "BYOB ile birleştirerek her kiracıyı kendi bucket'ına yerleştirin."
   }
 }
