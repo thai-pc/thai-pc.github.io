@@ -156,7 +156,7 @@
     "accounts_q": "사용자에게 FluxFiles 계정이 필요한가요?",
     "accounts_a": "아니요. FluxFiles는 당신의 앱이 발급한 JWT를 신뢰하므로 기존 인증에 바로 연결됩니다 — 별도의 사용자 시스템이 필요 없습니다.",
     "embed_q": "기존 앱이나 에디터에 임베드할 수 있나요?",
-    "embed_a": "네 — iframe + JS SDK는 어떤 페이지에서도 동작하며 Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE용 공식 어댑터를 제공합니다.",
+    "embed_a": "네 — iframe + JS SDK는 어떤 페이지에서도 동작하며 Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE, Summernote용 공식 어댑터를 제공합니다.",
     "run_q": "실행하려면 무엇이 필요한가요?",
     "run_a": "PHP 8.1+와 몇 가지 일반 확장, 그리고 Composer입니다. 디스크를 지정하고 시크릿과 허용 오리진을 설정한 뒤 실행하면 됩니다 — 작은 VPS에서도 잘 돌아갑니다."
   },
@@ -208,7 +208,7 @@
     "p2_title": "에이전시·프리랜서",
     "p2_desc": "프로젝트마다 스토리지 인프라를 세우지 않고도 세련된 미디어 라이브러리를 고객에게 제공.",
     "p3_title": "CMS·에디터 통합",
-    "p3_desc": "iframe SDK로 CKEditor, TinyMCE 또는 직접 만든 에디터에 미디어 피커를 추가.",
+    "p3_desc": "iframe SDK로 CKEditor, TinyMCE, Summernote 또는 직접 만든 에디터에 미디어 피커를 추가.",
     "p4_title": "내부 도구·대시보드",
     "p4_desc": "관리자 패널에 업로드·미리보기·감사 기록 파일 작업을 반나절 만에 추가."
   },

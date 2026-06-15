@@ -156,7 +156,7 @@
     "accounts_q": "ユーザーに FluxFiles のアカウントは必要ですか？",
     "accounts_a": "不要です。FluxFiles はあなたのアプリが発行する JWT を信頼するので、既存の認証にそのまま組み込めます。別個のユーザー管理は不要です。",
     "embed_q": "既存のアプリやエディターに組み込めますか？",
-    "embed_a": "はい。iframe + JS SDK はどのページでも動作し、Laravel・WordPress・React・Vue/Nuxt・CKEditor 4・TinyMCE 向けの公式アダプターがあります。",
+    "embed_a": "はい。iframe + JS SDK はどのページでも動作し、Laravel・WordPress・React・Vue/Nuxt・CKEditor 4・TinyMCE・Summernote 向けの公式アダプターがあります。",
     "run_q": "動かすには何が必要ですか？",
     "run_a": "PHP 8.1+ と一般的な拡張、そして Composer です。ディスクを指定し、シークレットと許可オリジンを設定して起動するだけ。小さな VPS でも快適に動きます。"
   },
@@ -208,7 +208,7 @@
     "p2_title": "代理店・フリーランス",
     "p2_desc": "プロジェクトごとにストレージ基盤を立てずに、洗練されたメディアライブラリを各クライアントへ。",
     "p3_title": "CMS・エディタ連携",
-    "p3_desc": "iframe SDK で CKEditor、TinyMCE、または自作エディタにメディアピッカーを追加。",
+    "p3_desc": "iframe SDK で CKEditor、TinyMCE、Summernote、または自作エディタにメディアピッカーを追加。",
     "p4_title": "社内ツール・ダッシュボード",
     "p4_desc": "管理画面にアップロード・プレビュー・監査付きファイル操作を半日で追加。"
   },

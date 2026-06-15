@@ -156,7 +156,7 @@
     "accounts_q": "Brauchen meine Nutzer ein FluxFiles-Konto?",
     "accounts_a": "Nein. FluxFiles vertraut dem JWT aus Ihrer eigenen App und fügt sich so in Ihre bestehende Authentifizierung ein — kein separates Nutzersystem.",
     "embed_q": "Kann ich es in meine bestehende App oder meinen Editor einbetten?",
-    "embed_a": "Ja — iframe + JS-SDK funktioniert auf jeder Seite, mit offiziellen Adaptern für Laravel, WordPress, React, Vue/Nuxt, CKEditor 4 und TinyMCE.",
+    "embed_a": "Ja — iframe + JS-SDK funktioniert auf jeder Seite, mit offiziellen Adaptern für Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE und Summernote.",
     "run_q": "Was brauche ich, um es zu betreiben?",
     "run_a": "PHP 8.1+ mit einigen gängigen Erweiterungen und Composer. Auf einen Disk verweisen, Secret und erlaubte Origins setzen, dann starten — läuft auf einem kleinen VPS."
   },
@@ -208,7 +208,7 @@
     "p2_title": "Agenturen & Freelancer",
     "p2_desc": "Liefern Sie jedem Kunden eine gepflegte Mediathek, ohne pro Projekt Speicher-Infrastruktur aufzubauen.",
     "p3_title": "CMS- & Editor-Integrationen",
-    "p3_desc": "Binden Sie einen Medien-Picker per iframe-SDK in CKEditor, TinyMCE oder Ihren eigenen Editor ein.",
+    "p3_desc": "Binden Sie einen Medien-Picker per iframe-SDK in CKEditor, TinyMCE, Summernote oder Ihren eigenen Editor ein.",
     "p4_title": "Interne Tools & Dashboards",
     "p4_desc": "Ergänzen Sie Admin-Panels an einem Nachmittag um Uploads, Vorschauen und auditierte Dateioperationen."
   },

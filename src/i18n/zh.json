@@ -156,7 +156,7 @@
     "accounts_q": "我的用户需要 FluxFiles 账号吗？",
     "accounts_a": "不需要。FluxFiles 信任你自己应用签发的 JWT，可直接接入你现有的认证——无需单独的用户系统。",
     "embed_q": "能嵌入到我现有的应用或编辑器里吗？",
-    "embed_a": "可以——iframe + JS SDK 适用于任意页面，并提供 Laravel、WordPress、React、Vue/Nuxt、CKEditor 4 和 TinyMCE 的官方适配器。",
+    "embed_a": "可以——iframe + JS SDK 适用于任意页面，并提供 Laravel、WordPress、React、Vue/Nuxt、CKEditor 4、TinyMCE 和 Summernote 的官方适配器。",
     "run_q": "运行它需要什么？",
     "run_a": "PHP 8.1+、几个常见扩展和 Composer。指向一个磁盘，设置密钥与允许来源，然后启动即可——在小型 VPS 上也能流畅运行。"
   },
@@ -208,7 +208,7 @@
     "p2_title": "代理商与自由职业者",
     "p2_desc": "为每个客户交付精致的媒体库，无需为每个项目搭建存储基础设施。",
     "p3_title": "CMS 与编辑器集成",
-    "p3_desc": "通过 iframe SDK 将媒体选择器嵌入 CKEditor、TinyMCE 或你自己的编辑器。",
+    "p3_desc": "通过 iframe SDK 将媒体选择器嵌入 CKEditor、TinyMCE、Summernote 或你自己的编辑器。",
     "p4_title": "内部工具与仪表板",
     "p4_desc": "一个下午即可为后台面板加上上传、预览和带审计的文件操作。"
   },
