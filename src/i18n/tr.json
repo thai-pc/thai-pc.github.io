@@ -156,7 +156,7 @@
     "accounts_q": "Kullanıcılarımın FluxFiles hesabına ihtiyacı var mı?",
     "accounts_a": "Hayır. FluxFiles kendi uygulamanızın verdiği JWT'ye güvenir, böylece mevcut kimlik doğrulamanıza doğrudan bağlanır — ayrı bir kullanıcı sistemi yok.",
     "embed_q": "Mevcut uygulamama veya editörüme gömebilir miyim?",
-    "embed_a": "Evet — iframe + JS SDK her sayfada çalışır; Laravel, WordPress, React, Vue/Nuxt, CKEditor 4 ve TinyMCE için resmi adaptörler vardır.",
+    "embed_a": "Evet — iframe + JS SDK her sayfada çalışır; Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE ve Summernote için resmi adaptörler vardır.",
     "run_q": "Çalıştırmak için neye ihtiyacım var?",
     "run_a": "Birkaç yaygın eklenti ile PHP 8.1+ ve Composer. Bir diske yönlendirin, bir secret ve izin verilen origin'leri ayarlayın, ardından sunun — küçük bir VPS'te çalışır."
   },
@@ -208,7 +208,7 @@
     "p2_title": "Ajanslar ve serbest çalışanlar",
     "p2_desc": "Her proje için depolama altyapısı kurmadan her müşteriye özenli bir medya kütüphanesi sunun.",
     "p3_title": "CMS ve editör entegrasyonları",
-    "p3_desc": "iframe SDK ile CKEditor, TinyMCE veya kendi editörünüze bir medya seçici ekleyin.",
+    "p3_desc": "iframe SDK ile CKEditor, TinyMCE, Summernote veya kendi editörünüze bir medya seçici ekleyin.",
     "p4_title": "İç araçlar ve panolar",
     "p4_desc": "Yönetim panellerine yükleme, önizleme ve denetlenen dosya işlemlerini bir öğleden sonrada ekleyin."
   },

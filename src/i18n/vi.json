@@ -156,7 +156,7 @@
     "accounts_q": "Người dùng có cần tài khoản FluxFiles không?",
     "accounts_a": "Không. FluxFiles tin tưởng JWT do chính ứng dụng của bạn cấp, nên gắn thẳng vào hệ thống auth sẵn có — không cần hệ thống user riêng.",
     "embed_q": "Tôi có nhúng được vào app/editor sẵn có không?",
-    "embed_a": "Có — iframe + JS SDK chạy trên mọi trang, kèm adapter chính thức cho Laravel, WordPress, React, Vue/Nuxt, CKEditor 4 và TinyMCE.",
+    "embed_a": "Có — iframe + JS SDK chạy trên mọi trang, kèm adapter chính thức cho Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE và Summernote.",
     "run_q": "Cần gì để chạy?",
     "run_a": "PHP 8.1+ với vài extension phổ biến và Composer. Trỏ tới một disk, đặt secret và allowed origins, rồi chạy — nhẹ tới mức chạy được trên VPS nhỏ."
   },
@@ -208,7 +208,7 @@
     "p2_title": "Agency & freelancer",
     "p2_desc": "Giao thư viện media gọn gàng cho từng khách mà không phải dựng hạ tầng lưu trữ cho mỗi dự án.",
     "p3_title": "Tích hợp CMS & trình soạn thảo",
-    "p3_desc": "Gắn bộ chọn media vào CKEditor, TinyMCE hoặc editor của bạn qua iframe SDK.",
+    "p3_desc": "Gắn bộ chọn media vào CKEditor, TinyMCE, Summernote hoặc editor của bạn qua iframe SDK.",
     "p4_title": "Công cụ nội bộ & dashboard",
     "p4_desc": "Thêm upload, xem trước và thao tác file có audit vào trang quản trị chỉ trong một buổi chiều."
   },
