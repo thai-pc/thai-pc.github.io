@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        accent: { DEFAULT: '#1A56A0', light: '#E6F1FB', dark: '#4d8ed4' },
+        accent: { DEFAULT: '#8957e5', light: '#F1EAFB', dark: '#a98aec' },
         surface: { DEFAULT: '#f8f9fa', dark: 'var(--bg-page)' },
       },
       fontFamily: {
