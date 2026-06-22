@@ -29,7 +29,8 @@
     "cap_activity": "Registro de atividade — mantido no seu próprio bucket",
     "cap_trash": "Lixeira — restaurar ou excluir definitivamente",
     "cap_doctor": "Bucket Doctor — verificações de S3/R2 + correções",
-    "cap_mobile": "Responsivo no celular"
+    "cap_mobile": "Responsivo no celular",
+    "cap_s3": "Multi-nuvem — S3 / R2 / SFTP, uma UI"
   },
   "features": {
     "label": "Recursos",

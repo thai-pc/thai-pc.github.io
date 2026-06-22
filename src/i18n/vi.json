@@ -29,7 +29,8 @@
     "cap_activity": "Nhật ký hoạt động — lưu trong bucket của bạn",
     "cap_trash": "Thùng rác — khôi phục hoặc xoá vĩnh viễn",
     "cap_doctor": "Bucket Doctor — kiểm tra S3/R2 + cách khắc phục",
-    "cap_mobile": "Tương thích trên di động"
+    "cap_mobile": "Tương thích trên di động",
+    "cap_s3": "Đa đám mây — S3 / R2 / SFTP, một giao diện"
   },
   "features": {
     "label": "Tính năng",

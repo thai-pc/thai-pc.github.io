@@ -29,7 +29,8 @@
     "cap_activity": "Registro attività — conservato nel tuo bucket",
     "cap_trash": "Cestino — ripristina o elimina per sempre",
     "cap_doctor": "Bucket Doctor — diagnostica S3/R2 + soluzioni",
-    "cap_mobile": "Responsive su mobile"
+    "cap_mobile": "Responsive su mobile",
+    "cap_s3": "Multi-cloud — S3 / R2 / SFTP, una sola UI"
   },
   "features": {
     "label": "Funzionalità",

@@ -29,7 +29,8 @@
     "cap_activity": "Journal d'activité — conservé dans votre bucket",
     "cap_trash": "Corbeille — restaurer ou supprimer définitivement",
     "cap_doctor": "Bucket Doctor — diagnostics S3/R2 + correctifs",
-    "cap_mobile": "Adapté au mobile"
+    "cap_mobile": "Adapté au mobile",
+    "cap_s3": "Multi-cloud — S3 / R2 / SFTP, une seule UI"
   },
   "features": {
     "label": "Fonctionnalités",

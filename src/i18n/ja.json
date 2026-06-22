@@ -29,7 +29,8 @@
     "cap_activity": "操作ログ — 自分のバケットに保存",
     "cap_trash": "ゴミ箱 — 復元または完全削除",
     "cap_doctor": "バケットドクター — S3/R2 健全性チェック＋修正",
-    "cap_mobile": "モバイル対応"
+    "cap_mobile": "モバイル対応",
+    "cap_s3": "マルチクラウド — S3 / R2 / SFTP を1つのUIで"
   },
   "features": {
     "label": "機能",
