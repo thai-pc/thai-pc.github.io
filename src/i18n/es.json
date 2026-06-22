@@ -29,7 +29,8 @@
     "cap_activity": "Registro de actividad — guardado en tu propio bucket",
     "cap_trash": "Papelera — restaurar o eliminar para siempre",
     "cap_doctor": "Bucket Doctor — diagnóstico de S3/R2 + soluciones",
-    "cap_mobile": "Adaptado a móvil"
+    "cap_mobile": "Adaptado a móvil",
+    "cap_s3": "Multi-nube — S3 / R2 / SFTP, una sola UI"
   },
   "features": {
     "label": "Características",

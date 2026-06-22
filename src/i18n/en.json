@@ -29,7 +29,8 @@
     "cap_activity": "Activity log — kept in your own bucket",
     "cap_trash": "Trash — restore or delete forever",
     "cap_doctor": "Bucket Doctor — S3/R2 health checks + fixes",
-    "cap_mobile": "Responsive on mobile"
+    "cap_mobile": "Responsive on mobile",
+    "cap_s3": "Multi-cloud — S3 / R2 / SFTP, one UI"
   },
   "features": {
     "label": "Features",

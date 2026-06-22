@@ -29,7 +29,8 @@
     "cap_activity": "Aktivitätsprotokoll — in Ihrem eigenen Bucket",
     "cap_trash": "Papierkorb — wiederherstellen oder endgültig löschen",
     "cap_doctor": "Bucket Doctor — S3/R2-Diagnose + Korrekturen",
-    "cap_mobile": "Mobil responsiv"
+    "cap_mobile": "Mobil responsiv",
+    "cap_s3": "Multi-Cloud — S3 / R2 / SFTP in einer UI"
   },
   "features": {
     "label": "Funktionen",

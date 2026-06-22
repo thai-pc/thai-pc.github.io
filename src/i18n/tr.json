@@ -29,7 +29,8 @@
     "cap_activity": "Etkinlik günlüğü — kendi bucket'ınızda saklanır",
     "cap_trash": "Çöp kutusu — geri yükle veya kalıcı sil",
     "cap_doctor": "Bucket Doctor — S3/R2 sağlık kontrolü + çözümler",
-    "cap_mobile": "Mobilde duyarlı"
+    "cap_mobile": "Mobilde duyarlı",
+    "cap_s3": "Çoklu bulut — S3 / R2 / SFTP, tek arayüz"
   },
   "features": {
     "label": "Özellikler",

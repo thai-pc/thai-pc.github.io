@@ -29,7 +29,8 @@
     "cap_activity": "Activiteitenlog — bewaard in je eigen bucket",
     "cap_trash": "Prullenbak — herstellen of definitief verwijderen",
     "cap_doctor": "Bucket Doctor — S3/R2-controles + oplossingen",
-    "cap_mobile": "Responsief op mobiel"
+    "cap_mobile": "Responsief op mobiel",
+    "cap_s3": "Multi-cloud — S3 / R2 / SFTP, één UI"
   },
   "features": {
     "label": "Functies",

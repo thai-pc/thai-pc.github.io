@@ -29,7 +29,8 @@
     "cap_activity": "활동 로그 — 내 버킷에 저장",
     "cap_trash": "휴지통 — 복원 또는 영구 삭제",
     "cap_doctor": "버킷 닥터 — S3/R2 상태 점검 + 해결",
-    "cap_mobile": "모바일 반응형"
+    "cap_mobile": "모바일 반응형",
+    "cap_s3": "멀티 클라우드 — S3 / R2 / SFTP, 하나의 UI"
   },
   "features": {
     "label": "기능",
