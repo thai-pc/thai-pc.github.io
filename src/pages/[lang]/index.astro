@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Hero from '../../components/Hero.astro';
 import ScreenshotSlider from '../../components/ScreenshotSlider.astro';
+import LiveDemo from '../../components/LiveDemo.astro';
 import Byob from '../../components/Byob.astro';
 import MultiTenant from '../../components/MultiTenant.astro';
 import Who from '../../components/Who.astro';
@@ -24,13 +25,14 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params as { lang: Lang };
 const t = useTranslations(lang);
+const demoConfigured = !!import.meta.env.PUBLIC_DEMO_URL;
 ---
 
 <BaseLayout title={t('meta.title')} description={t('meta.description')} lang={lang}>
   <Navbar lang={lang} />
   <main>
     <Hero lang={lang} />
-    <ScreenshotSlider lang={lang} />
+    {demoConfigured ? <LiveDemo lang={lang} /> : <ScreenshotSlider lang={lang} />}
     <Byob lang={lang} />
     <MultiTenant lang={lang} />
     <Who lang={lang} />
