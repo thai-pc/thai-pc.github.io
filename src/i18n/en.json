@@ -225,7 +225,7 @@
     "per_year": "/year",
     "custom": "Custom",
     "soon": "Coming soon",
-    "footnote": "Flat-fee, unlimited sites — not metered per file/call. Prices billed yearly; monthly available. 14-day refund. Buyer-side VAT handled at checkout.",
+    "footnote": "Flat-fee, unlimited sites — not metered per file/call. Annual saves ~2 months; a lifetime option is available. 14-day refund. Buyer-side VAT handled at checkout.",
     "free_name": "Free (Core)",
     "free_desc": "The full MIT file manager, self-hosted.",
     "free_cta": "Get started",
@@ -253,7 +253,11 @@
     "ent_f1": "Everything in Studio",
     "ent_f2": "Virus scan + <strong>C2PA</strong> provenance + audit retention",
     "ent_f3": "SSO bridge + custom onboarding",
-    "ent_f4": "SLA + priority roadmap"
+    "ent_f4": "SLA + priority roadmap",
+    "monthly": "Monthly",
+    "annual": "Annual",
+    "save": "Save ~17%",
+    "per_month": "/month"
   },
   "who": {
     "label": "Who it's for",

@@ -226,7 +226,7 @@
     "per_year": "/năm",
     "custom": "Liên hệ",
     "soon": "Sắp ra mắt",
-    "footnote": "Giá cố định, không giới hạn site — không tính theo file/lượt. Thanh toán theo năm; có gói tháng. Hoàn tiền 14 ngày. VAT xử lý khi thanh toán.",
+    "footnote": "Giá cố định, không giới hạn site — không tính theo file/lượt. Gói năm tiết kiệm ~2 tháng; có tùy chọn trọn đời (lifetime). Hoàn tiền 14 ngày. VAT xử lý khi thanh toán.",
     "free_name": "Miễn phí (Lõi)",
     "free_desc": "File manager MIT đầy đủ, tự host.",
     "free_cta": "Bắt đầu",
@@ -254,7 +254,11 @@
     "ent_f1": "Mọi thứ trong Studio",
     "ent_f2": "Quét virus + <strong>C2PA</strong> provenance + lưu audit",
     "ent_f3": "Cầu SSO + onboarding riêng",
-    "ent_f4": "SLA + roadmap ưu tiên"
+    "ent_f4": "SLA + roadmap ưu tiên",
+    "monthly": "Theo tháng",
+    "annual": "Theo năm",
+    "save": "Tiết kiệm ~17%",
+    "per_month": "/tháng"
   },
   "who": {
     "label": "Dành cho ai",
