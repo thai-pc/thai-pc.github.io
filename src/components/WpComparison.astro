@@ -1,0 +1,75 @@
+---
+import { useTranslations, type Lang } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+// ✓ = yes, '—' = no. Order: FluxFiles, FileBird, WP Media Folder, WP Offload.
+const rows = [
+  { key: 'row_folders', flux: true, filebird: true, wpmf: true, offload: false },
+  { key: 'row_cloud', flux: true, filebird: false, wpmf: true, offload: true },
+  { key: 'row_offload', flux: true, filebird: false, wpmf: false, offload: true },
+  { key: 'row_portals', flux: true, filebird: false, wpmf: false, offload: false },
+  { key: 'row_share', flux: true, filebird: false, wpmf: false, offload: false },
+];
+
+const priceRow = {
+  flux: t('wp.price_flux'),
+  filebird: t('wp.price_filebird'),
+  wpmf: t('wp.price_wpmf'),
+  offload: t('wp.price_offload'),
+};
+
+const yes = `<svg class="w-4 h-4 mx-auto text-accent" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>`;
+const no = `<span class="text-gray-300 dark:text-gray-600">—</span>`;
+---
+
+<section id="wordpress" class="py-20 sm:py-28">
+  <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <p class="text-sm font-semibold uppercase tracking-wider text-accent">{t('wp.label')}</p>
+      <h2 class="mt-2 text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+        {t('wp.headline')}
+      </h2>
+      <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">{t('wp.sub')}</p>
+    </div>
+
+    <div class="mt-12 overflow-x-auto">
+      <table class="w-full min-w-[560px] border-collapse text-sm">
+        <thead>
+          <tr class="border-b border-gray-200 dark:border-gray-800">
+            <th class="py-3 px-3 text-left font-medium text-gray-500 dark:text-gray-400">{t('wp.col_feature')}</th>
+            <th class="py-3 px-3 text-center font-semibold text-accent">{t('wp.col_flux')}</th>
+            <th class="py-3 px-3 text-center font-medium text-gray-500 dark:text-gray-400">{t('wp.col_filebird')}</th>
+            <th class="py-3 px-3 text-center font-medium text-gray-500 dark:text-gray-400">{t('wp.col_wpmf')}</th>
+            <th class="py-3 px-3 text-center font-medium text-gray-500 dark:text-gray-400">{t('wp.col_offload')}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r) => (
+            <tr class="border-b border-gray-100 dark:border-gray-800/60">
+              <td class="py-3 px-3 text-gray-700 dark:text-gray-300">{t(`wp.${r.key}`)}</td>
+              <td class="py-3 px-3 text-center bg-accent/[0.04]" set:html={r.flux ? yes : no}></td>
+              <td class="py-3 px-3 text-center" set:html={r.filebird ? yes : no}></td>
+              <td class="py-3 px-3 text-center" set:html={r.wpmf ? yes : no}></td>
+              <td class="py-3 px-3 text-center" set:html={r.offload ? yes : no}></td>
+            </tr>
+          ))}
+          <tr class="border-b border-gray-100 dark:border-gray-800/60">
+            <td class="py-3 px-3 font-medium text-gray-700 dark:text-gray-300">{t('wp.row_price')}</td>
+            <td class="py-3 px-3 text-center font-semibold text-accent bg-accent/[0.04]">{priceRow.flux}</td>
+            <td class="py-3 px-3 text-center text-gray-500 dark:text-gray-400">{priceRow.filebird}</td>
+            <td class="py-3 px-3 text-center text-gray-500 dark:text-gray-400">{priceRow.wpmf}</td>
+            <td class="py-3 px-3 text-center text-gray-500 dark:text-gray-400">{priceRow.offload}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="mt-6 text-center text-sm text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">{t('wp.footnote')}</p>
+  </div>
+</section>

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "FluxFiles — The file manager that embeds anywhere",
-    "description": "PHP 8.1+ file manager with S3, R2, and local storage. Alpine.js UI. Embed via iframe + JavaScript SDK."
+    "description": "PHP 8.1+ file manager: Local, S3, R2, SFTP. Embed via iframe + JS SDK. Free MIT core + paid file portals (Branded Share, Upload Portals)."
   },
   "nav": {
     "docs": "Docs",
@@ -9,12 +9,13 @@
     "changelog": "Changelog",
     "github": "GitHub",
     "byob": "Why BYOB",
-    "pricing": "Pricing"
+    "pricing": "Pricing",
+    "demo": "Demo"
   },
   "hero": {
     "badge": "v0.2 — Open Source · MIT License",
     "headline": "The file manager that embeds anywhere",
-    "sub": "PHP ≥ 8.1 + Flysystem 3. Alpine.js UI. Local, S3, Cloudflare R2. Embed with a few lines of JavaScript.",
+    "sub": "PHP ≥ 8.1 + Flysystem 3. Alpine.js UI. Local, S3, Cloudflare R2, SFTP. Embed with a few lines of JavaScript.",
     "cta_start": "Get started",
     "cta_github": "Star on GitHub",
     "stat_php": "No framework required",
@@ -91,14 +92,16 @@
     "zip_desc": "Download a selection as a zip, or extract an archive in place — zip-slip & bomb guarded.",
     "watermark_title": "Watermark",
     "watermark_desc": "Apply a text or logo watermark on the fly for preview protection — the source is never touched.",
-    "webp_title": "On-demand WebP + srcset",
-    "webp_desc": "Serve any image size as cached WebP via one URL, with ready responsive srcset.",
+    "webp_title": "On-demand WebP + AVIF",
+    "webp_desc": "Serve any image size as cached AVIF/WebP via one URL (Accept-negotiated), with ready responsive srcset.",
     "chmod_title": "SFTP permissions",
     "chmod_desc": "Change Unix file permissions (chmod) on SFTP disks with a cPanel-style dialog.",
     "usage_title": "Usage dashboard",
     "usage_desc": "See storage at a glance — quota plus a per-type and per-folder breakdown.",
     "media_title": "Media preview",
-    "media_desc": "Inline image, video, audio & PDF preview; private local media streams securely (Range-capable)."
+    "media_desc": "Inline image, video, audio & PDF preview; private local media streams securely (Range-capable).",
+    "embed2_title": "BYO-embed tools",
+    "embed2_desc": "Free config toggles to embed a terminal (ttyd), PDF tools (Stirling), office (Collabora) & e-sign (DocuSeal)."
   },
   "install": {
     "label": "Quick install",
@@ -175,7 +178,13 @@
     "embed_q": "Can I embed it in my existing app or editor?",
     "embed_a": "Yes — the iframe + JS SDK works in any page, with official adapters for Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE and Summernote.",
     "run_q": "What do I need to run it?",
-    "run_a": "PHP 8.1+ with common extensions and Composer. Point it at a disk, set a secret and allowed origins, then serve — it runs on a small VPS."
+    "run_a": "PHP 8.1+ with common extensions and Composer. Point it at a disk, set a secret and allowed origins, then serve — it runs on a small VPS.",
+    "paid_q": "What do the paid tiers include?",
+    "paid_a": "The core is free (MIT). Paid tiers unlock file-portal modules: Branded Share (expiring/password links) and Upload Portals (public “send us files”), plus Versioning, Webhooks, AI Vision/OCR and a compliance bundle at higher tiers.",
+    "license_q": "How do I activate a license?",
+    "license_a": "After purchase you get a license key. Set FLUXFILES_LICENSE_KEY in your environment and the paid modules unlock — verified offline (no phone-home), so it works air-gapped.",
+    "billing_q": "One-time or subscription?",
+    "billing_a": "Both. Monthly for a low-commitment start, annual to save (≈ 2 months free), or a one-time lifetime option. An expired license keeps running the version you have; only updates/support pause."
   },
   "byob": {
     "label": "The moat · BYOB",
@@ -286,5 +295,47 @@
     "headline": "One token per tenant — each with its own rules",
     "sub": "FluxFiles is stateless: the JWT your backend mints is the tenant's config. Storage path, file-size limit, quota, file count, allowed types, permissions — all enforced server-side. No per-tenant config files, no restarts.",
     "note": "Pair it with BYOB to put each tenant on their own bucket."
+  },
+  "products": {
+    "label": "Sellable products",
+    "headline": "Do more than manage files — sell & receive them",
+    "sub": "The free core embeds a file manager. The paid modules turn it into products your clients pay for.",
+    "share_name": "Branded Share",
+    "share_tag": "Pro",
+    "share_desc": "Send a branded, self-serve link to any file or folder — with expiry, password, download cap, and view analytics. Your logo, your domain.",
+    "share_f1": "Expiring / password-protected links",
+    "share_f2": "Download caps + view analytics",
+    "share_f3": "Scoped token — no account for the recipient",
+    "intake_name": "Upload Portals",
+    "intake_tag": "Pro",
+    "intake_desc": "A public “send us your files” page that drops straight into your storage. Perfect for agencies, photographers, and client onboarding — no account for the uploader.",
+    "intake_f1": "Public portal → your bucket",
+    "intake_f2": "Per-portal size / type / expiry limits",
+    "intake_f3": "Anonymous upload, owner-scoped",
+    "compliance_name": "Compliance bundle",
+    "compliance_tag": "Enterprise",
+    "compliance_desc": "Virus scanning, C2PA content provenance, file versioning, webhooks and audit retention — for regulated and enterprise deployments.",
+    "cta": "See pricing"
+  },
+  "wp": {
+    "label": "WordPress",
+    "headline": "One plugin instead of three",
+    "sub": "On WordPress, FluxFiles is both a client file-portal AND a media manager — replacing separate folder, cloud, and offload plugins.",
+    "col_feature": "Capability",
+    "col_flux": "FluxFiles",
+    "col_filebird": "FileBird",
+    "col_wpmf": "WP Media Folder",
+    "col_offload": "WP Offload",
+    "row_folders": "Media folders",
+    "row_cloud": "S3 / R2 / SFTP storage",
+    "row_offload": "Offload + URL rewrite",
+    "row_portals": "Client upload portals",
+    "row_share": "Branded share links",
+    "row_price": "Typical price",
+    "price_flux": "One license",
+    "price_filebird": "$49/yr",
+    "price_wpmf": "$69/yr",
+    "price_offload": "paid",
+    "footnote": "Folders + cloud + offload + client portals in one — instead of paying FileBird and WP Media Folder and WP Offload separately."
   }
 }

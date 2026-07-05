@@ -11,6 +11,8 @@ import Features from '../../components/Features.astro';
 import Install from '../../components/Install.astro';
 import Comparison from '../../components/Comparison.astro';
 import SaasComparison from '../../components/SaasComparison.astro';
+import PaidProducts from '../../components/PaidProducts.astro';
+import WpComparison from '../../components/WpComparison.astro';
 import Pricing from '../../components/Pricing.astro';
 import Adapters from '../../components/Adapters.astro';
 import EmbedDemo from '../../components/EmbedDemo.astro';
@@ -42,6 +44,8 @@ const demoConfigured = !!import.meta.env.PUBLIC_DEMO_URL;
     <EmbedDemo lang={lang} />
     <Comparison lang={lang} />
     <SaasComparison lang={lang} />
+    <PaidProducts lang={lang} />
+    <WpComparison lang={lang} />
     <Pricing lang={lang} />
     <Faq lang={lang} />
     <Cta lang={lang} />
