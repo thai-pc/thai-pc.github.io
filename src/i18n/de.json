@@ -32,7 +32,10 @@
     "cap_trash": "Papierkorb — wiederherstellen oder endgültig löschen",
     "cap_doctor": "Bucket Doctor — S3/R2-Diagnose + Korrekturen",
     "cap_mobile": "Mobil responsiv",
-    "cap_s3": "Multi-Cloud — S3 / R2 / SFTP in einer UI"
+    "cap_s3": "Multi-Cloud — S3 / R2 / SFTP in einer UI",
+    "cap_share": "Datei teilen — Ablauf, Passwort, Limit",
+    "cap_intake": "Upload-Portale — ohne Konto empfangen",
+    "cap_links": "Alle Links verwalten und jederzeit widerrufen"
   },
   "features": {
     "label": "Funktionen",

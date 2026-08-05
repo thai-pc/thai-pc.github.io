@@ -32,7 +32,10 @@
     "cap_trash": "Papelera — restaurar o eliminar para siempre",
     "cap_doctor": "Bucket Doctor — diagnóstico de S3/R2 + soluciones",
     "cap_mobile": "Adaptado a móvil",
-    "cap_s3": "Multi-nube — S3 / R2 / SFTP, una sola UI"
+    "cap_s3": "Multi-nube — S3 / R2 / SFTP, una sola UI",
+    "cap_share": "Comparte un archivo — caducidad, contraseña, límite",
+    "cap_intake": "Portales de subida — sin cuenta",
+    "cap_links": "Gestiona cada enlace y revócalo cuando quieras"
   },
   "features": {
     "label": "Características",

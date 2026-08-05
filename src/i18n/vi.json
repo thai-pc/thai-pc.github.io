@@ -32,7 +32,10 @@
     "cap_trash": "Thùng rác — khôi phục hoặc xoá vĩnh viễn",
     "cap_doctor": "Bucket Doctor — kiểm tra S3/R2 + cách khắc phục",
     "cap_mobile": "Tương thích trên di động",
-    "cap_s3": "Đa đám mây — S3 / R2 / SFTP, một giao diện"
+    "cap_s3": "Đa đám mây — S3 / R2 / SFTP, một giao diện",
+    "cap_share": "Chia sẻ file — hạn dùng, mật khẩu, giới hạn tải",
+    "cap_intake": "Cổng nhận tệp — khách gửi file, không cần tài khoản",
+    "cap_links": "Quản lý mọi liên kết, thu hồi bất kỳ lúc nào"
   },
   "features": {
     "label": "Tính năng",
