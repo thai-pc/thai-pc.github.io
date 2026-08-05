@@ -39,7 +39,7 @@
     "headline": "Everything a modern file manager needs",
     "sub": "Built for developers who need flexibility.",
     "storage_title": "Multi-storage",
-    "storage_desc": "Local, AWS S3, Cloudflare R2 via Flysystem v3 — swap with config, no code change.",
+    "storage_desc": "Local, AWS S3, Cloudflare R2, SFTP via Flysystem v3 — swap with config, no code change.",
     "embed_title": "Embed anywhere",
     "embed_desc": "iframe + postMessage SDK. Standalone UI is Alpine.js (zero build). Works with any framework.",
     "jwt_title": "JWT auth + scoping",

@@ -39,7 +39,7 @@
     "headline": "Alles wat een moderne bestandsbeheerder nodig heeft",
     "sub": "Gebouwd voor ontwikkelaars die flexibiliteit nodig hebben.",
     "storage_title": "Multi-opslag",
-    "storage_desc": "Lokaal, AWS S3, Cloudflare R2 via Flysystem v3 — wissel via config, geen codewijziging.",
+    "storage_desc": "Lokaal, AWS S3, Cloudflare R2, SFTP via Flysystem v3 — wissel via config, geen codewijziging.",
     "embed_title": "Overal integreren",
     "embed_desc": "iframe + postMessage SDK. Standalone UI gebruikt Alpine.js (geen build). Werkt met elk framework.",
     "jwt_title": "JWT-auth + scoping",
