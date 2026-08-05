@@ -7,6 +7,11 @@ interface Props {
 
 const { lang } = Astro.props;
 const t = useTranslations(lang);
+
+// The live-demo instance URL (a self-hosted FluxFiles running with FLUXFILES_DEMO=1).
+// Set PUBLIC_DEMO_URL at build time (e.g. https://demo.fluxfiles.dev). Empty → the
+// iframe stays blank and callers should not render this section.
+const demoBase = import.meta.env.PUBLIC_DEMO_URL ?? '';
 ---
 
 <section id="live-demo" class="py-16 sm:py-24 bg-gray-50/50 dark:bg-gray-900/50">
@@ -35,13 +40,12 @@ const t = useTranslations(lang);
       </div>
       <iframe
         data-demo-frame
+        data-demo-base={demoBase}
         title="FluxFiles interactive demo"
         loading="lazy"
+        allow="clipboard-write"
         class="w-full h-[560px] sm:h-[640px] bg-white dark:bg-gray-950"
       ></iframe>
-      <noscript>
-        <iframe src="/demo-app/" title="FluxFiles interactive demo" class="w-full h-[560px] sm:h-[640px]"></iframe>
-      </noscript>
     </div>
 
     <p class="text-center mt-5 text-sm text-gray-500 dark:text-gray-400">{t('live.hint')}</p>
@@ -51,14 +55,13 @@ const t = useTranslations(lang);
     (function () {
       var frame = document.querySelector('[data-demo-frame]');
       if (!frame) return;
+      var base = frame.getAttribute('data-demo-base') || '';
+      if (!base) return; // no demo instance configured → leave the frame blank
       var theme = function () { return document.documentElement.classList.contains('dark') ? 'dark' : 'light'; };
-      // Load the demo already in the host's theme (no flash), then keep it in sync.
-      frame.src = '/demo-app/?theme=' + theme();
-      var sync = function () {
-        try { frame.contentWindow.postMessage({ type: 'fluxfiles-theme', theme: theme() }, '*'); } catch (e) {}
-      };
-      frame.addEventListener('load', sync);
-      new MutationObserver(sync).observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+      // The demo instance mints a hardened per-visitor token server-side and injects it
+      // as window.__FM_BOOT__ (the token never touches this page). ?theme= boots it in the
+      // host's theme with no flash.
+      frame.src = base.replace(/\/$/, '') + '/public/index.html?theme=' + theme();
     })();
   </script>
 </section>

@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
 import ScreenshotSlider from '../components/ScreenshotSlider.astro';
+import LiveDemo from '../components/LiveDemo.astro';
 import Byob from '../components/Byob.astro';
 import MultiTenant from '../components/MultiTenant.astro';
 import Who from '../components/Who.astro';
@@ -10,6 +11,9 @@ import Features from '../components/Features.astro';
 import Install from '../components/Install.astro';
 import Comparison from '../components/Comparison.astro';
 import SaasComparison from '../components/SaasComparison.astro';
+import PaidProducts from '../components/PaidProducts.astro';
+import WpComparison from '../components/WpComparison.astro';
+import Pricing from '../components/Pricing.astro';
 import Adapters from '../components/Adapters.astro';
 import EmbedDemo from '../components/EmbedDemo.astro';
 import Faq from '../components/Faq.astro';
@@ -19,13 +23,14 @@ import { useTranslations, type Lang } from '../i18n/utils';
 
 const lang: Lang = 'en';
 const t = useTranslations(lang);
+const demoConfigured = !!import.meta.env.PUBLIC_DEMO_URL;
 ---
 
 <BaseLayout title={t('meta.title')} description={t('meta.description')} lang={lang}>
   <Navbar lang={lang} />
   <main>
     <Hero lang={lang} />
-    <ScreenshotSlider lang={lang} />
+    {demoConfigured ? <LiveDemo lang={lang} /> : <ScreenshotSlider lang={lang} />}
     <Byob lang={lang} />
     <MultiTenant lang={lang} />
     <Who lang={lang} />
@@ -35,6 +40,9 @@ const t = useTranslations(lang);
     <EmbedDemo lang={lang} />
     <Comparison lang={lang} />
     <SaasComparison lang={lang} />
+    <PaidProducts lang={lang} />
+    <WpComparison lang={lang} />
+    <Pricing lang={lang} />
     <Faq lang={lang} />
     <Cta lang={lang} />
   </main>
