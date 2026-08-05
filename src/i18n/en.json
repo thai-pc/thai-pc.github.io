@@ -32,14 +32,19 @@
     "cap_trash": "Trash — restore or delete forever",
     "cap_doctor": "Bucket Doctor — S3/R2 health checks + fixes",
     "cap_mobile": "Responsive on mobile",
-    "cap_s3": "Multi-cloud — S3 / R2 / SFTP, one UI"
+    "cap_s3": "Multi-cloud — S3 / R2 / SFTP, one UI",
+    "cap_share": "Share a file — expiry, password, download cap",
+    "cap_intake": "Upload portals — clients send files, no account",
+    "cap_links": "Manage every link, revoke any of them",
+    "cap_editor": "Edit config files in place — no SSH, no FTP client",
+    "cap_media": "Video, audio and PDF preview without downloading"
   },
   "features": {
     "label": "Features",
     "headline": "Everything a modern file manager needs",
     "sub": "Built for developers who need flexibility.",
     "storage_title": "Multi-storage",
-    "storage_desc": "Local, AWS S3, Cloudflare R2 via Flysystem v3 — swap with config, no code change.",
+    "storage_desc": "Local, AWS S3, Cloudflare R2, SFTP via Flysystem v3 — swap with config, no code change.",
     "embed_title": "Embed anywhere",
     "embed_desc": "iframe + postMessage SDK. Standalone UI is Alpine.js (zero build). Works with any framework.",
     "jwt_title": "JWT auth + scoping",
