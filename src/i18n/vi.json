@@ -35,7 +35,9 @@
     "cap_s3": "Đa đám mây — S3 / R2 / SFTP, một giao diện",
     "cap_share": "Chia sẻ file — hạn dùng, mật khẩu, giới hạn tải",
     "cap_intake": "Cổng nhận tệp — khách gửi file, không cần tài khoản",
-    "cap_links": "Quản lý mọi liên kết, thu hồi bất kỳ lúc nào"
+    "cap_links": "Quản lý mọi liên kết, thu hồi bất kỳ lúc nào",
+    "cap_editor": "Sửa file cấu hình ngay tại chỗ — không cần SSH hay FTP",
+    "cap_media": "Xem trước video, audio và PDF mà không cần tải về"
   },
   "features": {
     "label": "Tính năng",

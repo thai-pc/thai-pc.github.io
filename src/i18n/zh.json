@@ -35,7 +35,9 @@
     "cap_s3": "多云 — S3 / R2 / SFTP，统一界面",
     "cap_share": "分享文件 — 有效期、密码、下载上限",
     "cap_intake": "上传门户 — 客户无需账号即可发送文件",
-    "cap_links": "管理所有链接，随时撤销"
+    "cap_links": "管理所有链接，随时撤销",
+    "cap_editor": "就地编辑配置文件 — 无需 SSH 或 FTP",
+    "cap_media": "无需下载即可预览视频、音频和 PDF"
   },
   "features": {
     "label": "功能",

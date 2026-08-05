@@ -35,7 +35,9 @@
     "cap_s3": "Multi-cloud — S3 / R2 / SFTP, one UI",
     "cap_share": "Share a file — expiry, password, download cap",
     "cap_intake": "Upload portals — clients send files, no account",
-    "cap_links": "Manage every link, revoke any of them"
+    "cap_links": "Manage every link, revoke any of them",
+    "cap_editor": "Edit config files in place — no SSH, no FTP client",
+    "cap_media": "Video, audio and PDF preview without downloading"
   },
   "features": {
     "label": "Features",

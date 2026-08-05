@@ -35,7 +35,9 @@
     "cap_s3": "Multi-nube — S3 / R2 / SFTP, una sola UI",
     "cap_share": "Comparte un archivo — caducidad, contraseña, límite",
     "cap_intake": "Portales de subida — sin cuenta",
-    "cap_links": "Gestiona cada enlace y revócalo cuando quieras"
+    "cap_links": "Gestiona cada enlace y revócalo cuando quieras",
+    "cap_editor": "Edita archivos de configuración in situ — sin SSH ni FTP",
+    "cap_media": "Vista previa de vídeo, audio y PDF sin descargar"
   },
   "features": {
     "label": "Características",

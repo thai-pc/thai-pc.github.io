@@ -35,7 +35,9 @@
     "cap_s3": "멀티 클라우드 — S3 / R2 / SFTP, 하나의 UI",
     "cap_share": "파일 공유 — 만료·비밀번호·다운로드 제한",
     "cap_intake": "업로드 포털 — 계정 없이 파일 받기",
-    "cap_links": "모든 링크 관리 및 즉시 해지"
+    "cap_links": "모든 링크 관리 및 즉시 해지",
+    "cap_editor": "설정 파일을 바로 편집 — SSH도 FTP도 불필요",
+    "cap_media": "내려받지 않고 동영상·오디오·PDF 미리보기"
   },
   "features": {
     "label": "기능",
