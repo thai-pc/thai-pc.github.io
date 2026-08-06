@@ -33,6 +33,7 @@
     "cap_doctor": "存储桶体检 — S3/R2 健康检查 + 修复",
     "cap_mobile": "移动端自适应",
     "cap_s3": "多云 — S3 / R2 / SFTP，统一界面",
+    "cap_sftp": "通过 SFTP 管理远程 VPS — 无需 FTP 客户端",
     "cap_share": "分享文件 — 有效期、密码、下载上限",
     "cap_intake": "上传门户 — 客户无需账号即可发送文件",
     "cap_links": "管理所有链接，随时撤销",
