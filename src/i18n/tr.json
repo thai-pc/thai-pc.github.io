@@ -33,6 +33,7 @@
     "cap_doctor": "Bucket Doctor — S3/R2 sağlık kontrolü + çözümler",
     "cap_mobile": "Mobilde duyarlı",
     "cap_s3": "Çoklu bulut — S3 / R2 / SFTP, tek arayüz",
+    "cap_sftp": "SFTP ile uzak VPS — FTP istemcisi gerekmez",
     "cap_share": "Dosya paylaş — süre, parola, indirme sınırı",
     "cap_intake": "Yükleme portalları — hesap gerekmez",
     "cap_links": "Her bağlantıyı yönetin, dilediğinizde iptal edin",

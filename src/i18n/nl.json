@@ -33,6 +33,7 @@
     "cap_doctor": "Bucket Doctor — S3/R2-controles + oplossingen",
     "cap_mobile": "Responsief op mobiel",
     "cap_s3": "Multi-cloud — S3 / R2 / SFTP, één UI",
+    "cap_sftp": "Externe VPS via SFTP — geen FTP-client nodig",
     "cap_share": "Deel een bestand — vervaldatum, wachtwoord, limiet",
     "cap_intake": "Uploadportalen — zonder account ontvangen",
     "cap_links": "Beheer elke link en trek hem wanneer je wilt in",

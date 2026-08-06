@@ -33,6 +33,7 @@
     "cap_doctor": "Bucket Doctor — diagnostica S3/R2 + soluzioni",
     "cap_mobile": "Responsive su mobile",
     "cap_s3": "Multi-cloud — S3 / R2 / SFTP, una sola UI",
+    "cap_sftp": "VPS remoto via SFTP — senza client FTP",
     "cap_share": "Condividi un file — scadenza, password, limite",
     "cap_intake": "Portali di caricamento — senza account",
     "cap_links": "Gestisci ogni link e revocalo quando vuoi",

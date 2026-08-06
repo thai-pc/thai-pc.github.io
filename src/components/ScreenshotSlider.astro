@@ -15,7 +15,10 @@ const screenshots = [
   { src: '/demo/fluxfiles-demo-intake-create.png', alt: 'Creating a FluxFiles upload portal with a file limit, size cap and allowed file types', caption: t('demo.cap_intake') },
   { src: '/demo/fluxfiles-demo-links-panel.png', alt: 'FluxFiles links panel listing shared links with views, downloads and revoke', caption: t('demo.cap_links') },
   { src: '/demo/fluxfiles-demo-desktop.png', alt: 'FluxFiles desktop file manager with image thumbnails', caption: t('demo.cap_desktop') },
-  { src: '/demo/fluxfiles-demo-s3.png', alt: 'FluxFiles browsing an S3 / R2 bucket with the local + S3 disk switcher', caption: t('demo.cap_s3') },
+  { src: '/demo/fluxfiles-demo-s3.png', alt: 'FluxFiles browsing an S3 / R2 bucket with the local, S3 and SFTP disk switcher', caption: t('demo.cap_s3') },
+  // The S3 shot alone can't back up "one UI" — it's the same chrome on a remote VPS
+  // over SFTP that makes the claim visible.
+  { src: '/demo/fluxfiles-demo-sftp.png', alt: 'FluxFiles managing a remote VPS deploy directory over SFTP, same UI as the S3 bucket', caption: t('demo.cap_sftp') },
   { src: '/demo/fluxfiles-demo-editor.png', alt: 'Editing an nginx config file inside FluxFiles with syntax highlighting', caption: t('demo.cap_editor') },
   { src: '/demo/fluxfiles-demo-media-preview.png', alt: 'FluxFiles previewing a video inline in the detail panel', caption: t('demo.cap_media') },
   { src: '/demo/fluxfiles-demo-doctor.png', alt: 'FluxFiles Bucket Doctor health checks for an S3 bucket with CORS and IAM remediation', caption: t('demo.cap_doctor') },
