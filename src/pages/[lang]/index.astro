@@ -34,7 +34,8 @@ const demoConfigured = !!import.meta.env.PUBLIC_DEMO_URL;
   <Navbar lang={lang} />
   <main>
     <Hero lang={lang} />
-    {demoConfigured ? <LiveDemo lang={lang} /> : <ScreenshotSlider lang={lang} />}
+    <ScreenshotSlider lang={lang} />
+{demoConfigured && <LiveDemo lang={lang} />}
     <Byob lang={lang} />
     <MultiTenant lang={lang} />
     <Who lang={lang} />

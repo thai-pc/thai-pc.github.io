@@ -27,6 +27,12 @@ jobs:
       - run: npm ci
 
       - run: npm run build
+        env:
+          PUBLIC_DEMO_URL: ${{ vars.PUBLIC_DEMO_URL }}
+          PUBLIC_POLAR_PRO_YEARLY: ${{ vars.PUBLIC_POLAR_PRO_YEARLY }}
+          PUBLIC_POLAR_PRO_MONTHLY: ${{ vars.PUBLIC_POLAR_PRO_MONTHLY }}
+          PUBLIC_POLAR_STUDIO_YEARLY: ${{ vars.PUBLIC_POLAR_STUDIO_YEARLY }}
+          PUBLIC_POLAR_STUDIO_MONTHLY: ${{ vars.PUBLIC_POLAR_STUDIO_MONTHLY }}
 
       - run: touch dist/.nojekyll
 

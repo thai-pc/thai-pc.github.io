@@ -139,6 +139,25 @@ If you fork this project for your own product, update the following:
 2. Go to repo **Settings → Pages → Source** → select **GitHub Actions**
 3. The workflow at `.github/workflows/deploy.yml` builds and deploys automatically
 
+### Enabling the live demo section
+
+The page always shows the screenshot slider. To also show a real, embedded
+FluxFiles instance below it:
+
+1. Deploy a FluxFiles core instance with `FLUXFILES_DEMO=1` (see
+   `packages/core/api/DemoMode.php` and `docs/CONFIG.md` in the main repo —
+   this mints a sandboxed, auto-expiring, local-disk-only token per visitor;
+   nothing from the landing page's own storage is exposed).
+2. Local dev/preview: set `PUBLIC_DEMO_URL=https://your-demo-host` in `.env`.
+3. GitHub Pages build: go to **Settings → Secrets and variables → Actions →
+   Variables** and add a repo variable named `PUBLIC_DEMO_URL` with the same
+   value. `.github/workflows/deploy.yml` already passes it into `npm run build`.
+4. Leaving `PUBLIC_DEMO_URL` unset keeps the live-demo section hidden — no
+   other code changes are needed either way.
+
+The same repo-variable mechanism also applies to the `PUBLIC_POLAR_*`
+checkout links from `.env.example` — set them the same way before a real launch.
+
 ## Tech Stack
 
 | Technology      | Purpose                             |
