@@ -321,6 +321,9 @@
     "compliance_name": "Compliance bundle",
     "compliance_tag": "Enterprise",
     "compliance_desc": "Antivirus, provenienza contenuti C2PA e conservazione audit — per deployment regolamentati ed enterprise.",
+    "compliance_f1": "Antivirus a ogni caricamento",
+    "compliance_f2": "Provenienza contenuti C2PA",
+    "compliance_f3": "Conservazione dei log di audit",
     "cta": "Vedi i prezzi"
   },
   "wp": {

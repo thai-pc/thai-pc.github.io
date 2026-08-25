@@ -321,6 +321,9 @@
     "compliance_name": "Compliance bundle",
     "compliance_tag": "Enterprise",
     "compliance_desc": "Virusscan, C2PA-inhoudsherkomst en auditbewaring — voor gereguleerde en enterprise-implementaties.",
+    "compliance_f1": "Virusscan bij elke upload",
+    "compliance_f2": "C2PA-inhoudsherkomst",
+    "compliance_f3": "Bewaring van auditlogs",
     "cta": "Bekijk prijzen"
   },
   "wp": {

@@ -321,6 +321,9 @@
     "compliance_name": "Compliance bundle",
     "compliance_tag": "Enterprise",
     "compliance_desc": "Antivirus, procedencia de contenido C2PA y retención de auditoría — para despliegues regulados y de empresa.",
+    "compliance_f1": "Antivirus en cada subida",
+    "compliance_f2": "Procedencia de contenido C2PA",
+    "compliance_f3": "Retención de registros de auditoría",
     "cta": "Ver precios"
   },
   "wp": {

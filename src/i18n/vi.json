@@ -321,6 +321,9 @@
     "compliance_name": "Bộ tuân thủ",
     "compliance_tag": "Enterprise",
     "compliance_desc": "Quét virus, C2PA provenance và lưu audit — cho triển khai enterprise/quản lý chặt.",
+    "compliance_f1": "Quét virus trên mọi lượt tải lên",
+    "compliance_f2": "Xác thực nguồn gốc nội dung C2PA",
+    "compliance_f3": "Lưu trữ audit log",
     "cta": "Xem bảng giá"
   },
   "wp": {

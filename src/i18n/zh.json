@@ -321,6 +321,9 @@
     "compliance_name": "Compliance bundle",
     "compliance_tag": "Enterprise",
     "compliance_desc": "病毒扫描、C2PA 内容溯源和审计留存——面向受监管和企业部署。",
+    "compliance_f1": "每次上传均病毒扫描",
+    "compliance_f2": "C2PA 内容溯源",
+    "compliance_f3": "审计日志留存",
     "cta": "查看价格"
   },
   "wp": {

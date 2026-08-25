@@ -321,6 +321,9 @@
     "compliance_name": "Compliance bundle",
     "compliance_tag": "Enterprise",
     "compliance_desc": "वायरस स्कैन, C2PA सामग्री उद्गम और ऑडिट प्रतिधारण — विनियमित और एंटरप्राइज़ परिनियोजन के लिए।",
+    "compliance_f1": "हर अपलोड पर वायरस स्कैन",
+    "compliance_f2": "C2PA सामग्री उद्गम",
+    "compliance_f3": "ऑडिट लॉग प्रतिधारण",
     "cta": "मूल्य देखें"
   },
   "wp": {

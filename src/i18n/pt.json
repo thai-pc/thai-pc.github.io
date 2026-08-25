@@ -321,6 +321,9 @@
     "compliance_name": "Compliance bundle",
     "compliance_tag": "Enterprise",
     "compliance_desc": "Antivírus, proveniência de conteúdo C2PA e retenção de auditoria — para implantações reguladas e corporativas.",
+    "compliance_f1": "Antivírus em cada envio",
+    "compliance_f2": "Proveniência de conteúdo C2PA",
+    "compliance_f3": "Retenção de logs de auditoria",
     "cta": "Ver preços"
   },
   "wp": {

@@ -1,5 +1,5 @@
 ---
-import { useTranslations, type Lang } from '../i18n/utils';
+import { useTranslations, localePath, type Lang } from '../i18n/utils';
 
 interface Props {
   lang: Lang;
@@ -37,7 +37,7 @@ const tiers = [
     desc: t('pricing.free_desc'),
     features: ['free_f1', 'free_f2', 'free_f3', 'free_f4'].map((k) => t(`pricing.${k}`)),
     cta: t('pricing.free_cta'),
-    hrefMonthly: `/${lang}/#install`, hrefYearly: `/${lang}/#install`,
+    hrefMonthly: localePath(lang, '#install'), hrefYearly: localePath(lang, '#install'),
     featured: false, style: 'plain',
   },
   {

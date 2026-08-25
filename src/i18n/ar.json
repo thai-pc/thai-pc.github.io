@@ -321,6 +321,9 @@
     "compliance_name": "Compliance bundle",
     "compliance_tag": "Enterprise",
     "compliance_desc": "فحص الفيروسات، مصدر محتوى C2PA وحفظ التدقيق — لعمليات النشر المنظَّمة والمؤسسية.",
+    "compliance_f1": "فحص الفيروسات عند كل رفع",
+    "compliance_f2": "مصدر محتوى C2PA",
+    "compliance_f3": "حفظ سجلات التدقيق",
     "cta": "عرض الأسعار"
   },
   "wp": {

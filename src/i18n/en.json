@@ -321,6 +321,9 @@
     "compliance_name": "Compliance bundle",
     "compliance_tag": "Enterprise",
     "compliance_desc": "Virus scanning, C2PA content provenance and audit retention — for regulated and enterprise deployments.",
+    "compliance_f1": "Virus scanning on every upload",
+    "compliance_f2": "C2PA content provenance",
+    "compliance_f3": "Audit log retention",
     "cta": "See pricing"
   },
   "wp": {

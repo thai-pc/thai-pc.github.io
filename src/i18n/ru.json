@@ -321,6 +321,9 @@
     "compliance_name": "Compliance bundle",
     "compliance_tag": "Enterprise",
     "compliance_desc": "Антивирус, происхождение контента C2PA и хранение аудита — для регулируемых и корпоративных развёртываний.",
+    "compliance_f1": "Антивирус при каждой загрузке",
+    "compliance_f2": "Происхождение контента C2PA",
+    "compliance_f3": "Хранение журналов аудита",
     "cta": "Смотреть цены"
   },
   "wp": {

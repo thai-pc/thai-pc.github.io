@@ -321,6 +321,9 @@
     "compliance_name": "Compliance bundle",
     "compliance_tag": "Enterprise",
     "compliance_desc": "Virüs taraması, C2PA içerik kökeni ve denetim saklama — düzenlemeye tabi ve kurumsal dağıtımlar için.",
+    "compliance_f1": "Her yüklemede virüs taraması",
+    "compliance_f2": "C2PA içerik kökeni",
+    "compliance_f3": "Denetim günlüğü saklama",
     "cta": "Fiyatları gör"
   },
   "wp": {

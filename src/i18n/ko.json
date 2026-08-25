@@ -321,6 +321,9 @@
     "compliance_name": "Compliance bundle",
     "compliance_tag": "Enterprise",
     "compliance_desc": "바이러스 검사, C2PA 콘텐츠 출처, 감사 보존——규제 및 엔터프라이즈 배포용.",
+    "compliance_f1": "업로드마다 바이러스 검사",
+    "compliance_f2": "C2PA 콘텐츠 출처",
+    "compliance_f3": "감사 로그 보존",
     "cta": "요금 보기"
   },
   "wp": {

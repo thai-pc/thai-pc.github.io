@@ -38,7 +38,7 @@ fluxfiles-landing/
 │   ├── components/
 │   │   ├── Navbar.astro         # Sticky nav + lang switcher + theme (light/dark/system)
 │   │   ├── Hero.astro           # Headline, CTAs, stats row
-│   │   ├── Features.astro       # 21 feature cards grid
+│   │   ├── Features.astro       # 31 feature cards grid
 │   │   ├── Install.astro        # Composer/Laravel/JS SDK/React/Vue/Manual tabs
 │   │   ├── Comparison.astro     # FluxFiles vs 4 competitors
 │   │   └── Footer.astro         # Links + copyright
@@ -80,7 +80,6 @@ fluxfiles-landing/
 | URL      | Content            |
 | :------- | :----------------- |
 | `/`      | English (default)  |
-| `/en/`   | English            |
 | `/vi/`   | Vietnamese         |
 | `/zh/`   | Chinese            |
 | `/ja/`   | Japanese           |

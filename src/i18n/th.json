@@ -321,6 +321,9 @@
     "compliance_name": "Compliance bundle",
     "compliance_tag": "Enterprise",
     "compliance_desc": "สแกนไวรัส, ที่มาเนื้อหา C2PA และเก็บ audit — สำหรับการใช้งานที่มีกฎระเบียบและองค์กร",
+    "compliance_f1": "สแกนไวรัสทุกการอัปโหลด",
+    "compliance_f2": "ที่มาเนื้อหา C2PA",
+    "compliance_f3": "เก็บบันทึก audit log",
     "cta": "ดูราคา"
   },
   "wp": {

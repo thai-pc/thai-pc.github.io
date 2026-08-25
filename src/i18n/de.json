@@ -321,6 +321,9 @@
     "compliance_name": "Compliance bundle",
     "compliance_tag": "Enterprise",
     "compliance_desc": "Virenscan, C2PA-Inhaltsherkunft und Audit-Aufbewahrung — für regulierte und Enterprise-Deployments.",
+    "compliance_f1": "Virenscan bei jedem Upload",
+    "compliance_f2": "C2PA-Inhaltsherkunft",
+    "compliance_f3": "Audit-Log-Aufbewahrung",
     "cta": "Preise ansehen"
   },
   "wp": {

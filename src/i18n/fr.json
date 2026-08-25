@@ -321,6 +321,9 @@
     "compliance_name": "Compliance bundle",
     "compliance_tag": "Enterprise",
     "compliance_desc": "Antivirus, provenance de contenu C2PA et rétention d'audit — pour déploiements réglementés et entreprise.",
+    "compliance_f1": "Antivirus à chaque envoi",
+    "compliance_f2": "Provenance de contenu C2PA",
+    "compliance_f3": "Rétention des journaux d'audit",
     "cta": "Voir les tarifs"
   },
   "wp": {

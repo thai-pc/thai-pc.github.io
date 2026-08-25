@@ -321,6 +321,9 @@
     "compliance_name": "Compliance bundle",
     "compliance_tag": "Enterprise",
     "compliance_desc": "ウイルススキャン、C2PA コンテンツ来歴、監査保持——規制対象・エンタープライズ向け。",
+    "compliance_f1": "アップロードごとのウイルススキャン",
+    "compliance_f2": "C2PA コンテンツ来歴",
+    "compliance_f3": "監査ログの保持",
     "cta": "料金を見る"
   },
   "wp": {
