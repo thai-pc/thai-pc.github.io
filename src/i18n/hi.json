@@ -300,7 +300,10 @@
     "monthly": "मासिक",
     "annual": "वार्षिक",
     "save": "~17% बचत",
-    "per_month": "/माह"
+    "per_month": "/माह",
+    "support_name": "Priority Support",
+    "support_desc": "मुफ़्त कोर या किसी भी सशुल्क मॉड्यूल पर तेज़, प्राथमिकता वाली प्रतिक्रिया — कोई सॉफ़्टवेयर अनलॉक नहीं होता।",
+    "support_cta": "Support खरीदें"
   },
   "products": {
     "label": "बिक्री योग्य उत्पाद",

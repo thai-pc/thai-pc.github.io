@@ -300,7 +300,10 @@
     "monthly": "Monatlich",
     "annual": "Jährlich",
     "save": "~17 % sparen",
-    "per_month": "/Monat"
+    "per_month": "/Monat",
+    "support_name": "Priority Support",
+    "support_desc": "Schnellere, priorisierte Antworten für den kostenlosen Kern oder jedes bereits gekaufte kostenpflichtige Modul — es wird keine Software freigeschaltet.",
+    "support_cta": "Support kaufen"
   },
   "products": {
     "label": "Verkäufliche Produkte",

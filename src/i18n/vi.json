@@ -272,7 +272,10 @@
     "monthly": "Theo tháng",
     "annual": "Theo năm",
     "save": "Tiết kiệm ~17%",
-    "per_month": "/tháng"
+    "per_month": "/tháng",
+    "support_name": "Priority Support",
+    "support_desc": "Phản hồi nhanh, ưu tiên trên lõi miễn phí hoặc bất kỳ module trả phí nào — không mở khóa phần mềm nào.",
+    "support_cta": "Mua Support"
   },
   "who": {
     "label": "Dành cho ai",

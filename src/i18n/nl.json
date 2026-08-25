@@ -300,7 +300,10 @@
     "monthly": "Maandelijks",
     "annual": "Jaarlijks",
     "save": "~17% besparing",
-    "per_month": "/maand"
+    "per_month": "/maand",
+    "support_name": "Priority Support",
+    "support_desc": "Snellere, prioritaire reacties op de gratis kern of elke betaalde module die je al hebt — er wordt geen software ontgrendeld.",
+    "support_cta": "Koop Support"
   },
   "products": {
     "label": "Verkoopbare producten",

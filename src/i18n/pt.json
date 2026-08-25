@@ -300,7 +300,10 @@
     "monthly": "Mensal",
     "annual": "Anual",
     "save": "~17% de economia",
-    "per_month": "/mês"
+    "per_month": "/mês",
+    "support_name": "Priority Support",
+    "support_desc": "Respostas mais rápidas e prioritárias no núcleo grátis ou em qualquer módulo pago — nenhum software é desbloqueado.",
+    "support_cta": "Comprar Support"
   },
   "products": {
     "label": "Produtos vendáveis",

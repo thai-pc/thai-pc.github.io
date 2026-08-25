@@ -300,7 +300,10 @@
     "monthly": "按月",
     "annual": "按年",
     "save": "省约17%",
-    "per_month": "/月"
+    "per_month": "/月",
+    "support_name": "Priority Support",
+    "support_desc": "在免费核心或任何付费模块上获得更快、优先的响应——不解锁任何软件。",
+    "support_cta": "购买 Support"
   },
   "products": {
     "label": "可售产品",

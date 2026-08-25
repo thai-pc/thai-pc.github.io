@@ -300,7 +300,10 @@
     "monthly": "Aylık",
     "annual": "Yıllık",
     "save": "~%17 tasarruf",
-    "per_month": "/ay"
+    "per_month": "/ay",
+    "support_name": "Priority Support",
+    "support_desc": "Ücretsiz çekirdekte veya sahip olduğunuz herhangi bir ücretli modülde daha hızlı, öncelikli yanıtlar — hiçbir yazılım açılmaz.",
+    "support_cta": "Support Satın Al"
   },
   "products": {
     "label": "Satılabilir ürünler",

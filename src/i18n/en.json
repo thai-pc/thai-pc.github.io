@@ -272,7 +272,10 @@
     "monthly": "Monthly",
     "annual": "Annual",
     "save": "Save ~17%",
-    "per_month": "/month"
+    "per_month": "/month",
+    "support_name": "Priority Support",
+    "support_desc": "Faster, prioritized responses on the free core or any paid module — no software unlocked.",
+    "support_cta": "Buy Support"
   },
   "who": {
     "label": "Who it's for",

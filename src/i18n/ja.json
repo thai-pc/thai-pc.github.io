@@ -300,7 +300,10 @@
     "monthly": "月額",
     "annual": "年額",
     "save": "約17%お得",
-    "per_month": "/月"
+    "per_month": "/月",
+    "support_name": "Priority Support",
+    "support_desc": "無料コアや購入済みの有料モジュールで、より速く優先的なサポートを——ソフトウェアの解除はなし。",
+    "support_cta": "Support を購入"
   },
   "products": {
     "label": "販売可能な製品",

@@ -300,7 +300,10 @@
     "monthly": "شهري",
     "annual": "سنوي",
     "save": "توفير ~17%",
-    "per_month": "/شهر"
+    "per_month": "/شهر",
+    "support_name": "Priority Support",
+    "support_desc": "ردود أسرع وذات أولوية على النواة المجانية أو أي وحدة مدفوعة — لا يُفتح أي برنامج.",
+    "support_cta": "اشترِ Support"
   },
   "products": {
     "label": "منتجات قابلة للبيع",

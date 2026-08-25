@@ -300,7 +300,10 @@
     "monthly": "월간",
     "annual": "연간",
     "save": "약 17% 절약",
-    "per_month": "/월"
+    "per_month": "/월",
+    "support_name": "Priority Support",
+    "support_desc": "무료 코어나 이미 사용 중인 유료 모듈에서 더 빠르고 우선적인 응답을 받으세요 — 소프트웨어는 잠금 해제되지 않습니다.",
+    "support_cta": "Support 구매"
   },
   "products": {
     "label": "판매 가능한 제품",
