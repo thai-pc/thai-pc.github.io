@@ -1,5 +1,5 @@
 ---
-import { langList, dirFor, type Lang } from '../i18n/utils';
+import { langList, dirFor, localePath, type Lang } from '../i18n/utils';
 import '../styles/global.css';
 
 interface Props {
@@ -30,7 +30,7 @@ const dir = dirFor(lang);
       <link
         rel="alternate"
         hreflang={l}
-        href={new URL(`/${l}/`, Astro.site)}
+        href={new URL(localePath(l), Astro.site)}
       />
     ))}
     <link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site)} />

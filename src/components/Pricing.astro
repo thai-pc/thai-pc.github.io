@@ -1,5 +1,5 @@
 ---
-import { useTranslations, type Lang } from '../i18n/utils';
+import { useTranslations, localePath, type Lang } from '../i18n/utils';
 
 interface Props {
   lang: Lang;
@@ -25,6 +25,7 @@ const CHECKOUT = {
   pro_yearly: import.meta.env.PUBLIC_POLAR_PRO_YEARLY ?? '',
   studio_monthly: import.meta.env.PUBLIC_POLAR_STUDIO_MONTHLY ?? '',
   studio_yearly: import.meta.env.PUBLIC_POLAR_STUDIO_YEARLY ?? '',
+  support_yearly: import.meta.env.PUBLIC_POLAR_SUPPORT_YEARLY ?? '',
 };
 const CONTACT = 'mailto:sales@fluxfiles.dev?subject=FluxFiles%20Enterprise';
 
@@ -37,7 +38,7 @@ const tiers = [
     desc: t('pricing.free_desc'),
     features: ['free_f1', 'free_f2', 'free_f3', 'free_f4'].map((k) => t(`pricing.${k}`)),
     cta: t('pricing.free_cta'),
-    hrefMonthly: `/${lang}/#install`, hrefYearly: `/${lang}/#install`,
+    hrefMonthly: localePath(lang, '#install'), hrefYearly: localePath(lang, '#install'),
     featured: false, style: 'plain',
   },
   {
@@ -165,6 +166,22 @@ const tiers = [
           </ul>
         </div>
       ))}
+    </div>
+
+    <!-- Support is a standalone service subscription, not a software tier — no
+         module is unlocked by buying it, so it sits apart from the 4-column grid
+         rather than as a 5th tier (that would blur the free→enterprise ladder). -->
+    <div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl bg-gray-50 dark:bg-gray-900/60 ring-1 ring-gray-200 dark:ring-gray-800 px-6 py-5">
+      <div>
+        <h3 class="text-base font-semibold text-gray-900 dark:text-white">{t('pricing.support_name')}</h3>
+        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">{t('pricing.support_desc')}</p>
+      </div>
+      {CHECKOUT.support_yearly ? (
+        <a href={CHECKOUT.support_yearly}
+          class="inline-flex shrink-0 items-center justify-center rounded-lg px-5 py-2.5 text-sm font-semibold ring-1 ring-gray-300 dark:ring-gray-700 text-gray-900 dark:text-white hover:bg-white dark:hover:bg-gray-800 transition-colors">{t('pricing.support_cta')}</a>
+      ) : (
+        <span class="inline-flex shrink-0 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800 px-5 py-2.5 text-sm font-semibold text-gray-400 cursor-not-allowed">{t('pricing.soon')}</span>
+      )}
     </div>
 
     <p class="mt-10 text-center text-sm text-gray-500 dark:text-gray-400">

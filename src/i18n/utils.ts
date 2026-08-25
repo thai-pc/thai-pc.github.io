@@ -44,6 +44,16 @@ export function dirFor(lang: Lang): 'rtl' | 'ltr' {
   return rtlLangs.includes(lang) ? 'rtl' : 'ltr';
 }
 
+/**
+ * The default lang has no `/en/` route (see getStaticPaths in pages/[lang]/index.astro) —
+ * it's served at `/`. Every internal link must route through this so it never points at
+ * the nonexistent/duplicate `/en/` and so hreflang/canonical stay consistent.
+ */
+export function localePath(lang: Lang, suffix: string = ''): string {
+  const base = lang === defaultLang ? '/' : `/${lang}/`;
+  return suffix ? base + suffix : base;
+}
+
 const translations: Record<Lang, Record<string, any>> = { en, vi, zh, ja, ko, fr, de, es, hi, pt, ru, ar, th, tr, it, nl };
 
 export function getLangFromUrl(url: URL): Lang {
