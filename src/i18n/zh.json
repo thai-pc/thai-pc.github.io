@@ -38,7 +38,20 @@
     "cap_intake": "上传门户 — 客户无需账号即可发送文件",
     "cap_links": "管理所有链接，随时撤销",
     "cap_editor": "就地编辑配置文件 — 无需 SSH 或 FTP",
-    "cap_media": "无需下载即可预览视频、音频和 PDF"
+    "cap_media": "无需下载即可预览视频、音频和 PDF",
+    "tab_free": "免费核心版",
+    "tab_pro": "专业版",
+    "tab_studio": "工作室版",
+    "tab_enterprise": "企业版",
+    "concept_label": "工作原理",
+    "cap_ai_tag": "免费 AI 自动打标——上传时生成可搜索标签",
+    "cap_versioning": "每次覆盖都会保留旧版本，随时可恢复",
+    "cap_webhooks": "文件事件触发已签名的 HTTP POST 到你的端点——Zapier、Make、n8n",
+    "cap_ai_vision": "使用你自己的视觉 API key 进行去背景、放大和智能裁剪",
+    "cap_ocr": "从图片和 PDF 中提取文字，直接在 API 响应中返回",
+    "cap_virus": "每个上传文件在存储前都会被扫描——ClamAV 或你自己的云端 key",
+    "cap_c2pa": "使用可验证的 Content Credentials 为文件签名（C2PA 溯源）",
+    "cap_backup": "单向同步到第二个磁盘——本地、S3、R2 或 SFTP"
   },
   "features": {
     "label": "功能",

@@ -38,7 +38,20 @@
     "cap_intake": "Uploadportalen — zonder account ontvangen",
     "cap_links": "Beheer elke link en trek hem wanneer je wilt in",
     "cap_editor": "Configuratiebestanden ter plekke bewerken — zonder SSH of FTP",
-    "cap_media": "Video-, audio- en PDF-voorbeeld zonder downloaden"
+    "cap_media": "Video-, audio- en PDF-voorbeeld zonder downloaden",
+    "tab_free": "Gratis core",
+    "tab_pro": "Pro",
+    "tab_studio": "Studio",
+    "tab_enterprise": "Enterprise",
+    "concept_label": "Hoe het werkt",
+    "cap_ai_tag": "Gratis AI-autotagging — doorzoekbare tags gegenereerd bij upload",
+    "cap_versioning": "Elke overschrijving bewaart een eerdere versie, altijd terug te zetten",
+    "cap_webhooks": "Ondertekende HTTP POST naar jouw endpoint bij bestandsgebeurtenissen — Zapier, Make, n8n",
+    "cap_ai_vision": "Achtergrond verwijderen, upscalen en slim bijsnijden met je eigen vision-sleutel",
+    "cap_ocr": "Haalt tekst uit afbeeldingen en pdf's, teruggegeven in het API-antwoord",
+    "cap_virus": "Elke upload wordt gescand voordat hij wordt opgeslagen — ClamAV of je eigen cloudsleutel",
+    "cap_c2pa": "Onderteken bestanden met verifieerbare Content Credentials (C2PA-herkomst)",
+    "cap_backup": "Eenrichtingssynchronisatie naar een tweede schijf — local, S3, R2 of SFTP"
   },
   "features": {
     "label": "Functies",

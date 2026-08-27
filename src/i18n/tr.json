@@ -38,7 +38,20 @@
     "cap_intake": "Yükleme portalları — hesap gerekmez",
     "cap_links": "Her bağlantıyı yönetin, dilediğinizde iptal edin",
     "cap_editor": "Yapılandırma dosyalarını yerinde düzenleyin — SSH veya FTP olmadan",
-    "cap_media": "İndirmeden video, ses ve PDF önizlemesi"
+    "cap_media": "İndirmeden video, ses ve PDF önizlemesi",
+    "tab_free": "Ücretsiz çekirdek",
+    "tab_pro": "Pro",
+    "tab_studio": "Studio",
+    "tab_enterprise": "Enterprise",
+    "concept_label": "Nasıl çalışır",
+    "cap_ai_tag": "Ücretsiz AI otomatik etiketleme — yüklemede aranabilir etiketler oluşturulur",
+    "cap_versioning": "Her üzerine yazma önceki bir sürümü korur, istediğiniz zaman geri yüklenebilir",
+    "cap_webhooks": "Dosya olaylarında uç noktanıza imzalı HTTP POST — Zapier, Make, n8n",
+    "cap_ai_vision": "Kendi vision anahtarınızla arka plan kaldırma, üst ölçekleme ve akıllı kırpma",
+    "cap_ocr": "Görsellerden ve PDF'lerden metin çıkarır, API yanıtında döner",
+    "cap_virus": "Her yükleme depolanmadan önce taranır — ClamAV veya kendi bulut anahtarınız",
+    "cap_c2pa": "Dosyaları doğrulanabilir İçerik Kimlik Bilgileriyle imzalayın (C2PA kökeni)",
+    "cap_backup": "İkinci bir diske tek yönlü senkronizasyon — local, S3, R2 veya SFTP"
   },
   "features": {
     "label": "Özellikler",

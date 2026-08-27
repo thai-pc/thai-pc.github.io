@@ -38,7 +38,20 @@
     "cap_intake": "Cổng nhận tệp — khách gửi file, không cần tài khoản",
     "cap_links": "Quản lý mọi liên kết, thu hồi bất kỳ lúc nào",
     "cap_editor": "Sửa file cấu hình ngay tại chỗ — không cần SSH hay FTP",
-    "cap_media": "Xem trước video, audio và PDF mà không cần tải về"
+    "cap_media": "Xem trước video, audio và PDF mà không cần tải về",
+    "tab_free": "Miễn phí (core)",
+    "tab_pro": "Pro",
+    "tab_studio": "Studio",
+    "tab_enterprise": "Enterprise",
+    "concept_label": "Cách hoạt động",
+    "cap_ai_tag": "Tự động gắn thẻ AI miễn phí — tạo tag có thể tìm kiếm khi tải lên",
+    "cap_versioning": "Mỗi lần ghi đè đều giữ phiên bản cũ, khôi phục bất cứ lúc nào",
+    "cap_webhooks": "Gửi HTTP POST đã ký đến endpoint của bạn khi có sự kiện tệp — Zapier, Make, n8n",
+    "cap_ai_vision": "Xoá phông, phóng to và crop thông minh bằng key AI thị giác của riêng bạn",
+    "cap_ocr": "Trích xuất văn bản từ ảnh và PDF, trả về ngay trong phản hồi API",
+    "cap_virus": "Mọi tệp tải lên đều được quét trước khi lưu trữ — ClamAV hoặc key cloud của riêng bạn",
+    "cap_c2pa": "Ký tệp với Content Credentials có thể xác minh (nguồn gốc C2PA)",
+    "cap_backup": "Đồng bộ một chiều sang ổ đĩa thứ hai — local, S3, R2 hoặc SFTP"
   },
   "features": {
     "label": "Tính năng",

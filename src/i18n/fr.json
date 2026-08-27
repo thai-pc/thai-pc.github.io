@@ -38,7 +38,20 @@
     "cap_intake": "Portails de dépôt — sans compte",
     "cap_links": "Gérez chaque lien, révoquez-en un à tout moment",
     "cap_editor": "Modifiez les fichiers de config sur place — sans SSH ni FTP",
-    "cap_media": "Aperçu vidéo, audio et PDF sans téléchargement"
+    "cap_media": "Aperçu vidéo, audio et PDF sans téléchargement",
+    "tab_free": "Core gratuit",
+    "tab_pro": "Pro",
+    "tab_studio": "Studio",
+    "tab_enterprise": "Enterprise",
+    "concept_label": "Comment ça marche",
+    "cap_ai_tag": "Auto-tagging IA gratuit — tags indexables générés à l'upload",
+    "cap_versioning": "Chaque écrasement conserve une version antérieure, restaurable à tout moment",
+    "cap_webhooks": "POST HTTP signé vers votre endpoint à chaque événement fichier — Zapier, Make, n8n",
+    "cap_ai_vision": "Suppression d'arrière-plan, upscale et recadrage intelligent avec votre propre clé vision",
+    "cap_ocr": "Extraction de texte depuis images et PDF, renvoyée directement dans la réponse API",
+    "cap_virus": "Chaque upload est scanné avant stockage — ClamAV ou votre propre clé cloud",
+    "cap_c2pa": "Signez vos fichiers avec des Content Credentials vérifiables (provenance C2PA)",
+    "cap_backup": "Synchronisation à sens unique vers un second disque — local, S3, R2 ou SFTP"
   },
   "features": {
     "label": "Fonctionnalités",

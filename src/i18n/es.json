@@ -38,7 +38,20 @@
     "cap_intake": "Portales de subida — sin cuenta",
     "cap_links": "Gestiona cada enlace y revócalo cuando quieras",
     "cap_editor": "Edita archivos de configuración in situ — sin SSH ni FTP",
-    "cap_media": "Vista previa de vídeo, audio y PDF sin descargar"
+    "cap_media": "Vista previa de vídeo, audio y PDF sin descargar",
+    "tab_free": "Core gratuito",
+    "tab_pro": "Pro",
+    "tab_studio": "Studio",
+    "tab_enterprise": "Enterprise",
+    "concept_label": "Cómo funciona",
+    "cap_ai_tag": "Etiquetado automático por IA gratis — tags buscables generados al subir",
+    "cap_versioning": "Cada sobrescritura conserva una versión anterior, restaurable en cualquier momento",
+    "cap_webhooks": "POST HTTP firmado a tu endpoint en cada evento de archivo — Zapier, Make, n8n",
+    "cap_ai_vision": "Elimina fondos, escala y recorta de forma inteligente con tu propia clave de visión",
+    "cap_ocr": "Extrae texto de imágenes y PDF, devuelto directamente en la respuesta de la API",
+    "cap_virus": "Cada subida se escanea antes de almacenarse — ClamAV o tu propia clave en la nube",
+    "cap_c2pa": "Firma archivos con Content Credentials verificables (procedencia C2PA)",
+    "cap_backup": "Sincronización unidireccional a un segundo disco — local, S3, R2 o SFTP"
   },
   "features": {
     "label": "Características",

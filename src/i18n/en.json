@@ -38,7 +38,20 @@
     "cap_intake": "Upload portals — clients send files, no account",
     "cap_links": "Manage every link, revoke any of them",
     "cap_editor": "Edit config files in place — no SSH, no FTP client",
-    "cap_media": "Video, audio and PDF preview without downloading"
+    "cap_media": "Video, audio and PDF preview without downloading",
+    "tab_free": "Free core",
+    "tab_pro": "Pro",
+    "tab_studio": "Studio",
+    "tab_enterprise": "Enterprise",
+    "concept_label": "How it works",
+    "cap_ai_tag": "Free AI auto-tag — searchable tags generated on upload",
+    "cap_versioning": "Every overwrite keeps a prior version, restorable anytime",
+    "cap_webhooks": "Signed HTTP POST to your endpoint on file events — Zapier, Make, n8n",
+    "cap_ai_vision": "Background removal, upscale and smart-crop with your own vision key",
+    "cap_ocr": "Extract text from images and PDFs, returned in the API response",
+    "cap_virus": "Every upload scanned before it's stored — ClamAV or your own cloud key",
+    "cap_c2pa": "Sign files with verifiable Content Credentials (C2PA provenance)",
+    "cap_backup": "One-way sync to a second disk — local, S3, R2 or SFTP"
   },
   "features": {
     "label": "Features",
