@@ -153,6 +153,61 @@ const tabs = [
 
 <script is:inline>
   document.addEventListener('DOMContentLoaded', function () {
+    var AUTOPLAY_MS = 5000;
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // One modal is shared by every carousel in a section (it's position:fixed,
+    // a sibling of all the carousel roots). Wire its nav/close/keyboard handling
+    // exactly ONCE here and track which carousel currently "owns" it — otherwise
+    // every carousel's own listener would fire on the same keypress/click and
+    // fight over what the modal shows next.
+    document.querySelectorAll('[data-carousel-modal]').forEach(function (modal) {
+      var modalImg = modal.querySelector('[data-carousel-modal-image]');
+      var modalClose = modal.querySelector('[data-carousel-modal-close]');
+      var modalBackdrop = modal.querySelector('[data-carousel-modal-backdrop]');
+      var modalPrevBtn = modal.querySelector('[data-carousel-modal-prev]');
+      var modalNextBtn = modal.querySelector('[data-carousel-modal-next]');
+      var modalTitle = modal.querySelector('[data-carousel-modal-title]');
+      var previouslyFocused = null;
+      var active = null;
+
+      function setModalImage() {
+        if (!modalImg || !active) return;
+        var img = active.images[active.getIndex()];
+        if (!img) return;
+        modalImg.setAttribute('src', img.getAttribute('src') || '');
+        modalImg.setAttribute('alt', img.getAttribute('alt') || 'Screenshot');
+        if (modalTitle) modalTitle.textContent = img.getAttribute('data-caption') || '';
+      }
+      function open(controller) {
+        active = controller;
+        previouslyFocused = document.activeElement;
+        setModalImage();
+        modal.classList.remove('hidden');
+        (modalClose || modal).focus && (modalClose || modal).focus();
+      }
+      function close() {
+        modal.classList.add('hidden');
+        active = null;
+        if (previouslyFocused && previouslyFocused.focus) previouslyFocused.focus();
+      }
+      function prev() { if (!active) return; active.goTo(active.getIndex() - 1); setModalImage(); }
+      function next() { if (!active) return; active.goTo(active.getIndex() + 1); setModalImage(); }
+
+      modalClose && modalClose.addEventListener('click', close);
+      modalBackdrop && modalBackdrop.addEventListener('click', close);
+      modalPrevBtn && modalPrevBtn.addEventListener('click', prev);
+      modalNextBtn && modalNextBtn.addEventListener('click', next);
+      document.addEventListener('keydown', function (e) {
+        if (modal.classList.contains('hidden')) return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowLeft') prev();
+        if (e.key === 'ArrowRight') next();
+      });
+
+      modal._open = open;
+    });
+
     document.querySelectorAll('[data-screenshot-carousel]').forEach(function (root) {
       var track = root.querySelector('[data-carousel-track]');
       var slides = root.querySelectorAll('[data-carousel-slide]');
@@ -163,17 +218,9 @@ const tabs = [
 
       var index = 0;
       var images = root.querySelectorAll('[data-carousel-image]');
-      // The zoom modal is a sibling of the carousel root (it's position:fixed),
-      // so scope lookups to the section, not to `root`.
       var scope = root.closest('section') || document;
       var modal = scope.querySelector('[data-carousel-modal]');
-      var modalImg = modal && modal.querySelector('[data-carousel-modal-image]');
-      var modalClose = modal && modal.querySelector('[data-carousel-modal-close]');
-      var modalBackdrop = modal && modal.querySelector('[data-carousel-modal-backdrop]');
-      var modalPrev = modal && modal.querySelector('[data-carousel-modal-prev]');
-      var modalNext = modal && modal.querySelector('[data-carousel-modal-next]');
-      var modalTitle = modal && modal.querySelector('[data-carousel-modal-title]');
-      var previouslyFocused = null;
+      var autoplayTimer = null;
 
       function clamp(n) {
         return Math.max(0, Math.min(slides.length - 1, n));
@@ -189,60 +236,60 @@ const tabs = [
         index = clamp(n);
         render();
       }
-      function setModalImage() {
-        if (!modalImg) return;
-        var active = images[index];
-        if (!active) return;
-        modalImg.setAttribute('src', active.getAttribute('src') || '');
-        modalImg.setAttribute('alt', active.getAttribute('alt') || 'Screenshot');
-        if (modalTitle) modalTitle.textContent = active.getAttribute('data-caption') || '';
+      var controller = {
+        images: images,
+        getIndex: function () { return index; },
+        goTo: goTo,
+      };
+
+      function isVisible() {
+        return root.offsetParent !== null;
       }
-      function openModal() {
-        if (!modal) return;
-        previouslyFocused = document.activeElement;
-        setModalImage();
-        modal.classList.remove('hidden');
-        (modalClose || modal).focus && (modalClose || modal).focus();
+      function stopAutoplay() {
+        if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; }
       }
-      function closeModal() {
-        if (!modal) return;
-        modal.classList.add('hidden');
-        if (previouslyFocused && previouslyFocused.focus) previouslyFocused.focus();
+      function startAutoplay() {
+        if (reduceMotion || slides.length < 2) return;
+        stopAutoplay();
+        autoplayTimer = setInterval(function () {
+          if (!isVisible() || document.hidden) return;
+          if (modal && !modal.classList.contains('hidden')) return;
+          goTo(index >= slides.length - 1 ? 0 : index + 1);
+        }, AUTOPLAY_MS);
+      }
+      function userNav(n) {
+        goTo(n);
+        startAutoplay();
       }
 
-      btnPrev && btnPrev.addEventListener('click', function () { goTo(index - 1); });
-      btnNext && btnNext.addEventListener('click', function () { goTo(index + 1); });
+      btnPrev && btnPrev.addEventListener('click', function () { userNav(index - 1); });
+      btnNext && btnNext.addEventListener('click', function () { userNav(index + 1); });
       dots.forEach(function (d) {
         d.addEventListener('click', function () {
           var raw = d.getAttribute('data-carousel-dot');
-          goTo(raw ? parseInt(raw, 10) : 0);
+          userNav(raw ? parseInt(raw, 10) : 0);
         });
       });
       images.forEach(function (img) {
         img.addEventListener('click', function () {
           var raw = img.getAttribute('data-carousel-image');
           var n = raw ? parseInt(raw, 10) : 0;
-          goTo(n);
-          openModal();
+          userNav(n);
+          if (modal && modal._open) modal._open(controller);
         });
       });
-      modalClose && modalClose.addEventListener('click', closeModal);
-      modalBackdrop && modalBackdrop.addEventListener('click', closeModal);
-      modalPrev && modalPrev.addEventListener('click', function () { goTo(index - 1); setModalImage(); });
-      modalNext && modalNext.addEventListener('click', function () { goTo(index + 1); setModalImage(); });
 
       root.addEventListener('keydown', function (e) {
-        if (e.key === 'ArrowLeft') goTo(index - 1);
-        if (e.key === 'ArrowRight') goTo(index + 1);
+        if (e.key === 'ArrowLeft') userNav(index - 1);
+        if (e.key === 'ArrowRight') userNav(index + 1);
       });
-      document.addEventListener('keydown', function (e) {
-        if (!modal || modal.classList.contains('hidden')) return;
-        if (e.key === 'Escape') closeModal();
-        if (e.key === 'ArrowLeft') { goTo(index - 1); setModalImage(); }
-        if (e.key === 'ArrowRight') { goTo(index + 1); setModalImage(); }
-      });
+      root.addEventListener('mouseenter', stopAutoplay);
+      root.addEventListener('mouseleave', startAutoplay);
+      root.addEventListener('focusin', stopAutoplay);
+      root.addEventListener('focusout', startAutoplay);
 
       render();
+      startAutoplay();
     });
   });
 </script>
