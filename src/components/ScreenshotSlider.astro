@@ -191,8 +191,8 @@ const tabs = [
         active = null;
         if (previouslyFocused && previouslyFocused.focus) previouslyFocused.focus();
       }
-      function prev() { if (!active) return; active.goTo(active.getIndex() - 1); setModalImage(); }
-      function next() { if (!active) return; active.goTo(active.getIndex() + 1); setModalImage(); }
+      function prev() { if (!active) return; active.step(-1); setModalImage(); }
+      function next() { if (!active) return; active.step(1); setModalImage(); }
 
       modalClose && modalClose.addEventListener('click', close);
       modalBackdrop && modalBackdrop.addEventListener('click', close);
@@ -236,10 +236,15 @@ const tabs = [
         index = clamp(n);
         render();
       }
+      function step(delta) {
+        var len = slides.length;
+        goTo(((index + delta) % len + len) % len);
+      }
       var controller = {
         images: images,
         getIndex: function () { return index; },
         goTo: goTo,
+        step: step,
       };
 
       function isVisible() {
@@ -254,16 +259,20 @@ const tabs = [
         autoplayTimer = setInterval(function () {
           if (!isVisible() || document.hidden) return;
           if (modal && !modal.classList.contains('hidden')) return;
-          goTo(index >= slides.length - 1 ? 0 : index + 1);
+          step(1);
         }, AUTOPLAY_MS);
       }
       function userNav(n) {
         goTo(n);
         startAutoplay();
       }
+      function userStep(delta) {
+        step(delta);
+        startAutoplay();
+      }
 
-      btnPrev && btnPrev.addEventListener('click', function () { userNav(index - 1); });
-      btnNext && btnNext.addEventListener('click', function () { userNav(index + 1); });
+      btnPrev && btnPrev.addEventListener('click', function () { userStep(-1); });
+      btnNext && btnNext.addEventListener('click', function () { userStep(1); });
       dots.forEach(function (d) {
         d.addEventListener('click', function () {
           var raw = d.getAttribute('data-carousel-dot');
@@ -280,8 +289,8 @@ const tabs = [
       });
 
       root.addEventListener('keydown', function (e) {
-        if (e.key === 'ArrowLeft') userNav(index - 1);
-        if (e.key === 'ArrowRight') userNav(index + 1);
+        if (e.key === 'ArrowLeft') userStep(-1);
+        if (e.key === 'ArrowRight') userStep(1);
       });
       root.addEventListener('mouseenter', stopAutoplay);
       root.addEventListener('mouseleave', startAutoplay);
