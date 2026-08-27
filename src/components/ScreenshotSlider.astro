@@ -1,5 +1,7 @@
 ---
 import { useTranslations, type Lang } from '../i18n/utils';
+import ScreenshotCarousel from './ScreenshotCarousel.astro';
+import DiagramCarousel from './DiagramCarousel.astro';
 
 interface Props {
   lang: Lang;
@@ -8,29 +10,49 @@ interface Props {
 const { lang } = Astro.props;
 const t = useTranslations(lang);
 
-const screenshots = [
-  // The two PAID products led the pricing table and had no image at all — a buyer was
-  // asked for $79 without being shown what they were buying. They go first.
-  { src: '/demo/fluxfiles-demo-share-create.png', alt: 'Creating a FluxFiles share link with an expiry, a password and a download limit', caption: t('demo.cap_share') },
-  { src: '/demo/fluxfiles-demo-intake-create.png', alt: 'Creating a FluxFiles upload portal with a file limit, size cap and allowed file types', caption: t('demo.cap_intake') },
-  { src: '/demo/fluxfiles-demo-links-panel.png', alt: 'FluxFiles links panel listing shared links with views, downloads and revoke', caption: t('demo.cap_links') },
+const freeScreenshots = [
   { src: '/demo/fluxfiles-demo-desktop.png', alt: 'FluxFiles desktop file manager with image thumbnails', caption: t('demo.cap_desktop') },
   { src: '/demo/fluxfiles-demo-s3.png', alt: 'FluxFiles browsing an S3 / R2 bucket with the local, S3 and SFTP disk switcher', caption: t('demo.cap_s3') },
-  // The S3 shot alone can't back up "one UI" — it's the same chrome on a remote VPS
-  // over SFTP that makes the claim visible.
   { src: '/demo/fluxfiles-demo-sftp.png', alt: 'FluxFiles managing a remote VPS deploy directory over SFTP, same UI as the S3 bucket', caption: t('demo.cap_sftp') },
   { src: '/demo/fluxfiles-demo-editor.png', alt: 'Editing an nginx config file inside FluxFiles with syntax highlighting', caption: t('demo.cap_editor') },
   { src: '/demo/fluxfiles-demo-media-preview.png', alt: 'FluxFiles previewing a video inline in the detail panel', caption: t('demo.cap_media') },
   { src: '/demo/fluxfiles-demo-doctor.png', alt: 'FluxFiles Bucket Doctor health checks for an S3 bucket with CORS and IAM remediation', caption: t('demo.cap_doctor') },
   { src: '/demo/fluxfiles-demo-activity.png', alt: 'FluxFiles activity log of file operations', caption: t('demo.cap_activity') },
   { src: '/demo/fluxfiles-demo-trash.png', alt: 'FluxFiles trash with restore and delete forever', caption: t('demo.cap_trash') },
+  { src: '/demo/fluxfiles-demo-ai-tag.png', alt: 'FluxFiles free AI auto-tag panel generating searchable tags for an image', caption: t('demo.cap_ai_tag') },
   { src: '/demo/fluxfiles-demo-mobile.png', alt: 'FluxFiles responsive mobile file manager', caption: t('demo.cap_mobile') },
+];
+
+const proScreenshots = [
+  { src: '/demo/fluxfiles-demo-share-create.png', alt: 'Creating a FluxFiles share link with an expiry, a password and a download limit', caption: t('demo.cap_share') },
+  { src: '/demo/fluxfiles-demo-intake-create.png', alt: 'Creating a FluxFiles upload portal with a file limit, size cap and allowed file types', caption: t('demo.cap_intake') },
+  { src: '/demo/fluxfiles-demo-links-panel.png', alt: 'FluxFiles links panel listing shared links with views, downloads and revoke', caption: t('demo.cap_links') },
+];
+
+const studioDiagrams = [
+  { key: 'versioning', caption: t('demo.cap_versioning') },
+  { key: 'webhooks', caption: t('demo.cap_webhooks'), json: '{ "event": "upload",\n  "file": "invoice.pdf" }' },
+  { key: 'ai-vision', caption: t('demo.cap_ai_vision') },
+  { key: 'ocr', caption: t('demo.cap_ocr') },
+];
+
+const enterpriseDiagrams = [
+  { key: 'virus', caption: t('demo.cap_virus') },
+  { key: 'c2pa', caption: t('demo.cap_c2pa') },
+  { key: 'backup', caption: t('demo.cap_backup') },
+];
+
+const tabs = [
+  { key: 'free', label: t('demo.tab_free') },
+  { key: 'pro', label: t('demo.tab_pro') },
+  { key: 'studio', label: t('demo.tab_studio') },
+  { key: 'enterprise', label: t('demo.tab_enterprise') },
 ];
 ---
 
-<section id="screenshots" class="py-16 sm:py-20" aria-label="Product screenshots">
+<section id="screenshots" class="py-16 sm:py-20" aria-label="Product screenshots" x-data="{ tab: 'free' }">
   <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-10">
+    <div class="text-center max-w-2xl mx-auto mb-8">
       <div class="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent-light dark:bg-accent/10 px-3 py-1 text-xs font-medium text-accent dark:text-accent-dark mb-4">
         {t('demo.label')}
       </div>
@@ -39,67 +61,30 @@ const screenshots = [
       </h2>
     </div>
 
-    <div
-      class="rounded-xl border border-[var(--border-default)] bg-[var(--bg-elevated)] overflow-hidden shadow-lg shadow-black/5 dark:shadow-black/30"
-      data-screenshot-carousel
-    >
-      <div class="relative">
-        <div class="flex transition-transform duration-300 ease-out will-change-transform" data-carousel-track>
-          {screenshots.map((img, idx) => (
-            <figure class="w-full shrink-0" data-carousel-slide>
-              <div class="relative w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9] bg-[var(--bg-page)]">
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  width="1440"
-                  height="900"
-                  loading={idx === 0 ? 'eager' : 'lazy'}
-                  fetchpriority={idx === 0 ? 'high' : 'auto'}
-                  decoding="async"
-                  class="h-full w-full object-contain cursor-zoom-in"
-                  data-carousel-image={idx}
-                  data-caption={img.caption}
-                />
-                <figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-[var(--border-default)] bg-[var(--bg-page)]/90 px-3 py-1 text-xs font-medium text-[var(--text-secondary)] backdrop-blur">
-                  {img.caption}
-                </figcaption>
-              </div>
-            </figure>
-          ))}
-        </div>
-
-        <button
-          type="button"
-          class="absolute left-3 top-1/2 -translate-y-1/2 inline-flex items-center justify-center w-9 h-9 rounded-full border border-[var(--border-default)] bg-[var(--bg-page)]/90 text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-page)] transition-colors backdrop-blur"
-          aria-label="Previous screenshot"
-          data-carousel-prev
-        >
-          <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M12.707 15.707a1 1 0 01-1.414 0l-5-5a1 1 0 010-1.414l5-5a1 1 0 111.414 1.414L8.414 10l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
-          </svg>
-        </button>
-        <button
-          type="button"
-          class="absolute right-3 top-1/2 -translate-y-1/2 inline-flex items-center justify-center w-9 h-9 rounded-full border border-[var(--border-default)] bg-[var(--bg-page)]/90 text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-page)] transition-colors backdrop-blur"
-          aria-label="Next screenshot"
-          data-carousel-next
-        >
-          <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M7.293 4.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 11-1.414-1.414L11.586 10 7.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-        </button>
-      </div>
-
-      <div class="flex items-center justify-center gap-2 py-3 border-t border-[var(--border-default)] bg-[var(--bg-elevated)]" data-carousel-dots>
-        {screenshots.map((_, idx) => (
+    <div class="flex justify-center mb-8">
+      <div class="inline-flex flex-wrap items-center justify-center gap-1 rounded-full bg-gray-100 dark:bg-gray-800 p-1 text-sm font-medium">
+        {tabs.map((tb) => (
           <button
             type="button"
-            class="w-2.5 h-2.5 rounded-full border border-[var(--border-default)] bg-[var(--bg-page)] hover:bg-[var(--bg-subtle)] transition-colors"
-            aria-label={`Go to screenshot ${idx + 1}`}
-            data-carousel-dot={idx}
-          />
+            @click={`tab = '${tb.key}'`}
+            x-bind:class={`tab === '${tb.key}' ? 'bg-white dark:bg-gray-900 text-gray-900 dark:text-white shadow' : 'text-gray-500 dark:text-gray-400'`}
+            class="rounded-full px-4 py-1.5 transition-colors"
+          >{tb.label}</button>
         ))}
       </div>
+    </div>
+
+    <div x-show="tab === 'free'" x-cloak>
+      <ScreenshotCarousel items={freeScreenshots} />
+    </div>
+    <div x-show="tab === 'pro'" x-cloak>
+      <ScreenshotCarousel items={proScreenshots} />
+    </div>
+    <div x-show="tab === 'studio'" x-cloak>
+      <DiagramCarousel items={studioDiagrams} lang={lang} />
+    </div>
+    <div x-show="tab === 'enterprise'" x-cloak>
+      <DiagramCarousel items={enterpriseDiagrams} lang={lang} />
     </div>
 
     <div
@@ -115,7 +100,7 @@ const screenshots = [
         <div class="rounded-xl border border-[var(--border-default)] bg-[var(--bg-page)] shadow-2xl overflow-hidden">
           <div class="flex items-center justify-between px-4 py-3 border-b border-[var(--border-default)] bg-[var(--bg-elevated)]">
             <div class="text-sm font-medium" style="color: var(--text-secondary);" data-carousel-modal-title>
-              {screenshots[0].caption}
+              {freeScreenshots[0].caption}
             </div>
             <button
               type="button"
@@ -132,8 +117,8 @@ const screenshots = [
           <div class="relative bg-[var(--bg-page)]">
             <div class="w-full aspect-[4/3] sm:aspect-[16/9] bg-[var(--bg-page)]">
               <img
-                src={screenshots[0].src}
-                alt={screenshots[0].alt}
+                src={freeScreenshots[0].src}
+                alt={freeScreenshots[0].alt}
                 class="h-full w-full object-contain"
                 data-carousel-modal-image
               />
@@ -261,4 +246,3 @@ const screenshots = [
     });
   });
 </script>
-

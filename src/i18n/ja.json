@@ -38,7 +38,20 @@
     "cap_intake": "アップロードポータル — アカウント不要で受け取り",
     "cap_links": "すべてのリンクを管理し、いつでも失効",
     "cap_editor": "設定ファイルをその場で編集 — SSH も FTP も不要",
-    "cap_media": "ダウンロードせずに動画・音声・PDF をプレビュー"
+    "cap_media": "ダウンロードせずに動画・音声・PDF をプレビュー",
+    "tab_free": "無料コア版",
+    "tab_pro": "Pro",
+    "tab_studio": "Studio",
+    "tab_enterprise": "Enterprise",
+    "concept_label": "仕組み",
+    "cap_ai_tag": "無料AI自動タグ付け — アップロード時に検索可能なタグを生成",
+    "cap_versioning": "上書きのたびに旧バージョンを保持、いつでも復元可能",
+    "cap_webhooks": "ファイルイベント発生時に署名付きHTTP POSTを送信 — Zapier、Make、n8n",
+    "cap_ai_vision": "自分のビジョンAPIキーで背景除去・アップスケール・スマートクロップ",
+    "cap_ocr": "画像やPDFからテキストを抽出し、API応答でそのまま返却",
+    "cap_virus": "アップロードされたファイルは保存前にすべてスキャン — ClamAVまたは自分のクラウドキー",
+    "cap_c2pa": "検証可能なContent Credentialsでファイルに署名（C2PA来歴）",
+    "cap_backup": "セカンドディスクへの一方向同期 — ローカル、S3、R2、SFTP"
   },
   "features": {
     "label": "機能",

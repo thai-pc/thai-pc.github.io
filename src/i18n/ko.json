@@ -38,7 +38,20 @@
     "cap_intake": "업로드 포털 — 계정 없이 파일 받기",
     "cap_links": "모든 링크 관리 및 즉시 해지",
     "cap_editor": "설정 파일을 바로 편집 — SSH도 FTP도 불필요",
-    "cap_media": "내려받지 않고 동영상·오디오·PDF 미리보기"
+    "cap_media": "내려받지 않고 동영상·오디오·PDF 미리보기",
+    "tab_free": "무료 코어",
+    "tab_pro": "Pro",
+    "tab_studio": "Studio",
+    "tab_enterprise": "Enterprise",
+    "concept_label": "작동 방식",
+    "cap_ai_tag": "무료 AI 자동 태그 — 업로드 시 검색 가능한 태그 생성",
+    "cap_versioning": "덮어쓸 때마다 이전 버전을 보관, 언제든 복원 가능",
+    "cap_webhooks": "파일 이벤트 발생 시 서명된 HTTP POST를 엔드포인트로 전송 — Zapier, Make, n8n",
+    "cap_ai_vision": "본인의 비전 API 키로 배경 제거, 업스케일, 스마트 크롭",
+    "cap_ocr": "이미지와 PDF에서 텍스트를 추출해 API 응답으로 반환",
+    "cap_virus": "업로드되는 모든 파일을 저장 전에 검사 — ClamAV 또는 본인의 클라우드 키",
+    "cap_c2pa": "검증 가능한 Content Credentials로 파일 서명 (C2PA 출처 증명)",
+    "cap_backup": "두 번째 디스크로 단방향 동기화 — 로컬, S3, R2 또는 SFTP"
   },
   "features": {
     "label": "기능",
