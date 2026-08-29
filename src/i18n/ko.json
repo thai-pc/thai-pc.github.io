@@ -51,7 +51,9 @@
     "cap_ocr": "이미지와 PDF에서 텍스트를 추출해 API 응답으로 반환",
     "cap_virus": "업로드되는 모든 파일을 저장 전에 검사 — ClamAV 또는 본인의 클라우드 키",
     "cap_c2pa": "검증 가능한 Content Credentials로 파일 서명 (C2PA 출처 증명)",
-    "cap_backup": "두 번째 디스크로 단방향 동기화 — 로컬, S3, R2 또는 SFTP"
+    "cap_backup": "두 번째 디스크로 단방향 동기화 — 로컬, S3, R2 또는 SFTP",
+    "cap_audit_export": "전체 감사 로그를 NDJSON 또는 CSV로 내보내기 — 보관된 로그도 포함",
+    "cap_sso": "본인의 OIDC ID 공급자로 로그인 — 그룹이 권한에 자동 매핑"
   },
   "features": {
     "label": "기능",
@@ -336,10 +338,12 @@
     "intake_f3": "익명 업로드, 소유자 범위",
     "compliance_name": "Compliance bundle",
     "compliance_tag": "Enterprise",
-    "compliance_desc": "바이러스 검사, C2PA 콘텐츠 출처, 감사 보존——규제 및 엔터프라이즈 배포용.",
+    "compliance_desc": "바이러스 검사, C2PA 콘텐츠 출처, 감사 로그 보존 및 내보내기, SSO 로그인——규제 및 엔터프라이즈 배포용.",
     "compliance_f1": "업로드마다 바이러스 검사",
     "compliance_f2": "C2PA 콘텐츠 출처",
     "compliance_f3": "감사 로그 보존",
+    "compliance_f4": "감사 로그 내보내기 (NDJSON/CSV)",
+    "compliance_f5": "SSO 로그인 (OIDC)",
     "cta": "요금 보기"
   },
   "wp": {

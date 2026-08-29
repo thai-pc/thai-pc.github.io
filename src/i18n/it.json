@@ -51,7 +51,9 @@
     "cap_ocr": "Estrae testo da immagini e PDF, restituito direttamente nella risposta API",
     "cap_virus": "Ogni upload viene scansionato prima di essere salvato — ClamAV o la tua chiave cloud",
     "cap_c2pa": "Firma i file con Content Credentials verificabili (provenienza C2PA)",
-    "cap_backup": "Sincronizzazione unidirezionale verso un secondo disco — locale, S3, R2 o SFTP"
+    "cap_backup": "Sincronizzazione unidirezionale verso un secondo disco — locale, S3, R2 o SFTP",
+    "cap_audit_export": "Esporta il registro di audit completo in NDJSON o CSV, incluse le voci archiviate",
+    "cap_sso": "Accedi con il tuo provider di identità OIDC — i gruppi vengono mappati sui permessi"
   },
   "features": {
     "label": "Funzionalità",
@@ -336,10 +338,12 @@
     "intake_f3": "Caricamento anonimo, con ambito proprietario",
     "compliance_name": "Compliance bundle",
     "compliance_tag": "Enterprise",
-    "compliance_desc": "Antivirus, provenienza contenuti C2PA e conservazione audit — per deployment regolamentati ed enterprise.",
+    "compliance_desc": "Antivirus, provenienza contenuti C2PA, conservazione ed esportazione audit, e login SSO — per deployment regolamentati ed enterprise.",
     "compliance_f1": "Antivirus a ogni caricamento",
     "compliance_f2": "Provenienza contenuti C2PA",
     "compliance_f3": "Conservazione dei log di audit",
+    "compliance_f4": "Esportazione log di audit (NDJSON/CSV)",
+    "compliance_f5": "Login SSO (OIDC)",
     "cta": "Vedi i prezzi"
   },
   "wp": {

@@ -51,7 +51,9 @@
     "cap_ocr": "Trích xuất văn bản từ ảnh và PDF, trả về ngay trong phản hồi API",
     "cap_virus": "Mọi tệp tải lên đều được quét trước khi lưu trữ — ClamAV hoặc key cloud của riêng bạn",
     "cap_c2pa": "Ký tệp với Content Credentials có thể xác minh (nguồn gốc C2PA)",
-    "cap_backup": "Đồng bộ một chiều sang ổ đĩa thứ hai — local, S3, R2 hoặc SFTP"
+    "cap_backup": "Đồng bộ một chiều sang ổ đĩa thứ hai — local, S3, R2 hoặc SFTP",
+    "cap_audit_export": "Xuất toàn bộ audit log dạng NDJSON hoặc CSV, bao gồm cả log đã lưu trữ",
+    "cap_sso": "Đăng nhập bằng nhà cung cấp OIDC của riêng bạn — nhóm tự động ánh xạ sang quyền"
   },
   "features": {
     "label": "Tính năng",
@@ -336,10 +338,12 @@
     "intake_f3": "Tải ẩn danh, giới hạn theo chủ",
     "compliance_name": "Bộ tuân thủ",
     "compliance_tag": "Enterprise",
-    "compliance_desc": "Quét virus, C2PA provenance và lưu audit — cho triển khai enterprise/quản lý chặt.",
+    "compliance_desc": "Quét virus, C2PA provenance, lưu trữ và xuất audit log, và đăng nhập SSO — cho triển khai enterprise/quản lý chặt.",
     "compliance_f1": "Quét virus trên mọi lượt tải lên",
     "compliance_f2": "Xác thực nguồn gốc nội dung C2PA",
     "compliance_f3": "Lưu trữ audit log",
+    "compliance_f4": "Xuất audit log (NDJSON/CSV)",
+    "compliance_f5": "Đăng nhập SSO (OIDC)",
     "cta": "Xem bảng giá"
   },
   "wp": {

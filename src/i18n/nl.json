@@ -51,7 +51,9 @@
     "cap_ocr": "Haalt tekst uit afbeeldingen en pdf's, teruggegeven in het API-antwoord",
     "cap_virus": "Elke upload wordt gescand voordat hij wordt opgeslagen — ClamAV of je eigen cloudsleutel",
     "cap_c2pa": "Onderteken bestanden met verifieerbare Content Credentials (C2PA-herkomst)",
-    "cap_backup": "Eenrichtingssynchronisatie naar een tweede schijf — local, S3, R2 of SFTP"
+    "cap_backup": "Eenrichtingssynchronisatie naar een tweede schijf — local, S3, R2 of SFTP",
+    "cap_audit_export": "Exporteer het volledige auditlog als NDJSON of CSV, inclusief gearchiveerde logs",
+    "cap_sso": "Log in met je eigen OIDC-identiteitsprovider — groepen worden gemapt naar rechten"
   },
   "features": {
     "label": "Functies",
@@ -336,10 +338,12 @@
     "intake_f3": "Anoniem uploaden, eigenaar-scoped",
     "compliance_name": "Compliance bundle",
     "compliance_tag": "Enterprise",
-    "compliance_desc": "Virusscan, C2PA-inhoudsherkomst en auditbewaring — voor gereguleerde en enterprise-implementaties.",
+    "compliance_desc": "Virusscan, C2PA-inhoudsherkomst, auditbewaring en -export, en SSO-login — voor gereguleerde en enterprise-implementaties.",
     "compliance_f1": "Virusscan bij elke upload",
     "compliance_f2": "C2PA-inhoudsherkomst",
     "compliance_f3": "Bewaring van auditlogs",
+    "compliance_f4": "Auditlog-export (NDJSON/CSV)",
+    "compliance_f5": "SSO-login (OIDC)",
     "cta": "Bekijk prijzen"
   },
   "wp": {
