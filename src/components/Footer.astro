@@ -47,8 +47,15 @@ const repoBranch = 'master';
 
     <div class="mt-8 pt-6 border-t border-gray-100 dark:border-gray-800 text-center">
       <p class="text-xs text-gray-400 dark:text-gray-500">
-        &copy; {new Date().getFullYear()} FluxFiles. Open source under MIT License.
+        &copy; <span data-copyright-year>{new Date().getFullYear()}</span> FluxFiles. Open source under MIT License.
       </p>
     </div>
   </div>
 </footer>
+
+<script is:inline>
+  (function () {
+    var el = document.querySelector('[data-copyright-year]');
+    if (el) el.textContent = String(new Date().getFullYear());
+  })();
+</script>
