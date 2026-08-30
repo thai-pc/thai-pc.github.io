@@ -51,7 +51,9 @@
     "cap_ocr": "Extrae texto de imágenes y PDF, devuelto directamente en la respuesta de la API",
     "cap_virus": "Cada subida se escanea antes de almacenarse — ClamAV o tu propia clave en la nube",
     "cap_c2pa": "Firma archivos con Content Credentials verificables (procedencia C2PA)",
-    "cap_backup": "Sincronización unidireccional a un segundo disco — local, S3, R2 o SFTP"
+    "cap_backup": "Sincronización unidireccional a un segundo disco — local, S3, R2 o SFTP",
+    "cap_audit_export": "Exporta el registro de auditoría completo como NDJSON o CSV, incluidos los archivados",
+    "cap_sso": "Inicia sesión con tu propio proveedor de identidad OIDC — los grupos se mapean a permisos"
   },
   "features": {
     "label": "Características",
@@ -307,7 +309,7 @@
     "ent_desc": "Cumplimiento, a escala.",
     "ent_cta": "Contactar ventas",
     "ent_f1": "Todo lo Studio",
-    "ent_f2": "Antivirus + procedencia <strong>C2PA</strong> + retención de auditoría",
+    "ent_f2": "Antivirus + procedencia <strong>C2PA</strong> + retención/exportación de auditoría + inicio de sesión SSO",
     "ent_f3": "Onboarding a medida",
     "ent_f4": "SLA + hoja de ruta prioritaria",
     "monthly": "Mensual",
@@ -336,10 +338,12 @@
     "intake_f3": "Subida anónima, restringida al propietario",
     "compliance_name": "Compliance bundle",
     "compliance_tag": "Enterprise",
-    "compliance_desc": "Antivirus, procedencia de contenido C2PA y retención de auditoría — para despliegues regulados y de empresa.",
+    "compliance_desc": "Antivirus, procedencia de contenido C2PA, retención y exportación de auditoría, e inicio de sesión SSO — para despliegues regulados y de empresa.",
     "compliance_f1": "Antivirus en cada subida",
     "compliance_f2": "Procedencia de contenido C2PA",
     "compliance_f3": "Retención de registros de auditoría",
+    "compliance_f4": "Exportación de registros de auditoría (NDJSON/CSV)",
+    "compliance_f5": "Inicio de sesión SSO (OIDC)",
     "cta": "Ver precios"
   },
   "wp": {

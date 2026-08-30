@@ -51,7 +51,9 @@
     "cap_ocr": "Text aus Bildern und PDFs extrahieren, direkt in der API-Antwort zurückgegeben",
     "cap_virus": "Jeder Upload wird vor der Speicherung gescannt — ClamAV oder dein eigener Cloud-Key",
     "cap_c2pa": "Dateien mit verifizierbaren Content Credentials signieren (C2PA-Herkunft)",
-    "cap_backup": "Einweg-Sync auf eine zweite Festplatte — lokal, S3, R2 oder SFTP"
+    "cap_backup": "Einweg-Sync auf eine zweite Festplatte — lokal, S3, R2 oder SFTP",
+    "cap_audit_export": "Exportiere das vollständige Audit-Log als NDJSON oder CSV, inklusive archivierter Einträge",
+    "cap_sso": "Anmeldung über deinen eigenen OIDC-Identitätsanbieter — Gruppen werden auf Berechtigungen gemappt"
   },
   "features": {
     "label": "Funktionen",
@@ -307,7 +309,7 @@
     "ent_desc": "Compliance, skaliert.",
     "ent_cta": "Vertrieb kontaktieren",
     "ent_f1": "Alles aus Studio",
-    "ent_f2": "Virenscan + <strong>C2PA</strong>-Herkunft + Audit-Aufbewahrung",
+    "ent_f2": "Virenscan + <strong>C2PA</strong>-Herkunft + Audit-Aufbewahrung/-Export + SSO-Login",
     "ent_f3": "Individuelles Onboarding",
     "ent_f4": "SLA + priorisierte Roadmap",
     "monthly": "Monatlich",
@@ -336,10 +338,12 @@
     "intake_f3": "Anonymer Upload, eigentümerbeschränkt",
     "compliance_name": "Compliance bundle",
     "compliance_tag": "Enterprise",
-    "compliance_desc": "Virenscan, C2PA-Inhaltsherkunft und Audit-Aufbewahrung — für regulierte und Enterprise-Deployments.",
+    "compliance_desc": "Virenscan, C2PA-Inhaltsherkunft, Audit-Aufbewahrung und -Export sowie SSO-Login — für regulierte und Enterprise-Deployments.",
     "compliance_f1": "Virenscan bei jedem Upload",
     "compliance_f2": "C2PA-Inhaltsherkunft",
     "compliance_f3": "Audit-Log-Aufbewahrung",
+    "compliance_f4": "Audit-Log-Export (NDJSON/CSV)",
+    "compliance_f5": "SSO-Login (OIDC)",
     "cta": "Preise ansehen"
   },
   "wp": {

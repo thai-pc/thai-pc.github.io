@@ -51,7 +51,9 @@
     "cap_ocr": "画像やPDFからテキストを抽出し、API応答でそのまま返却",
     "cap_virus": "アップロードされたファイルは保存前にすべてスキャン — ClamAVまたは自分のクラウドキー",
     "cap_c2pa": "検証可能なContent Credentialsでファイルに署名（C2PA来歴）",
-    "cap_backup": "セカンドディスクへの一方向同期 — ローカル、S3、R2、SFTP"
+    "cap_backup": "セカンドディスクへの一方向同期 — ローカル、S3、R2、SFTP",
+    "cap_audit_export": "監査ログ全体をNDJSONまたはCSVでエクスポート、アーカイブ済みログも含む",
+    "cap_sso": "自分のOIDC IDプロバイダーでサインイン — グループが権限に自動マッピング"
   },
   "features": {
     "label": "機能",
@@ -307,7 +309,7 @@
     "ent_desc": "コンプライアンス、大規模に。",
     "ent_cta": "営業に問い合わせ",
     "ent_f1": "Studio のすべて",
-    "ent_f2": "ウイルススキャン + <strong>C2PA</strong> 来歴 + 監査保持",
+    "ent_f2": "ウイルススキャン + <strong>C2PA</strong> 来歴 + 監査保持/エクスポート + SSOログイン",
     "ent_f3": "カスタム導入",
     "ent_f4": "SLA + 優先ロードマップ",
     "monthly": "月額",
@@ -336,10 +338,12 @@
     "intake_f3": "匿名アップロード、所有者スコープ",
     "compliance_name": "Compliance bundle",
     "compliance_tag": "Enterprise",
-    "compliance_desc": "ウイルススキャン、C2PA コンテンツ来歴、監査保持——規制対象・エンタープライズ向け。",
+    "compliance_desc": "ウイルススキャン、C2PA コンテンツ来歴、監査ログの保持とエクスポート、SSO ログイン——規制対象・エンタープライズ向け。",
     "compliance_f1": "アップロードごとのウイルススキャン",
     "compliance_f2": "C2PA コンテンツ来歴",
     "compliance_f3": "監査ログの保持",
+    "compliance_f4": "監査ログのエクスポート（NDJSON/CSV）",
+    "compliance_f5": "SSO ログイン（OIDC）",
     "cta": "料金を見る"
   },
   "wp": {

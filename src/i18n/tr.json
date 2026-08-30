@@ -51,7 +51,9 @@
     "cap_ocr": "Görsellerden ve PDF'lerden metin çıkarır, API yanıtında döner",
     "cap_virus": "Her yükleme depolanmadan önce taranır — ClamAV veya kendi bulut anahtarınız",
     "cap_c2pa": "Dosyaları doğrulanabilir İçerik Kimlik Bilgileriyle imzalayın (C2PA kökeni)",
-    "cap_backup": "İkinci bir diske tek yönlü senkronizasyon — local, S3, R2 veya SFTP"
+    "cap_backup": "İkinci bir diske tek yönlü senkronizasyon — local, S3, R2 veya SFTP",
+    "cap_audit_export": "Tüm denetim kaydını NDJSON veya CSV olarak dışa aktarın, arşivlenenler dahil",
+    "cap_sso": "Kendi OIDC kimlik sağlayıcınızla giriş yapın — gruplar izinlere otomatik eşlenir"
   },
   "features": {
     "label": "Özellikler",
@@ -307,7 +309,7 @@
     "ent_desc": "Uyumluluk, ölçekte.",
     "ent_cta": "Satışa ulaşın",
     "ent_f1": "Studio'daki her şey",
-    "ent_f2": "Virüs taraması + <strong>C2PA</strong> köken + denetim saklama",
+    "ent_f2": "Virüs taraması + <strong>C2PA</strong> köken + denetim saklama/dışa aktarma + SSO girişi",
     "ent_f3": "Özel katılım",
     "ent_f4": "SLA + öncelikli yol haritası",
     "monthly": "Aylık",
@@ -336,10 +338,12 @@
     "intake_f3": "Anonim yükleme, sahip kapsamlı",
     "compliance_name": "Compliance bundle",
     "compliance_tag": "Enterprise",
-    "compliance_desc": "Virüs taraması, C2PA içerik kökeni ve denetim saklama — düzenlemeye tabi ve kurumsal dağıtımlar için.",
+    "compliance_desc": "Virüs taraması, C2PA içerik kökeni, denetim kaydı saklama ve dışa aktarma, ve SSO girişi — düzenlemeye tabi ve kurumsal dağıtımlar için.",
     "compliance_f1": "Her yüklemede virüs taraması",
     "compliance_f2": "C2PA içerik kökeni",
     "compliance_f3": "Denetim günlüğü saklama",
+    "compliance_f4": "Denetim günlüğü dışa aktarma (NDJSON/CSV)",
+    "compliance_f5": "SSO girişi (OIDC)",
     "cta": "Fiyatları gör"
   },
   "wp": {

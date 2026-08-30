@@ -51,7 +51,9 @@
     "cap_ocr": "从图片和 PDF 中提取文字，直接在 API 响应中返回",
     "cap_virus": "每个上传文件在存储前都会被扫描——ClamAV 或你自己的云端 key",
     "cap_c2pa": "使用可验证的 Content Credentials 为文件签名（C2PA 溯源）",
-    "cap_backup": "单向同步到第二个磁盘——本地、S3、R2 或 SFTP"
+    "cap_backup": "单向同步到第二个磁盘——本地、S3、R2 或 SFTP",
+    "cap_audit_export": "以 NDJSON 或 CSV 格式导出完整审计日志，含已归档记录",
+    "cap_sso": "使用你自己的 OIDC 身份提供商登录——用户组自动映射到权限"
   },
   "features": {
     "label": "功能",
@@ -307,7 +309,7 @@
     "ent_desc": "合规，规模化。",
     "ent_cta": "联系销售",
     "ent_f1": "包含 Studio 全部",
-    "ent_f2": "病毒扫描 + <strong>C2PA</strong> 溯源 + 审计留存",
+    "ent_f2": "病毒扫描 + <strong>C2PA</strong> 溯源 + 审计留存/导出 + SSO 登录",
     "ent_f3": "定制上线",
     "ent_f4": "SLA + 优先路线图",
     "monthly": "按月",
@@ -336,10 +338,12 @@
     "intake_f3": "匿名上传，按所有者范围控制",
     "compliance_name": "Compliance bundle",
     "compliance_tag": "Enterprise",
-    "compliance_desc": "病毒扫描、C2PA 内容溯源和审计留存——面向受监管和企业部署。",
+    "compliance_desc": "病毒扫描、C2PA 内容溯源、审计日志留存与导出，以及 SSO 登录——面向受监管和企业部署。",
     "compliance_f1": "每次上传均病毒扫描",
     "compliance_f2": "C2PA 内容溯源",
     "compliance_f3": "审计日志留存",
+    "compliance_f4": "审计日志导出（NDJSON/CSV）",
+    "compliance_f5": "SSO 登录（OIDC）",
     "cta": "查看价格"
   },
   "wp": {

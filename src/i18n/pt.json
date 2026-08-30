@@ -51,7 +51,9 @@
     "cap_ocr": "Extraia texto de imagens e PDFs, retornado direto na resposta da API",
     "cap_virus": "Todo upload é escaneado antes de ser armazenado — ClamAV ou sua própria chave na nuvem",
     "cap_c2pa": "Assine arquivos com Content Credentials verificáveis (proveniência C2PA)",
-    "cap_backup": "Sincronização unidirecional para um segundo disco — local, S3, R2 ou SFTP"
+    "cap_backup": "Sincronização unidirecional para um segundo disco — local, S3, R2 ou SFTP",
+    "cap_audit_export": "Exporte o log de auditoria completo em NDJSON ou CSV, incluindo entradas arquivadas",
+    "cap_sso": "Entre com seu próprio provedor de identidade OIDC — grupos mapeados direto para permissões"
   },
   "features": {
     "label": "Recursos",
@@ -307,7 +309,7 @@
     "ent_desc": "Conformidade, em escala.",
     "ent_cta": "Falar com vendas",
     "ent_f1": "Tudo do Studio",
-    "ent_f2": "Antivírus + proveniência <strong>C2PA</strong> + retenção de auditoria",
+    "ent_f2": "Antivírus + proveniência <strong>C2PA</strong> + retenção/exportação de auditoria + login SSO",
     "ent_f3": "Onboarding sob medida",
     "ent_f4": "SLA + roteiro prioritário",
     "monthly": "Mensal",
@@ -336,10 +338,12 @@
     "intake_f3": "Envio anônimo, restrito ao dono",
     "compliance_name": "Compliance bundle",
     "compliance_tag": "Enterprise",
-    "compliance_desc": "Antivírus, proveniência de conteúdo C2PA e retenção de auditoria — para implantações reguladas e corporativas.",
+    "compliance_desc": "Antivírus, proveniência de conteúdo C2PA, retenção e exportação de auditoria, e login SSO — para implantações reguladas e corporativas.",
     "compliance_f1": "Antivírus em cada envio",
     "compliance_f2": "Proveniência de conteúdo C2PA",
     "compliance_f3": "Retenção de logs de auditoria",
+    "compliance_f4": "Exportação de logs de auditoria (NDJSON/CSV)",
+    "compliance_f5": "Login SSO (OIDC)",
     "cta": "Ver preços"
   },
   "wp": {
