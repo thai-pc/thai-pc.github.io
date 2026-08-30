@@ -29,10 +29,13 @@ const proScreenshots = [
   { src: '/demo/fluxfiles-demo-links-panel.png', alt: 'FluxFiles links panel listing shared links with views, downloads and revoke', caption: t('demo.cap_links') },
 ];
 
+const studioScreenshots = [
+  { src: '/demo/fluxfiles-demo-ai-vision.png', alt: 'FluxFiles AI Vision panel removing the background from an image with your own vision API key', caption: t('demo.cap_ai_vision') },
+];
+
 const studioDiagrams = [
   { key: 'versioning', caption: t('demo.cap_versioning') },
   { key: 'webhooks', caption: t('demo.cap_webhooks'), json: '{ "event": "upload",\n  "file": "invoice.pdf" }' },
-  { key: 'ai-vision', caption: t('demo.cap_ai_vision') },
   { key: 'ocr', caption: t('demo.cap_ocr') },
 ];
 
@@ -82,7 +85,8 @@ const tabs = [
     <div x-show="tab === 'pro'" x-cloak>
       <ScreenshotCarousel items={proScreenshots} />
     </div>
-    <div x-show="tab === 'studio'" x-cloak>
+    <div x-show="tab === 'studio'" x-cloak class="space-y-6">
+      <ScreenshotCarousel items={studioScreenshots} />
       <DiagramCarousel items={studioDiagrams} lang={lang} />
     </div>
     <div x-show="tab === 'enterprise'" x-cloak>
