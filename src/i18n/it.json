@@ -309,7 +309,7 @@
     "ent_desc": "Conformità, su larga scala.",
     "ent_cta": "Contatta le vendite",
     "ent_f1": "Tutto dello Studio",
-    "ent_f2": "Antivirus + provenienza <strong>C2PA</strong> + conservazione audit",
+    "ent_f2": "Antivirus + provenienza <strong>C2PA</strong> + conservazione/esportazione audit + accesso SSO",
     "ent_f3": "Onboarding su misura",
     "ent_f4": "SLA + roadmap prioritaria",
     "monthly": "Mensile",

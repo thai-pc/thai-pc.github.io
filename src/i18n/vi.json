@@ -281,7 +281,7 @@
     "ent_desc": "Tuân thủ, quy mô lớn.",
     "ent_cta": "Liên hệ",
     "ent_f1": "Mọi thứ trong Studio",
-    "ent_f2": "Quét virus + <strong>C2PA</strong> provenance + lưu audit",
+    "ent_f2": "Quét virus + <strong>C2PA</strong> provenance + lưu/xuất audit + đăng nhập SSO",
     "ent_f3": "Onboarding riêng",
     "ent_f4": "SLA + roadmap ưu tiên",
     "monthly": "Theo tháng",
