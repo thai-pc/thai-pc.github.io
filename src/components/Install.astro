@@ -113,6 +113,22 @@ app.get('/fluxfiles-token', (req, res) => {
     res.json({ token });
 });`;
 
+const pythonCode = `pip install fluxfiles-token
+
+# FastAPI / Django / Flask route — mint a token from your Python backend (no PHP)
+from fluxfiles_token import create_token
+
+@app.get("/fluxfiles-token")
+def fluxfiles_token(user=Depends(current_user)):
+    token = create_token(
+        secret=os.environ["FLUXFILES_SECRET"],  # >= 32 bytes
+        user_id=user.id,
+        perms=["read", "write", "delete"],
+        prefix=f"users/{user.id}",
+        ttl=3600,
+    )
+    return {"token": token}`;
+
 const dockerCode = `git clone https://github.com/thai-pc/fluxfiles.git
 docker build -f fluxfiles/docker/Dockerfile.prod -t fluxfiles fluxfiles
 
@@ -126,6 +142,7 @@ const tabs = [
   { id: 'composer', label: t('install.tab_composer'), code: composerCode },
   { id: 'laravel',  label: t('install.tab_laravel'),  code: laravelCode },
   { id: 'node',     label: 'Node',                    code: nodeCode },
+  { id: 'python',   label: 'Python',                  code: pythonCode },
   { id: 'sdk',      label: t('install.tab_sdk'),      code: sdkCode },
   { id: 'react',    label: 'React',                   code: reactCode },
   { id: 'vue',      label: 'Vue',                     code: vueCode },
