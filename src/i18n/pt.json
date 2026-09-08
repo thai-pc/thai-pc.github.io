@@ -53,7 +53,10 @@
     "cap_c2pa": "Assine arquivos com Content Credentials verificáveis (proveniência C2PA)",
     "cap_backup": "Sincronização unidirecional para um segundo disco — local, S3, R2 ou SFTP",
     "cap_audit_export": "Exporte o log de auditoria completo em NDJSON ou CSV, incluindo entradas arquivadas",
-    "cap_sso": "Entre com seu próprio provedor de identidade OIDC — grupos mapeados direto para permissões"
+    "cap_sso": "Entre com seu próprio provedor de identidade OIDC — grupos mapeados direto para permissões",
+    "cap_dlp": "Oculte números de CPF, cartões e segredos antes mesmo do arquivo ser armazenado",
+    "cap_legal_hold": "Retenção legal — bloqueia exclusão, renomeação e movimentação até ser liberada, com trilha de auditoria completa",
+    "cap_compliance": "Painel de prontidão de conformidade — veja de relance quais proteções estão ativas"
   },
   "features": {
     "label": "Recursos",

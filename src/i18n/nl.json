@@ -53,7 +53,10 @@
     "cap_c2pa": "Onderteken bestanden met verifieerbare Content Credentials (C2PA-herkomst)",
     "cap_backup": "Eenrichtingssynchronisatie naar een tweede schijf — local, S3, R2 of SFTP",
     "cap_audit_export": "Exporteer het volledige auditlog als NDJSON of CSV, inclusief gearchiveerde logs",
-    "cap_sso": "Log in met je eigen OIDC-identiteitsprovider — groepen worden gemapt naar rechten"
+    "cap_sso": "Log in met je eigen OIDC-identiteitsprovider — groepen worden gemapt naar rechten",
+    "cap_dlp": "Verberg burgerservicenummers, kaartnummers en geheimen voordat een bestand wordt opgeslagen",
+    "cap_legal_hold": "Legal hold — blokkeert verwijderen, hernoemen en verplaatsen tot vrijgave, met een volledig audittrail",
+    "cap_compliance": "Compliance-gereedheidsscorekaart — zie in één oogopslag welke waarborgen actief zijn"
   },
   "features": {
     "label": "Functies",

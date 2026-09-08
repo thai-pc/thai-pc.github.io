@@ -53,7 +53,10 @@
     "cap_c2pa": "Ký tệp với Content Credentials có thể xác minh (nguồn gốc C2PA)",
     "cap_backup": "Đồng bộ một chiều sang ổ đĩa thứ hai — local, S3, R2 hoặc SFTP",
     "cap_audit_export": "Xuất toàn bộ audit log dạng NDJSON hoặc CSV, bao gồm cả log đã lưu trữ",
-    "cap_sso": "Đăng nhập bằng nhà cung cấp OIDC của riêng bạn — nhóm tự động ánh xạ sang quyền"
+    "cap_sso": "Đăng nhập bằng nhà cung cấp OIDC của riêng bạn — nhóm tự động ánh xạ sang quyền",
+    "cap_dlp": "Ẩn số CMND/CCCD, số thẻ và các thông tin nhạy cảm trước khi file được lưu trữ",
+    "cap_legal_hold": "Phong tỏa pháp lý — chặn xóa, đổi tên và di chuyển cho đến khi gỡ, kèm nhật ký đầy đủ",
+    "cap_compliance": "Bảng điểm sẵn sàng tuân thủ — xem ngay các biện pháp bảo vệ nào đang bật"
   },
   "features": {
     "label": "Tính năng",

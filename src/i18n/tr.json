@@ -53,7 +53,10 @@
     "cap_c2pa": "Dosyaları doğrulanabilir İçerik Kimlik Bilgileriyle imzalayın (C2PA kökeni)",
     "cap_backup": "İkinci bir diske tek yönlü senkronizasyon — local, S3, R2 veya SFTP",
     "cap_audit_export": "Tüm denetim kaydını NDJSON veya CSV olarak dışa aktarın, arşivlenenler dahil",
-    "cap_sso": "Kendi OIDC kimlik sağlayıcınızla giriş yapın — gruplar izinlere otomatik eşlenir"
+    "cap_sso": "Kendi OIDC kimlik sağlayıcınızla giriş yapın — gruplar izinlere otomatik eşlenir",
+    "cap_dlp": "Dosya depolanmadan önce TC kimlik numaralarını, kart numaralarını ve gizli bilgileri gizler",
+    "cap_legal_hold": "Yasal tutma — serbest bırakılana kadar silme, yeniden adlandırma ve taşımayı engeller, tam denetim izi ile",
+    "cap_compliance": "Uyumluluk hazırlık puan kartı — hangi korumaların açık olduğunu tek bakışta gör"
   },
   "features": {
     "label": "Özellikler",

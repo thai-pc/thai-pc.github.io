@@ -53,7 +53,10 @@
     "cap_c2pa": "Sign files with verifiable Content Credentials (C2PA provenance)",
     "cap_backup": "One-way sync to a second disk — local, S3, R2 or SFTP",
     "cap_audit_export": "Export the full audit trail as NDJSON or CSV, including archived logs",
-    "cap_sso": "Sign in with your own OIDC identity provider — groups map to permissions"
+    "cap_sso": "Sign in with your own OIDC identity provider — groups map to permissions",
+    "cap_dlp": "Redact SSNs, card numbers and secrets before a file is ever stored",
+    "cap_legal_hold": "Legal hold — blocks delete, rename and move until released, with a full audit trail",
+    "cap_compliance": "Compliance readiness scorecard — see which safeguards are on at a glance"
   },
   "features": {
     "label": "Features",

@@ -53,7 +53,10 @@
     "cap_c2pa": "使用可验证的 Content Credentials 为文件签名（C2PA 溯源）",
     "cap_backup": "单向同步到第二个磁盘——本地、S3、R2 或 SFTP",
     "cap_audit_export": "以 NDJSON 或 CSV 格式导出完整审计日志，含已归档记录",
-    "cap_sso": "使用你自己的 OIDC 身份提供商登录——用户组自动映射到权限"
+    "cap_sso": "使用你自己的 OIDC 身份提供商登录——用户组自动映射到权限",
+    "cap_dlp": "在文件存储之前遮蔽身份证号、银行卡号和密钥等敏感信息",
+    "cap_legal_hold": "法律保留——在解除之前阻止删除、重命名和移动，并保留完整审计记录",
+    "cap_compliance": "合规就绪评分卡——一目了然查看已启用的安全防护措施"
   },
   "features": {
     "label": "功能",
