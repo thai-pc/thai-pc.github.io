@@ -241,7 +241,19 @@
     "license_q": "Wie aktiviere ich eine Lizenz?",
     "license_a": "Nach dem Kauf erhalten Sie einen Lizenzschlüssel. Setzen Sie FLUXFILES_LICENSE_KEY in Ihrer Umgebung und die Module werden freigeschaltet — offline verifiziert (kein Phone-Home), also auch air-gapped nutzbar.",
     "billing_q": "Einmalig oder Abo?",
-    "billing_a": "Abo: monatlich für einen unverbindlichen Start oder jährlich zum Sparen (~2 Monate gratis). Gelegentlich bieten wir als limitierte Aktion eine einmalige Lifetime-Option an — aktuelle Verfügbarkeit siehe Preise. Eine abgelaufene Lizenz führt Ihre Version weiter aus; nur Updates/Support pausieren."
+    "billing_a": "Abo: monatlich für einen unverbindlichen Start oder jährlich zum Sparen (~2 Monate gratis). Gelegentlich bieten wir als limitierte Aktion eine einmalige Lifetime-Option an — aktuelle Verfügbarkeit siehe Preise. Eine abgelaufene Lizenz führt Ihre Version weiter aus; nur Updates/Support pausieren.",
+    "security_q": "Wie sicher ist es gegen gängige Angriffe?",
+    "security_a": "JWT-Claims begrenzen jede Anfrage (Rechte, Disk, Pfadpräfix, Endungen, owner-only); serverseitige Abrufe wie URL-Import und BYOB-Prüfungen laufen durch einen SSRF-Schutz, der private/interne IPs blockiert; Uploads erhalten Anti-XSS-Header, und die Dateiendung wird beim Upload fixiert, sodass Umbenennen/Verschieben/Kopieren sie nicht ändern kann.",
+    "db_q": "Muss ich eine Datenbank betreiben?",
+    "db_a": "Nein. Standardmäßig liegen alle Metadaten (Dateiinfos, Suchindex, Audit-Log) als JSON-Sidecars direkt neben Ihren Dateien — nichts Zusätzliches zu betreiben oder zu sichern. Wenn Sie diese Verwaltung lieber in Ihrer eigenen MySQL-, PostgreSQL- oder SQLite-Datenbank halten möchten, verschiebt der optionale Modus FLUXFILES_STORAGE_BACKEND=db sie dorthin; die Dateibytes bleiben in jedem Fall in Ihrem Storage.",
+    "roles_q": "Können verschiedene Benutzer unterschiedliche Rechte haben?",
+    "roles_a": "Ja. Erstellen Sie einen Token mit feingranularen Claims (Lesen/Schreiben/Löschen, Disk, Pfadpräfix, Upload-Limits, erlaubte Endungen, owner-only), oder nutzen Sie eines von vier vordefinierten Rollen-Presets — viewer, editor, admin, superadmin —, um einen Token in einer Zeile statt mit einer langen Claims-Liste zu begrenzen.",
+    "compliance_q": "Unterstützt es Audit-Logs, DSGVO oder SSO?",
+    "compliance_a": "Jede verändernde Aktion wird in ein manipulationssicheres Audit-Log geschrieben — kostenlos und standardmäßig aktiv. Das Enterprise-Compliance-Bundle ergänzt admin-gesteuerten Audit-Export/-Purge, DLP-Scanning, Legal Hold und eine OIDC-SSO-Anmeldebrücke für Teams mit formalen Compliance-Anforderungen.",
+    "support_q": "Welche Art von Support bekomme ich?",
+    "support_a": "Community-Support über GitHub Issues steht allen im kostenlosen Core zur Verfügung. Bezahlte Module beinhalten Standard-Support; ein separates Priority-Support-Abo verschafft Ihnen schnellere, priorisierte Antworten auf den Core oder jedes Modul — ohne dass zusätzliche Software freigeschaltet wird.",
+    "limits_q": "Gibt es Nutzungsbeschränkungen?",
+    "limits_a": "Der Core selbst hat keine künstlichen Limits — keine Obergrenze für monatlich aktive Nutzer, kein erzwungener Upgrade-Hinweis. Sie legen Ihre eigenen Grenzen über JWT-Claims fest: Speicherkontingente pro Nutzer, Upload-Größen-/Endungsbeschränkungen und einen eingebauten Rate-Limiter (standardmäßig 60 Lese-/10 Schreibzugriffe pro Minute, konfigurierbar)."
   },
   "byob": {
     "label": "Der Burggraben · BYOB",

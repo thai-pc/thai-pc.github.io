@@ -241,7 +241,19 @@
     "license_q": "Lisansı nasıl etkinleştiririm?",
     "license_a": "Satın alma sonrası bir lisans anahtarı alırsınız. Ortamınızda FLUXFILES_LICENSE_KEY ayarlayın; modüller açılır — çevrimdışı doğrulanır (phone-home yok), yani air-gapped ortamda da çalışır.",
     "billing_q": "Tek seferlik mi abonelik mi?",
-    "billing_a": "İkisi de. Bağlayıcı olmayan bir başlangıç için aylık, tasarruf için yıllık (~2 ay ücretsiz) veya tek seferlik ömür boyu. Süresi dolan lisans mevcut sürümünüzü çalıştırmaya devam eder; yalnızca güncelleme/destek duraklar."
+    "billing_a": "Abonelik: bağlayıcı olmayan bir başlangıç için aylık, ya da tasarruf için yıllık (~2 ay ücretsiz). Zaman zaman sınırlı bir kampanya olarak tek seferlik ömür boyu lisans sunuyoruz — güncel durumu fiyatlandırma sayfasından kontrol edin. Süresi dolan lisans elinizdeki sürümü çalıştırmaya devam eder; yalnızca güncelleme/destek durur.",
+    "security_q": "Yaygın saldırılara karşı ne kadar güvenli?",
+    "security_a": "Her istek JWT claim'leriyle sınırlanır (izinler, disk, yol öneki, uzantılar, owner-only); URL içe aktarma ve BYOB kontrolleri gibi sunucu taraflı istekler, özel/dahili IP'leri engelleyen bir SSRF korumasından geçer; yüklemeler anti-XSS başlıkları alır ve bir dosyanın uzantısı yükleme sırasında kilitlenir, böylece yeniden adlandırma/taşıma/kopyalama onu değiştiremez.",
+    "db_q": "Veritabanı çalıştırmam gerekiyor mu?",
+    "db_a": "Hayır. Varsayılan olarak tüm meta veriler (dosya bilgisi, arama dizini, denetim günlüğü) dosyalarınızın yanında JSON yardımcı dosyaları olarak durur — kurulacak veya yedeklenecek ekstra bir şey yoktur. Bu kayıtları kendi MySQL, PostgreSQL veya SQLite veritabanınızda tutmayı tercih ederseniz, isteğe bağlı FLUXFILES_STORAGE_BACKEND=db modu bunları oraya taşır; dosya baytları her durumda depolama alanınızda kalır.",
+    "roles_q": "Farklı kullanıcılar farklı izinlere sahip olabilir mi?",
+    "roles_a": "Evet. İnce ayarlı claim'lerle (okuma/yazma/silme, disk, yol öneki, yükleme sınırları, izin verilen uzantılar, owner-only) bir token oluşturun veya her claim'i tek tek yazmak yerine tokeni tek satırda sınırlamak için dört yerleşik rol ön ayarından birini — viewer, editor, admin, superadmin — kullanın.",
+    "compliance_q": "Denetim günlüklerini, GDPR'ı veya SSO'yu destekliyor mu?",
+    "compliance_a": "Verileri değiştiren her işlem, ücretsiz ve varsayılan olarak açık olan, kurcalamaya karşı korumalı bir denetim günlüğüne yazılır. Enterprise Compliance paketi; yönetici kontrollü denetim dışa aktarma/temizleme, DLP taraması, yasal tutma (legal hold) ve resmi uyumluluk gereksinimleri olan ekipler için bir OIDC SSO giriş köprüsü ekler.",
+    "support_q": "Ne tür bir destek alıyorum?",
+    "support_a": "GitHub issues üzerinden topluluk desteği, ücretsiz çekirdekte herkes için mevcuttur. Ücretli modüller standart destek içerir; ayrı bir Öncelikli Destek aboneliği, çekirdek veya herhangi bir modül için daha hızlı, öncelikli yanıtlar sağlar — herhangi bir ek yazılımın kilidini açmaz.",
+    "limits_q": "Herhangi bir kullanım sınırı var mı?",
+    "limits_a": "Çekirdeğin kendisi yapay bir sınır koymaz — aylık aktif kullanıcı üst sınırı yoktur, zorunlu yükseltme uyarısı yoktur. Kendi sınırlarınızı JWT claim'leri üzerinden siz belirlersiniz: kullanıcı başına depolama kotaları, yükleme boyutu/uzantı kısıtlamaları ve yerleşik bir hız sınırlayıcı (varsayılan olarak dakikada 60 okuma / 10 yazma, yapılandırılabilir)."
   },
   "byob": {
     "label": "Avantaj · BYOB",

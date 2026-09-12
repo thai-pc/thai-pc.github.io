@@ -6,7 +6,7 @@ interface Props {
   keys?: string[];
 }
 
-const ALL_ITEMS = ['oss', 'storage', 'auth', 'accounts', 'embed', 'run', 'paid', 'license', 'billing'];
+const ALL_ITEMS = ['oss', 'storage', 'auth', 'accounts', 'embed', 'run', 'security', 'db', 'roles', 'compliance', 'paid', 'license', 'billing', 'support', 'limits'];
 
 const { lang, keys = ALL_ITEMS } = Astro.props;
 const t = useTranslations(lang);

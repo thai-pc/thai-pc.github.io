@@ -241,7 +241,19 @@
     "license_q": "Hoe activeer ik een licentie?",
     "license_a": "Na aankoop krijg je een licentiesleutel. Stel FLUXFILES_LICENSE_KEY in je omgeving in en de modules ontgrendelen — offline geverifieerd (geen phone-home), dus ook air-gapped bruikbaar.",
     "billing_q": "Eenmalig of abonnement?",
-    "billing_a": "Abonnement: maandelijks voor een vrijblijvende start, of jaarlijks om te besparen (~2 maanden gratis). Af en toe bieden we als tijdelijke actie een eenmalige lifetime-optie aan — check de prijzenpagina voor actuele beschikbaarheid. Een verlopen licentie blijft je versie draaien; alleen updates/support pauzeren."
+    "billing_a": "Abonnement: maandelijks voor een vrijblijvende start, of jaarlijks om te besparen (~2 maanden gratis). Af en toe bieden we als tijdelijke actie een eenmalige lifetime-optie aan — check de prijzenpagina voor actuele beschikbaarheid. Een verlopen licentie blijft je versie draaien; alleen updates/support pauzeren.",
+    "security_q": "Hoe veilig is het tegen veelvoorkomende aanvallen?",
+    "security_a": "JWT-claims begrenzen elk verzoek (rechten, disk, padprefix, extensies, owner-only); server-side aanroepen zoals URL-import en BYOB-checks lopen via een SSRF-guard die private/interne IP's blokkeert; uploads krijgen anti-XSS-headers, en de extensie van een bestand wordt bij upload vastgezet, zodat hernoemen/verplaatsen/kopiëren die niet kan wijzigen.",
+    "db_q": "Moet ik een database draaien?",
+    "db_a": "Nee. Standaard staat alle metadata (bestandsinfo, zoekindex, auditlog) naast je bestanden als JSON-sidecars — niets extra's om te provisionen of te back-uppen. Wil je die administratie liever in je eigen MySQL, PostgreSQL of SQLite bewaren, dan verplaatst een optionele FLUXFILES_STORAGE_BACKEND=db-modus dit ernaartoe; de bestandsbytes blijven hoe dan ook altijd in je storage.",
+    "roles_q": "Kunnen verschillende gebruikers verschillende rechten hebben?",
+    "roles_a": "Ja. Genereer een token met fijnmazige claims (lezen/schrijven/verwijderen, disk, padprefix, uploadlimieten, toegestane extensies, owner-only), of gebruik een van de vier ingebouwde rolpresets — viewer, editor, admin, superadmin — om een token in één regel te begrenzen in plaats van elke claim los op te schrijven.",
+    "compliance_q": "Ondersteunt het auditlogs, AVG (GDPR) of SSO?",
+    "compliance_a": "Elke wijzigende actie wordt geschreven naar een manipulatiebestendige auditlog, gratis en standaard aan. De Enterprise Compliance-bundel voegt door de beheerder gestuurde audit-export/-purge toe, DLP-scanning, legal hold, en een OIDC SSO-inlogbrug voor teams met formele compliance-eisen.",
+    "support_q": "Wat voor soort support krijg ik?",
+    "support_a": "Community-support via GitHub issues is beschikbaar voor iedereen op de gratis core. Betaalde modules zijn inclusief standaard support; een aparte Priority Support-abonnement geeft je snellere, voorrang gevende reacties op de core of elke module — er wordt geen extra software mee ontgrendeld.",
+    "limits_q": "Zijn er gebruikslimieten?",
+    "limits_a": "De core zelf legt geen kunstmatige limieten op — geen cap op maandelijks actieve gebruikers, geen gedwongen upgrade-meldingen. Je stelt je eigen limieten in via JWT-claims: opslagquota per gebruiker, upload-grootte-/extensiebeperkingen, en een ingebouwde rate limiter (standaard 60 reads / 10 writes per minuut, configureerbaar)."
   },
   "byob": {
     "label": "De slotgracht · BYOB",

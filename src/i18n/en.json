@@ -243,7 +243,19 @@
     "license_q": "How do I activate a license?",
     "license_a": "After purchase you get a license key. Set FLUXFILES_LICENSE_KEY in your environment and the paid modules unlock — verified offline (no phone-home), so it works air-gapped.",
     "billing_q": "One-time or subscription?",
-    "billing_a": "Subscription: monthly for a low-commitment start, or annual to save (≈ 2 months free). We occasionally run a one-time lifetime deal as a limited promo — check pricing for current availability. An expired license keeps running the version you have; only updates/support pause."
+    "billing_a": "Subscription: monthly for a low-commitment start, or annual to save (≈ 2 months free). We occasionally run a one-time lifetime deal as a limited promo — check pricing for current availability. An expired license keeps running the version you have; only updates/support pause.",
+    "security_q": "How secure is it against common attacks?",
+    "security_a": "JWT claims scope every request (permissions, disk, path prefix, extensions, owner-only); server-side fetches like URL import and BYOB checks go through an SSRF guard that blocks private/internal IPs; uploads get anti-XSS response headers, and a file's extension is locked at upload time so rename/move/copy can't change it.",
+    "db_q": "Do I need to run a database?",
+    "db_a": "No. By default all metadata (file info, search index, audit log) lives next to your files as JSON sidecars — nothing extra to provision or back up. If you'd rather keep that bookkeeping in your own MySQL, PostgreSQL, or SQLite, an opt-in FLUXFILES_STORAGE_BACKEND=db mode moves it there; file bytes always stay in your storage either way.",
+    "roles_q": "Can different users have different permissions?",
+    "roles_a": "Yes. Mint a token with fine-grained claims (read/write/delete, disk, path prefix, upload limits, allowed extensions, owner-only), or use one of four built-in role presets — viewer, editor, admin, superadmin — to scope a token in one line instead of listing every claim by hand.",
+    "compliance_q": "Does it support audit logs, GDPR, or SSO?",
+    "compliance_a": "Every mutating action is written to a tamper-evident audit log, free and on by default. The Enterprise Compliance bundle adds admin-controlled audit export/purge, DLP scanning, legal hold, and an OIDC SSO login bridge for teams with formal compliance requirements.",
+    "support_q": "What kind of support do I get?",
+    "support_a": "Community support via GitHub issues is available to everyone on the free core. Paid modules include standard support; a separate Priority Support subscription gets you faster, prioritized responses on the free core or any module — it doesn't unlock any additional software.",
+    "limits_q": "Are there any usage limits?",
+    "limits_a": "The core itself has no artificial limits — no monthly-active-user caps, no forced upgrade prompts. You set your own limits via JWT claims: per-user storage quotas, upload size/extension restrictions, and a built-in rate limiter (60 reads / 10 writes per minute by default, configurable)."
   },
   "byob": {
     "label": "The moat · BYOB",

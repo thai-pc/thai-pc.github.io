@@ -241,7 +241,19 @@
     "license_q": "Kích hoạt license thế nào?",
     "license_a": "Sau khi mua bạn nhận một license key. Đặt FLUXFILES_LICENSE_KEY trong môi trường là module trả phí mở — xác thực offline (không phone-home), chạy được cả air-gapped.",
     "billing_q": "Trả một lần hay thuê bao?",
-    "billing_a": "Trả theo gói: theo tháng để khởi đầu nhẹ, hoặc theo năm để tiết kiệm (≈ 2 tháng). Thỉnh thoảng có đợt khuyến mãi trọn đời một lần, số lượng giới hạn — xem trang giá để biết đợt hiện tại. License hết hạn vẫn chạy bản đang có; chỉ tạm dừng update/support."
+    "billing_a": "Trả theo gói: theo tháng để khởi đầu nhẹ, hoặc theo năm để tiết kiệm (≈ 2 tháng). Thỉnh thoảng có đợt khuyến mãi trọn đời một lần, số lượng giới hạn — xem trang giá để biết đợt hiện tại. License hết hạn vẫn chạy bản đang có; chỉ tạm dừng update/support.",
+    "security_q": "Mức độ bảo mật trước các kiểu tấn công phổ biến ra sao?",
+    "security_a": "Mọi request đều bị giới hạn bởi JWT claims (quyền, disk, path prefix, đuôi file, owner-only); các lượt gọi phía server như import từ URL hay kiểm tra BYOB đều đi qua lớp chắn SSRF chặn IP nội bộ/riêng tư; file upload được gắn header chống XSS, và đuôi file bị khóa ngay lúc upload nên đổi tên/di chuyển/sao chép không thể thay đổi được.",
+    "db_q": "Tôi có cần chạy database không?",
+    "db_a": "Không. Mặc định, mọi metadata (thông tin file, chỉ mục tìm kiếm, audit log) đều nằm cạnh file của bạn dưới dạng JSON sidecar — không cần dựng hay backup gì thêm. Nếu muốn lưu phần sổ sách này trong MySQL, PostgreSQL hoặc SQLite của riêng bạn, chế độ tùy chọn FLUXFILES_STORAGE_BACKEND=db sẽ chuyển nó sang đó; dữ liệu file luôn nằm trong storage của bạn dù dùng chế độ nào.",
+    "roles_q": "Các người dùng khác nhau có thể có quyền khác nhau không?",
+    "roles_a": "Có. Bạn có thể tạo token với các claim chi tiết (đọc/ghi/xóa, disk, path prefix, giới hạn upload, đuôi file được phép, owner-only), hoặc dùng một trong bốn preset vai trò dựng sẵn — viewer, editor, admin, superadmin — để giới hạn token chỉ trong một dòng thay vì liệt kê từng claim.",
+    "compliance_q": "Có hỗ trợ audit log, GDPR hay SSO không?",
+    "compliance_a": "Mọi hành động thay đổi dữ liệu đều được ghi vào audit log chống giả mạo, miễn phí và bật mặc định. Gói Enterprise Compliance bổ sung tính năng xuất/xóa audit log do admin kiểm soát, quét DLP, legal hold (giữ dữ liệu phục vụ pháp lý), và cầu nối đăng nhập SSO qua OIDC cho các đội cần tuân thủ quy định chính thức.",
+    "support_q": "Tôi nhận được hỗ trợ ở mức nào?",
+    "support_a": "Ai dùng bản core miễn phí cũng có thể nhận hỗ trợ cộng đồng qua GitHub issues. Các module trả phí đã bao gồm hỗ trợ tiêu chuẩn; gói Priority Support riêng giúp bạn nhận phản hồi nhanh hơn, ưu tiên hơn cho core hoặc bất kỳ module nào — không mở khóa thêm phần mềm nào cả.",
+    "limits_q": "Có giới hạn sử dụng nào không?",
+    "limits_a": "Bản core không đặt ra giới hạn nhân tạo nào — không giới hạn số người dùng hoạt động hàng tháng, không thúc ép nâng cấp. Bạn tự đặt giới hạn của mình qua JWT claims: hạn mức lưu trữ theo từng user, giới hạn dung lượng/đuôi file upload, và bộ giới hạn tốc độ tích hợp sẵn (mặc định 60 lượt đọc / 10 lượt ghi mỗi phút, có thể tùy chỉnh)."
   },
   "byob": {
     "label": "Lợi thế · BYOB",

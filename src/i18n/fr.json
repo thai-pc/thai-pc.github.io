@@ -241,7 +241,19 @@
     "license_q": "Comment activer une licence ?",
     "license_a": "Après l'achat, vous recevez une clé de licence. Définissez FLUXFILES_LICENSE_KEY dans votre environnement et les modules payants se débloquent — vérifiés hors ligne (sans appel réseau), donc utilisables en air-gap.",
     "billing_q": "Achat unique ou abonnement ?",
-    "billing_a": "Les deux. Mensuel pour un démarrage sans engagement, annuel pour économiser (~2 mois offerts), ou à vie en une fois. Une licence expirée continue d'exécuter votre version ; seuls les mises à jour/support s'arrêtent."
+    "billing_a": "Abonnement : mensuel pour un démarrage sans engagement, ou annuel pour économiser (~2 mois offerts). Nous proposons parfois une offre promotionnelle limitée de licence à vie en un seul paiement — consultez la page tarifs pour la disponibilité actuelle. Une licence expirée continue de faire fonctionner votre version ; seuls les mises à jour et le support s'arrêtent.",
+    "security_q": "Quel est le niveau de sécurité contre les attaques courantes ?",
+    "security_a": "Les claims JWT délimitent chaque requête (permissions, disque, préfixe de chemin, extensions, owner-only) ; les appels côté serveur comme l'import par URL et les vérifications BYOB passent par une protection SSRF qui bloque les IP privées/internes ; les uploads reçoivent des en-têtes anti-XSS, et l'extension d'un fichier est verrouillée à l'upload pour qu'un renommage/déplacement/copie ne puisse pas la modifier.",
+    "db_q": "Ai-je besoin de faire tourner une base de données ?",
+    "db_a": "Non. Par défaut, toutes les métadonnées (infos fichier, index de recherche, journal d'audit) vivent à côté de vos fichiers sous forme de JSON annexes — rien de plus à provisionner ou sauvegarder. Si vous préférez conserver cette comptabilité dans votre propre base MySQL, PostgreSQL ou SQLite, un mode optionnel FLUXFILES_STORAGE_BACKEND=db l'y déplace ; les octets des fichiers restent toujours dans votre stockage.",
+    "roles_q": "Différents utilisateurs peuvent-ils avoir des permissions différentes ?",
+    "roles_a": "Oui. Générez un token avec des claims fins (lecture/écriture/suppression, disque, préfixe de chemin, limites d'upload, extensions autorisées, owner-only), ou utilisez l'un des quatre rôles prédéfinis — viewer, editor, admin, superadmin — pour délimiter un token en une ligne plutôt que d'énumérer chaque claim à la main.",
+    "compliance_q": "Est-ce que ça supporte les journaux d'audit, le RGPD ou le SSO ?",
+    "compliance_a": "Chaque action modifiant des données est écrite dans un journal d'audit infalsifiable, gratuit et actif par défaut. Le pack Conformité Enterprise ajoute l'export/purge d'audit contrôlé par l'admin, l'analyse DLP, la mise sous scellé légal (legal hold), et un pont de connexion SSO via OIDC pour les équipes ayant des exigences de conformité formelles.",
+    "support_q": "Quel type de support est-ce que j'obtiens ?",
+    "support_a": "Le support communautaire via les issues GitHub est disponible pour tous sur le core gratuit. Les modules payants incluent un support standard ; un abonnement Support Prioritaire séparé vous donne des réponses plus rapides et prioritaires sur le core ou n'importe quel module — sans débloquer de logiciel supplémentaire.",
+    "limits_q": "Y a-t-il des limites d'utilisation ?",
+    "limits_a": "Le core lui-même n'impose aucune limite artificielle — pas de plafond d'utilisateurs actifs mensuels, pas d'incitation forcée à la mise à niveau. Vous fixez vos propres limites via les claims JWT : quotas de stockage par utilisateur, restrictions de taille/extension d'upload, et un limiteur de débit intégré (60 lectures / 10 écritures par minute par défaut, configurable)."
   },
   "byob": {
     "label": "L’atout · BYOB",

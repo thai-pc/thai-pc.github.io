@@ -241,7 +241,19 @@
     "license_q": "Como ativo uma licença?",
     "license_a": "Após a compra você recebe uma chave de licença. Defina FLUXFILES_LICENSE_KEY no seu ambiente e os módulos são desbloqueados — verificados offline (sem phone-home), funcionando até em air-gap.",
     "billing_q": "Pagamento único ou assinatura?",
-    "billing_a": "Ambos. Mensal para começar sem compromisso, anual para economizar (~2 meses grátis), ou vitalício em um pagamento. Uma licença expirada continua executando sua versão; só atualizações/suporte pausam."
+    "billing_a": "Assinatura: mensal para começar sem compromisso, ou anual para economizar (~2 meses grátis). De vez em quando fazemos uma promoção limitada de licença vitalícia em pagamento único — confira a página de preços para a disponibilidade atual. Uma licença expirada continua executando a versão que você tem; só as atualizações/suporte pausam.",
+    "security_q": "Quão seguro é contra ataques comuns?",
+    "security_a": "Claims JWT delimitam cada requisição (permissões, disco, prefixo de caminho, extensões, owner-only); chamadas do lado do servidor como importação por URL e verificações BYOB passam por uma proteção SSRF que bloqueia IPs privados/internos; uploads recebem cabeçalhos anti-XSS, e a extensão de um arquivo fica travada no momento do upload, então renomear/mover/copiar não consegue alterá-la.",
+    "db_q": "Preciso rodar um banco de dados?",
+    "db_a": "Não. Por padrão, todos os metadados (info de arquivo, índice de busca, log de auditoria) ficam ao lado dos seus arquivos como JSON auxiliares — nada extra para provisionar ou fazer backup. Se preferir manter esse registro no seu próprio MySQL, PostgreSQL ou SQLite, um modo opcional FLUXFILES_STORAGE_BACKEND=db move isso para lá; os bytes do arquivo sempre permanecem no seu storage.",
+    "roles_q": "Usuários diferentes podem ter permissões diferentes?",
+    "roles_a": "Sim. Gere um token com claims granulares (ler/escrever/excluir, disco, prefixo de caminho, limites de upload, extensões permitidas, owner-only), ou use um dos quatro perfis predefinidos — viewer, editor, admin, superadmin — para delimitar um token em uma linha em vez de listar cada claim manualmente.",
+    "compliance_q": "Ele suporta logs de auditoria, LGPD/GDPR ou SSO?",
+    "compliance_a": "Toda ação que modifica dados é registrada em um log de auditoria à prova de adulteração, gratuito e ativo por padrão. O pacote Enterprise Compliance adiciona exportação/purga de auditoria controlada pelo admin, varredura DLP, retenção legal (legal hold), e uma ponte de login SSO via OIDC para times com requisitos formais de conformidade.",
+    "support_q": "Que tipo de suporte eu recebo?",
+    "support_a": "O suporte da comunidade via GitHub issues está disponível para todos no core gratuito. Módulos pagos incluem suporte padrão; uma assinatura separada de Suporte Prioritário garante respostas mais rápidas e priorizadas no core ou em qualquer módulo — sem desbloquear nenhum software adicional.",
+    "limits_q": "Há algum limite de uso?",
+    "limits_a": "O core em si não impõe limites artificiais — sem teto de usuários ativos mensais, sem incentivo forçado a upgrade. Você define seus próprios limites via claims JWT: cotas de armazenamento por usuário, restrições de tamanho/extensão de upload, e um limitador de taxa embutido (60 leituras / 10 escritas por minuto por padrão, configurável)."
   },
   "byob": {
     "label": "O diferencial · BYOB",
