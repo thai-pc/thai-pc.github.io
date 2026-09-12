@@ -1,0 +1,12 @@
+---
+import IntegrationsBody from '../../sections/pages/IntegrationsBody.astro';
+import { langList, defaultLang, type Lang } from '../../i18n/utils';
+
+export function getStaticPaths() {
+  return langList.filter((lang) => lang !== defaultLang).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: Lang };
+---
+
+<IntegrationsBody lang={lang} />

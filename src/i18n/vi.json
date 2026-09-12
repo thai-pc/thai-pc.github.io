@@ -1,7 +1,19 @@
 {
   "meta": {
-    "title": "FluxFiles — Trình quản lý file nhúng được mọi nơi",
-    "description": "Trình quản lý file PHP 8.1+: Local, S3, R2, SFTP. Nhúng qua iframe + JS SDK. Lõi MIT miễn phí + cổng file trả phí (Branded Share, Upload Portals)."
+    "title": "FluxFiles — Trình quản lý file chạy trên storage riêng của khách hàng bạn",
+    "description": "Trình quản lý file nhúng được cho ứng dụng PHP — file của mỗi tenant nằm trong S3, R2, SFTP hoặc ổ đĩa riêng của họ. Xác thực JWT, không cần database trung tâm. Miễn phí, giấy phép MIT.",
+    "product_title": "Sản phẩm — FluxFiles",
+    "product_description": "Mọi thứ FluxFiles cung cấp: thao tác file, xử lý ảnh, adapter cho các framework, và so sánh với việc tự xây dựng hoặc gắn thêm một widget SaaS.",
+    "solutions_title": "Giải pháp — FluxFiles",
+    "solutions_description": "Ai dùng FluxFiles và vì sao: nền tảng SaaS, agency, website WordPress/CMS, và công cụ nội bộ cần lưu trữ file multi-tenant, BYOB.",
+    "integrations_title": "Tích hợp — FluxFiles",
+    "integrations_description": "Adapter chính thức cho các framework (Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE, Summernote) và SDK tạo token phía server (Node, Python).",
+    "pricing_title": "Giá — FluxFiles",
+    "pricing_description": "Bản lõi miễn phí theo giấy phép MIT, các gói trả phí Pro/Studio, và Enterprise Compliance Bundle. Thanh toán theo tháng hoặc năm qua Polar.",
+    "docs_title": "Tài liệu — FluxFiles",
+    "docs_description": "Hướng dẫn bắt đầu nhanh, tài liệu cấu hình, và các route API để tự host và nhúng FluxFiles.",
+    "privacy_title": "Chính sách bảo mật — FluxFiles",
+    "privacy_description": "Cách FluxFiles và fluxfiles.dev xử lý dữ liệu."
   },
   "nav": {
     "docs": "Tài liệu",
@@ -10,18 +22,21 @@
     "github": "GitHub",
     "byob": "Vì sao BYOB",
     "pricing": "Giá",
-    "demo": "Demo"
+    "demo": "Demo",
+    "product": "Sản phẩm",
+    "solutions": "Giải pháp",
+    "integrations": "Tích hợp"
   },
   "hero": {
-    "badge": "v0.2 — Mã nguồn mở · Giấy phép MIT",
-    "headline": "Trình quản lý file nhúng được mọi nơi",
-    "sub": "PHP ≥ 8.1 + Flysystem 3. Giao diện Alpine.js. Local, S3, Cloudflare R2, SFTP. Nhúng chỉ với vài dòng JavaScript.",
+    "badge": "Bring-your-own-storage · Giấy phép MIT",
+    "headline": "Trình quản lý file chạy trên chính storage của khách hàng bạn",
+    "sub": "Nhúng qua iframe hoặc SDK, tạo một JWT có phạm vi giới hạn, và file của mỗi tenant nằm trong S3, R2, SFTP hoặc ổ đĩa riêng của họ — không bao giờ bị copy vào một database mà bạn phải vận hành, bảo mật hay trả tiền.",
     "cta_start": "Bắt đầu",
     "cta_github": "Star trên GitHub",
-    "stat_php": "Không cần framework",
-    "stat_sdk": "Kích thước SDK",
     "stat_oss": "Giấy phép mã nguồn mở",
-    "stat_lang": "Ngôn ngữ hỗ trợ"
+    "stat_lang": "Ngôn ngữ hỗ trợ",
+    "stat_backends": "Storage backend được hỗ trợ",
+    "stat_zero": "Server nhìn thấy file của bạn"
   },
   "demo": {
     "label": "Xem trước",
@@ -68,6 +83,8 @@
     "embed_desc": "iframe + SDK postMessage. UI độc lập dùng Alpine.js (không build). Dùng được với mọi framework.",
     "jwt_title": "JWT auth + phân quyền",
     "jwt_desc": "Prefix đường dẫn theo user, quyền, whitelist disk, chế độ owner-only — hoặc bắt đầu từ preset vai trò viewer/editor/admin.",
+    "acl_title": "Preset vai trò ACL",
+    "acl_desc": "Cấp token từ các preset viewer/editor/admin/superadmin — chỉ một tham số là mở ra đúng các claim quyền, disk và phạm vi truy cập, khỏi phải ráp tay từng cái.",
     "seo_title": "SEO metadata",
     "seo_desc": "Title, alt, caption, tags — metadata object S3 (cloud) hoặc sidecar JSON (local). Tìm kiếm full-text.",
     "presign_title": "Upload presigned",
@@ -86,6 +103,8 @@
     "trash_desc": "Xóa mềm có thể khôi phục, tự dọn dẹp.",
     "search_title": "Tìm kiếm toàn văn",
     "search_desc": "Tìm kiếm có index theo tên, tiêu đề, tags — mặc định dựa trên file, hoặc dùng database SQL riêng (tùy chọn).",
+    "dbstorage_title": "Metadata lưu trong database",
+    "dbstorage_desc": "Chế độ tùy chọn FLUXFILES_STORAGE_BACKEND=db — metadata, index tìm kiếm/thư mục và audit log được lưu trong MySQL/PostgreSQL/SQLite của riêng bạn thay vì file JSON. Dữ liệu file vẫn nằm trên storage trong cả hai trường hợp.",
     "bulk_title": "Thao tác hàng loạt",
     "bulk_desc": "Chọn nhiều file để di chuyển, sao chép, xóa, tải.",
     "crossdisk_title": "Chuyển giữa các disk",
@@ -165,7 +184,10 @@
     "row_search": "Tìm kiếm toàn văn",
     "row_darkmode": "Chế độ tối",
     "row_i18n": "16 ngôn ngữ",
-    "row_php81": "PHP ≥ 8.1"
+    "row_php81": "PHP ≥ 8.1",
+    "asof_note": "So sánh tính đến {date}, không liên kết với các bên — xem repo GitHub để báo lỗi cần chỉnh sửa.",
+    "tab_oss": "So với các file manager mã nguồn mở",
+    "tab_saas": "So với các SaaS file-API"
   },
   "footer": {
     "made_by": "Tạo bởi",
@@ -175,7 +197,9 @@
     "license_link": "Giấy phép",
     "packagist": "Packagist",
     "npm": "npm",
-    "readme_hint": "Tài liệu đầy đủ trên GitHub"
+    "readme_hint": "Tài liệu đầy đủ trên GitHub",
+    "privacy": "Quyền riêng tư",
+    "terms": "Điều khoản"
   },
   "cta": {
     "headline": "Sẵn sàng nhúng FluxFiles?",
@@ -186,7 +210,10 @@
   "adapters": {
     "label": "Tích hợp",
     "headline": "Adapter cắm-là-chạy cho stack của bạn",
-    "sub": "Các adapter chính thức nhúng FluxFiles trực tiếp vào framework và trình soạn thảo bạn đang dùng."
+    "sub": "Các adapter chính thức nhúng FluxFiles trực tiếp vào framework và trình soạn thảo bạn đang dùng.",
+    "sdk_headline": "Tạo token từ backend của bạn, không cần UI",
+    "sdk_label": "SDK tạo token phía server",
+    "sdk_note": "Đây không phải adapter giao diện — chúng phát hành JWT quy định phạm vi hoạt động cho giao diện FluxFiles (bất kỳ adapter nào ở trên, hoặc iframe standalone). Không cần PHP để phát hành token."
   },
   "embed": {
     "label": "Nhúng",
@@ -214,7 +241,7 @@
     "license_q": "Kích hoạt license thế nào?",
     "license_a": "Sau khi mua bạn nhận một license key. Đặt FLUXFILES_LICENSE_KEY trong môi trường là module trả phí mở — xác thực offline (không phone-home), chạy được cả air-gapped.",
     "billing_q": "Trả một lần hay thuê bao?",
-    "billing_a": "Cả hai. Theo tháng để khởi đầu nhẹ, theo năm để tiết kiệm (≈ 2 tháng), hoặc trọn đời một lần. License hết hạn vẫn chạy bản đang có; chỉ tạm dừng update/support."
+    "billing_a": "Trả theo gói: theo tháng để khởi đầu nhẹ, hoặc theo năm để tiết kiệm (≈ 2 tháng). Thỉnh thoảng có đợt khuyến mãi trọn đời một lần, số lượng giới hạn — xem trang giá để biết đợt hiện tại. License hết hạn vẫn chạy bản đang có; chỉ tạm dừng update/support."
   },
   "byob": {
     "label": "Lợi thế · BYOB",
@@ -264,7 +291,7 @@
     "per_year": "/năm",
     "custom": "Liên hệ",
     "soon": "Sắp ra mắt",
-    "footnote": "Giá cố định, không giới hạn site — không tính theo file/lượt. Gói năm tiết kiệm ~2 tháng; có tùy chọn trọn đời (lifetime). Hoàn tiền 14 ngày. VAT xử lý khi thanh toán.",
+    "footnote": "Giá cố định, không giới hạn site — không tính theo file/lượt. Gói năm tiết kiệm ~2 tháng; thỉnh thoảng có đợt khuyến mãi trọn đời một lần. Hoàn tiền 14 ngày. VAT xử lý khi thanh toán.",
     "free_name": "Miễn phí (Lõi)",
     "free_desc": "File manager MIT đầy đủ, tự host.",
     "free_cta": "Bắt đầu",
@@ -312,7 +339,8 @@
     "p3_title": "Tích hợp CMS & trình soạn thảo",
     "p3_desc": "Gắn bộ chọn media vào CKEditor, TinyMCE, Summernote hoặc editor của bạn qua iframe SDK.",
     "p4_title": "Công cụ nội bộ & dashboard",
-    "p4_desc": "Thêm upload, xem trước và thao tác file có audit vào trang quản trị chỉ trong một buổi chiều."
+    "p4_desc": "Thêm upload, xem trước và thao tác file có audit vào trang quản trị chỉ trong một buổi chiều.",
+    "see_all": "Xem tất cả use case"
   },
   "live": {
     "label": "Demo trực tiếp",
@@ -350,10 +378,10 @@
     "compliance_desc": "Ẩn danh PII, legal hold, quét virus, xuất xứ C2PA và xuất audit — cho triển khai quy định chặt chẽ và doanh nghiệp.",
     "compliance_f1": "Ẩn danh PII (số CCCD/thẻ, thông tin nhạy cảm) trước khi file được lưu",
     "compliance_f2": "Legal hold — chặn xóa, đổi tên và di chuyển, có nhật ký audit đầy đủ",
-    "compliance_f3": "Bảng điểm sẵn sàng tuân thủ (compliance scorecard), nhìn là biết",
+    "compliance_f3": "Sao lưu tự động ngoài trung tâm (chỉ có ở Enterprise)",
     "compliance_f4": "Quét virus trên mọi lượt tải lên",
     "compliance_f5": "Xuất xứ nội dung C2PA",
-    "compliance_f6": "Lưu trữ nhật ký audit",
+    "compliance_f6": "Xóa vĩnh viễn nhật ký audit do admin kiểm soát",
     "compliance_f7": "Xuất nhật ký audit (NDJSON/CSV)",
     "compliance_f8": "Đăng nhập SSO (OIDC)",
     "cta": "Xem bảng giá"
@@ -378,5 +406,39 @@
     "price_wpmf": "$69/năm",
     "price_offload": "trả phí",
     "footnote": "Folder + cloud + offload + cổng khách trong một — thay vì trả riêng FileBird và WP Media Folder và WP Offload."
+  },
+  "docs": {
+    "label": "Tài liệu",
+    "headline": "Mọi thứ đều nằm trong repo GitHub",
+    "sub": "FluxFiles không có trang tài liệu riêng — README và tài liệu tham khảo trong repo chính là nguồn thông tin chuẩn, luôn được cập nhật theo từng bản phát hành.",
+    "card_quickstart_title": "Bắt đầu nhanh",
+    "card_quickstart_desc": "Cài đặt qua Composer, tạo token, nhúng iframe — con đường nhanh nhất từ zero đến một file manager hoạt động được.",
+    "card_config_title": "Tài liệu cấu hình",
+    "card_config_desc": "Mọi JWT claim và biến môi trường mà FluxFiles đọc, gói gọn trong một bảng.",
+    "card_api_title": "Tài liệu API",
+    "card_api_desc": "Mọi route HTTP mà core cung cấp, cùng cấu trúc request/response.",
+    "card_selfhost_title": "Triển khai production",
+    "card_selfhost_desc": "Chạy FluxFiles trên server của riêng bạn — cấu hình web server, phân quyền, và ghi chú hardening.",
+    "view": "Xem trên GitHub"
+  },
+  "solutions": {
+    "wp_lead_in": "Riêng trên WordPress, FluxFiles thay thế cùng lúc ba plugin — thư mục, lưu trữ cloud, và cổng upload cho khách hàng."
+  },
+  "privacy": {
+    "banner": "<strong>Bản nháp — đang chờ rà soát pháp lý.</strong> Trang này là nội dung tạm mô tả kiến trúc thực tế của FluxFiles. Nội dung chưa được luật sư rà soát và không nên được xem là chính sách cuối cùng, có tính ràng buộc.",
+    "h1": "Chính sách bảo mật",
+    "intro": "Chính sách này áp dụng cho <strong>fluxfiles.dev</strong> (trang web này) và bản thân phần mềm FluxFiles.",
+    "website_h2": "Trang web này",
+    "website_p": "fluxfiles.dev là một trang tĩnh. Trang không chạy công cụ phân tích riêng và không đặt cookie theo dõi ngoài những gì cần thiết cho luồng thanh toán ở trang giá, vốn được xử lý hoàn toàn bởi bên xử lý thanh toán của chúng tôi, Polar. Chúng tôi không thấy và không lưu trữ thông tin thanh toán của bạn.",
+    "software_h2": "Phần mềm FluxFiles",
+    "software_intro": "FluxFiles là phần mềm self-hosted, stateless mà bạn (hoặc tổ chức của bạn) tự cài đặt và vận hành. Khi bạn sử dụng FluxFiles:",
+    "software_li1": "Các file bạn tải lên được lưu trong storage backend <strong>của riêng bạn</strong> — ổ đĩa local, AWS S3, Cloudflare R2, hoặc SFTP server của riêng bạn. Chúng tôi không bao giờ nhận được bản sao.",
+    "software_li2": "Quyền truy cập được kiểm soát bằng JSON Web Token (JWT) tồn tại trong thời gian ngắn do ứng dụng của bạn cấp. Chúng tôi không vận hành hệ thống xác thực hay tài khoản thay bạn.",
+    "software_li3": "Metadata (tiêu đề, tag, chỉ mục tìm kiếm, audit log) được lưu cùng file của bạn trong storage của riêng bạn, không nằm trong một database trung tâm do chúng tôi vận hành.",
+    "software_li4": "Nếu bạn bật các tính năng AI tùy chọn (tự động gắn tag, xóa nền), dữ liệu file sẽ được gửi tới nhà cung cấp AI mà bạn cấu hình (ví dụ: Anthropic, OpenAI) bằng API key của riêng bạn — tuân theo chính sách bảo mật của nhà cung cấp đó, không phải của chúng tôi.",
+    "license_h2": "Kích hoạt license",
+    "license_p": "Các gói trả phí được xác minh offline bằng license key — không có dữ liệu nào về file hay người dùng của bạn được truyền đi để kích hoạt license.",
+    "contact_h2": "Liên hệ",
+    "contact_p": "Câu hỏi về chính sách này: <a href=\"mailto:privacy@fluxfiles.dev\">privacy@fluxfiles.dev</a>"
   }
 }

@@ -1,0 +1,12 @@
+---
+import PrivacyBody from '../../sections/pages/PrivacyBody.astro';
+import { langList, defaultLang, type Lang } from '../../i18n/utils';
+
+export function getStaticPaths() {
+  return langList.filter((lang) => lang !== defaultLang).map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: Lang };
+---
+
+<PrivacyBody lang={lang} />

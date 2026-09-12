@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Who from '../../components/Who.astro';
+import WpComparison from '../../components/WpComparison.astro';
+import { useTranslations, type Lang } from '../../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<BaseLayout title={t('meta.solutions_title')} description={t('meta.solutions_description')} lang={lang} path="solutions">
+  <Navbar lang={lang} />
+  <main>
+    <h1 class="sr-only">{t('meta.solutions_title')}</h1>
+    <Who lang={lang} />
+    <p class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 text-center text-gray-600 dark:text-gray-400 -mt-8 mb-8">
+      {t('solutions.wp_lead_in')}
+    </p>
+    <WpComparison lang={lang} />
+  </main>
+  <Footer lang={lang} />
+</BaseLayout>

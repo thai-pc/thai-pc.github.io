@@ -1,5 +1,5 @@
 ---
-import { useTranslations, localePath, type Lang } from '../i18n/utils';
+import { useTranslations, type Lang } from '../i18n/utils';
 
 interface Props {
   lang: Lang;
@@ -84,7 +84,7 @@ const products = [
     </div>
 
     <div class="mt-10 text-center">
-      <a href={localePath(lang, '#pricing')} class="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-accent/25 hover:bg-accent/90 transition-colors">
+      <a href="#pricing" class="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-accent/25 hover:bg-accent/90 transition-colors">
         {t('products.cta')}
         <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
       </a>

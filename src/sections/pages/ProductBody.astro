@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import Features from '../../components/Features.astro';
+import Install from '../../components/Install.astro';
+import Adapters from '../../components/Adapters.astro';
+import EmbedDemo from '../../components/EmbedDemo.astro';
+import ComparisonTabs from '../../components/ComparisonTabs.astro';
+import Faq from '../../components/Faq.astro';
+import { useTranslations, type Lang } from '../../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<BaseLayout title={t('meta.product_title')} description={t('meta.product_description')} lang={lang} path="product">
+  <Navbar lang={lang} />
+  <main>
+    <h1 class="sr-only">{t('meta.product_title')}</h1>
+    <Features lang={lang} />
+    <Install lang={lang} />
+    <Adapters lang={lang} />
+    <EmbedDemo lang={lang} />
+    <ComparisonTabs lang={lang} />
+    <Faq lang={lang} keys={['auth', 'accounts', 'run']} />
+  </main>
+  <Footer lang={lang} />
+</BaseLayout>

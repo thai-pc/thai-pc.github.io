@@ -1,7 +1,19 @@
 {
   "meta": {
-    "title": "FluxFiles — Her yere gömülebilen dosya yöneticisi",
-    "description": "PHP 8.1+ dosya yöneticisi: Local, S3, R2, SFTP. iframe + JS SDK ile gömün. Ücretsiz MIT çekirdeği + ücretli dosya portalları (Markalı Paylaşım, Yükleme Portalları)."
+    "title": "FluxFiles — Müşterilerinizin kendi depolama alanında çalışan dosya yöneticisi",
+    "description": "PHP uygulamaları için gömülebilir dosya yöneticisi — her kiracının dosyaları kendi S3, R2, SFTP veya yerel depolamasında kalır. JWT kimlik doğrulama, merkezi veritabanı yok. Ücretsiz, MIT lisanslı.",
+    "product_title": "Ürün — FluxFiles",
+    "product_description": "FluxFiles'ın sunduğu her şey: dosya işlemleri, görüntü işleme, framework adaptörleri, ve bunu kendiniz geliştirmek veya bir SaaS widget'ı eklemekle karşılaştırma.",
+    "solutions_title": "Çözümler — FluxFiles",
+    "solutions_description": "FluxFiles'ı kimler, neden kullanıyor: SaaS platformları, ajanslar, WordPress/CMS siteleri, ve çok kiracılı BYOB dosya depolamaya ihtiyaç duyan dahili araçlar.",
+    "integrations_title": "Entegrasyonlar — FluxFiles",
+    "integrations_description": "Resmi framework adaptörleri (Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE, Summernote) ve sunucu tarafı token SDK'ları (Node, Python).",
+    "pricing_title": "Fiyatlandırma — FluxFiles",
+    "pricing_description": "Ücretsiz MIT çekirdek, ücretli Pro/Studio planları, ve Enterprise Compliance Bundle. Polar üzerinden aylık veya yıllık faturalandırma.",
+    "docs_title": "Dokümantasyon — FluxFiles",
+    "docs_description": "FluxFiles'ı kendi sunucunuzda barındırmak ve gömmek için hızlı başlangıç, yapılandırma referansı, ve API rotaları.",
+    "privacy_title": "Gizlilik Politikası — FluxFiles",
+    "privacy_description": "FluxFiles ve fluxfiles.dev verileri nasıl işler."
   },
   "nav": {
     "docs": "Dokümantasyon",
@@ -10,18 +22,21 @@
     "github": "GitHub",
     "byob": "Neden BYOB",
     "demo": "Demo",
-    "pricing": "Fiyatlar"
+    "pricing": "Fiyatlar",
+    "product": "Ürün",
+    "solutions": "Çözümler",
+    "integrations": "Entegrasyonlar"
   },
   "hero": {
-    "badge": "v0.2 — Açık Kaynak · MIT Lisansı",
-    "headline": "Her yere gömülebilen dosya yöneticisi",
-    "sub": "PHP ≥ 8.1 + Flysystem 3. Alpine.js arayüzü. Local, S3, Cloudflare R2, SFTP. Birkaç satır JavaScript ile gömün.",
+    "badge": "Bring-your-own-storage · MIT Lisanslı",
+    "headline": "Müşterilerinizin kendi depolama alanında çalışan dosya yöneticisi",
+    "sub": "iframe veya SDK ile gömün, kapsamı sınırlı bir JWT oluşturun; her kiracının dosyaları kendi S3, R2, SFTP veya yerel diskinde kalır — asla işletmeniz, güvenliğini sağlamanız veya ücretini ödemeniz gereken bir veritabanına kopyalanmaz.",
     "cta_start": "Başlayın",
     "cta_github": "GitHub'da Star verin",
-    "stat_php": "Framework gerektirmez",
-    "stat_sdk": "SDK boyutu",
     "stat_oss": "Açık kaynak lisans",
-    "stat_lang": "Desteklenen diller"
+    "stat_lang": "Desteklenen diller",
+    "stat_backends": "Desteklenen depolama backend'i",
+    "stat_zero": "Dosyalarınızı gören sunucu sayısı"
   },
   "demo": {
     "label": "Canlı Önizleme",
@@ -68,6 +83,8 @@
     "embed_desc": "iframe + postMessage SDK. Bağımsız UI Alpine.js (derleme yok). Her framework ile çalışır.",
     "jwt_title": "JWT kimlik doğrulama + kapsam",
     "jwt_desc": "Kullanıcı başına yol öneki, izinler, disk beyaz listesi, yalnızca sahip modu — veya viewer/editor/admin rol ön ayarıyla başlayın.",
+    "acl_title": "ACL rol ön ayarları",
+    "acl_desc": "viewer/editor/admin/superadmin ön ayarlarından token üretin — tek bir parametre, doğru izin, disk ve kapsam claim'lerini elle bir araya getirmek yerine otomatik açar.",
     "seo_title": "SEO meta verileri",
     "seo_desc": "Başlık, alt, açıklama, etiketler — S3 nesne meta verisi (bulut) veya sidecar JSON (yerel). Tam metin arama.",
     "presign_title": "Ön imzalı yüklemeler",
@@ -86,6 +103,8 @@
     "trash_desc": "Kurtarılabilir silme, otomatik temizleme.",
     "search_title": "Tam metin arama",
     "search_desc": "İsim, başlık, etiketlerde dizinli arama — varsayılan olarak dosya tabanlı, isteğe bağlı olarak kendi SQL veritabanınız arka uç olarak.",
+    "dbstorage_title": "Veritabanı destekli meta veri",
+    "dbstorage_desc": "İsteğe bağlı FLUXFILES_STORAGE_BACKEND=db modu — meta veriler, arama/klasör indeksi ve denetim günlüğü JSON yan dosyaları yerine kendi MySQL/PostgreSQL/SQLite veritabanınızda tutulur. Dosya baytları her iki durumda da depolamada kalır.",
     "bulk_title": "Toplu işlemler",
     "bulk_desc": "Çoklu seçim: taşıma, kopyalama, silme, indirme.",
     "crossdisk_title": "Diskler arası transfer",
@@ -165,7 +184,10 @@
     "row_search": "Tam metin arama",
     "row_darkmode": "Karanlık mod",
     "row_i18n": "16 dil",
-    "row_php81": "PHP ≥ 8.1"
+    "row_php81": "PHP ≥ 8.1",
+    "asof_note": "Karşılaştırma {date} tarihi itibarıyla günceldir, bağımsız olarak hazırlanmıştır — bir düzeltme bildirmek için GitHub deposuna bakın.",
+    "tab_oss": "açık kaynak dosya yöneticileriyle karşılaştırma",
+    "tab_saas": "dosya API SaaS'larıyla karşılaştırma"
   },
   "footer": {
     "made_by": "Yapan",
@@ -175,7 +197,9 @@
     "license_link": "Lisans",
     "packagist": "Packagist",
     "npm": "npm",
-    "readme_hint": "Tam belgelendirme GitHub'da"
+    "readme_hint": "Tam belgelendirme GitHub'da",
+    "privacy": "Gizlilik",
+    "terms": "Koşullar"
   },
   "cta": {
     "headline": "FluxFiles'ı gömmeye hazır mısınız?",
@@ -186,7 +210,10 @@
   "adapters": {
     "label": "Entegrasyonlar",
     "headline": "Yığınınız için hazır adaptörler",
-    "sub": "Resmi adaptörler, FluxFiles'ı zaten kullandığınız çerçevelere ve editörlere yerel olarak gömer."
+    "sub": "Resmi adaptörler, FluxFiles'ı zaten kullandığınız çerçevelere ve editörlere yerel olarak gömer.",
+    "sdk_headline": "UI olmadan, backend'inizden token oluşturun",
+    "sdk_label": "Sunucu tarafı token SDK'ları",
+    "sdk_note": "Bunlar UI adaptörü değildir — bir FluxFiles UI'ının (yukarıdaki adaptörlerden herhangi biri veya bağımsız iframe) yapmasına izin verilenleri sınırlayan JWT'leri bunlar oluşturur. Token oluşturmak için PHP gerekmez."
   },
   "embed": {
     "label": "Gömme",
@@ -266,7 +293,8 @@
     "p3_title": "CMS ve editör entegrasyonları",
     "p3_desc": "iframe SDK ile CKEditor, TinyMCE, Summernote veya kendi editörünüze bir medya seçici ekleyin.",
     "p4_title": "İç araçlar ve panolar",
-    "p4_desc": "Yönetim panellerine yükleme, önizleme ve denetlenen dosya işlemlerini bir öğleden sonrada ekleyin."
+    "p4_desc": "Yönetim panellerine yükleme, önizleme ve denetlenen dosya işlemlerini bir öğleden sonrada ekleyin.",
+    "see_all": "Tüm kullanım senaryolarını gör"
   },
   "live": {
     "label": "Canlı demo",
@@ -350,10 +378,10 @@
     "compliance_desc": "PII gizleme, legal hold, virüs taraması, C2PA kökeni ve denetim dışa aktarma — düzenlemeye tabi ve kurumsal dağıtımlar için.",
     "compliance_f1": "Dosya depolanmadan önce PII'yi (SSN, kart numaraları, gizli bilgiler) gizle",
     "compliance_f2": "Legal hold — silme, yeniden adlandırma ve taşımayı engeller, tam denetim izi ile",
-    "compliance_f3": "Uyumluluk hazırlık skor kartı, tek bakışta",
+    "compliance_f3": "Otomatik saha dışı yedekleme (yalnızca Enterprise)",
     "compliance_f4": "Her yüklemede virüs taraması",
     "compliance_f5": "C2PA içerik kökeni",
-    "compliance_f6": "Denetim günlüğü saklama",
+    "compliance_f6": "Yönetici kontrollü denetim günlüğü temizleme",
     "compliance_f7": "Denetim günlüğü dışa aktarma (NDJSON/CSV)",
     "compliance_f8": "SSO girişi (OIDC)",
     "cta": "Fiyatları gör"
@@ -378,5 +406,39 @@
     "price_wpmf": "$69/yıl",
     "price_offload": "ücretli",
     "footnote": "Klasörler + bulut + offload + müşteri portalları tek pakette — FileBird ve WP Media Folder ve WP Offload'u ayrı ödemek yerine."
+  },
+  "docs": {
+    "label": "Dokümantasyon",
+    "headline": "Her şey GitHub deposunda",
+    "sub": "FluxFiles'ın ayrı bir dokümantasyon sitesi yok — depodaki README ve referans belgeleri, her sürümle senkronize tutulan tek doğru kaynaktır.",
+    "card_quickstart_title": "Hızlı başlangıç",
+    "card_quickstart_desc": "Composer ile kurun, bir token oluşturun, iframe'i gömün — sıfırdan çalışan bir dosya yöneticisine giden en hızlı yol.",
+    "card_config_title": "Yapılandırma referansı",
+    "card_config_desc": "FluxFiles'ın okuduğu her JWT claim'i ve ortam değişkeni, tek bir tabloda.",
+    "card_api_title": "API referansı",
+    "card_api_desc": "Çekirdeğin sunduğu her HTTP rotası, istek/yanıt yapılarıyla birlikte.",
+    "card_selfhost_title": "Üretim ortamına dağıtım",
+    "card_selfhost_desc": "FluxFiles'ı kendi sunucunuzda çalıştırmak — web sunucusu yapılandırması, izinler, ve sertleştirme (hardening) notları.",
+    "view": "GitHub'da görüntüle"
+  },
+  "solutions": {
+    "wp_lead_in": "Özellikle WordPress'te FluxFiles, üç eklentinin yerini birden alır — klasörler, bulut depolama, ve müşteri yükleme portalları."
+  },
+  "privacy": {
+    "banner": "<strong>Taslak — hukuki incelemesi bekleniyor.</strong> Bu sayfa, FluxFiles'ın gerçek mimarisini açıklayan bir yer tutucudur. Bir avukat tarafından incelenmemiştir ve nihai, bağlayıcı bir politika olarak değerlendirilmemelidir.",
+    "h1": "Gizlilik Politikası",
+    "intro": "Bu politika <strong>fluxfiles.dev</strong>'i (bu web sitesi) ve FluxFiles yazılımının kendisini kapsar.",
+    "website_h2": "Bu web sitesi",
+    "website_p": "fluxfiles.dev statik bir sitedir. Fiyatlandırma sayfasındaki ödeme akışı için gerekli olanın dışında kendi analitiğini çalıştırmaz veya izleme çerezleri ayarlamaz; ödeme tamamen ödeme işlemcimiz Polar tarafından yönetilir. Ödeme bilgilerinizi görmeyiz veya saklamayız.",
+    "software_h2": "FluxFiles yazılımı",
+    "software_intro": "FluxFiles, sizin (veya kuruluşunuzun) kurup çalıştırdığı, kendi kendine barındırılan ve durum bilgisi tutmayan (stateless) bir yazılımdır. FluxFiles'ı kullandığınızda:",
+    "software_li1": "Yüklediğiniz dosyalar <strong>kendi</strong> depolama arka ucunuzda saklanır — yerel disk, AWS S3, Cloudflare R2 veya kendi SFTP sunucunuz. Bir kopyasını asla almayız.",
+    "software_li2": "Erişim, uygulamanızın verdiği kısa ömürlü JSON Web Token'lar (JWT) ile kontrol edilir. Sizin adınıza herhangi bir kimlik doğrulama veya hesap sistemi işletmeyiz.",
+    "software_li3": "Meta veriler (başlıklar, etiketler, arama dizini, denetim günlüğü) dosyalarınızla birlikte kendi deponuzda saklanır, bizim işlettiğimiz merkezi bir veritabanında değil.",
+    "software_li4": "İsteğe bağlı AI özelliklerini (otomatik etiketleme, arka plan kaldırma) etkinleştirirseniz, dosya verileri sizin yapılandırdığınız AI sağlayıcısına (ör. Anthropic, OpenAI) kendi API anahtarınızla gönderilir — bu, bizim değil, o sağlayıcının gizlilik politikasına tabidir.",
+    "license_h2": "Lisans etkinleştirme",
+    "license_p": "Ücretli katmanlar bir lisans anahtarı kullanılarak çevrimdışı doğrulanır — lisansı etkinleştirmek için dosyalarınız veya kullanıcılarınız hakkında hiçbir veri iletilmez.",
+    "contact_h2": "İletişim",
+    "contact_p": "Bu politikayla ilgili sorular: <a href=\"mailto:privacy@fluxfiles.dev\">privacy@fluxfiles.dev</a>"
   }
 }

@@ -1,7 +1,19 @@
 {
   "meta": {
-    "title": "FluxFiles — 可嵌入任何地方的文件管理器",
-    "description": "PHP 8.1+ 文件管理器：Local、S3、R2、SFTP。通过 iframe + JS SDK 嵌入。免费 MIT 核心 + 付费文件门户（品牌分享、上传门户）。"
+    "title": "FluxFiles — 让文件保存在客户自己存储中的文件管理器",
+    "description": "面向 PHP 应用的可嵌入文件管理器——每个租户的文件保存在他们自己的 S3、R2、SFTP 或本地存储中。JWT 认证，无需中心数据库。免费，MIT 许可。",
+    "product_title": "产品 — FluxFiles",
+    "product_description": "FluxFiles 提供的一切：文件操作、图像处理、框架适配器，以及与自行开发或接入 SaaS 组件的对比。",
+    "solutions_title": "解决方案 — FluxFiles",
+    "solutions_description": "谁在使用 FluxFiles，为什么：SaaS 平台、代理机构、WordPress/CMS 网站，以及需要多租户 BYOB 文件存储的内部工具。",
+    "integrations_title": "集成 — FluxFiles",
+    "integrations_description": "官方框架适配器（Laravel、WordPress、React、Vue/Nuxt、CKEditor 4、TinyMCE、Summernote）以及服务端令牌 SDK（Node、Python）。",
+    "pricing_title": "价格 — FluxFiles",
+    "pricing_description": "免费的 MIT 核心版、付费的 Pro/Studio 套餐，以及企业合规套件。通过 Polar 按月或按年计费。",
+    "docs_title": "文档 — FluxFiles",
+    "docs_description": "快速开始、配置参考，以及用于自托管和嵌入 FluxFiles 的 API 路由。",
+    "privacy_title": "隐私政策 — FluxFiles",
+    "privacy_description": "FluxFiles 与 fluxfiles.dev 如何处理数据。"
   },
   "nav": {
     "docs": "文档",
@@ -10,18 +22,21 @@
     "github": "GitHub",
     "byob": "为何 BYOB",
     "demo": "演示",
-    "pricing": "价格"
+    "pricing": "价格",
+    "product": "产品",
+    "solutions": "解决方案",
+    "integrations": "集成"
   },
   "hero": {
-    "badge": "v0.2 — 开源 · MIT 许可证",
-    "headline": "可嵌入任何地方的文件管理器",
-    "sub": "PHP ≥ 8.1 + Flysystem 3。Alpine.js 界面。Local、S3、Cloudflare R2、SFTP。几行 JavaScript 即可嵌入。",
+    "badge": "自带存储（BYOB）· MIT 许可",
+    "headline": "运行在客户自己存储之上的文件管理器",
+    "sub": "通过 iframe 或 SDK 嵌入，签发一个限定范围的 JWT，每个租户的文件就保存在他们自己的 S3、R2、SFTP 或本地磁盘中——永远不会被复制到一个你必须运维、保护或付费的数据库里。",
     "cta_start": "开始使用",
     "cta_github": "在GitHub上加星",
-    "stat_php": "无需框架",
-    "stat_sdk": "SDK包大小",
     "stat_oss": "开源许可证",
-    "stat_lang": "支持语言"
+    "stat_lang": "支持语言",
+    "stat_backends": "支持的存储后端",
+    "stat_zero": "能看到你文件的服务器数量"
   },
   "demo": {
     "label": "预览",
@@ -68,6 +83,8 @@
     "embed_desc": "iframe + postMessage SDK。独立 UI 使用 Alpine.js（零构建）。适用于任何框架。",
     "jwt_title": "JWT认证 + 权限范围",
     "jwt_desc": "每用户路径前缀、权限声明、磁盘白名单、仅所有者模式——也可从 viewer/editor/admin 角色预设开始。",
+    "acl_title": "ACL 角色预设",
+    "acl_desc": "从 viewer/editor/admin/superadmin 预设中签发令牌——一个参数即可展开正确的权限、磁盘和作用域声明，无需手动拼装。",
     "seo_title": "SEO元数据",
     "seo_desc": "标题、alt、说明、标签 — 云端为 S3 对象元数据，本地为 sidecar JSON。全文搜索。",
     "presign_title": "预签名上传",
@@ -86,6 +103,8 @@
     "trash_desc": "可恢复删除，自动清理。",
     "search_title": "全文搜索",
     "search_desc": "对文件名、标题、标签建立索引搜索——默认基于文件，也可选用自己的 SQL 数据库作为后端。",
+    "dbstorage_title": "数据库支持的元数据",
+    "dbstorage_desc": "可选的 FLUXFILES_STORAGE_BACKEND=db 模式——元数据、搜索/文件夹索引和审计日志存储在你自己的 MySQL/PostgreSQL/SQLite 中，而非 JSON 附属文件。无论哪种方式，文件字节都保留在存储端。",
     "bulk_title": "批量操作",
     "bulk_desc": "多选移动、复制、删除、下载。",
     "crossdisk_title": "跨磁盘传输",
@@ -165,7 +184,10 @@
     "row_search": "全文搜索",
     "row_darkmode": "深色模式",
     "row_i18n": "16种语言",
-    "row_php81": "PHP ≥ 8.1"
+    "row_php81": "PHP ≥ 8.1",
+    "asof_note": "对比数据截至 {date}，非官方关联——如需纠正请前往 GitHub 仓库反馈。",
+    "tab_oss": "对比开源文件管理器",
+    "tab_saas": "对比文件 API SaaS"
   },
   "footer": {
     "made_by": "作者",
@@ -175,7 +197,9 @@
     "license_link": "许可证",
     "packagist": "Packagist",
     "npm": "npm",
-    "readme_hint": "完整文档见 GitHub"
+    "readme_hint": "完整文档见 GitHub",
+    "privacy": "隐私政策",
+    "terms": "服务条款"
   },
   "cta": {
     "headline": "准备好嵌入 FluxFiles 了吗？",
@@ -186,7 +210,10 @@
   "adapters": {
     "label": "集成",
     "headline": "适配你技术栈的即插即用适配器",
-    "sub": "官方适配器可将 FluxFiles 原生嵌入你已经在用的框架和编辑器中。"
+    "sub": "官方适配器可将 FluxFiles 原生嵌入你已经在用的框架和编辑器中。",
+    "sdk_headline": "从你的后端签发令牌，无需 UI",
+    "sdk_label": "服务端令牌 SDK",
+    "sdk_note": "这些不是 UI 适配器——它们签发的 JWT 用于限定 FluxFiles UI（上面任意一种适配器，或独立 iframe）可以执行的操作范围。签发令牌无需 PHP。"
   },
   "embed": {
     "label": "嵌入",
@@ -266,7 +293,8 @@
     "p3_title": "CMS 与编辑器集成",
     "p3_desc": "通过 iframe SDK 将媒体选择器嵌入 CKEditor、TinyMCE、Summernote 或你自己的编辑器。",
     "p4_title": "内部工具与仪表板",
-    "p4_desc": "一个下午即可为后台面板加上上传、预览和带审计的文件操作。"
+    "p4_desc": "一个下午即可为后台面板加上上传、预览和带审计的文件操作。",
+    "see_all": "查看所有使用场景"
   },
   "live": {
     "label": "在线演示",
@@ -350,10 +378,10 @@
     "compliance_desc": "PII 脱敏、法律保全（legal hold）、病毒扫描、C2PA 溯源与审计导出——面向受监管与企业级部署。",
     "compliance_f1": "存储前脱敏 PII（身份证号、卡号、密钥等）",
     "compliance_f2": "法律保全（legal hold)——阻止删除、重命名和移动，并保留完整审计轨迹",
-    "compliance_f3": "合规就绪评分卡，一目了然",
+    "compliance_f3": "自动异地备份（仅限 Enterprise）",
     "compliance_f4": "每次上传均病毒扫描",
     "compliance_f5": "C2PA 内容溯源",
-    "compliance_f6": "审计日志留存",
+    "compliance_f6": "管理员控制的审计日志清除",
     "compliance_f7": "审计日志导出（NDJSON/CSV）",
     "compliance_f8": "SSO 登录（OIDC）",
     "cta": "查看价格"
@@ -378,5 +406,39 @@
     "price_wpmf": "$69/年",
     "price_offload": "付费",
     "footnote": "文件夹 + 云 + 卸载 + 客户门户合一——无需分别购买 FileBird、WP Media Folder 和 WP Offload。"
+  },
+  "docs": {
+    "label": "文档",
+    "headline": "一切都在 GitHub 仓库中",
+    "sub": "FluxFiles 没有独立的文档站点——仓库中的 README 和参考文档就是权威来源，并随每次发布保持同步。",
+    "card_quickstart_title": "快速开始",
+    "card_quickstart_desc": "通过 Composer 安装，签发令牌，嵌入 iframe——从零到可用文件管理器最快的路径。",
+    "card_config_title": "配置参考",
+    "card_config_desc": "FluxFiles 读取的每一个 JWT 声明和环境变量，汇总在一张表里。",
+    "card_api_title": "API 参考",
+    "card_api_desc": "核心暴露的每一个 HTTP 路由，及其请求/响应结构。",
+    "card_selfhost_title": "生产环境部署",
+    "card_selfhost_desc": "在你自己的服务器上运行 FluxFiles——Web 服务器配置、权限，以及加固说明。",
+    "view": "在 GitHub 上查看"
+  },
+  "solutions": {
+    "wp_lead_in": "在 WordPress 上，FluxFiles 一次性替代三个插件——文件夹管理、云存储，以及客户上传门户。"
+  },
+  "privacy": {
+    "banner": "<strong>草案 — 待法律审核。</strong> 本页面是描述 FluxFiles 实际架构的占位内容，尚未经过律师审核，不应被视为最终的、具有约束力的政策。",
+    "h1": "隐私政策",
+    "intro": "本政策涵盖 <strong>fluxfiles.dev</strong>（本网站）以及 FluxFiles 软件本身。",
+    "website_h2": "本网站",
+    "website_p": "fluxfiles.dev 是一个静态网站。除了价格页结账流程所必需的部分外，本站不运行自有的分析工具，也不设置追踪 Cookie；结账流程完全由我们的支付处理方 Polar 处理。我们不会看到或存储你的支付信息。",
+    "software_h2": "FluxFiles 软件",
+    "software_intro": "FluxFiles 是自托管、无状态的软件，由你（或你的组织）自行安装和运行。当你使用 FluxFiles 时：",
+    "software_li1": "你上传的文件保存在<strong>你自己的</strong>存储后端中——本地磁盘、AWS S3、Cloudflare R2，或你自己的 SFTP 服务器。我们绝不会收到副本。",
+    "software_li2": "访问权限由你的应用程序签发的短期 JSON Web Token（JWT）控制。我们不会代表你运行任何身份验证或账户系统。",
+    "software_li3": "元数据（标题、标签、搜索索引、审计日志）与你的文件一起保存在你自己的存储中，而不是我们运营的中央数据库中。",
+    "software_li4": "如果你启用了可选的 AI 功能（自动打标、去除背景），文件数据会使用你自己的 API key 发送给你配置的 AI 提供商（例如 Anthropic、OpenAI）——受该提供商而非我们的隐私政策约束。",
+    "license_h2": "许可证激活",
+    "license_p": "付费套餐通过许可证密钥离线验证——激活许可证不会传输任何关于你的文件或用户的数据。",
+    "contact_h2": "联系我们",
+    "contact_p": "关于本政策的问题：<a href=\"mailto:privacy@fluxfiles.dev\">privacy@fluxfiles.dev</a>"
   }
 }

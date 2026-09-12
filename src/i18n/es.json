@@ -1,7 +1,19 @@
 {
   "meta": {
-    "title": "FluxFiles — El gestor de archivos que se incrusta en cualquier lugar",
-    "description": "Gestor de archivos PHP 8.1+: Local, S3, R2, SFTP. Integra vía iframe + SDK JS. Núcleo MIT gratis + portales de archivos de pago (Compartir con marca, Portales de subida)."
+    "title": "FluxFiles — El gestor de archivos que usa el almacenamiento de tus clientes",
+    "description": "Gestor de archivos embebible para aplicaciones PHP — los archivos de cada inquilino permanecen en su propio S3, R2, SFTP o almacenamiento local. Autenticación JWT, sin base de datos central. Gratis, con licencia MIT.",
+    "product_title": "Producto — FluxFiles",
+    "product_description": "Todo lo que ofrece FluxFiles: operaciones de archivos, procesamiento de imágenes, adaptadores para frameworks, y su comparación con construirlo tú mismo o añadir un widget SaaS.",
+    "solutions_title": "Soluciones — FluxFiles",
+    "solutions_description": "Quién usa FluxFiles y por qué: plataformas SaaS, agencias, sitios WordPress/CMS, y herramientas internas que necesitan almacenamiento de archivos multiinquilino BYOB.",
+    "integrations_title": "Integraciones — FluxFiles",
+    "integrations_description": "Adaptadores oficiales para frameworks (Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE, Summernote) y SDKs de tokens del lado del servidor (Node, Python).",
+    "pricing_title": "Precios — FluxFiles",
+    "pricing_description": "Núcleo gratuito con licencia MIT, planes de pago Pro/Studio, y el Enterprise Compliance Bundle. Facturación mensual o anual a través de Polar.",
+    "docs_title": "Documentación — FluxFiles",
+    "docs_description": "Inicio rápido, referencia de configuración, y rutas de la API para autoalojar e integrar FluxFiles.",
+    "privacy_title": "Política de privacidad — FluxFiles",
+    "privacy_description": "Cómo manejan los datos FluxFiles y fluxfiles.dev."
   },
   "nav": {
     "docs": "Documentación",
@@ -10,18 +22,21 @@
     "github": "GitHub",
     "byob": "Por qué BYOB",
     "demo": "Demo",
-    "pricing": "Precios"
+    "pricing": "Precios",
+    "product": "Producto",
+    "solutions": "Soluciones",
+    "integrations": "Integraciones"
   },
   "hero": {
-    "badge": "v0.2 — Código abierto · Licencia MIT",
-    "headline": "El gestor de archivos que se incrusta en cualquier lugar",
-    "sub": "PHP ≥ 8.1 + Flysystem 3. Interfaz Alpine.js. Local, S3, Cloudflare R2, SFTP. Integra con unas líneas de JavaScript.",
+    "badge": "Bring-your-own-storage · Licencia MIT",
+    "headline": "El gestor de archivos que funciona sobre el almacenamiento de tus clientes",
+    "sub": "Embébelo mediante iframe o SDK, genera un JWT de alcance limitado, y los archivos de cada inquilino permanecen en su propio S3, R2, SFTP o disco local — nunca se copian a una base de datos que tengas que operar, proteger o pagar.",
     "cta_start": "Comenzar",
     "cta_github": "Star en GitHub",
-    "stat_php": "Sin framework requerido",
-    "stat_sdk": "Tamaño del SDK",
     "stat_oss": "Licencia código abierto",
-    "stat_lang": "Idiomas soportados"
+    "stat_lang": "Idiomas soportados",
+    "stat_backends": "Backends de almacenamiento compatibles",
+    "stat_zero": "Servidores que ven tus archivos"
   },
   "demo": {
     "label": "Vista previa",
@@ -68,6 +83,8 @@
     "embed_desc": "iframe + SDK postMessage. La UI standalone usa Alpine.js (sin build). Funciona con cualquier framework.",
     "jwt_title": "Auth JWT + alcance",
     "jwt_desc": "Prefijo de ruta por usuario, permisos, lista blanca de discos, modo solo propietario — o parte de un preset de rol viewer/editor/admin.",
+    "acl_title": "Presets de rol ACL",
+    "acl_desc": "Emite tokens desde presets viewer/editor/admin/superadmin — un solo parámetro expande los claims correctos de permisos, disco y alcance en lugar de armarlos a mano.",
     "seo_title": "Metadatos SEO",
     "seo_desc": "Título, alt, leyenda, tags — metadatos de objeto S3 (nube) o JSON sidecar (local). Búsqueda de texto completo.",
     "presign_title": "Subidas presignadas",
@@ -86,6 +103,8 @@
     "trash_desc": "Eliminación recuperable con purga automática.",
     "search_title": "Búsqueda de texto completo",
     "search_desc": "Búsqueda indexada por nombres, títulos, tags — basada en archivos por defecto, o tu propia base de datos SQL como backend opcional.",
+    "dbstorage_title": "Metadatos respaldados por BD",
+    "dbstorage_desc": "Modo opcional FLUXFILES_STORAGE_BACKEND=db — metadatos, índice de búsqueda/carpetas y log de auditoría viven en tu propia base MySQL/PostgreSQL/SQLite en vez de archivos JSON. Los bytes del archivo siguen residiendo en el almacenamiento en ambos casos.",
     "bulk_title": "Operaciones masivas",
     "bulk_desc": "Selección múltiple: mover, copiar, eliminar, descargar.",
     "crossdisk_title": "Transferencia cross-disk",
@@ -165,7 +184,10 @@
     "row_search": "Búsqueda de texto",
     "row_darkmode": "Modo oscuro",
     "row_i18n": "16 idiomas",
-    "row_php81": "PHP ≥ 8.1"
+    "row_php81": "PHP ≥ 8.1",
+    "asof_note": "Comparación al {date}, independiente — consulta el repositorio de GitHub para señalar una corrección.",
+    "tab_oss": "vs. gestores de archivos de código abierto",
+    "tab_saas": "vs. SaaS de API de archivos"
   },
   "footer": {
     "made_by": "Creado por",
@@ -175,7 +197,9 @@
     "license_link": "Licencia",
     "packagist": "Packagist",
     "npm": "npm",
-    "readme_hint": "Documentación completa en GitHub"
+    "readme_hint": "Documentación completa en GitHub",
+    "privacy": "Privacidad",
+    "terms": "Términos"
   },
   "cta": {
     "headline": "¿Listo para integrar FluxFiles?",
@@ -186,7 +210,10 @@
   "adapters": {
     "label": "Integraciones",
     "headline": "Adaptadores listos para tu stack",
-    "sub": "Los adaptadores oficiales integran FluxFiles de forma nativa en los frameworks y editores que ya usas."
+    "sub": "Los adaptadores oficiales integran FluxFiles de forma nativa en los frameworks y editores que ya usas.",
+    "sdk_headline": "Genera tokens desde tu backend, sin UI",
+    "sdk_label": "SDKs de tokens del lado del servidor",
+    "sdk_note": "Estos no son adaptadores de interfaz — emiten los JWT que delimitan lo que una interfaz de FluxFiles (cualquiera de los adaptadores anteriores, o el iframe independiente) puede hacer. No se necesita PHP para emitir tokens."
   },
   "embed": {
     "label": "Integración",
@@ -266,7 +293,8 @@
     "p3_title": "Integraciones de CMS y editores",
     "p3_desc": "Añade un selector de medios a CKEditor, TinyMCE, Summernote o tu propio editor mediante el SDK por iframe.",
     "p4_title": "Herramientas internas y paneles",
-    "p4_desc": "Añade subidas, vistas previas y operaciones de archivos auditadas a tus paneles de admin en una tarde."
+    "p4_desc": "Añade subidas, vistas previas y operaciones de archivos auditadas a tus paneles de admin en una tarde.",
+    "see_all": "Ver todos los casos de uso"
   },
   "live": {
     "label": "Demo en vivo",
@@ -350,10 +378,10 @@
     "compliance_desc": "Redacción de PII, legal hold, antivirus, procedencia C2PA y exportación de auditoría — para implementaciones reguladas y empresariales.",
     "compliance_f1": "Redacta PII (números de la seguridad social, tarjetas, secretos) antes de almacenar el archivo",
     "compliance_f2": "Legal hold — bloquea eliminar, renombrar y mover, con un registro de auditoría completo",
-    "compliance_f3": "Panel de preparación de cumplimiento, de un vistazo",
+    "compliance_f3": "Copia de seguridad externa automatizada (solo Enterprise)",
     "compliance_f4": "Antivirus en cada subida",
     "compliance_f5": "Procedencia de contenido C2PA",
-    "compliance_f6": "Retención de registro de auditoría",
+    "compliance_f6": "Purga del registro de auditoría controlada por el administrador",
     "compliance_f7": "Exportación de registro de auditoría (NDJSON/CSV)",
     "compliance_f8": "Inicio de sesión SSO (OIDC)",
     "cta": "Ver precios"
@@ -378,5 +406,39 @@
     "price_wpmf": "69 $/año",
     "price_offload": "de pago",
     "footnote": "Carpetas + nube + offload + portales de clientes en uno — en vez de pagar FileBird y WP Media Folder y WP Offload por separado."
+  },
+  "docs": {
+    "label": "Documentación",
+    "headline": "Todo vive en el repositorio de GitHub",
+    "sub": "FluxFiles no tiene un sitio de documentación aparte — el README y la documentación de referencia del repositorio son la fuente de verdad, mantenidos al día con cada versión.",
+    "card_quickstart_title": "Inicio rápido",
+    "card_quickstart_desc": "Instala vía Composer, genera un token, embebe el iframe — el camino más rápido de cero a un gestor de archivos funcionando.",
+    "card_config_title": "Referencia de configuración",
+    "card_config_desc": "Cada claim JWT y variable de entorno que lee FluxFiles, en una sola tabla.",
+    "card_api_title": "Referencia de la API",
+    "card_api_desc": "Cada ruta HTTP que expone el núcleo, con la forma de sus solicitudes y respuestas.",
+    "card_selfhost_title": "Despliegue en producción",
+    "card_selfhost_desc": "Ejecutar FluxFiles en tu propio servidor — configuración del servidor web, permisos, y notas de hardening.",
+    "view": "Ver en GitHub"
+  },
+  "solutions": {
+    "wp_lead_in": "En WordPress en particular, FluxFiles reemplaza tres plugins a la vez — carpetas, almacenamiento en la nube, y portales de subida para clientes."
+  },
+  "privacy": {
+    "banner": "<strong>Borrador — pendiente de revisión legal.</strong> Esta página es un marcador de posición que describe la arquitectura real de FluxFiles. No ha sido revisada por un abogado y no debe considerarse una política final y vinculante.",
+    "h1": "Política de privacidad",
+    "intro": "Esta política cubre <strong>fluxfiles.dev</strong> (este sitio web) y el software FluxFiles en sí.",
+    "website_h2": "Este sitio web",
+    "website_p": "fluxfiles.dev es un sitio estático. No ejecuta analítica propia ni establece cookies de seguimiento más allá de lo necesario para el flujo de pago en la página de precios, gestionado íntegramente por nuestro procesador de pagos, Polar. No vemos ni almacenamos los datos de tu pago.",
+    "software_h2": "El software FluxFiles",
+    "software_intro": "FluxFiles es un software autoalojado y sin estado que tú (o tu organización) instala y ejecuta. Cuando usas FluxFiles:",
+    "software_li1": "Los archivos que subes se almacenan en <strong>tu propio</strong> backend de almacenamiento — disco local, AWS S3, Cloudflare R2, o tu propio servidor SFTP. Nunca recibimos una copia.",
+    "software_li2": "El acceso se controla mediante JSON Web Tokens (JWT) de corta duración que emite tu aplicación. No operamos un sistema de autenticación o cuentas en tu nombre.",
+    "software_li3": "Los metadatos (títulos, etiquetas, índice de búsqueda, registro de auditoría) se almacenan junto a tus archivos en tu propio almacenamiento, no en una base de datos central que operemos nosotros.",
+    "software_li4": "Si activas funciones opcionales de IA (etiquetado automático, eliminación de fondo), los datos del archivo se envían al proveedor de IA que configures (p. ej., Anthropic, OpenAI) usando tu propia clave de API — sujeto a la política de privacidad de ese proveedor, no a la nuestra.",
+    "license_h2": "Activación de licencia",
+    "license_p": "Los planes de pago se verifican sin conexión mediante una clave de licencia — no se transmiten datos sobre tus archivos o usuarios para activar una licencia.",
+    "contact_h2": "Contacto",
+    "contact_p": "Preguntas sobre esta política: <a href=\"mailto:privacy@fluxfiles.dev\">privacy@fluxfiles.dev</a>"
   }
 }

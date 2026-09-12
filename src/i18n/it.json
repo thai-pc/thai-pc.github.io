@@ -1,7 +1,19 @@
 {
   "meta": {
-    "title": "FluxFiles — Il file manager integrabile ovunque",
-    "description": "File manager PHP 8.1+: Local, S3, R2, SFTP. Integra via iframe + SDK JS. Core MIT gratis + portali file a pagamento (Condivisione brandizzata, Portali di caricamento)."
+    "title": "FluxFiles — Il file manager che usa lo storage dei tuoi clienti",
+    "description": "File manager incorporabile per applicazioni PHP — i file di ogni tenant restano nel proprio S3, R2, SFTP o storage locale. Autenticazione JWT, nessun database centrale. Gratuito, con licenza MIT.",
+    "product_title": "Prodotto — FluxFiles",
+    "product_description": "Tutto ciò che offre FluxFiles: operazioni sui file, elaborazione delle immagini, adapter per i framework, e il confronto con lo sviluppo in proprio o l'aggiunta di un widget SaaS.",
+    "solutions_title": "Soluzioni — FluxFiles",
+    "solutions_description": "Chi usa FluxFiles e perché: piattaforme SaaS, agenzie, siti WordPress/CMS, e strumenti interni che richiedono storage di file multi-tenant BYOB.",
+    "integrations_title": "Integrazioni — FluxFiles",
+    "integrations_description": "Adapter ufficiali per i framework (Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE, Summernote) e SDK per token lato server (Node, Python).",
+    "pricing_title": "Prezzi — FluxFiles",
+    "pricing_description": "Core gratuito con licenza MIT, piani a pagamento Pro/Studio, e l'Enterprise Compliance Bundle. Fatturazione mensile o annuale tramite Polar.",
+    "docs_title": "Documentazione — FluxFiles",
+    "docs_description": "Guida rapida, riferimento alla configurazione, e rotte API per l'autohosting e l'integrazione di FluxFiles.",
+    "privacy_title": "Informativa sulla privacy — FluxFiles",
+    "privacy_description": "Come FluxFiles e fluxfiles.dev gestiscono i dati."
   },
   "nav": {
     "docs": "Documentazione",
@@ -10,18 +22,21 @@
     "github": "GitHub",
     "byob": "Perché BYOB",
     "demo": "Demo",
-    "pricing": "Prezzi"
+    "pricing": "Prezzi",
+    "product": "Prodotto",
+    "solutions": "Soluzioni",
+    "integrations": "Integrazioni"
   },
   "hero": {
-    "badge": "v0.2 — Open Source · Licenza MIT",
-    "headline": "Il file manager integrabile ovunque",
-    "sub": "PHP ≥ 8.1 + Flysystem 3. Interfaccia Alpine.js. Local, S3, Cloudflare R2, SFTP. Integra con poche righe di JavaScript.",
+    "badge": "Bring-your-own-storage · Con licenza MIT",
+    "headline": "Il file manager che funziona sullo storage dei tuoi clienti",
+    "sub": "Incorporalo tramite iframe o SDK, genera un JWT con ambito limitato, e i file di ogni tenant restano nel proprio S3, R2, SFTP o disco locale — mai copiati in un database che devi gestire, proteggere o pagare.",
     "cta_start": "Inizia ora",
     "cta_github": "Star su GitHub",
-    "stat_php": "Nessun framework richiesto",
-    "stat_sdk": "Dimensione SDK",
     "stat_oss": "Licenza open source",
-    "stat_lang": "Lingue supportate"
+    "stat_lang": "Lingue supportate",
+    "stat_backends": "Storage backend supportati",
+    "stat_zero": "Server che vedono i tuoi file"
   },
   "demo": {
     "label": "Anteprima",
@@ -68,6 +83,8 @@
     "embed_desc": "iframe + SDK postMessage. UI standalone con Alpine.js (zero build). Con qualsiasi framework.",
     "jwt_title": "Auth JWT + scoping",
     "jwt_desc": "Prefisso percorso per utente, permessi, whitelist dischi, modalità solo proprietario — o parti da un preset di ruolo viewer/editor/admin.",
+    "acl_title": "Preset di ruolo ACL",
+    "acl_desc": "Emetti token da preset viewer/editor/admin/superadmin — un solo parametro espande i claim corretti di permessi, disco e ambito invece di assemblarli a mano.",
     "seo_title": "Metadati SEO",
     "seo_desc": "Titolo, alt, didascalia, tag — metadati oggetto S3 (cloud) o JSON sidecar (locale). Ricerca full-text.",
     "presign_title": "Upload pre-firmati",
@@ -86,6 +103,8 @@
     "trash_desc": "Eliminazione recuperabile con pulizia automatica.",
     "search_title": "Ricerca full-text",
     "search_desc": "Ricerca indicizzata per nomi, titoli, tag — basata su file di default, oppure un tuo database SQL come backend opzionale.",
+    "dbstorage_title": "Metadati su database",
+    "dbstorage_desc": "Modalità opzionale FLUXFILES_STORAGE_BACKEND=db — metadati, indice di ricerca/cartelle e log di audit vivono nel tuo database MySQL/PostgreSQL/SQLite invece che in file JSON. I byte dei file restano comunque nello storage.",
     "bulk_title": "Operazioni in blocco",
     "bulk_desc": "Selezione multipla: spostare, copiare, eliminare, scaricare.",
     "crossdisk_title": "Trasferimento cross-disk",
@@ -165,7 +184,10 @@
     "row_search": "Ricerca full-text",
     "row_darkmode": "Modalità scura",
     "row_i18n": "16 lingue",
-    "row_php81": "PHP ≥ 8.1"
+    "row_php81": "PHP ≥ 8.1",
+    "asof_note": "Confronto aggiornato al {date}, indipendente — consulta il repository GitHub per segnalare una correzione.",
+    "tab_oss": "vs. file manager open source",
+    "tab_saas": "vs. SaaS di API per file"
   },
   "footer": {
     "made_by": "Creato da",
@@ -175,7 +197,9 @@
     "license_link": "Licenza",
     "packagist": "Packagist",
     "npm": "npm",
-    "readme_hint": "Documentazione completa su GitHub"
+    "readme_hint": "Documentazione completa su GitHub",
+    "privacy": "Privacy",
+    "terms": "Termini"
   },
   "cta": {
     "headline": "Pronto a integrare FluxFiles?",
@@ -186,7 +210,10 @@
   "adapters": {
     "label": "Integrazioni",
     "headline": "Adattatori pronti all'uso per il tuo stack",
-    "sub": "Gli adattatori ufficiali integrano FluxFiles in modo nativo nei framework e negli editor che usi già."
+    "sub": "Gli adattatori ufficiali integrano FluxFiles in modo nativo nei framework e negli editor che usi già.",
+    "sdk_headline": "Genera token dal tuo backend, senza UI",
+    "sdk_label": "SDK per token lato server",
+    "sdk_note": "Questi non sono adapter UI — emettono i JWT che delimitano ciò che una UI di FluxFiles (uno degli adapter sopra, o l'iframe standalone) può fare. Non serve PHP per emettere i token."
   },
   "embed": {
     "label": "Incorpora",
@@ -266,7 +293,8 @@
     "p3_title": "Integrazioni CMS ed editor",
     "p3_desc": "Inserisci un selettore di media in CKEditor, TinyMCE, Summernote o nel tuo editor tramite l'SDK iframe.",
     "p4_title": "Strumenti interni e dashboard",
-    "p4_desc": "Aggiungi upload, anteprime e operazioni sui file con audit ai pannelli di amministrazione in un pomeriggio."
+    "p4_desc": "Aggiungi upload, anteprime e operazioni sui file con audit ai pannelli di amministrazione in un pomeriggio.",
+    "see_all": "Vedi tutti i casi d'uso"
   },
   "live": {
     "label": "Demo dal vivo",
@@ -350,10 +378,10 @@
     "compliance_desc": "Redazione PII, legal hold, antivirus, provenienza C2PA ed esportazione audit — per implementazioni regolamentate ed enterprise.",
     "compliance_f1": "Redigi i PII (codici fiscali, numeri di carta, segreti) prima che il file venga salvato",
     "compliance_f2": "Legal hold — blocca eliminazione, rinomina e spostamento, con audit trail completo",
-    "compliance_f3": "Scorecard di prontezza alla conformità, a colpo d'occhio",
+    "compliance_f3": "Backup automatico fuori sede (solo Enterprise)",
     "compliance_f4": "Antivirus a ogni caricamento",
     "compliance_f5": "Provenienza del contenuto C2PA",
-    "compliance_f6": "Conservazione del log di audit",
+    "compliance_f6": "Eliminazione del log di audit controllata dall'amministratore",
     "compliance_f7": "Esportazione del log di audit (NDJSON/CSV)",
     "compliance_f8": "Accesso SSO (OIDC)",
     "cta": "Vedi i prezzi"
@@ -378,5 +406,39 @@
     "price_wpmf": "69 $/anno",
     "price_offload": "a pagamento",
     "footnote": "Cartelle + cloud + offload + portali clienti in uno — invece di pagare FileBird e WP Media Folder e WP Offload separatamente."
+  },
+  "docs": {
+    "label": "Documentazione",
+    "headline": "Tutto vive nel repository GitHub",
+    "sub": "FluxFiles non ha un sito di documentazione separato — il README e la documentazione di riferimento nel repository sono la fonte autorevole, mantenuti sincronizzati a ogni release.",
+    "card_quickstart_title": "Guida rapida",
+    "card_quickstart_desc": "Installa tramite Composer, genera un token, incorpora l'iframe — il percorso più rapido da zero a un file manager funzionante.",
+    "card_config_title": "Riferimento alla configurazione",
+    "card_config_desc": "Ogni claim JWT e variabile d'ambiente letta da FluxFiles, in un'unica tabella.",
+    "card_api_title": "Riferimento API",
+    "card_api_desc": "Ogni rotta HTTP esposta dal core, con la struttura di richiesta/risposta.",
+    "card_selfhost_title": "Deploy in produzione",
+    "card_selfhost_desc": "Eseguire FluxFiles sul proprio server — configurazione del web server, permessi, e note di hardening.",
+    "view": "Vedi su GitHub"
+  },
+  "solutions": {
+    "wp_lead_in": "Su WordPress in particolare, FluxFiles sostituisce tre plugin in una volta sola — cartelle, storage cloud, e portali di upload per i clienti."
+  },
+  "privacy": {
+    "banner": "<strong>Bozza — in attesa di revisione legale.</strong> Questa pagina è un segnaposto che descrive l'architettura effettiva di FluxFiles. Non è stata revisionata da un legale e non deve essere considerata una politica finale e vincolante.",
+    "h1": "Informativa sulla privacy",
+    "intro": "Questa informativa copre <strong>fluxfiles.dev</strong> (questo sito) e il software FluxFiles stesso.",
+    "website_h2": "Questo sito web",
+    "website_p": "fluxfiles.dev è un sito statico. Non esegue analitiche proprie né imposta cookie di tracciamento oltre a quanto necessario per il flusso di checkout nella pagina prezzi, gestito interamente dal nostro elaboratore di pagamenti, Polar. Non vediamo né memorizziamo i dettagli del tuo pagamento.",
+    "software_h2": "Il software FluxFiles",
+    "software_intro": "FluxFiles è un software self-hosted e stateless che tu (o la tua organizzazione) installi ed esegui. Quando usi FluxFiles:",
+    "software_li1": "I file che carichi vengono archiviati nel <strong>tuo</strong> backend di storage — disco locale, AWS S3, Cloudflare R2, o il tuo server SFTP. Non ne riceviamo mai una copia.",
+    "software_li2": "L'accesso è controllato da JSON Web Token (JWT) di breve durata emessi dalla tua applicazione. Non gestiamo alcun sistema di autenticazione o account per tuo conto.",
+    "software_li3": "I metadati (titoli, tag, indice di ricerca, registro di audit) sono archiviati insieme ai tuoi file nel tuo storage, non in un database centrale gestito da noi.",
+    "software_li4": "Se abiliti funzionalità AI opzionali (tagging automatico, rimozione dello sfondo), i dati del file vengono inviati al provider AI che configuri (es. Anthropic, OpenAI) usando la tua chiave API — soggetti all'informativa sulla privacy di quel provider, non alla nostra.",
+    "license_h2": "Attivazione della licenza",
+    "license_p": "I piani a pagamento vengono verificati offline tramite una chiave di licenza — nessun dato sui tuoi file o utenti viene trasmesso per attivare una licenza.",
+    "contact_h2": "Contatti",
+    "contact_p": "Domande su questa informativa: <a href=\"mailto:privacy@fluxfiles.dev\">privacy@fluxfiles.dev</a>"
   }
 }

@@ -3,9 +3,14 @@ import { useTranslations, type Lang } from '../i18n/utils';
 
 interface Props {
   lang: Lang;
+  // Server-side token SDKs (Node/Python) mint JWTs but render no UI, so they're
+  // a distinct category from the framework adapters below — shown only where
+  // that distinction matters (the full /integrations reference), not on the
+  // lighter /product teaser. See decision 6 in the redesign plan.
+  showSdks?: boolean;
 }
 
-const { lang } = Astro.props;
+const { lang, showSdks = false } = Astro.props;
 const t = useTranslations(lang);
 
 // Official integrations shipped with FluxFiles. Names are proper nouns (not translated).
@@ -17,6 +22,11 @@ const adapters = [
   { name: 'CKEditor 4', tag: 'Plugin', icon: 'M4 5a2 2 0 012-2h12a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm4 4h8M8 13h8M8 17h5' },
   { name: 'TinyMCE', tag: 'Plugin', icon: 'M5 5h14v3H5V5zm5 5h9v9h-9v-9zM5 12h3v7H5v-7z' },
   { name: 'Summernote', tag: 'Plugin', icon: 'M4 5a2 2 0 012-2h12a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4h6M7 12h10M7 15h8' },
+];
+
+const sdks = [
+  { name: '@fluxfiles/node', tag: 'Node.js', titleKey: 'features.node_title', descKey: 'features.node_desc', icon: 'M15 7a2 2 0 012 2m4-2a6 6 0 01-7.743 5.743L11 14H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z' },
+  { name: 'fluxfiles-token', tag: 'Python', titleKey: 'features.python_title', descKey: 'features.python_desc', icon: 'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' },
 ];
 ---
 
@@ -41,5 +51,29 @@ const adapters = [
         </div>
       ))}
     </div>
+
+    {showSdks && (
+      <div class="mt-16 pt-16 border-t border-gray-200 dark:border-gray-800">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <p class="text-sm font-semibold uppercase tracking-wide text-accent dark:text-accent-dark mb-3">{t('adapters.sdk_label')}</p>
+          <h3 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-100">{t('adapters.sdk_headline')}</h3>
+          <p class="mt-4 text-gray-600 dark:text-gray-400">{t('adapters.sdk_note')}</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+          {sdks.map((s) => (
+            <div class="flex items-start gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/40 p-6">
+              <div class="w-10 h-10 shrink-0 rounded-lg bg-accent-light dark:bg-accent/10 flex items-center justify-center">
+                <svg class="w-5 h-5 text-accent dark:text-accent-dark" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d={s.icon} /></svg>
+              </div>
+              <div>
+                <div class="font-semibold text-sm text-gray-900 dark:text-gray-100">{t(s.titleKey)} <span class="text-xs font-normal text-gray-500 dark:text-gray-400">({s.name})</span></div>
+                <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">{t(s.descKey)}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
   </div>
 </section>

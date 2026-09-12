@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import { useTranslations, type Lang } from '../../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<BaseLayout title={t('meta.terms_title')} description={t('meta.terms_description')} lang={lang} translated={false}>
+  <Navbar lang={lang} />
+  <main>
+    <section class="py-20 sm:py-28">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-gray-700 dark:text-gray-300 leading-relaxed [&_h2]:mt-10 [&_h2]:mb-3 [&_h2]:text-xl [&_h2]:font-semibold [&_h2]:text-gray-900 [&_h2]:dark:text-white [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:list-disc [&_ul]:pl-6 [&_li]:mb-2 [&_a]:text-accent [&_a]:underline">
+        <div class="mb-8 rounded-lg border border-amber-300 bg-amber-50 dark:border-amber-900 dark:bg-amber-950/40 px-4 py-3 text-sm text-amber-800 dark:text-amber-300">
+          <strong>Draft — pending legal review.</strong> This page is a placeholder describing FluxFiles' actual product and licensing model. It has not been reviewed by counsel and should not be treated as a final, binding agreement.
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">Terms of Service</h1>
+        <p>These terms cover use of <strong>fluxfiles.dev</strong> (this website, including its checkout flow) and the FluxFiles software.</p>
+
+        <h2>The software</h2>
+        <p>The FluxFiles core is licensed under the MIT License — see the <a href="https://github.com/thai-pc/fluxfiles/blob/master/LICENSE" target="_blank" rel="noopener noreferrer">LICENSE file</a> on GitHub for the exact terms. You may self-host, modify, and redistribute it under those terms.</p>
+
+        <h2>Paid modules</h2>
+        <p>Optional paid modules (Branded Share, Upload Portals, Versioning, Webhooks, and the Enterprise Compliance Bundle) are licensed separately and are not covered by the MIT License. A purchase grants you a license key that unlocks the corresponding module for self-hosted use, verified offline.</p>
+
+        <h2>Billing</h2>
+        <p>Paid subscriptions are billed monthly or annually via our payment processor, Polar. You can cancel at any time; an expired or cancelled license keeps running the version of the software you already have, but stops receiving updates and support. We occasionally run a one-time lifetime deal as a limited promo; where purchased, it does not expire.</p>
+
+        <h2>Refunds</h2>
+        <p>We offer a 14-day refund window from the date of purchase for paid modules and subscriptions, no questions asked.</p>
+
+        <h2>No warranty</h2>
+        <p>The software is provided "as is," without warranty of any kind, to the extent permitted by law — consistent with the MIT License's disclaimer for the free core, and extended to the paid modules.</p>
+
+        <h2>Contact</h2>
+        <p>Questions about these terms: <a href="mailto:legal@fluxfiles.dev">legal@fluxfiles.dev</a></p>
+      </div>
+    </section>
+  </main>
+  <Footer lang={lang} />
+</BaseLayout>

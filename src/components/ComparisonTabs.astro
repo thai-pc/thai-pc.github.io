@@ -1,0 +1,144 @@
+---
+import { useTranslations, type Lang } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+// '✓' yes · '✗' no · '⚠' partial / enterprise-only
+const ossRows = [
+  { key: 'row_storage',    flux: '✓', elfinder: '⚠', lfm: '⚠', rfm: '⚠', resp: '✗' },
+  { key: 'row_embed',      flux: '✓', elfinder: '⚠', lfm: '✗', rfm: '⚠', resp: '✗' },
+  { key: 'row_jwt',        flux: '✓', elfinder: '✗', lfm: '✗', rfm: '✗', resp: '✗' },
+  { key: 'row_seo',        flux: '✓', elfinder: '✗', lfm: '✗', rfm: '✗', resp: '✗' },
+  { key: 'row_ai',         flux: '✓', elfinder: '✗', lfm: '✗', rfm: '✗', resp: '✗' },
+  { key: 'row_crop',       flux: '✓', elfinder: '✓', lfm: '✗', rfm: '✗', resp: '✗' },
+  { key: 'row_chunk',      flux: '✓', elfinder: '✗', lfm: '✗', rfm: '✗', resp: '✗' },
+  { key: 'row_search',     flux: '✓', elfinder: '✗', lfm: '✗', rfm: '✗', resp: '✗' },
+  { key: 'row_darkmode',   flux: '✓', elfinder: '✗', lfm: '⚠', rfm: '✗', resp: '✗' },
+  { key: 'row_i18n',       flux: '✓', elfinder: '✓', lfm: '✗', rfm: '✗', resp: '✗' },
+  { key: 'row_php81',      flux: '✓', elfinder: '✓', lfm: '✗', rfm: '✓', resp: '✓' },
+  { key: 'row_maintained', flux: '✓', elfinder: '✓', lfm: '⚠', rfm: '✗', resp: '✗' },
+  { key: 'row_ui',         flux: '✓', elfinder: '✗', lfm: '⚠', rfm: '✗', resp: '✗' },
+];
+
+const saasRows = [
+  { key: 'row_selfhost',     flux: '✓', filestack: '✗', uploadcare: '✗', cloudinary: '✗', supabase: '⚠' },
+  { key: 'row_byob',         flux: '✓', filestack: '⚠', uploadcare: '⚠', cloudinary: '✗', supabase: '✗' },
+  { key: 'row_embed',        flux: '✓', filestack: '✓', uploadcare: '✓', cloudinary: '⚠', supabase: '✗' },
+  { key: 'row_oss',          flux: '✓', filestack: '✗', uploadcare: '✗', cloudinary: '✗', supabase: '✓' },
+  { key: 'row_fees',         flux: '✓', filestack: '✗', uploadcare: '✗', cloudinary: '✗', supabase: '⚠' },
+  { key: 'row_multistorage', flux: '✓', filestack: '⚠', uploadcare: '✗', cloudinary: '✗', supabase: '✗' },
+  { key: 'row_scoping',      flux: '✓', filestack: '⚠', uploadcare: '⚠', cloudinary: '⚠', supabase: '⚠' },
+];
+
+function statusClass(val: string): string {
+  if (val === '✓') return 'text-green-600 dark:text-green-400 font-bold';
+  if (val === '✗') return 'text-red-500 dark:text-red-400';
+  return 'text-amber-500 dark:text-amber-400';
+}
+
+const asOfDate = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+const asOfNote = t('compare.asof_note').replace('{date}', asOfDate);
+---
+
+<section id="compare" class="py-16 sm:py-24 bg-gray-50/50 dark:bg-gray-900/50">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8" x-data="{ tab: 'oss' }">
+    <div class="text-center max-w-2xl mx-auto mb-8">
+      <div class="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent-light dark:bg-accent/10 px-3 py-1 text-xs font-medium text-accent dark:text-accent-dark mb-4">
+        {t('compare.label')}
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
+        {t('compare.headline')}
+      </h2>
+    </div>
+
+    <div class="flex items-center justify-center gap-2 mb-8">
+      <button
+        type="button"
+        x-on:click="tab = 'oss'"
+        x-bind:class="tab === 'oss' ? 'bg-accent text-white' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800'"
+        class="rounded-full px-4 py-2 text-sm font-medium transition-colors"
+      >
+        {t('compare.tab_oss')}
+      </button>
+      <button
+        type="button"
+        x-on:click="tab = 'saas'"
+        x-bind:class="tab === 'saas' ? 'bg-accent text-white' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800'"
+        class="rounded-full px-4 py-2 text-sm font-medium transition-colors"
+      >
+        {t('compare.tab_saas')}
+      </button>
+    </div>
+
+    <div class="sm:hidden flex items-center justify-center gap-1.5 mb-3 text-xs text-gray-400 dark:text-gray-500">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-4 5 4 5m8-10l4 5-4 5"/></svg>
+      <span>{t('ui.swipe')}</span>
+    </div>
+
+    <div x-show="tab === 'oss'" x-cloak class="mx-auto max-w-5xl overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-gray-200 dark:border-gray-700">
+            <th class="text-left py-3 px-3 font-medium text-gray-500 dark:text-gray-400">{t('compare.col_feature')}</th>
+            <th class="text-center py-3 px-3 font-bold text-accent dark:text-accent-dark">{t('compare.col_flux')}</th>
+            <th class="text-center py-3 px-3 font-medium text-gray-500 dark:text-gray-400">{t('compare.col_elfinder')}</th>
+            <th class="text-center py-3 px-3 font-medium text-gray-500 dark:text-gray-400">{t('compare.col_lfm')}</th>
+            <th class="text-center py-3 px-3 font-medium text-gray-500 dark:text-gray-400">{t('compare.col_rfm')}</th>
+            <th class="text-center py-3 px-3 font-medium text-gray-500 dark:text-gray-400">{t('compare.col_resp')}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {ossRows.map((row) => (
+            <tr class="border-b border-gray-100 dark:border-gray-800">
+              <td class="py-3 px-3 text-gray-700 dark:text-gray-300">{t(`compare.${row.key}`)}</td>
+              <td class:list={['py-3 px-3 text-center text-lg', statusClass(row.flux)]}>{row.flux}</td>
+              <td class:list={['py-3 px-3 text-center text-lg', statusClass(row.elfinder)]}>{row.elfinder}</td>
+              <td class:list={['py-3 px-3 text-center text-lg', statusClass(row.lfm)]}>{row.lfm}</td>
+              <td class:list={['py-3 px-3 text-center text-lg', statusClass(row.rfm)]}>{row.rfm}</td>
+              <td class:list={['py-3 px-3 text-center text-lg', statusClass(row.resp)]}>{row.resp}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div x-show="tab === 'saas'" x-cloak class="mx-auto max-w-5xl overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-gray-200 dark:border-gray-700">
+            <th class="text-left py-3 px-3 font-medium text-gray-500 dark:text-gray-400">{t('saas.col_feature')}</th>
+            <th class="text-center py-3 px-3 font-bold text-accent dark:text-accent-dark">{t('saas.col_flux')}</th>
+            <th class="text-center py-3 px-3 font-medium text-gray-500 dark:text-gray-400">{t('saas.col_filestack')}</th>
+            <th class="text-center py-3 px-3 font-medium text-gray-500 dark:text-gray-400">{t('saas.col_uploadcare')}</th>
+            <th class="text-center py-3 px-3 font-medium text-gray-500 dark:text-gray-400">{t('saas.col_cloudinary')}</th>
+            <th class="text-center py-3 px-3 font-medium text-gray-500 dark:text-gray-400">{t('saas.col_supabase')}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {saasRows.map((row) => (
+            <tr class="border-b border-gray-100 dark:border-gray-800">
+              <td class="py-3 px-3 text-gray-700 dark:text-gray-300">{t(`saas.${row.key}`)}</td>
+              <td class:list={['py-3 px-3 text-center text-lg', statusClass(row.flux)]}>{row.flux}</td>
+              <td class:list={['py-3 px-3 text-center text-lg', statusClass(row.filestack)]}>{row.filestack}</td>
+              <td class:list={['py-3 px-3 text-center text-lg', statusClass(row.uploadcare)]}>{row.uploadcare}</td>
+              <td class:list={['py-3 px-3 text-center text-lg', statusClass(row.cloudinary)]}>{row.cloudinary}</td>
+              <td class:list={['py-3 px-3 text-center text-lg', statusClass(row.supabase)]}>{row.supabase}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <p class="mt-6 mx-auto max-w-3xl text-center text-xs text-gray-400 dark:text-gray-500 leading-relaxed">
+        {t('saas.note')}
+      </p>
+    </div>
+
+    <p class="mt-8 mx-auto max-w-3xl text-center text-xs text-gray-400 dark:text-gray-500 leading-relaxed">
+      {asOfNote}
+    </p>
+  </div>
+</section>

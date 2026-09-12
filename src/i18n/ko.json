@@ -1,7 +1,19 @@
 {
   "meta": {
-    "title": "FluxFiles — 어디에든 임베드할 수 있는 파일 매니저",
-    "description": "PHP 8.1+ 파일 매니저: Local, S3, R2, SFTP. iframe + JS SDK로 임베드. 무료 MIT 코어 + 유료 파일 포털(브랜드 공유, 업로드 포털)."
+    "title": "FluxFiles — 고객 자신의 스토리지에서 실행되는 파일 관리자",
+    "description": "PHP 앱을 위한 임베드 가능한 파일 관리자 — 각 테넌트의 파일은 자신의 S3, R2, SFTP 또는 로컬 스토리지에 보관됩니다. JWT 인증, 중앙 데이터베이스 불필요. 무료, MIT 라이선스.",
+    "product_title": "제품 — FluxFiles",
+    "product_description": "FluxFiles가 제공하는 모든 것: 파일 작업, 이미지 처리, 프레임워크 어댑터, 그리고 직접 구축하거나 SaaS 위젯을 붙이는 것과의 비교.",
+    "solutions_title": "솔루션 — FluxFiles",
+    "solutions_description": "누가, 왜 FluxFiles를 사용하는가: SaaS 플랫폼, 에이전시, WordPress/CMS 사이트, 그리고 멀티테넌트 BYOB 파일 스토리지가 필요한 사내 도구.",
+    "integrations_title": "통합 — FluxFiles",
+    "integrations_description": "공식 프레임워크 어댑터(Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE, Summernote)와 서버 사이드 토큰 SDK(Node, Python).",
+    "pricing_title": "요금 — FluxFiles",
+    "pricing_description": "무료 MIT 코어, 유료 Pro/Studio 플랜, 그리고 Enterprise Compliance Bundle. Polar를 통한 월간 또는 연간 결제.",
+    "docs_title": "문서 — FluxFiles",
+    "docs_description": "FluxFiles를 셀프 호스팅하고 임베드하기 위한 빠른 시작, 설정 레퍼런스, API 라우트.",
+    "privacy_title": "개인정보 처리방침 — FluxFiles",
+    "privacy_description": "FluxFiles와 fluxfiles.dev가 데이터를 처리하는 방식."
   },
   "nav": {
     "docs": "문서",
@@ -10,18 +22,21 @@
     "github": "GitHub",
     "byob": "BYOB 란",
     "demo": "데모",
-    "pricing": "요금"
+    "pricing": "요금",
+    "product": "제품",
+    "solutions": "솔루션",
+    "integrations": "통합"
   },
   "hero": {
-    "badge": "v0.2 — 오픈소스 · MIT 라이선스",
-    "headline": "어디에든 임베드할 수 있는 파일 매니저",
-    "sub": "PHP ≥ 8.1 + Flysystem 3. Alpine.js UI. Local, S3, Cloudflare R2, SFTP. 몇 줄의 JavaScript로 임베드.",
+    "badge": "Bring-your-own-storage · MIT 라이선스",
+    "headline": "고객 자신의 스토리지 위에서 실행되는 파일 관리자",
+    "sub": "iframe이나 SDK로 임베드하고 범위가 제한된 JWT를 발급하면, 각 테넌트의 파일은 자신의 S3, R2, SFTP 또는 로컬 디스크에 저장됩니다 — 여러분이 운영·보호·비용을 지불해야 하는 데이터베이스로 복사되는 일은 절대 없습니다.",
     "cta_start": "시작하기",
     "cta_github": "GitHub에서 스타하기",
-    "stat_php": "프레임워크 불필요",
-    "stat_sdk": "SDK 번들 크기",
     "stat_oss": "오픈소스 라이선스",
-    "stat_lang": "지원 언어"
+    "stat_lang": "지원 언어",
+    "stat_backends": "지원하는 스토리지 백엔드",
+    "stat_zero": "여러분의 파일을 보는 서버 수"
   },
   "demo": {
     "label": "미리보기",
@@ -68,6 +83,8 @@
     "embed_desc": "iframe + postMessage SDK. 독립 UI는 Alpine.js(빌드 없음). 모든 프레임워크와 호환.",
     "jwt_title": "JWT 인증 + 스코핑",
     "jwt_desc": "사용자별 경로 접두사, 권한, 디스크 화이트리스트, owner-only 모드 — 또는 viewer/editor/admin 역할 프리셋으로 시작.",
+    "acl_title": "ACL 역할 프리셋",
+    "acl_desc": "viewer/editor/admin/superadmin 프리셋으로 토큰 발급 — 매개변수 하나로 올바른 권한·디스크·범위 클레임이 자동으로 구성되어 수동 조합이 필요 없습니다.",
     "seo_title": "SEO 메타데이터",
     "seo_desc": "제목, alt, 캡션, 태그 — 클라우드는 S3 객체 메타데이터, 로컬은 sidecar JSON. 전체 텍스트 검색.",
     "presign_title": "사전 서명 업로드",
@@ -86,6 +103,8 @@
     "trash_desc": "복구 가능한 삭제, 자동 정리.",
     "search_title": "전체 텍스트 검색",
     "search_desc": "이름, 제목, 태그 인덱스 검색 — 기본은 파일 기반, 선택적으로 자체 SQL 데이터베이스를 백엔드로 사용 가능.",
+    "dbstorage_title": "DB 기반 메타데이터",
+    "dbstorage_desc": "선택적 FLUXFILES_STORAGE_BACKEND=db 모드 — 메타데이터, 검색/폴더 인덱스, 감사 로그가 JSON 사이드카 대신 자체 MySQL/PostgreSQL/SQLite에 저장됩니다. 파일 바이트는 두 경우 모두 스토리지에 그대로 남습니다.",
     "bulk_title": "일괄 작업",
     "bulk_desc": "다중 선택 이동, 복사, 삭제, 다운로드.",
     "crossdisk_title": "크로스 디스크 전송",
@@ -165,7 +184,10 @@
     "row_search": "전체 텍스트 검색",
     "row_darkmode": "다크 모드",
     "row_i18n": "16개 언어",
-    "row_php81": "PHP ≥ 8.1"
+    "row_php81": "PHP ≥ 8.1",
+    "asof_note": "{date} 기준 비교이며, 비공식 자료입니다 — 수정이 필요하면 GitHub 저장소에 알려주세요.",
+    "tab_oss": "오픈소스 파일 관리자와 비교",
+    "tab_saas": "파일 API SaaS와 비교"
   },
   "footer": {
     "made_by": "제작",
@@ -175,7 +197,9 @@
     "license_link": "라이선스",
     "packagist": "Packagist",
     "npm": "npm",
-    "readme_hint": "전체 문서는 GitHub에서"
+    "readme_hint": "전체 문서는 GitHub에서",
+    "privacy": "개인정보처리방침",
+    "terms": "이용약관"
   },
   "cta": {
     "headline": "FluxFiles를 임베드할 준비가 되셨나요?",
@@ -186,7 +210,10 @@
   "adapters": {
     "label": "통합",
     "headline": "당신의 스택을 위한 드롭인 어댑터",
-    "sub": "공식 어댑터로 이미 사용 중인 프레임워크와 에디터에 FluxFiles를 네이티브로 임베드하세요."
+    "sub": "공식 어댑터로 이미 사용 중인 프레임워크와 에디터에 FluxFiles를 네이티브로 임베드하세요.",
+    "sdk_headline": "UI 없이 백엔드에서 토큰 발급",
+    "sdk_label": "서버 사이드 토큰 SDK",
+    "sdk_note": "이들은 UI 어댑터가 아닙니다 — FluxFiles UI(위의 어댑터 중 하나 또는 독립형 iframe)가 수행할 수 있는 작업 범위를 정하는 JWT를 발급합니다. 토큰 발급에 PHP는 필요하지 않습니다."
   },
   "embed": {
     "label": "임베드",
@@ -266,7 +293,8 @@
     "p3_title": "CMS·에디터 통합",
     "p3_desc": "iframe SDK로 CKEditor, TinyMCE, Summernote 또는 직접 만든 에디터에 미디어 피커를 추가.",
     "p4_title": "내부 도구·대시보드",
-    "p4_desc": "관리자 패널에 업로드·미리보기·감사 기록 파일 작업을 반나절 만에 추가."
+    "p4_desc": "관리자 패널에 업로드·미리보기·감사 기록 파일 작업을 반나절 만에 추가.",
+    "see_all": "모든 사용 사례 보기"
   },
   "live": {
     "label": "라이브 데모",
@@ -350,10 +378,10 @@
     "compliance_desc": "PII 마스킹, 리걸 홀드, 바이러스 검사, C2PA 출처, 감사 내보내기 — 규제 및 엔터프라이즈 배포용.",
     "compliance_f1": "저장 전 PII(주민등록번호, 카드번호, 비밀정보) 마스킹",
     "compliance_f2": "리걸 홀드 — 삭제·이름 변경·이동을 차단하고 전체 감사 기록 보존",
-    "compliance_f3": "규정 준수 준비 상태 스코어카드, 한눈에 확인",
+    "compliance_f3": "자동 오프사이트 백업 (Enterprise 전용)",
     "compliance_f4": "업로드마다 바이러스 검사",
     "compliance_f5": "C2PA 콘텐츠 출처",
-    "compliance_f6": "감사 로그 보존",
+    "compliance_f6": "관리자 제어 감사 로그 삭제(퍼지)",
     "compliance_f7": "감사 로그 내보내기(NDJSON/CSV)",
     "compliance_f8": "SSO 로그인(OIDC)",
     "cta": "요금 보기"
@@ -378,5 +406,39 @@
     "price_wpmf": "$69/년",
     "price_offload": "유료",
     "footnote": "폴더 + 클라우드 + 오프로드 + 고객 포털을 하나로——FileBird와 WP Media Folder와 WP Offload를 따로 사는 대신."
+  },
+  "docs": {
+    "label": "문서",
+    "headline": "모든 것은 GitHub 저장소에 있습니다",
+    "sub": "FluxFiles는 별도의 문서 사이트가 없습니다 — 저장소의 README와 레퍼런스 문서가 신뢰할 수 있는 원천이며, 모든 릴리스와 동기화되어 있습니다.",
+    "card_quickstart_title": "빠른 시작",
+    "card_quickstart_desc": "Composer로 설치하고, 토큰을 발급하고, iframe을 임베드하세요 — 제로에서 작동하는 파일 관리자까지 가장 빠른 경로입니다.",
+    "card_config_title": "설정 레퍼런스",
+    "card_config_desc": "FluxFiles가 읽는 모든 JWT 클레임과 환경 변수를 하나의 표로 정리했습니다.",
+    "card_api_title": "API 레퍼런스",
+    "card_api_desc": "코어가 노출하는 모든 HTTP 라우트와 요청/응답 구조.",
+    "card_selfhost_title": "프로덕션 배포",
+    "card_selfhost_desc": "자체 서버에서 FluxFiles 운영하기 — 웹 서버 설정, 권한, 강화(hardening) 참고 사항.",
+    "view": "GitHub에서 보기"
+  },
+  "solutions": {
+    "wp_lead_in": "WordPress에서는 특히, FluxFiles가 폴더 관리, 클라우드 스토리지, 클라이언트 업로드 포털이라는 세 가지 플러그인을 한 번에 대체합니다."
+  },
+  "privacy": {
+    "banner": "<strong>초안 — 법률 검토 대기 중.</strong> 이 페이지는 FluxFiles의 실제 아키텍처를 설명하는 자리표시자입니다. 변호사의 검토를 거치지 않았으며 최종적이고 구속력 있는 정책으로 간주해서는 안 됩니다.",
+    "h1": "개인정보 처리방침",
+    "intro": "이 정책은 <strong>fluxfiles.dev</strong>(본 웹사이트)와 FluxFiles 소프트웨어 자체를 다룹니다.",
+    "website_h2": "이 웹사이트",
+    "website_p": "fluxfiles.dev는 정적 사이트입니다. 요금제 결제 흐름에 필요한 것 외에는 자체 분석 도구를 운영하거나 추적 쿠키를 설정하지 않으며, 결제는 전적으로 저희의 결제 대행사인 Polar가 처리합니다. 저희는 귀하의 결제 정보를 보거나 저장하지 않습니다.",
+    "software_h2": "FluxFiles 소프트웨어",
+    "software_intro": "FluxFiles는 귀하(또는 귀하의 조직)가 직접 설치하고 운영하는 셀프 호스팅형 무상태(stateless) 소프트웨어입니다. FluxFiles를 사용할 때:",
+    "software_li1": "업로드한 파일은 <strong>귀하 자신의</strong> 스토리지 백엔드 — 로컬 디스크, AWS S3, Cloudflare R2, 또는 귀하의 SFTP 서버 — 에 저장됩니다. 저희는 사본을 받지 않습니다.",
+    "software_li2": "액세스는 귀하의 애플리케이션이 발급하는 단기 JSON Web Token(JWT)으로 제어됩니다. 저희는 귀하를 대신하여 인증이나 계정 시스템을 운영하지 않습니다.",
+    "software_li3": "메타데이터(제목, 태그, 검색 인덱스, 감사 로그)는 저희가 운영하는 중앙 데이터베이스가 아니라 귀하의 파일과 함께 귀하 자신의 스토리지에 저장됩니다.",
+    "software_li4": "선택적 AI 기능(자동 태깅, 배경 제거)을 활성화하면, 파일 데이터는 귀하가 설정한 AI 제공업체(예: Anthropic, OpenAI)에 귀하 자신의 API 키를 사용하여 전송됩니다 — 이는 저희가 아닌 해당 제공업체의 개인정보 처리방침이 적용됩니다.",
+    "license_h2": "라이선스 활성화",
+    "license_p": "유료 요금제는 라이선스 키를 사용하여 오프라인으로 검증됩니다 — 라이선스를 활성화하기 위해 귀하의 파일이나 사용자에 대한 어떠한 데이터도 전송되지 않습니다.",
+    "contact_h2": "문의",
+    "contact_p": "이 정책에 대한 문의: <a href=\"mailto:privacy@fluxfiles.dev\">privacy@fluxfiles.dev</a>"
   }
 }

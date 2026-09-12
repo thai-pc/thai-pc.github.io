@@ -6,11 +6,23 @@ interface Props {
   title: string;
   description: string;
   lang: Lang;
+  // Route suffix passed to localePath() to build this page's per-locale hreflang
+  // alternates (e.g. "product" for /product and /vi/product). Default '' = home.
+  path?: string;
+  // false for English-only pages (privacy/terms) that have no per-locale variant —
+  // emitting hreflang alternates pointing at unrelated locale homepages would be
+  // actively wrong, so these pages skip the hreflang block entirely.
+  translated?: boolean;
 }
 
-const { title, description, lang } = Astro.props;
+const { title, description, lang, path = '', translated = true } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const dir = dirFor(lang);
+// Astro's static build uses directory format (/product/index.html), served canonically
+// as "/product/" — localePath() itself must NOT add this slash, since it's also used
+// for hash-anchor links (localePath(lang, '#install')) where a trailing slash would
+// break the anchor. So the slash is added only here, for real page routes.
+const routeSuffix = path ? `${path}/` : '';
 ---
 
 <!doctype html>
@@ -26,14 +38,16 @@ const dir = dirFor(lang);
     <link rel="canonical" href={canonicalURL} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    {langList.map((l) => (
+    {translated && langList.map((l) => (
       <link
         rel="alternate"
         hreflang={l}
-        href={new URL(localePath(l), Astro.site)}
+        href={new URL(localePath(l, routeSuffix), Astro.site)}
       />
     ))}
-    <link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site)} />
+    {translated && (
+      <link rel="alternate" hreflang="x-default" href={new URL(localePath('en', routeSuffix), Astro.site)} />
+    )}
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
@@ -67,12 +81,25 @@ const dir = dirFor(lang);
       "name": "FluxFiles",
       "applicationCategory": "DeveloperApplication",
       "operatingSystem": "Any",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      // The MIT core is genuinely $0, but the same product line also sells
+      // Pro/Studio tiers on top (see Pricing.astro) — an AggregateOffer with
+      // the real monthly range is more honest than a flat "$0" that ignores
+      // the paid tiers entirely. Keep these numbers in sync with
+      // Pricing.astro's `tiers` monthly prices; Enterprise is "Custom" and
+      // has no numeric price, so it's excluded from the count/range.
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "lowPrice": "0",
+        "highPrice": "29",
+        "offerCount": "3"
+      },
       "license": "https://opensource.org/licenses/MIT"
     })} />
   </head>
   <body class="min-h-screen font-sans antialiased">
     <slot />
+    <script is:inline src="https://cdn.jsdelivr.net/npm/alpinejs@3.16.3/dist/cdn.min.js" integrity="sha384-GWGIn3FlbC6EIhIhKi0GSHWq/UCqPc7qpVE5J/bsAW8FMyMAyA08W86xYxy+8i5/" crossorigin="anonymous" defer></script>
     <script is:inline>
       (function () {
         var KEY = 'theme';

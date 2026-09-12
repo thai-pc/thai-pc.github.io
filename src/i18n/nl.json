@@ -1,7 +1,19 @@
 {
   "meta": {
-    "title": "FluxFiles — De bestandsbeheerder die overal past",
-    "description": "PHP 8.1+ bestandsbeheerder: Local, S3, R2, SFTP. Insluiten via iframe + JS SDK. Gratis MIT-kern + betaalde bestandsportalen (Branded Share, Upload-portalen)."
+    "title": "FluxFiles — De bestandsmanager die draait op de opslag van je klanten",
+    "description": "Insluitbare bestandsmanager voor PHP-apps — de bestanden van elke tenant blijven in zijn eigen S3, R2, SFTP of lokale opslag. JWT-authenticatie, geen centrale database. Gratis, MIT-gelicentieerd.",
+    "product_title": "Product — FluxFiles",
+    "product_description": "Alles wat FluxFiles biedt: bestandsbewerkingen, beeldverwerking, framework-adapters, en de vergelijking met het zelf bouwen ervan of een SaaS-widget toevoegen.",
+    "solutions_title": "Oplossingen — FluxFiles",
+    "solutions_description": "Wie gebruikt FluxFiles en waarom: SaaS-platforms, bureaus, WordPress/CMS-sites, en interne tools die multi-tenant BYOB-bestandsopslag nodig hebben.",
+    "integrations_title": "Integraties — FluxFiles",
+    "integrations_description": "Officiële framework-adapters (Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE, Summernote) en server-side token-SDK's (Node, Python).",
+    "pricing_title": "Prijzen — FluxFiles",
+    "pricing_description": "Gratis MIT-kern, betaalde Pro/Studio-abonnementen, en de Enterprise Compliance Bundle. Maandelijkse of jaarlijkse facturering via Polar.",
+    "docs_title": "Documentatie — FluxFiles",
+    "docs_description": "Snelstart, configuratiereferentie, en API-routes voor het zelf hosten en insluiten van FluxFiles.",
+    "privacy_title": "Privacybeleid — FluxFiles",
+    "privacy_description": "Hoe FluxFiles en fluxfiles.dev met gegevens omgaan."
   },
   "nav": {
     "docs": "Documentatie",
@@ -10,18 +22,21 @@
     "github": "GitHub",
     "byob": "Waarom BYOB",
     "demo": "Demo",
-    "pricing": "Prijzen"
+    "pricing": "Prijzen",
+    "product": "Product",
+    "solutions": "Oplossingen",
+    "integrations": "Integraties"
   },
   "hero": {
-    "badge": "v0.2 — Open Source · MIT-licentie",
-    "headline": "De bestandsbeheerder die overal past",
-    "sub": "PHP ≥ 8.1 + Flysystem 3. Alpine.js-UI. Local, S3, Cloudflare R2, SFTP. Sluit in met een paar regels JavaScript.",
+    "badge": "Bring-your-own-storage · MIT-gelicentieerd",
+    "headline": "De bestandsmanager die draait op de eigen opslag van je klanten",
+    "sub": "Sluit in via iframe of SDK, geef een JWT met beperkte scope uit, en de bestanden van elke tenant blijven in zijn eigen S3, R2, SFTP of lokale schijf — nooit gekopieerd naar een database die jij moet beheren, beveiligen of betalen.",
     "cta_start": "Aan de slag",
     "cta_github": "Star op GitHub",
-    "stat_php": "Geen framework nodig",
-    "stat_sdk": "SDK-bundel grootte",
     "stat_oss": "Open source licentie",
-    "stat_lang": "Ondersteunde talen"
+    "stat_lang": "Ondersteunde talen",
+    "stat_backends": "Ondersteunde opslag-backends",
+    "stat_zero": "Servers die je bestanden zien"
   },
   "demo": {
     "label": "Live voorbeeld",
@@ -68,6 +83,8 @@
     "embed_desc": "iframe + postMessage SDK. Standalone UI gebruikt Alpine.js (geen build). Werkt met elk framework.",
     "jwt_title": "JWT-auth + scoping",
     "jwt_desc": "Pad-prefix per gebruiker, rechten, schijf-whitelist, alleen-eigenaar modus — of begin met een viewer/editor/admin rolpreset.",
+    "acl_title": "ACL-rolpresets",
+    "acl_desc": "Geef tokens uit vanuit viewer-/editor-/admin-/superadmin-presets — één parameter zet meteen de juiste rechten-, schijf- en scope-claims, in plaats van ze handmatig samen te stellen.",
     "seo_title": "SEO-metadata",
     "seo_desc": "Titel, alt, bijschrift, tags — S3-objectmetadata (cloud) of sidecar JSON (lokaal). Zoeken in volledige tekst.",
     "presign_title": "Vooraf ondertekende uploads",
@@ -86,6 +103,8 @@
     "trash_desc": "Herstelbare verwijderingen met automatische opschoning.",
     "search_title": "Zoeken in volledige tekst",
     "search_desc": "Geïndexeerde zoekopdracht op namen, titels, tags — standaard bestandsgebaseerd, of je eigen SQL-database als optionele backend.",
+    "dbstorage_title": "DB-gebaseerde metadata",
+    "dbstorage_desc": "Optionele FLUXFILES_STORAGE_BACKEND=db-modus — metadata, zoek-/mapindex en auditlog staan in je eigen MySQL/PostgreSQL/SQLite in plaats van JSON-sidecars. Bestandsbytes blijven in beide gevallen in de storage.",
     "bulk_title": "Bulkbewerkingen",
     "bulk_desc": "Multi-select verplaatsen, kopiëren, verwijderen, downloaden.",
     "crossdisk_title": "Cross-disk overdracht",
@@ -165,7 +184,10 @@
     "row_search": "Zoeken in volledige tekst",
     "row_darkmode": "Donkere modus",
     "row_i18n": "16 talen",
-    "row_php81": "PHP ≥ 8.1"
+    "row_php81": "PHP ≥ 8.1",
+    "asof_note": "Vergelijking actueel per {date}, onafhankelijk opgesteld — zie de GitHub-repository om een correctie te melden.",
+    "tab_oss": "vs. open source bestandsmanagers",
+    "tab_saas": "vs. file-API SaaS"
   },
   "footer": {
     "made_by": "Gemaakt door",
@@ -175,7 +197,9 @@
     "license_link": "Licentie",
     "packagist": "Packagist",
     "npm": "npm",
-    "readme_hint": "Volledige documentatie op GitHub"
+    "readme_hint": "Volledige documentatie op GitHub",
+    "privacy": "Privacy",
+    "terms": "Voorwaarden"
   },
   "cta": {
     "headline": "Klaar om FluxFiles in te bouwen?",
@@ -186,7 +210,10 @@
   "adapters": {
     "label": "Integraties",
     "headline": "Kant-en-klare adapters voor jouw stack",
-    "sub": "Officiële adapters bouwen FluxFiles native in de frameworks en editors die je al gebruikt."
+    "sub": "Officiële adapters bouwen FluxFiles native in de frameworks en editors die je al gebruikt.",
+    "sdk_headline": "Geef tokens uit vanaf je backend, zonder UI",
+    "sdk_label": "Server-side token-SDK's",
+    "sdk_note": "Dit zijn geen UI-adapters — ze geven de JWT's uit die bepalen wat een FluxFiles-UI (elk van de bovenstaande adapters, of de standalone iframe) mag doen. Geen PHP nodig om tokens uit te geven."
   },
   "embed": {
     "label": "Insluiten",
@@ -214,7 +241,7 @@
     "license_q": "Hoe activeer ik een licentie?",
     "license_a": "Na aankoop krijg je een licentiesleutel. Stel FLUXFILES_LICENSE_KEY in je omgeving in en de modules ontgrendelen — offline geverifieerd (geen phone-home), dus ook air-gapped bruikbaar.",
     "billing_q": "Eenmalig of abonnement?",
-    "billing_a": "Beide. Maandelijks voor een vrijblijvende start, jaarlijks om te besparen (~2 maanden gratis), of eenmalig lifetime. Een verlopen licentie blijft je versie draaien; alleen updates/support pauzeren."
+    "billing_a": "Abonnement: maandelijks voor een vrijblijvende start, of jaarlijks om te besparen (~2 maanden gratis). Af en toe bieden we als tijdelijke actie een eenmalige lifetime-optie aan — check de prijzenpagina voor actuele beschikbaarheid. Een verlopen licentie blijft je versie draaien; alleen updates/support pauzeren."
   },
   "byob": {
     "label": "De slotgracht · BYOB",
@@ -266,7 +293,8 @@
     "p3_title": "CMS- en editor-integraties",
     "p3_desc": "Plaats een mediakiezer in CKEditor, TinyMCE, Summernote of je eigen editor via de iframe-SDK.",
     "p4_title": "Interne tools en dashboards",
-    "p4_desc": "Voeg uploads, previews en geaudite bestandsbewerkingen toe aan admin-panels in een middag."
+    "p4_desc": "Voeg uploads, previews en geaudite bestandsbewerkingen toe aan admin-panels in een middag.",
+    "see_all": "Bekijk alle use cases"
   },
   "live": {
     "label": "Live demo",
@@ -292,7 +320,7 @@
     "per_year": "/jaar",
     "custom": "Op maat",
     "soon": "Binnenkort",
-    "footnote": "Vast tarief, onbeperkte sites — geen kosten per bestand/aanroep. Jaarlijks bespaart ~2 maanden; lifetime-optie beschikbaar. 14 dagen retour. Btw koper afgehandeld bij afrekenen.",
+    "footnote": "Vast tarief, onbeperkte sites — geen kosten per bestand/aanroep. Jaarlijks bespaart ~2 maanden; af en toe een eenmalige lifetime-actie. 14 dagen retour. Btw koper afgehandeld bij afrekenen.",
     "free_name": "Gratis (Kern)",
     "free_desc": "De volledige MIT-bestandsbeheerder, self-hosted.",
     "free_cta": "Aan de slag",
@@ -350,10 +378,10 @@
     "compliance_desc": "PII-redactie, legal hold, virusscan, C2PA-herkomst en auditexport — voor gereguleerde en enterprise-implementaties.",
     "compliance_f1": "Redigeer PII (BSN, kaartnummers, geheimen) voordat een bestand wordt opgeslagen",
     "compliance_f2": "Legal hold — blokkeert verwijderen, hernoemen en verplaatsen, met volledig audittraject",
-    "compliance_f3": "Compliance-gereedheidsscorekaart, in één oogopslag",
+    "compliance_f3": "Geautomatiseerde offsite back-up (alleen Enterprise)",
     "compliance_f4": "Virusscan bij elke upload",
     "compliance_f5": "C2PA-inhoudsherkomst",
-    "compliance_f6": "Bewaring van auditlog",
+    "compliance_f6": "Door beheerder gecontroleerde verwijdering van auditlog",
     "compliance_f7": "Export van auditlog (NDJSON/CSV)",
     "compliance_f8": "SSO-login (OIDC)",
     "cta": "Bekijk prijzen"
@@ -378,5 +406,39 @@
     "price_wpmf": "$69/jaar",
     "price_offload": "betaald",
     "footnote": "Mappen + cloud + offload + klantportalen in één — in plaats van FileBird en WP Media Folder en WP Offload apart te betalen."
+  },
+  "docs": {
+    "label": "Documentatie",
+    "headline": "Alles staat in de GitHub-repository",
+    "sub": "FluxFiles heeft geen aparte documentatiesite — de README en referentiedocumentatie in de repository zijn de bron van waarheid en worden bij elke release synchroon gehouden.",
+    "card_quickstart_title": "Snelstart",
+    "card_quickstart_desc": "Installeer via Composer, geef een token uit, sluit de iframe in — de snelste weg van nul naar een werkende bestandsmanager.",
+    "card_config_title": "Configuratiereferentie",
+    "card_config_desc": "Elke JWT-claim en omgevingsvariabele die FluxFiles leest, in één tabel.",
+    "card_api_title": "API-referentie",
+    "card_api_desc": "Elke HTTP-route die de kern blootstelt, met de request/response-structuur.",
+    "card_selfhost_title": "Productie-deployment",
+    "card_selfhost_desc": "FluxFiles draaien op je eigen server — webserverconfiguratie, rechten, en hardening-notities.",
+    "view": "Bekijk op GitHub"
+  },
+  "solutions": {
+    "wp_lead_in": "Specifiek op WordPress vervangt FluxFiles in één keer drie plugins — mappen, cloudopslag, en upload-portals voor klanten."
+  },
+  "privacy": {
+    "banner": "<strong>Concept — in afwachting van juridische toetsing.</strong> Deze pagina is een placeholder die de daadwerkelijke architectuur van FluxFiles beschrijft. Ze is niet beoordeeld door een jurist en mag niet worden beschouwd als een definitief, bindend beleid.",
+    "h1": "Privacybeleid",
+    "intro": "Dit beleid heeft betrekking op <strong>fluxfiles.dev</strong> (deze website) en de FluxFiles-software zelf.",
+    "website_h2": "Deze website",
+    "website_p": "fluxfiles.dev is een statische site. De site voert geen eigen analytics uit en plaatst geen tracking cookies, behalve wat nodig is voor de afrekenflow op de prijzenpagina, die volledig wordt afgehandeld door onze betaalverwerker, Polar. Wij zien of bewaren je betaalgegevens niet.",
+    "software_h2": "De FluxFiles-software",
+    "software_intro": "FluxFiles is self-hosted, stateless software die jij (of je organisatie) installeert en beheert. Wanneer je FluxFiles gebruikt:",
+    "software_li1": "Bestanden die je uploadt, worden opgeslagen in <strong>je eigen</strong> storage-backend — lokale schijf, AWS S3, Cloudflare R2, of je eigen SFTP-server. Wij ontvangen nooit een kopie.",
+    "software_li2": "Toegang wordt geregeld via kortlevende JSON Web Tokens (JWT's) die je applicatie uitgeeft. Wij beheren geen authenticatie- of accountsysteem namens jou.",
+    "software_li3": "Metadata (titels, tags, zoekindex, auditlog) wordt samen met je bestanden opgeslagen in je eigen storage, niet in een centrale database die wij beheren.",
+    "software_li4": "Als je optionele AI-functies inschakelt (automatisch taggen, achtergrond verwijderen), wordt bestandsdata verstuurd naar de door jou geconfigureerde AI-provider (bijv. Anthropic, OpenAI) met je eigen API-key — onderworpen aan het privacybeleid van die provider, niet aan het onze.",
+    "license_h2": "Licentieactivering",
+    "license_p": "Betaalde tiers worden offline geverifieerd met een licentiesleutel — er worden geen gegevens over je bestanden of gebruikers verzonden om een licentie te activeren.",
+    "contact_h2": "Contact",
+    "contact_p": "Vragen over dit beleid: <a href=\"mailto:privacy@fluxfiles.dev\">privacy@fluxfiles.dev</a>"
   }
 }

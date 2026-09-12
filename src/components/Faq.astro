@@ -3,12 +3,15 @@ import { useTranslations, type Lang } from '../i18n/utils';
 
 interface Props {
   lang: Lang;
+  keys?: string[];
 }
 
-const { lang } = Astro.props;
+const ALL_ITEMS = ['oss', 'storage', 'auth', 'accounts', 'embed', 'run', 'paid', 'license', 'billing'];
+
+const { lang, keys = ALL_ITEMS } = Astro.props;
 const t = useTranslations(lang);
 
-const items = ['oss', 'storage', 'auth', 'accounts', 'embed', 'run', 'paid', 'license', 'billing'];
+const items = keys;
 ---
 
 <section id="faq" class="py-20 sm:py-28 bg-surface dark:bg-surface-dark">

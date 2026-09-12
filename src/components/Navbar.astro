@@ -11,6 +11,23 @@ const langEntries = Object.entries(languages) as [Lang, string][];
 // this.value === defaultLang → '/', else `/${value}/` — mirrors localePath() for the
 // select's plain-JS onchange (defaultLang is inlined server-side, not imported client-side).
 const langSwitchOnchange = `window.location.href = this.value === '${defaultLang}' ? '/' : '/' + this.value + '/'`;
+
+// Strip trailing slash (except root) so `/vi/product/` and `/vi/product` compare equal
+// regardless of Astro's directory-index trailing slash behavior per route.
+const normalize = (p: string) => p.replace(/\/$/, '') || '/';
+const currentPath = normalize(Astro.url.pathname);
+const isActive = (route: string) => currentPath === normalize(localePath(lang, route));
+
+const navItems = [
+  { route: 'product', label: t('nav.product') },
+  { route: 'solutions', label: t('nav.solutions') },
+  { route: 'integrations', label: t('nav.integrations') },
+  { route: 'pricing', label: t('nav.pricing') },
+  { route: 'docs', label: t('nav.docs') },
+];
+
+const activeClass = 'text-sm font-medium text-gray-900 dark:text-white hover:text-accent dark:hover:text-accent-dark transition-colors';
+const inactiveClass = 'text-sm text-gray-600 dark:text-gray-400 hover:text-accent dark:hover:text-accent-dark transition-colors';
 ---
 
 <nav
@@ -29,11 +46,15 @@ const langSwitchOnchange = `window.location.href = this.value === '${defaultLang
       </a>
 
       <div class="hidden md:flex items-center gap-6">
-        <a href="#products" class="text-sm text-gray-600 dark:text-gray-400 hover:text-accent dark:hover:text-accent-dark transition-colors">{t('products.label')}</a>
-        <a href="#byob" class="text-sm text-gray-600 dark:text-gray-400 hover:text-accent dark:hover:text-accent-dark transition-colors">{t('nav.byob')}</a>
-        <a href="#pricing" class="text-sm font-medium text-gray-900 dark:text-white hover:text-accent dark:hover:text-accent-dark transition-colors">{t('nav.pricing')}</a>
-        <a href="https://github.com/thai-pc/fluxfiles#readme" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-600 dark:text-gray-400 hover:text-accent dark:hover:text-accent-dark transition-colors">{t('nav.docs')}</a>
-        <a href="#install" class="text-sm text-gray-600 dark:text-gray-400 hover:text-accent dark:hover:text-accent-dark transition-colors">{t('nav.install')}</a>
+        {navItems.map((item) => (
+          <a
+            href={localePath(lang, item.route)}
+            class={isActive(item.route) ? activeClass : inactiveClass}
+            aria-current={isActive(item.route) ? 'page' : undefined}
+          >
+            {item.label}
+          </a>
+        ))}
         <a
           href="https://github.com/thai-pc/fluxfiles"
           target="_blank"
@@ -94,11 +115,17 @@ const langSwitchOnchange = `window.location.href = this.value === '${defaultLang
       class="md:hidden pb-4 border-t border-gray-200 dark:border-gray-800"
     >
       <div class="flex flex-col gap-3 pt-4">
-        <a href="#products" class="text-sm text-gray-600 dark:text-gray-400 hover:text-accent dark:hover:text-accent-dark">{t('products.label')}</a>
-        <a href="#pricing" class="text-sm text-gray-600 dark:text-gray-400 hover:text-accent dark:hover:text-accent-dark">{t('nav.pricing')}</a>
-        <a href="#byob" class="text-sm text-gray-600 dark:text-gray-400 hover:text-accent dark:hover:text-accent-dark">{t('nav.byob')}</a>
-        <a href="https://github.com/thai-pc/fluxfiles#readme" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-600 dark:text-gray-400 hover:text-accent dark:hover:text-accent-dark">{t('nav.docs')}</a>
-        <a href="#install" class="text-sm text-gray-600 dark:text-gray-400 hover:text-accent dark:hover:text-accent-dark">{t('nav.install')}</a>
+        {navItems.map((item) => (
+          <a
+            href={localePath(lang, item.route)}
+            class={isActive(item.route)
+              ? 'text-sm font-medium text-gray-900 dark:text-white hover:text-accent dark:hover:text-accent-dark'
+              : 'text-sm text-gray-600 dark:text-gray-400 hover:text-accent dark:hover:text-accent-dark'}
+            aria-current={isActive(item.route) ? 'page' : undefined}
+          >
+            {item.label}
+          </a>
+        ))}
         <a href="https://github.com/thai-pc/fluxfiles" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-600 dark:text-gray-400 hover:text-accent dark:hover:text-accent-dark">
           {t('nav.github')}
         </a>
