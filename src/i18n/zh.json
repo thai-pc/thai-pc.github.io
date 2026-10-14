@@ -7,7 +7,7 @@
     "solutions_title": "解决方案 — FluxFiles",
     "solutions_description": "谁在使用 FluxFiles，为什么：SaaS 平台、代理机构、WordPress/CMS 网站，以及需要多租户 BYOB 文件存储的内部工具。",
     "integrations_title": "集成 — FluxFiles",
-    "integrations_description": "官方框架适配器（Laravel、WordPress、React、Vue/Nuxt、CKEditor 4、TinyMCE、Summernote）以及服务端令牌 SDK（Node、Python）。",
+    "integrations_description": "官方框架适配器（Laravel、WordPress、React、Vue/Nuxt、CKEditor 4、TinyMCE、Summernote）、服务端令牌 SDK（Node、Python）以及面向 AI 智能体的 MCP 服务器。",
     "pricing_title": "价格 — FluxFiles",
     "pricing_description": "免费的 MIT 核心版、付费的 Pro/Studio 套餐，以及企业合规套件。通过 Polar 按月或按年计费。",
     "docs_title": "文档 — FluxFiles",
@@ -67,11 +67,14 @@
     "cap_virus": "每个上传文件在存储前都会被扫描——ClamAV 或你自己的云端 key",
     "cap_c2pa": "使用可验证的 Content Credentials 为文件签名（C2PA 溯源）",
     "cap_backup": "单向同步到第二个磁盘——本地、S3、R2 或 SFTP",
-    "cap_audit_export": "以 NDJSON 或 CSV 格式导出完整审计日志，含已归档记录",
+    "cap_audit_export": "将完整审计记录导出为 NDJSON 或 CSV，运行完整性检查并校验防篡改日志",
     "cap_sso": "使用你自己的 OIDC 身份提供商登录——用户组自动映射到权限",
     "cap_dlp": "在文件存储之前遮蔽身份证号、银行卡号和密钥等敏感信息",
     "cap_legal_hold": "法律保留——在解除之前阻止删除、重命名和移动，并保留完整审计记录",
-    "cap_compliance": "合规就绪评分卡——一目了然查看已启用的安全防护措施"
+    "cap_compliance": "合规就绪评分卡——一目了然查看已启用的安全防护措施",
+    "cap_retention": "保留规则——先预览，再将长期未变更的文件移入回收站或删除；法律保留始终优先",
+    "cap_duplicates": "重复文件查找——逐字节相同的文件及其浪费的空间",
+    "cap_posters": "海报缩略图——PDF 封面和视频画面直接显示在网格中"
   },
   "features": {
     "label": "功能",
@@ -129,6 +132,8 @@
     "node_desc": "用 @fluxfiles/node 从任意 JS 后端（Express、Next.js、Nuxt）签发 FluxFiles 令牌——与 PHP 核心逐字节兼容。签发令牌无需 PHP。",
     "python_title": "Python 令牌 SDK",
     "python_desc": "用 fluxfiles-token 从任意 Python 后端（FastAPI、Django、Flask）签发 FluxFiles 令牌——与 PHP 核心逐字节兼容。签发令牌无需 PHP。",
+    "mcp_title": "面向 AI 智能体的 MCP 服务器",
+    "mcp_desc": "通过 @fluxfiles/mcp，让 Claude Desktop、Claude Code 或任意 MCP 客户端列出、搜索和读取你的文件——范围由你签发的受限 JWT 决定。写入和移入回收站工具默认关闭，需显式启用。",
     "sftp_title": "SFTP 磁盘",
     "sftp_desc": "继 S3/R2 之后的第三种驱动——把任意 VPS 或共享主机变成文件管理器。",
     "editor_title": "代码 / 配置编辑器",
@@ -157,6 +162,7 @@
     "headline": "2分钟启动运行",
     "tab_composer": "Composer (PHP)",
     "tab_manual": "手动",
+    "mcp_note": "智能体只能访问其 JWT 允许的范围——磁盘、路径前缀和权限。请为它签发一个范围窄、只读的令牌。",
     "copy": "复制",
     "copied": "已复制！",
     "works_with": "兼容",
@@ -211,9 +217,9 @@
     "label": "集成",
     "headline": "适配你技术栈的即插即用适配器",
     "sub": "官方适配器可将 FluxFiles 原生嵌入你已经在用的框架和编辑器中。",
-    "sdk_headline": "从你的后端签发令牌，无需 UI",
-    "sdk_label": "服务端令牌 SDK",
-    "sdk_note": "这些不是 UI 适配器——它们签发的 JWT 用于限定 FluxFiles UI（上面任意一种适配器，或独立 iframe）可以执行的操作范围。签发令牌无需 PHP。"
+    "sdk_headline": "在后端签发令牌 —— 或交给 AI 智能体使用",
+    "sdk_label": "服务端软件包",
+    "sdk_note": "这些不是 UI 适配器——它们签发的 JWT 用于限定 FluxFiles UI（上面任意一种适配器，或独立 iframe）可以执行的操作范围。签发令牌无需 PHP。MCP 服务器则方向相反：它把这样一个受限令牌交给 AI 智能体，智能体只能执行令牌允许的操作。"
   },
   "embed": {
     "label": "嵌入",

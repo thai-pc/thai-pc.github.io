@@ -7,7 +7,7 @@
     "solutions_title": "Oplossingen — FluxFiles",
     "solutions_description": "Wie gebruikt FluxFiles en waarom: SaaS-platforms, bureaus, WordPress/CMS-sites, en interne tools die multi-tenant BYOB-bestandsopslag nodig hebben.",
     "integrations_title": "Integraties — FluxFiles",
-    "integrations_description": "Officiële framework-adapters (Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE, Summernote) en server-side token-SDK's (Node, Python).",
+    "integrations_description": "Officiële framework-adapters (Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE, Summernote), server-side token-SDK's (Node, Python) en een MCP-server voor AI-agents.",
     "pricing_title": "Prijzen — FluxFiles",
     "pricing_description": "Gratis MIT-kern, betaalde Pro/Studio-abonnementen, en de Enterprise Compliance Bundle. Maandelijkse of jaarlijkse facturering via Polar.",
     "docs_title": "Documentatie — FluxFiles",
@@ -67,11 +67,14 @@
     "cap_virus": "Elke upload wordt gescand voordat hij wordt opgeslagen — ClamAV of je eigen cloudsleutel",
     "cap_c2pa": "Onderteken bestanden met verifieerbare Content Credentials (C2PA-herkomst)",
     "cap_backup": "Eenrichtingssynchronisatie naar een tweede schijf — local, S3, R2 of SFTP",
-    "cap_audit_export": "Exporteer het volledige auditlog als NDJSON of CSV, inclusief gearchiveerde logs",
+    "cap_audit_export": "Exporteer het volledige audittrail als NDJSON of CSV, voer een integriteitscontrole uit en verifieer het manipulatiebestendige log",
     "cap_sso": "Log in met je eigen OIDC-identiteitsprovider — groepen worden gemapt naar rechten",
     "cap_dlp": "Verberg burgerservicenummers, kaartnummers en geheimen voordat een bestand wordt opgeslagen",
     "cap_legal_hold": "Legal hold — blokkeert verwijderen, hernoemen en verplaatsen tot vrijgave, met een volledig audittrail",
-    "cap_compliance": "Compliance-gereedheidsscorekaart — zie in één oogopslag welke waarborgen actief zijn"
+    "cap_compliance": "Compliance-gereedheidsscorekaart — zie in één oogopslag welke waarborgen actief zijn",
+    "cap_retention": "Bewaarregels — eerst een voorbeeld, dan ongewijzigde bestanden naar de prullenbak of verwijderen; een legal hold wint altijd",
+    "cap_duplicates": "Duplicatenzoeker — byte-identieke bestanden en de verspilde ruimte",
+    "cap_posters": "Posterminiaturen — PDF-voorpagina's en videoframes direct in het raster"
   },
   "features": {
     "label": "Functies",
@@ -129,6 +132,8 @@
     "node_desc": "Genereer FluxFiles-tokens vanuit elke JS-backend (Express, Next.js, Nuxt) met @fluxfiles/node — byte-compatibel met de PHP-core. Geen PHP nodig om tokens uit te geven.",
     "python_title": "Python-token-SDK",
     "python_desc": "Genereer FluxFiles-tokens vanuit elke Python-backend (FastAPI, Django, Flask) met fluxfiles-token — byte-compatibel met de PHP-core. Geen PHP nodig om tokens uit te geven.",
+    "mcp_title": "MCP-server voor AI-agents",
+    "mcp_desc": "Laat Claude Desktop, Claude Code of elke MCP-client je bestanden opsommen, doorzoeken en lezen met @fluxfiles/mcp — binnen de grenzen van de afgebakende JWT die je uitgeeft. Schrijf- en prullenbaktools blijven uit tenzij je ze inschakelt.",
     "sftp_title": "SFTP-schijf",
     "sftp_desc": "Een 3e driver na S3/R2 — maak van elke VPS of host een bestandsbeheerder.",
     "editor_title": "Code-/config-editor",
@@ -159,6 +164,7 @@
     "tab_laravel": "Laravel",
     "tab_sdk": "JS SDK",
     "tab_manual": "Handmatig",
+    "mcp_note": "De agent kan alleen aanraken wat zijn JWT toestaat — zijn disks, padprefix en rechten. Geef hem een smal, alleen-lezen token.",
     "copy": "Kopiëren",
     "copied": "Gekopieerd!",
     "works_with": "Werkt met"
@@ -211,9 +217,9 @@
     "label": "Integraties",
     "headline": "Kant-en-klare adapters voor jouw stack",
     "sub": "Officiële adapters bouwen FluxFiles native in de frameworks en editors die je al gebruikt.",
-    "sdk_headline": "Geef tokens uit vanaf je backend, zonder UI",
-    "sdk_label": "Server-side token-SDK's",
-    "sdk_note": "Dit zijn geen UI-adapters — ze geven de JWT's uit die bepalen wat een FluxFiles-UI (elk van de bovenstaande adapters, of de standalone iframe) mag doen. Geen PHP nodig om tokens uit te geven."
+    "sdk_headline": "Maak tokens in je backend — of geef er een aan een AI-agent",
+    "sdk_label": "Server-side pakketten",
+    "sdk_note": "Dit zijn geen UI-adapters — ze geven de JWT's uit die bepalen wat een FluxFiles-UI (elk van de bovenstaande adapters, of de standalone iframe) mag doen. Geen PHP nodig om tokens uit te geven. De MCP-server werkt andersom: die geeft een van die afgebakende tokens aan een AI-agent, die dan alleen kan doen wat het token toestaat."
   },
   "embed": {
     "label": "Insluiten",

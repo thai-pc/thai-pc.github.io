@@ -7,7 +7,7 @@
     "solutions_title": "Soluzioni — FluxFiles",
     "solutions_description": "Chi usa FluxFiles e perché: piattaforme SaaS, agenzie, siti WordPress/CMS, e strumenti interni che richiedono storage di file multi-tenant BYOB.",
     "integrations_title": "Integrazioni — FluxFiles",
-    "integrations_description": "Adapter ufficiali per i framework (Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE, Summernote) e SDK per token lato server (Node, Python).",
+    "integrations_description": "Adapter ufficiali per i framework (Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE, Summernote), SDK per token lato server (Node, Python) e un server MCP per agenti IA.",
     "pricing_title": "Prezzi — FluxFiles",
     "pricing_description": "Core gratuito con licenza MIT, piani a pagamento Pro/Studio, e l'Enterprise Compliance Bundle. Fatturazione mensile o annuale tramite Polar.",
     "docs_title": "Documentazione — FluxFiles",
@@ -67,11 +67,14 @@
     "cap_virus": "Ogni upload viene scansionato prima di essere salvato — ClamAV o la tua chiave cloud",
     "cap_c2pa": "Firma i file con Content Credentials verificabili (provenienza C2PA)",
     "cap_backup": "Sincronizzazione unidirezionale verso un secondo disco — locale, S3, R2 o SFTP",
-    "cap_audit_export": "Esporta il registro di audit completo in NDJSON o CSV, incluse le voci archiviate",
+    "cap_audit_export": "Esporta l'intero audit trail in NDJSON o CSV, esegui un controllo di integrità e verifica il registro a prova di manomissione",
     "cap_sso": "Accedi con il tuo provider di identità OIDC — i gruppi vengono mappati sui permessi",
     "cap_dlp": "Oscura codici fiscali, numeri di carta e dati riservati prima che il file venga salvato",
     "cap_legal_hold": "Blocco legale — impedisce eliminazione, rinomina e spostamento finché non viene rilasciato, con audit trail completo",
-    "cap_compliance": "Scorecard di conformità — vedi a colpo d'occhio quali protezioni sono attive"
+    "cap_compliance": "Scorecard di conformità — vedi a colpo d'occhio quali protezioni sono attive",
+    "cap_retention": "Regole di conservazione: anteprima, poi cestina o elimina i file invariati; il blocco legale ha sempre la precedenza",
+    "cap_duplicates": "Ricerca duplicati: file identici byte per byte e lo spazio sprecato",
+    "cap_posters": "Miniature: copertine PDF e fotogrammi video direttamente nella griglia"
   },
   "features": {
     "label": "Funzionalità",
@@ -129,6 +132,8 @@
     "node_desc": "Genera token FluxFiles da qualsiasi backend JS (Express, Next.js, Nuxt) con @fluxfiles/node — compatibile byte per byte con il core PHP. Nessun PHP necessario per emettere i token.",
     "python_title": "SDK di token Python",
     "python_desc": "Genera token FluxFiles da qualsiasi backend Python (FastAPI, Django, Flask) con fluxfiles-token — compatibile byte per byte con il core PHP. Nessun PHP necessario per emettere i token.",
+    "mcp_title": "Server MCP per agenti IA",
+    "mcp_desc": "Consenti a Claude Desktop, Claude Code o qualsiasi client MCP di elencare, cercare e leggere i tuoi file con @fluxfiles/mcp — entro i limiti del JWT ristretto che emetti. Gli strumenti di scrittura e cestino restano disattivati finché non li abiliti.",
     "sftp_title": "Disco SFTP",
     "sftp_desc": "Un 3° driver dopo S3/R2 — trasforma qualsiasi VPS o hosting in file manager.",
     "editor_title": "Editor codice / config",
@@ -157,6 +162,7 @@
     "headline": "Pronto in 2 minuti",
     "tab_composer": "Composer (PHP)",
     "tab_manual": "Manuale",
+    "mcp_note": "L'agente può toccare solo ciò che il suo JWT consente — i suoi dischi, il prefisso di percorso e i permessi. Dagli un token ristretto e di sola lettura.",
     "copy": "Copia",
     "copied": "Copiato!",
     "works_with": "Funziona con",
@@ -211,9 +217,9 @@
     "label": "Integrazioni",
     "headline": "Adattatori pronti all'uso per il tuo stack",
     "sub": "Gli adattatori ufficiali integrano FluxFiles in modo nativo nei framework e negli editor che usi già.",
-    "sdk_headline": "Genera token dal tuo backend, senza UI",
-    "sdk_label": "SDK per token lato server",
-    "sdk_note": "Questi non sono adapter UI — emettono i JWT che delimitano ciò che una UI di FluxFiles (uno degli adapter sopra, o l'iframe standalone) può fare. Non serve PHP per emettere i token."
+    "sdk_headline": "Genera token dal tuo backend, o affidane uno a un agente IA",
+    "sdk_label": "Pacchetti lato server",
+    "sdk_note": "Questi non sono adapter UI — emettono i JWT che delimitano ciò che una UI di FluxFiles (uno degli adapter sopra, o l'iframe standalone) può fare. Non serve PHP per emettere i token. Il server MCP funziona al contrario: consegna uno di questi token ristretti a un agente IA, che può fare solo ciò che il token consente."
   },
   "embed": {
     "label": "Incorpora",

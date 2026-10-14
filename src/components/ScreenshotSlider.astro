@@ -19,6 +19,8 @@ const freeScreenshots = [
   { src: '/demo/fluxfiles-demo-doctor.png', alt: 'FluxFiles Bucket Doctor health checks for an S3 bucket with CORS and IAM remediation', caption: t('demo.cap_doctor') },
   { src: '/demo/fluxfiles-demo-activity.png', alt: 'FluxFiles activity log of file operations', caption: t('demo.cap_activity') },
   { src: '/demo/fluxfiles-demo-trash.png', alt: 'FluxFiles trash with restore and delete forever', caption: t('demo.cap_trash') },
+  { src: '/demo/fluxfiles-demo-duplicates.png', alt: 'FluxFiles usage dashboard listing byte-identical duplicate files and the space they waste', caption: t('demo.cap_duplicates') },
+  { src: '/demo/fluxfiles-demo-posters.png', alt: 'FluxFiles grid showing PDF cover pages and video frames as poster thumbnails', caption: t('demo.cap_posters') },
   { src: '/demo/fluxfiles-demo-ai-tag.png', alt: 'FluxFiles free AI auto-tag panel generating searchable tags for an image', caption: t('demo.cap_ai_tag') },
   { src: '/demo/fluxfiles-demo-mobile.png', alt: 'FluxFiles responsive mobile file manager', caption: t('demo.cap_mobile') },
   { src: '/demo/fluxfiles-demo-compliance-scorecard.png', alt: 'FluxFiles compliance readiness scorecard showing which safeguards are enabled', caption: t('demo.cap_compliance') },
@@ -31,25 +33,29 @@ const proScreenshots = [
 ];
 
 const studioScreenshots = [
+  { src: '/demo/fluxfiles-demo-versioning.png', alt: 'FluxFiles version history of a contract with four prior versions, who saved each, and Restore', caption: t('demo.cap_versioning') },
   { src: '/demo/fluxfiles-demo-ai-vision.png', alt: 'FluxFiles AI Vision panel removing the background from an image with your own vision API key', caption: t('demo.cap_ai_vision') },
+  { src: '/demo/fluxfiles-demo-ocr.png', alt: 'FluxFiles OCR panel showing text extracted from a scanned invoice', caption: t('demo.cap_ocr') },
 ];
 
+// Webhooks has no operator UI (it fires on file events), so it stays a diagram.
 const studioDiagrams = [
-  { key: 'versioning', caption: t('demo.cap_versioning') },
   { key: 'webhooks', caption: t('demo.cap_webhooks'), json: '{ "event": "upload",\n  "file": "invoice.pdf" }' },
-  { key: 'ocr', caption: t('demo.cap_ocr') },
 ];
 
 const enterpriseScreenshots = [
   { src: '/demo/fluxfiles-demo-legal-hold.png', alt: 'FluxFiles legal hold panel blocking delete, rename and move with a reason and audit trail', caption: t('demo.cap_legal_hold') },
+  { src: '/demo/fluxfiles-demo-retention.png', alt: 'FluxFiles retention rules previewing which old files would be trashed or deleted, skipping a file under legal hold', caption: t('demo.cap_retention') },
+  { src: '/demo/fluxfiles-demo-audit-export.png', alt: 'FluxFiles activity log with CSV/NDJSON export, an integrity check and a verified tamper-evident log', caption: t('demo.cap_audit_export') },
+  { src: '/demo/fluxfiles-demo-virus-scan.png', alt: 'FluxFiles on-demand virus scan reporting no threats found', caption: t('demo.cap_virus') },
+  { src: '/demo/fluxfiles-demo-backup.png', alt: 'FluxFiles backup syncing a folder to a second disk with copied, skipped and byte counts', caption: t('demo.cap_backup') },
 ];
 
+// No operator UI (DLP/C2PA run inside the write pipeline, SSO is the login itself),
+// so these stay diagrams.
 const enterpriseDiagrams = [
   { key: 'dlp', caption: t('demo.cap_dlp') },
-  { key: 'virus', caption: t('demo.cap_virus') },
   { key: 'c2pa', caption: t('demo.cap_c2pa') },
-  { key: 'backup', caption: t('demo.cap_backup') },
-  { key: 'audit-export', caption: t('demo.cap_audit_export') },
   { key: 'sso', caption: t('demo.cap_sso') },
 ];
 

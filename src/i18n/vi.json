@@ -7,7 +7,7 @@
     "solutions_title": "Giải pháp — FluxFiles",
     "solutions_description": "Ai dùng FluxFiles và vì sao: nền tảng SaaS, agency, website WordPress/CMS, và công cụ nội bộ cần lưu trữ file multi-tenant, BYOB.",
     "integrations_title": "Tích hợp — FluxFiles",
-    "integrations_description": "Adapter chính thức cho các framework (Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE, Summernote) và SDK tạo token phía server (Node, Python).",
+    "integrations_description": "Adapter chính thức cho các framework (Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE, Summernote), SDK tạo token phía server (Node, Python) và MCP server cho AI agent.",
     "pricing_title": "Giá — FluxFiles",
     "pricing_description": "Bản lõi miễn phí theo giấy phép MIT, các gói trả phí Pro/Studio, và Enterprise Compliance Bundle. Thanh toán theo tháng hoặc năm qua Polar.",
     "docs_title": "Tài liệu — FluxFiles",
@@ -67,11 +67,14 @@
     "cap_virus": "Mọi tệp tải lên đều được quét trước khi lưu trữ — ClamAV hoặc key cloud của riêng bạn",
     "cap_c2pa": "Ký tệp với Content Credentials có thể xác minh (nguồn gốc C2PA)",
     "cap_backup": "Đồng bộ một chiều sang ổ đĩa thứ hai — local, S3, R2 hoặc SFTP",
-    "cap_audit_export": "Xuất toàn bộ audit log dạng NDJSON hoặc CSV, bao gồm cả log đã lưu trữ",
+    "cap_audit_export": "Xuất toàn bộ audit log dạng NDJSON hoặc CSV, kiểm tra toàn vẹn tệp và xác minh nhật ký chống sửa đổi",
     "cap_sso": "Đăng nhập bằng nhà cung cấp OIDC của riêng bạn — nhóm tự động ánh xạ sang quyền",
     "cap_dlp": "Ẩn số CMND/CCCD, số thẻ và các thông tin nhạy cảm trước khi file được lưu trữ",
     "cap_legal_hold": "Phong tỏa pháp lý — chặn xóa, đổi tên và di chuyển cho đến khi gỡ, kèm nhật ký đầy đủ",
-    "cap_compliance": "Bảng điểm sẵn sàng tuân thủ — xem ngay các biện pháp bảo vệ nào đang bật"
+    "cap_compliance": "Bảng điểm sẵn sàng tuân thủ — xem ngay các biện pháp bảo vệ nào đang bật",
+    "cap_retention": "Quy tắc lưu giữ — xem trước rồi đưa vào thùng rác hoặc xoá tệp lâu không đổi; tệp đang phong tỏa pháp lý luôn được giữ",
+    "cap_duplicates": "Tìm tệp trùng — các tệp giống hệt nhau từng byte và dung lượng bị lãng phí",
+    "cap_posters": "Ảnh đại diện — trang bìa PDF và khung hình video hiển thị ngay trong lưới"
   },
   "features": {
     "label": "Tính năng",
@@ -129,6 +132,8 @@
     "node_desc": "Phát token FluxFiles từ backend JS bất kỳ (Express, Next.js, Nuxt) với @fluxfiles/node — tương thích byte với core PHP. Không cần PHP để phát token.",
     "python_title": "SDK phát token Python",
     "python_desc": "Phát token FluxFiles từ backend Python bất kỳ (FastAPI, Django, Flask) với fluxfiles-token — tương thích byte với core PHP. Không cần PHP để phát token.",
+    "mcp_title": "MCP server cho AI agent",
+    "mcp_desc": "Cho Claude Desktop, Claude Code hoặc bất kỳ MCP client nào liệt kê, tìm kiếm và đọc file của bạn qua @fluxfiles/mcp — giới hạn bởi JWT có phạm vi do bạn phát. Công cụ ghi file và chuyển vào thùng rác chỉ bật khi bạn cho phép.",
     "sftp_title": "Ổ đĩa SFTP",
     "sftp_desc": "Driver thứ 3 sau S3/R2 — biến mọi VPS hay shared host thành trình quản lý tệp.",
     "editor_title": "Sửa code / config",
@@ -157,6 +162,7 @@
     "headline": "Chạy trong 2 phút",
     "tab_composer": "Composer (PHP)",
     "tab_manual": "Thủ công",
+    "mcp_note": "Agent chỉ chạm được vào những gì JWT của nó cho phép — disk, path prefix và quyền. Hãy cấp cho nó một token phạm vi hẹp, chỉ đọc.",
     "copy": "Sao chép",
     "copied": "Đã sao chép!",
     "works_with": "Tương thích với",
@@ -211,9 +217,9 @@
     "label": "Tích hợp",
     "headline": "Adapter cắm-là-chạy cho stack của bạn",
     "sub": "Các adapter chính thức nhúng FluxFiles trực tiếp vào framework và trình soạn thảo bạn đang dùng.",
-    "sdk_headline": "Tạo token từ backend của bạn, không cần UI",
-    "sdk_label": "SDK tạo token phía server",
-    "sdk_note": "Đây không phải adapter giao diện — chúng phát hành JWT quy định phạm vi hoạt động cho giao diện FluxFiles (bất kỳ adapter nào ở trên, hoặc iframe standalone). Không cần PHP để phát hành token."
+    "sdk_headline": "Tạo token từ backend — hoặc giao một token cho AI agent",
+    "sdk_label": "Gói phía server",
+    "sdk_note": "Đây không phải adapter giao diện — chúng phát hành JWT quy định phạm vi hoạt động cho giao diện FluxFiles (bất kỳ adapter nào ở trên, hoặc iframe standalone). Không cần PHP để phát hành token. MCP server thì theo chiều ngược lại: nó trao một token có phạm vi như vậy cho AI agent, và agent chỉ làm được những gì token cho phép."
   },
   "embed": {
     "label": "Nhúng",

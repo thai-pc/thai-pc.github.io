@@ -7,7 +7,7 @@
     "solutions_title": "Solutions — FluxFiles",
     "solutions_description": "Qui utilise FluxFiles et pourquoi : plateformes SaaS, agences, sites WordPress/CMS, et outils internes nécessitant un stockage de fichiers multi-locataire en BYOB.",
     "integrations_title": "Intégrations — FluxFiles",
-    "integrations_description": "Adaptateurs officiels pour frameworks (Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE, Summernote) et SDK de jetons côté serveur (Node, Python).",
+    "integrations_description": "Adaptateurs officiels pour frameworks (Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE, Summernote), SDK de jetons côté serveur (Node, Python) et serveur MCP pour agents IA.",
     "pricing_title": "Tarifs — FluxFiles",
     "pricing_description": "Cœur gratuit sous licence MIT, offres payantes Pro/Studio, et l'Enterprise Compliance Bundle. Facturation mensuelle ou annuelle via Polar.",
     "docs_title": "Documentation — FluxFiles",
@@ -67,11 +67,14 @@
     "cap_virus": "Chaque upload est scanné avant stockage — ClamAV ou votre propre clé cloud",
     "cap_c2pa": "Signez vos fichiers avec des Content Credentials vérifiables (provenance C2PA)",
     "cap_backup": "Synchronisation à sens unique vers un second disque — local, S3, R2 ou SFTP",
-    "cap_audit_export": "Exportez le journal d'audit complet en NDJSON ou CSV, y compris les entrées archivées",
+    "cap_audit_export": "Exportez toute la piste d'audit en NDJSON ou CSV, lancez un contrôle d'intégrité et vérifiez le journal infalsifiable",
     "cap_sso": "Connectez-vous avec votre propre fournisseur d'identité OIDC — les groupes sont mappés aux permissions",
     "cap_dlp": "Masquez les numéros de sécurité sociale, de carte bancaire et les secrets avant même le stockage du fichier",
     "cap_legal_hold": "Conservation légale — bloque la suppression, le renommage et le déplacement jusqu'à la levée, avec une piste d'audit complète",
-    "cap_compliance": "Tableau de bord de conformité — visualisez en un coup d'œil les protections activées"
+    "cap_compliance": "Tableau de bord de conformité — visualisez en un coup d'œil les protections activées",
+    "cap_retention": "Règles de conservation — prévisualisez, puis mettez à la corbeille ou supprimez les fichiers inchangés ; la conservation légale l'emporte toujours",
+    "cap_duplicates": "Détecteur de doublons — fichiers identiques octet par octet et l'espace gaspillé",
+    "cap_posters": "Vignettes — pages de couverture PDF et images vidéo directement dans la grille"
   },
   "features": {
     "label": "Fonctionnalités",
@@ -129,6 +132,8 @@
     "node_desc": "Émettez des jetons FluxFiles depuis n’importe quel backend JS (Express, Next.js, Nuxt) avec @fluxfiles/node — compatible octet par octet avec le cœur PHP. Aucun PHP requis pour émettre des jetons.",
     "python_title": "SDK de jetons Python",
     "python_desc": "Émettez des jetons FluxFiles depuis n’importe quel backend Python (FastAPI, Django, Flask) avec fluxfiles-token — compatible octet par octet avec le cœur PHP. Aucun PHP requis pour émettre des jetons.",
+    "mcp_title": "Serveur MCP pour agents IA",
+    "mcp_desc": "Permettez à Claude Desktop, Claude Code ou tout client MCP de lister, rechercher et lire vos fichiers avec @fluxfiles/mcp — dans les limites du JWT restreint que vous émettez. Les outils d'écriture et de mise à la corbeille restent désactivés tant que vous ne les activez pas.",
     "sftp_title": "Disque SFTP",
     "sftp_desc": "Un 3ᵉ pilote après S3/R2 — transformez tout VPS ou hébergement en gestionnaire.",
     "editor_title": "Éditeur code / config",
@@ -157,6 +162,7 @@
     "headline": "Opérationnel en 2 minutes",
     "tab_composer": "Composer (PHP)",
     "tab_manual": "Manuel",
+    "mcp_note": "L'agent ne peut toucher que ce que son JWT autorise — ses disques, son préfixe de chemin et ses permissions. Donnez-lui un jeton restreint, en lecture seule.",
     "copy": "Copier",
     "copied": "Copié !",
     "works_with": "Compatible avec",
@@ -211,9 +217,9 @@
     "label": "Intégrations",
     "headline": "Des adaptateurs prêts à l'emploi pour votre stack",
     "sub": "Les adaptateurs officiels intègrent nativement FluxFiles aux frameworks et éditeurs que vous utilisez déjà.",
-    "sdk_headline": "Générez des jetons depuis votre backend, sans UI",
-    "sdk_label": "SDK de jetons côté serveur",
-    "sdk_note": "Ce ne sont pas des adaptateurs d'interface — ils émettent les JWT qui délimitent ce qu'une interface FluxFiles (l'un des adaptateurs ci-dessus, ou l'iframe autonome) est autorisée à faire. Aucun PHP n'est requis pour émettre des jetons."
+    "sdk_headline": "Générez des jetons depuis votre backend — ou confiez-en un à un agent IA",
+    "sdk_label": "Paquets côté serveur",
+    "sdk_note": "Ce ne sont pas des adaptateurs d'interface — ils émettent les JWT qui délimitent ce qu'une interface FluxFiles (l'un des adaptateurs ci-dessus, ou l'iframe autonome) est autorisée à faire. Aucun PHP n'est requis pour émettre des jetons. Le serveur MCP fonctionne dans l'autre sens : il confie l'un de ces jetons restreints à un agent IA, qui ne peut alors faire que ce que le jeton autorise."
   },
   "embed": {
     "label": "Intégration",

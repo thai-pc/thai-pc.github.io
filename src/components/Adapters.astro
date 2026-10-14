@@ -4,7 +4,8 @@ import { useTranslations, type Lang } from '../i18n/utils';
 interface Props {
   lang: Lang;
   // Server-side token SDKs (Node/Python) mint JWTs but render no UI, so they're
-  // a distinct category from the framework adapters below — shown only where
+  // a distinct category from the framework adapters below; the MCP server sits
+  // with them as the consumer of such a token (an AI agent's) — shown only where
   // that distinction matters (the full /integrations reference), not on the
   // lighter /product teaser. See decision 6 in the redesign plan.
   showSdks?: boolean;
@@ -27,6 +28,7 @@ const adapters = [
 const sdks = [
   { name: '@fluxfiles/node', tag: 'Node.js', titleKey: 'features.node_title', descKey: 'features.node_desc', icon: 'M15 7a2 2 0 012 2m4-2a6 6 0 01-7.743 5.743L11 14H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z' },
   { name: 'fluxfiles-token', tag: 'Python', titleKey: 'features.python_title', descKey: 'features.python_desc', icon: 'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' },
+  { name: '@fluxfiles/mcp', tag: 'MCP', titleKey: 'features.mcp_title', descKey: 'features.mcp_desc', icon: 'M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z' },
 ];
 ---
 
@@ -60,7 +62,7 @@ const sdks = [
           <p class="mt-4 text-gray-600 dark:text-gray-400">{t('adapters.sdk_note')}</p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {sdks.map((s) => (
             <div class="flex items-start gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/40 p-6">
               <div class="w-10 h-10 shrink-0 rounded-lg bg-accent-light dark:bg-accent/10 flex items-center justify-center">

@@ -7,7 +7,7 @@
     "solutions_title": "Solutions — FluxFiles",
     "solutions_description": "Who uses FluxFiles and why: SaaS platforms, agencies, WordPress/CMS sites, and internal tools that need multi-tenant, BYOB file storage.",
     "integrations_title": "Integrations — FluxFiles",
-    "integrations_description": "Official framework adapters (Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE, Summernote) and server-side token SDKs (Node, Python).",
+    "integrations_description": "Official framework adapters (Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE, Summernote), server-side token SDKs (Node, Python) and an MCP server for AI agents.",
     "pricing_title": "Pricing — FluxFiles",
     "pricing_description": "Free MIT core, paid Pro/Studio tiers, and the Enterprise Compliance Bundle. Monthly or annual billing via Polar.",
     "docs_title": "Docs — FluxFiles",
@@ -69,11 +69,14 @@
     "cap_virus": "Every upload scanned before it's stored — ClamAV or your own cloud key",
     "cap_c2pa": "Sign files with verifiable Content Credentials (C2PA provenance)",
     "cap_backup": "One-way sync to a second disk — local, S3, R2 or SFTP",
-    "cap_audit_export": "Export the full audit trail as NDJSON or CSV, including archived logs",
+    "cap_audit_export": "Export the full audit trail as NDJSON or CSV, run an integrity check and verify the tamper-evident log",
     "cap_sso": "Sign in with your own OIDC identity provider — groups map to permissions",
     "cap_dlp": "Redact SSNs, card numbers and secrets before a file is ever stored",
     "cap_legal_hold": "Legal hold — blocks delete, rename and move until released, with a full audit trail",
-    "cap_compliance": "Compliance readiness scorecard — see which safeguards are on at a glance"
+    "cap_compliance": "Compliance readiness scorecard — see which safeguards are on at a glance",
+    "cap_retention": "Retention rules — preview, then trash or delete files left unchanged; legal holds always win",
+    "cap_duplicates": "Duplicate finder — byte-identical files and the space they waste",
+    "cap_posters": "Poster thumbnails — PDF cover pages and video frames right in the grid"
   },
   "features": {
     "label": "Features",
@@ -131,6 +134,8 @@
     "node_desc": "Mint FluxFiles tokens from any JS backend (Express, Next.js, Nuxt) with @fluxfiles/node — byte-compatible with the PHP core. No PHP required to issue tokens.",
     "python_title": "Python token SDK",
     "python_desc": "Mint FluxFiles tokens from any Python backend (FastAPI, Django, Flask) with fluxfiles-token — byte-compatible with the PHP core. No PHP required to issue tokens.",
+    "mcp_title": "MCP server for AI agents",
+    "mcp_desc": "Let Claude Desktop, Claude Code or any MCP client list, search and read your files with @fluxfiles/mcp — bounded by the scoped JWT you mint. Write and trash tools stay off unless you enable them.",
     "sftp_title": "SFTP disk",
     "sftp_desc": "A 3rd driver after S3/R2 — turn any VPS or shared host into a managed file manager.",
     "editor_title": "Code / config editor",
@@ -161,6 +166,7 @@
     "tab_laravel": "Laravel",
     "tab_sdk": "JS SDK",
     "tab_manual": "Manual",
+    "mcp_note": "The agent can only touch what its JWT allows — its disks, path prefix and permissions. Give it a narrow, read-only token.",
     "copy": "Copy",
     "copied": "Copied!",
     "works_with": "Works with"
@@ -213,9 +219,9 @@
     "label": "Integrations",
     "headline": "Drop-in adapters for your stack",
     "sub": "Official adapters embed FluxFiles natively in the frameworks and editors you already use.",
-    "sdk_label": "Server-side token SDKs",
-    "sdk_headline": "Mint tokens from your backend, no UI",
-    "sdk_note": "These aren't UI adapters — they issue the JWTs that scope what a FluxFiles UI (any of the adapters above, or the standalone iframe) is allowed to do. No PHP required to issue tokens."
+    "sdk_label": "Server-side packages",
+    "sdk_headline": "Mint tokens from your backend — or hand one to an AI agent",
+    "sdk_note": "These aren't UI adapters — they issue the JWTs that scope what a FluxFiles UI (any of the adapters above, or the standalone iframe) is allowed to do. No PHP required to issue tokens. The MCP server works the other way round: it hands one of those scoped tokens to an AI agent, which can then do only what the token allows."
   },
   "embed": {
     "label": "Embed",

@@ -129,6 +129,27 @@ def fluxfiles_token(user=Depends(current_user)):
     )
     return {"token": token}`;
 
+// Client config for the MCP server. Placeholders only — the agent gets a
+// scoped JWT you mint (e.g. with @fluxfiles/node), never storage credentials.
+const mcpCode = `# Claude Desktop — claude_desktop_config.json
+{
+  "mcpServers": {
+    "fluxfiles": {
+      "command": "npx",
+      "args": ["-y", "@fluxfiles/mcp"],
+      "env": {
+        "FLUXFILES_URL": "<your FluxFiles URL>",
+        "FLUXFILES_TOKEN": "<scoped JWT>"
+      }
+    }
+  }
+}
+
+# Claude Code
+claude mcp add fluxfiles -e FLUXFILES_URL=<your FluxFiles URL> -e FLUXFILES_TOKEN=<scoped JWT> -- npx -y @fluxfiles/mcp
+
+# Read-only by default. Opt in: FLUXFILES_MCP_WRITE=1 (+ FLUXFILES_MCP_DELETE=1 for move_to_trash)`;
+
 const dockerCode = `git clone https://github.com/thai-pc/fluxfiles.git
 docker build -f fluxfiles/docker/Dockerfile.prod -t fluxfiles fluxfiles
 
@@ -143,6 +164,7 @@ const tabs = [
   { id: 'laravel',  label: t('install.tab_laravel'),  code: laravelCode },
   { id: 'node',     label: 'Node',                    code: nodeCode },
   { id: 'python',   label: 'Python',                  code: pythonCode },
+  { id: 'mcp',      label: 'MCP',                     code: mcpCode, note: t('install.mcp_note') },
   { id: 'sdk',      label: t('install.tab_sdk'),      code: sdkCode },
   { id: 'react',    label: 'React',                   code: reactCode },
   { id: 'vue',      label: 'Vue',                     code: vueCode },
@@ -204,6 +226,7 @@ const frameworks = [
             >
               {t('install.copy')}
             </button>
+            {tb.note && <p class="mt-3 text-sm text-gray-500 dark:text-gray-400">{tb.note}</p>}
           </div>
         ))}
       </div>

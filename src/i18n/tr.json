@@ -7,7 +7,7 @@
     "solutions_title": "Çözümler — FluxFiles",
     "solutions_description": "FluxFiles'ı kimler, neden kullanıyor: SaaS platformları, ajanslar, WordPress/CMS siteleri, ve çok kiracılı BYOB dosya depolamaya ihtiyaç duyan dahili araçlar.",
     "integrations_title": "Entegrasyonlar — FluxFiles",
-    "integrations_description": "Resmi framework adaptörleri (Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE, Summernote) ve sunucu tarafı token SDK'ları (Node, Python).",
+    "integrations_description": "Resmi framework adaptörleri (Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE, Summernote), sunucu tarafı token SDK'ları (Node, Python) ve yapay zekâ ajanları için bir MCP sunucusu.",
     "pricing_title": "Fiyatlandırma — FluxFiles",
     "pricing_description": "Ücretsiz MIT çekirdek, ücretli Pro/Studio planları, ve Enterprise Compliance Bundle. Polar üzerinden aylık veya yıllık faturalandırma.",
     "docs_title": "Dokümantasyon — FluxFiles",
@@ -67,11 +67,14 @@
     "cap_virus": "Her yükleme depolanmadan önce taranır — ClamAV veya kendi bulut anahtarınız",
     "cap_c2pa": "Dosyaları doğrulanabilir İçerik Kimlik Bilgileriyle imzalayın (C2PA kökeni)",
     "cap_backup": "İkinci bir diske tek yönlü senkronizasyon — local, S3, R2 veya SFTP",
-    "cap_audit_export": "Tüm denetim kaydını NDJSON veya CSV olarak dışa aktarın, arşivlenenler dahil",
+    "cap_audit_export": "Tüm denetim kaydını NDJSON veya CSV olarak dışa aktarın, bütünlük denetimi yapın ve kurcalamaya dayanıklı günlüğü doğrulayın",
     "cap_sso": "Kendi OIDC kimlik sağlayıcınızla giriş yapın — gruplar izinlere otomatik eşlenir",
     "cap_dlp": "Dosya depolanmadan önce TC kimlik numaralarını, kart numaralarını ve gizli bilgileri gizler",
     "cap_legal_hold": "Yasal tutma — serbest bırakılana kadar silme, yeniden adlandırma ve taşımayı engeller, tam denetim izi ile",
-    "cap_compliance": "Uyumluluk hazırlık puan kartı — hangi korumaların açık olduğunu tek bakışta gör"
+    "cap_compliance": "Uyumluluk hazırlık puan kartı — hangi korumaların açık olduğunu tek bakışta gör",
+    "cap_retention": "Saklama kuralları — önce önizleyin, sonra değişmeyen dosyaları çöpe taşıyın veya silin; yasal saklama her zaman önceliklidir",
+    "cap_duplicates": "Kopya bulucu — bayt bayt aynı dosyalar ve boşa harcadıkları alan",
+    "cap_posters": "Önizleme görselleri — PDF kapak sayfaları ve video kareleri doğrudan ızgarada"
   },
   "features": {
     "label": "Özellikler",
@@ -129,6 +132,8 @@
     "node_desc": "@fluxfiles/node ile herhangi bir JS arka ucundan (Express, Next.js, Nuxt) FluxFiles jetonları üretin — PHP çekirdeğiyle bayt uyumlu. Jeton üretmek için PHP gerekmez.",
     "python_title": "Python jeton SDK'sı",
     "python_desc": "fluxfiles-token ile herhangi bir Python arka ucundan (FastAPI, Django, Flask) FluxFiles jetonları üretin — PHP çekirdeğiyle bayt uyumlu. Jeton üretmek için PHP gerekmez.",
+    "mcp_title": "Yapay zekâ ajanları için MCP sunucusu",
+    "mcp_desc": "@fluxfiles/mcp ile Claude Desktop, Claude Code veya herhangi bir MCP istemcisi dosyalarınızı listeleyebilir, arayabilir ve okuyabilir — sizin ürettiğiniz kapsamlı JWT'nin sınırları içinde. Yazma ve çöp kutusuna taşıma araçları siz açmadıkça kapalı kalır.",
     "sftp_title": "SFTP diski",
     "sftp_desc": "S3/R2'den sonra 3. sürücü — herhangi bir VPS veya hosting'i dosya yöneticisine dönüştürün.",
     "editor_title": "Kod / yapılandırma düzenleyici",
@@ -157,6 +162,7 @@
     "headline": "2 dakikada hazır",
     "tab_composer": "Composer (PHP)",
     "tab_manual": "Manuel",
+    "mcp_note": "Ajan yalnızca JWT'sinin izin verdiği şeylere dokunabilir — diskleri, yol öneki ve izinleri. Ona dar kapsamlı, salt okunur bir token verin.",
     "copy": "Kopyala",
     "copied": "Kopyalandı!",
     "works_with": "Şunlarla çalışır",
@@ -211,9 +217,9 @@
     "label": "Entegrasyonlar",
     "headline": "Yığınınız için hazır adaptörler",
     "sub": "Resmi adaptörler, FluxFiles'ı zaten kullandığınız çerçevelere ve editörlere yerel olarak gömer.",
-    "sdk_headline": "UI olmadan, backend'inizden token oluşturun",
-    "sdk_label": "Sunucu tarafı token SDK'ları",
-    "sdk_note": "Bunlar UI adaptörü değildir — bir FluxFiles UI'ının (yukarıdaki adaptörlerden herhangi biri veya bağımsız iframe) yapmasına izin verilenleri sınırlayan JWT'leri bunlar oluşturur. Token oluşturmak için PHP gerekmez."
+    "sdk_headline": "Token'ları backend'inizde üretin — ya da bir yapay zekâ ajanına verin",
+    "sdk_label": "Sunucu tarafı paketler",
+    "sdk_note": "Bunlar UI adaptörü değildir — bir FluxFiles UI'ının (yukarıdaki adaptörlerden herhangi biri veya bağımsız iframe) yapmasına izin verilenleri sınırlayan JWT'leri bunlar oluşturur. Token oluşturmak için PHP gerekmez. MCP sunucusu ise tersine çalışır: bu kapsamlı token'lardan birini bir yapay zekâ ajanına verir; ajan da yalnızca token'ın izin verdiğini yapabilir."
   },
   "embed": {
     "label": "Gömme",

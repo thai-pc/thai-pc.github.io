@@ -7,7 +7,7 @@
     "solutions_title": "ソリューション — FluxFiles",
     "solutions_description": "FluxFilesを使うのは誰か、なぜか：SaaSプラットフォーム、代理店、WordPress/CMSサイト、マルチテナントかつBYOBのファイルストレージを必要とする社内ツール。",
     "integrations_title": "インテグレーション — FluxFiles",
-    "integrations_description": "公式フレームワークアダプター（Laravel、WordPress、React、Vue/Nuxt、CKEditor 4、TinyMCE、Summernote）とサーバーサイドトークンSDK（Node、Python）。",
+    "integrations_description": "公式フレームワークアダプター（Laravel、WordPress、React、Vue/Nuxt、CKEditor 4、TinyMCE、Summernote）、サーバーサイドトークンSDK（Node、Python）、AIエージェント向けMCPサーバー。",
     "pricing_title": "料金 — FluxFiles",
     "pricing_description": "無料のMITコア、有料のPro/Studioプラン、そしてEnterprise Compliance Bundle。Polarによる月次または年次課金。",
     "docs_title": "ドキュメント — FluxFiles",
@@ -67,11 +67,14 @@
     "cap_virus": "アップロードされたファイルは保存前にすべてスキャン — ClamAVまたは自分のクラウドキー",
     "cap_c2pa": "検証可能なContent Credentialsでファイルに署名（C2PA来歴）",
     "cap_backup": "セカンドディスクへの一方向同期 — ローカル、S3、R2、SFTP",
-    "cap_audit_export": "監査ログ全体をNDJSONまたはCSVでエクスポート、アーカイブ済みログも含む",
+    "cap_audit_export": "監査ログ全体を NDJSON / CSV でエクスポートし、整合性チェックと改ざん検知ログの検証を実行",
     "cap_sso": "自分のOIDC IDプロバイダーでサインイン — グループが権限に自動マッピング",
     "cap_dlp": "保存される前に、社会保障番号やカード番号、秘密情報をマスキング",
     "cap_legal_hold": "リーガルホールド — 解除するまで削除・名前変更・移動をブロックし、監査証跡を記録",
-    "cap_compliance": "コンプライアンス準備状況スコアカード — 有効な保護機能を一目で確認"
+    "cap_compliance": "コンプライアンス準備状況スコアカード — 有効な保護機能を一目で確認",
+    "cap_retention": "保持ルール — プレビューしてから、更新のないファイルをゴミ箱へ移動または削除。リーガルホールドが常に優先",
+    "cap_duplicates": "重複ファイル検出 — バイト単位で同一のファイルと無駄な容量",
+    "cap_posters": "ポスターサムネイル — PDF の表紙と動画のフレームをグリッドに表示"
   },
   "features": {
     "label": "機能",
@@ -129,6 +132,8 @@
     "node_desc": "@fluxfiles/node で任意の JS バックエンド（Express、Next.js、Nuxt）から FluxFiles トークンを発行——PHP コアとバイト互換。トークン発行に PHP 不要。",
     "python_title": "Python トークン SDK",
     "python_desc": "fluxfiles-token で任意の Python バックエンド（FastAPI、Django、Flask）から FluxFiles トークンを発行——PHP コアとバイト互換。トークン発行に PHP 不要。",
+    "mcp_title": "AI エージェント向け MCP サーバー",
+    "mcp_desc": "@fluxfiles/mcp で Claude Desktop、Claude Code、または任意の MCP クライアントからファイルの一覧・検索・読み取りが可能に——範囲は発行したスコープ付き JWT で制限されます。書き込みとゴミ箱移動のツールは明示的に有効化しない限りオフです。",
     "sftp_title": "SFTP ディスク",
     "sftp_desc": "S3/R2 に次ぐ3つ目のドライバー。あらゆる VPS や共有ホストをファイル管理に。",
     "editor_title": "コード / 設定エディタ",
@@ -157,6 +162,7 @@
     "headline": "2分で起動",
     "tab_composer": "Composer (PHP)",
     "tab_manual": "手動",
+    "mcp_note": "エージェントが触れられるのは JWT が許可する範囲（ディスク、パスプレフィックス、権限）だけです。範囲を絞った読み取り専用トークンを渡してください。",
     "copy": "コピー",
     "copied": "コピー済み！",
     "works_with": "対応フレームワーク",
@@ -211,9 +217,9 @@
     "label": "インテグレーション",
     "headline": "あなたのスタックに差し込めるアダプター",
     "sub": "公式アダプターで、すでに使っているフレームワークやエディターに FluxFiles をネイティブ統合できます。",
-    "sdk_headline": "UIなしでバックエンドからトークンを発行",
-    "sdk_label": "サーバーサイドトークンSDK",
-    "sdk_note": "これらはUIアダプターではありません——FluxFilesのUI（上記いずれかのアダプター、またはスタンドアロンiframe）が実行できる操作の範囲を定めるJWTを発行するものです。トークン発行にPHPは不要です。"
+    "sdk_headline": "バックエンドでトークンを発行 — または AI エージェントに渡す",
+    "sdk_label": "サーバーサイドパッケージ",
+    "sdk_note": "これらはUIアダプターではありません——FluxFilesのUI（上記いずれかのアダプター、またはスタンドアロンiframe）が実行できる操作の範囲を定めるJWTを発行するものです。トークン発行にPHPは不要です。MCPサーバーはその逆で、こうしたスコープ付きトークンをAIエージェントに渡します。エージェントはトークンが許可する操作しか実行できません。"
   },
   "embed": {
     "label": "組み込み",
