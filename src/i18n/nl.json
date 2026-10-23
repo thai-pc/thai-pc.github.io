@@ -190,7 +190,7 @@
     "row_search": "Zoeken in volledige tekst",
     "row_darkmode": "Donkere modus",
     "row_i18n": "16 talen",
-    "row_php81": "PHP ≥ 8.1",
+    "row_php81": "PHP ≥ 8.2",
     "asof_note": "Vergelijking actueel per {date}, onafhankelijk opgesteld — zie de GitHub-repository om een correctie te melden.",
     "tab_oss": "vs. open source bestandsmanagers",
     "tab_saas": "vs. file-API SaaS"
@@ -241,7 +241,7 @@
     "embed_q": "Kan ik het insluiten in mijn bestaande app of editor?",
     "embed_a": "Ja — de iframe + JS-SDK werkt op elke pagina, met officiële adapters voor Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE en Summernote.",
     "run_q": "Wat heb ik nodig om het te draaien?",
-    "run_a": "PHP 8.1+ met enkele gangbare extensies en Composer. Richt het op een schijf, stel een secret en toegestane origins in, en serveer — het draait op een kleine VPS.",
+    "run_a": "PHP 8.2.35+ met enkele gangbare extensies en Composer. Richt het op een schijf, stel een secret en toegestane origins in, en serveer — het draait op een kleine VPS.",
     "paid_q": "Wat bevatten de betaalde niveaus?",
     "paid_a": "De kern is gratis (MIT). Betaalde niveaus ontgrendelen portaalmodules: Branded Share (vervallende/wachtwoordlinks) en Upload-portalen (publiek «stuur ons bestanden»), plus Versiebeheer, Webhooks, AI Vision/OCR en een compliance-bundel op hogere niveaus.",
     "license_q": "Hoe activeer ik een licentie?",

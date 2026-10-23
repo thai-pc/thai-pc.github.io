@@ -190,7 +190,7 @@
     "row_search": "Tam metin arama",
     "row_darkmode": "Karanlık mod",
     "row_i18n": "16 dil",
-    "row_php81": "PHP ≥ 8.1",
+    "row_php81": "PHP ≥ 8.2",
     "asof_note": "Karşılaştırma {date} tarihi itibarıyla günceldir, bağımsız olarak hazırlanmıştır — bir düzeltme bildirmek için GitHub deposuna bakın.",
     "tab_oss": "açık kaynak dosya yöneticileriyle karşılaştırma",
     "tab_saas": "dosya API SaaS'larıyla karşılaştırma"
@@ -241,7 +241,7 @@
     "embed_q": "Mevcut uygulamama veya editörüme gömebilir miyim?",
     "embed_a": "Evet — iframe + JS SDK her sayfada çalışır; Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE ve Summernote için resmi adaptörler vardır.",
     "run_q": "Çalıştırmak için neye ihtiyacım var?",
-    "run_a": "Birkaç yaygın eklenti ile PHP 8.1+ ve Composer. Bir diske yönlendirin, bir secret ve izin verilen origin'leri ayarlayın, ardından sunun — küçük bir VPS'te çalışır.",
+    "run_a": "Birkaç yaygın eklenti ile PHP 8.2.35+ ve Composer. Bir diske yönlendirin, bir secret ve izin verilen origin'leri ayarlayın, ardından sunun — küçük bir VPS'te çalışır.",
     "paid_q": "Ücretli katmanlar neleri içerir?",
     "paid_a": "Çekirdek ücretsizdir (MIT). Ücretli katmanlar portal modüllerini açar: Markalı Paylaşım (süreli/parolalı bağlantılar) ve Yükleme Portalları (herkese açık «bize dosya gönderin»), ayrıca üst katmanlarda Sürümleme, Webhooks, AI Görü/OCR ve bir uyumluluk paketi.",
     "license_q": "Lisansı nasıl etkinleştiririm?",

@@ -190,7 +190,7 @@
     "row_search": "Recherche plein texte",
     "row_darkmode": "Mode sombre",
     "row_i18n": "16 langues",
-    "row_php81": "PHP ≥ 8.1",
+    "row_php81": "PHP ≥ 8.2",
     "asof_note": "Comparaison à jour au {date}, réalisée de manière indépendante — consultez le dépôt GitHub pour signaler une correction.",
     "tab_oss": "vs. gestionnaires de fichiers open source",
     "tab_saas": "vs. SaaS d'API de fichiers"
@@ -241,7 +241,7 @@
     "embed_q": "Puis-je l'intégrer dans mon application ou mon éditeur existant ?",
     "embed_a": "Oui — l'iframe + le SDK JS fonctionne dans n'importe quelle page, avec des adaptateurs officiels pour Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE et Summernote.",
     "run_q": "De quoi ai-je besoin pour l'exécuter ?",
-    "run_a": "PHP 8.1+ avec quelques extensions courantes et Composer. Pointez-le vers un disque, définissez un secret et les origines autorisées, puis lancez-le — il tourne sur un petit VPS.",
+    "run_a": "PHP 8.2.35+ avec quelques extensions courantes et Composer. Pointez-le vers un disque, définissez un secret et les origines autorisées, puis lancez-le — il tourne sur un petit VPS.",
     "paid_q": "Que comprennent les offres payantes ?",
     "paid_a": "Le cœur est gratuit (MIT). Les offres payantes débloquent les modules de portail : Partage de marque (liens expirants/protégés) et Portails d'envoi (« envoyez-nous des fichiers » public), plus Versioning, Webhooks, IA Vision/OCR et un bundle de conformité aux niveaux supérieurs.",
     "license_q": "Comment activer une licence ?",

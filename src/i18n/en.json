@@ -192,7 +192,7 @@
     "row_search": "Full-text search",
     "row_darkmode": "Dark mode",
     "row_i18n": "16 languages",
-    "row_php81": "PHP ≥ 8.1",
+    "row_php81": "PHP ≥ 8.2",
     "tab_oss": "vs. open-source file managers",
     "tab_saas": "vs. file-API SaaS",
     "asof_note": "Comparison as of {date}, unaffiliated — see the GitHub repo to flag a correction."
@@ -243,7 +243,7 @@
     "embed_q": "Can I embed it in my existing app or editor?",
     "embed_a": "Yes — the iframe + JS SDK works in any page, with official adapters for Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE and Summernote.",
     "run_q": "What do I need to run it?",
-    "run_a": "PHP 8.1+ with common extensions and Composer. Point it at a disk, set a secret and allowed origins, then serve — it runs on a small VPS.",
+    "run_a": "PHP 8.2.35+ with common extensions and Composer. Point it at a disk, set a secret and allowed origins, then serve — it runs on a small VPS.",
     "paid_q": "What do the paid tiers include?",
     "paid_a": "The core is free (MIT). Paid tiers unlock file-portal modules: Branded Share (expiring/password links) and Upload Portals (public “send us files”), plus Versioning, Webhooks, AI Vision/OCR and a compliance bundle at higher tiers.",
     "license_q": "How do I activate a license?",

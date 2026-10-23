@@ -190,7 +190,7 @@
     "row_search": "Volltextsuche",
     "row_darkmode": "Dunkelmodus",
     "row_i18n": "16 Sprachen",
-    "row_php81": "PHP ≥ 8.1",
+    "row_php81": "PHP ≥ 8.2",
     "asof_note": "Vergleich Stand {date}, unabhängig erstellt — Korrekturen bitte über das GitHub-Repository melden.",
     "tab_oss": "vs. Open-Source-Dateimanager",
     "tab_saas": "vs. Datei-API-SaaS"
@@ -241,7 +241,7 @@
     "embed_q": "Kann ich es in meine bestehende App oder meinen Editor einbetten?",
     "embed_a": "Ja — iframe + JS-SDK funktioniert auf jeder Seite, mit offiziellen Adaptern für Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE und Summernote.",
     "run_q": "Was brauche ich, um es zu betreiben?",
-    "run_a": "PHP 8.1+ mit einigen gängigen Erweiterungen und Composer. Auf einen Disk verweisen, Secret und erlaubte Origins setzen, dann starten — läuft auf einem kleinen VPS.",
+    "run_a": "PHP 8.2.35+ mit einigen gängigen Erweiterungen und Composer. Auf einen Disk verweisen, Secret und erlaubte Origins setzen, dann starten — läuft auf einem kleinen VPS.",
     "paid_q": "Was enthalten die kostenpflichtigen Stufen?",
     "paid_a": "Der Kern ist kostenlos (MIT). Kostenpflichtige Stufen schalten Portal-Module frei: Branded Share (ablaufende/passwortgeschützte Links) und Upload-Portale (öffentliches „Schick uns Dateien“), plus Versionierung, Webhooks, KI-Vision/OCR und ein Compliance-Bundle in höheren Stufen.",
     "license_q": "Wie aktiviere ich eine Lizenz?",

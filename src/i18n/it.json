@@ -190,7 +190,7 @@
     "row_search": "Ricerca full-text",
     "row_darkmode": "Modalità scura",
     "row_i18n": "16 lingue",
-    "row_php81": "PHP ≥ 8.1",
+    "row_php81": "PHP ≥ 8.2",
     "asof_note": "Confronto aggiornato al {date}, indipendente — consulta il repository GitHub per segnalare una correzione.",
     "tab_oss": "vs. file manager open source",
     "tab_saas": "vs. SaaS di API per file"
@@ -241,7 +241,7 @@
     "embed_q": "Posso incorporarlo nella mia app o nel mio editor esistente?",
     "embed_a": "Sì — l'iframe + SDK JS funziona in qualsiasi pagina, con adattatori ufficiali per Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE e Summernote.",
     "run_q": "Cosa serve per eseguirlo?",
-    "run_a": "PHP 8.1+ con alcune estensioni comuni e Composer. Puntalo a un disco, imposta un secret e le origini consentite, poi avvialo — gira su un piccolo VPS.",
+    "run_a": "PHP 8.2.35+ con alcune estensioni comuni e Composer. Puntalo a un disco, imposta un secret e le origini consentite, poi avvialo — gira su un piccolo VPS.",
     "paid_q": "Cosa includono i piani a pagamento?",
     "paid_a": "Il core è gratis (MIT). I piani a pagamento sbloccano i moduli portale: Condivisione brandizzata (link con scadenza/password) e Portali di caricamento («inviaci file» pubblico), più Versionamento, Webhooks, IA Vision/OCR e un pacchetto conformità ai livelli superiori.",
     "license_q": "Come attivo una licenza?",

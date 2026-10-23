@@ -190,7 +190,7 @@
     "row_search": "全文搜索",
     "row_darkmode": "深色模式",
     "row_i18n": "16种语言",
-    "row_php81": "PHP ≥ 8.1",
+    "row_php81": "PHP ≥ 8.2",
     "asof_note": "对比数据截至 {date}，非官方关联——如需纠正请前往 GitHub 仓库反馈。",
     "tab_oss": "对比开源文件管理器",
     "tab_saas": "对比文件 API SaaS"
@@ -241,7 +241,7 @@
     "embed_q": "能嵌入到我现有的应用或编辑器里吗？",
     "embed_a": "可以——iframe + JS SDK 适用于任意页面，并提供 Laravel、WordPress、React、Vue/Nuxt、CKEditor 4、TinyMCE 和 Summernote 的官方适配器。",
     "run_q": "运行它需要什么？",
-    "run_a": "PHP 8.1+、几个常见扩展和 Composer。指向一个磁盘，设置密钥与允许来源，然后启动即可——在小型 VPS 上也能流畅运行。",
+    "run_a": "PHP 8.2.35+、几个常见扩展和 Composer。指向一个磁盘，设置密钥与允许来源，然后启动即可——在小型 VPS 上也能流畅运行。",
     "paid_q": "付费套餐包含什么？",
     "paid_a": "核心免费（MIT）。付费套餐解锁文件门户模块：品牌分享（有效期/密码链接）和上传门户（公开“把文件发给我”），更高套餐还含版本管理、Webhooks、AI 视觉/OCR 及合规套件。",
     "license_q": "如何激活许可证？",

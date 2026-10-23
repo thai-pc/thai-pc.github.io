@@ -190,7 +190,7 @@
     "row_search": "Tìm kiếm toàn văn",
     "row_darkmode": "Chế độ tối",
     "row_i18n": "16 ngôn ngữ",
-    "row_php81": "PHP ≥ 8.1",
+    "row_php81": "PHP ≥ 8.2",
     "asof_note": "So sánh tính đến {date}, không liên kết với các bên — xem repo GitHub để báo lỗi cần chỉnh sửa.",
     "tab_oss": "So với các file manager mã nguồn mở",
     "tab_saas": "So với các SaaS file-API"
@@ -241,7 +241,7 @@
     "embed_q": "Tôi có nhúng được vào app/editor sẵn có không?",
     "embed_a": "Có — iframe + JS SDK chạy trên mọi trang, kèm adapter chính thức cho Laravel, WordPress, React, Vue/Nuxt, CKEditor 4, TinyMCE và Summernote.",
     "run_q": "Cần gì để chạy?",
-    "run_a": "PHP 8.1+ với vài extension phổ biến và Composer. Trỏ tới một disk, đặt secret và allowed origins, rồi chạy — nhẹ tới mức chạy được trên VPS nhỏ.",
+    "run_a": "PHP 8.2.35+ với vài extension phổ biến và Composer. Trỏ tới một disk, đặt secret và allowed origins, rồi chạy — nhẹ tới mức chạy được trên VPS nhỏ.",
     "paid_q": "Các gói trả phí gồm những gì?",
     "paid_a": "Lõi miễn phí (MIT). Gói trả phí mở module cổng file: Branded Share (link hết hạn/mật khẩu) và Upload Portals (cổng “gửi file cho tôi” công khai), cộng Versioning, Webhooks, AI Vision/OCR và bộ tuân thủ ở gói cao hơn.",
     "license_q": "Kích hoạt license thế nào?",

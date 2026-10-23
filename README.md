@@ -1,6 +1,6 @@
 # FluxFiles Landing Page
 
-Static landing page for [FluxFiles](https://github.com/thai-pc/fluxfiles) — PHP **8.1+** file manager with S3, R2, local storage, Alpine.js UI, and iframe + SDK embedding.
+Static landing page for [FluxFiles](https://github.com/thai-pc/fluxfiles) — PHP **8.2.35+** file manager with S3, R2, local storage, Alpine.js UI, and iframe + SDK embedding.
 
 Built with **Astro 4**, **Tailwind CSS 3**, supports **16 languages** and **light / dark / system** themes.
 
